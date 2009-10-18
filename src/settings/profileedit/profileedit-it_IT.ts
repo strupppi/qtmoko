@@ -131,7 +131,7 @@
         <location filename="ringprofile.cpp" line="159"/>
         <source>s</source>
         <comment>seconds</comment>
-        <translation>s</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="ringprofile.cpp" line="160"/>

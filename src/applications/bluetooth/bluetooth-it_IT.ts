@@ -61,7 +61,7 @@
     <message>
         <location filename="mainwindow.cpp" line="479"/>
         <source>Cancel current action</source>
-        <translation>Annulla l'azione corrente</translation>
+        <translation>Annulla l&apos;azione corrente</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="528"/>

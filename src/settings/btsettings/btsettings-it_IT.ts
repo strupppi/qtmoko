@@ -151,7 +151,7 @@
     <message>
         <location filename="mydevicesdisplay.cpp" line="313"/>
         <source>&lt;P&gt;Unable to create pairing</source>
-        <translation>&lt;P&gt;Impossibile completare l'accoppiamento. Ritenta..</translation>
+        <translation>&lt;P&gt;Impossibile completare l&apos;accoppiamento. Ritenta..</translation>
     </message>
     <message>
         <location filename="mydevicesdisplay.cpp" line="324"/>
@@ -162,7 +162,7 @@
         <location filename="mydevicesdisplay.cpp" line="327"/>
         <location filename="mydevicesdisplay.cpp" line="336"/>
         <source>&lt;P&gt;Unable to request device services</source>
-        <translation>&lt;P&gt;Impossibile ottenere l'elenco servizi del dispositivo..</translation>
+        <translation>&lt;P&gt;Impossibile ottenere l&apos;elenco servizi del dispositivo..</translation>
     </message>
     <message>
         <location filename="mydevicesdisplay.cpp" line="362"/>
@@ -178,12 +178,12 @@
     <message>
         <location filename="mydevicesdisplay.cpp" line="391"/>
         <source>Remove the pairing with this device?</source>
-        <translation>Rimuovere l'accoppiamento con il dispositivo?</translation>
+        <translation>Rimuovere l&apos;accoppiamento con il dispositivo?</translation>
     </message>
     <message>
         <location filename="mydevicesdisplay.cpp" line="398"/>
         <source>Unable to remove pairing</source>
-        <translation>Impossibile rimuovere l'accoppiamento. Ritenta.</translation>
+        <translation>Impossibile rimuovere l&apos;accoppiamento. Ritenta.</translation>
     </message>
 </context>
 <context>
@@ -207,7 +207,7 @@
     <message>
         <location filename="remotedeviceinfodialog.cpp" line="403"/>
         <source>Connectivity not available. Another device is using Bluetooth audio.</source>
-        <translation>Connettività Bluetooth non disponibile. Un altro dispositivo sta' utilizzando il servizio Audio Bluetooth.</translation>
+        <translation>Connettività Bluetooth non disponibile. Un altro dispositivo sta&apos; utilizzando il servizio Audio Bluetooth.</translation>
     </message>
     <message>
         <location filename="settingsdisplay.cpp" line="113"/>
@@ -357,7 +357,7 @@
     </message>
     <message>
         <location filename="settingsdisplay.cpp" line="61"/>
-        <source>Attesa:</source>
+        <source>Timeout:</source>
         <translation></translation>
     </message>
     <message>

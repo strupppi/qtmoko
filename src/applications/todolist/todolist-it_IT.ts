@@ -323,8 +323,8 @@ from the end</source>
         <source>%n days</source>
         <oldsource>%n giorni</oldsource>
         <comment>3 days</comment>
-        <translation>
-            <numerusform>%n giorni</numerusform>
+        <translation type="unfinished">
+            <numerusform>3 giorni</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -606,7 +606,7 @@ from the end</source>
         <location filename="mainwindow.cpp" line="301"/>
         <source>%1, %2</source>
         <comment>[Mon], [26 Feb]</comment>
-        <translation>%1, %2</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="303"/>

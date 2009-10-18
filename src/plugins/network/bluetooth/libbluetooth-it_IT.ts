@@ -6,7 +6,7 @@
     <message>
         <location filename="advancedbtbase.ui" line="13"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location filename="advancedbtbase.ui" line="27"/>
@@ -23,7 +23,7 @@
         <location filename="advancedbtbase.ui" line="40"/>
         <source>s</source>
         <comment>short for seconds</comment>
-        <translation></translation>
+        <translation>s</translation>
     </message>
     <message>
         <location filename="advancedbtbase.ui" line="59"/>
@@ -82,17 +82,17 @@
         <location filename="bluetoothimpl.cpp" line="98"/>
         <location filename="bluetoothimpl.cpp" line="153"/>
         <source>Interface hasn&apos;t been initialized yet.</source>
-        <translation>L'interfaccia Bluetooth non é stata inizializzata.</translation>
+        <translation>L&apos;interfaccia Bluetooth non é stata inizializzata.</translation>
     </message>
     <message>
         <location filename="bluetoothimpl.cpp" line="157"/>
         <source>Interface is not available.</source>
-        <translation>L'interfaccia Bluetooth non é disponibile. Verifica che il servizio sia attivo.</translation>
+        <translation>L&apos;interfaccia Bluetooth non é disponibile. Verifica che il servizio sia attivo.</translation>
     </message>
     <message>
         <location filename="bluetoothimpl.cpp" line="163"/>
         <source>Interface already started/active.</source>
-        <translation>L'interfaccia Bluetooth é già attiva.</translation>
+        <translation>L&apos;interfaccia Bluetooth é già attiva.</translation>
     </message>
     <message>
         <location filename="bluetoothimpl.cpp" line="179"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="bluetoothimpl.cpp" line="207"/>
         <source>Interface is not active.</source>
-        <translation>L'interfaccia Bluetooth non é attiva.</translation>
+        <translation>L&apos;interfaccia Bluetooth non é attiva.</translation>
     </message>
     <message>
         <location filename="bluetoothimpl.cpp" line="249"/>
@@ -161,7 +161,7 @@
     <message>
         <location filename="config.cpp" line="201"/>
         <source>General account information</source>
-        <translation>Informazioni generali sull'Account.</translation>
+        <translation>Informazioni generali sull&apos;Account.</translation>
     </message>
     <message>
         <location filename="config.cpp" line="204"/>

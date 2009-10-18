@@ -4,17 +4,17 @@
 <context>
     <name>home</name>
     <message numerus="yes">
-        <location filename="tr14830.cpp" line="1"/>
+        <location filename="tr10671.cpp" line="1"/>
         <source>%1 missed</source>
         <translation>
-            <numerusform>%1 senza risposta</numerusform>
+            <numerusform>%1 persa/e</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="tr14830.cpp" line="2"/>
+        <location filename="tr10671.cpp" line="2"/>
         <source>%1 new</source>
         <translation>
-            <numerusform>%1 da leggere</numerusform>
+            <numerusform>%1 nuovo/i</numerusform>
         </translation>
     </message>
 </context>

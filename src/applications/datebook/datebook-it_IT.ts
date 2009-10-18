@@ -32,17 +32,17 @@
     <message>
         <location filename="accounteditor.cpp" line="198"/>
         <source>Delete the selected account</source>
-        <translation>Cancella l&apos;account selezionato</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="accounteditor.cpp" line="201"/>
         <source>Sync Account</source>
-        <translation>Sincronizza account selezionato</translation>
+        <translation>Cancella account selezionato</translation>
     </message>
     <message>
         <location filename="accounteditor.cpp" line="202"/>
         <source>Syncs the selected accounts</source>
-        <translation>Sincronizza gli accounts selezionati</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="accounteditor.cpp" line="205"/>
@@ -465,7 +465,7 @@
     <message>
         <location filename="datebook.cpp" line="1097"/>
         <source>Accounts</source>
-        <translation>Accounts</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="datebook.cpp" line="1102"/>

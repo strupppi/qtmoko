@@ -85,7 +85,7 @@
     <message>
         <location filename="homescreen.cpp" line="135"/>
         <source>Return to homescreen:</source>
-        <translation>Ritorna alla Finestra Principale</translation>
+        <translation>Ritorna alla Finestra Principale:</translation>
     </message>
     <message>
         <location filename="homescreen.cpp" line="142"/>
@@ -132,7 +132,7 @@
         <location filename="homescreen.cpp" line="291"/>
         <location filename="homescreen.cpp" line="343"/>
         <source>Homescreen Photo</source>
-        <translation>Immagine Sfondo</translation>
+        <translation>Immagine Finestra Principale</translation>
     </message>
     <message>
         <location filename="homescreen.cpp" line="405"/>

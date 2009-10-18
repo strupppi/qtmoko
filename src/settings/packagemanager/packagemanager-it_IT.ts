@@ -108,7 +108,7 @@
         <source>%n program(s) found</source>
         <comment>%n =# of packages</comment>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>trovati %n pacchetti</numerusform>
         </translation>
     </message>
     <message>
@@ -507,7 +507,7 @@
         <location filename="sandboxinstall.cpp" line="1062"/>
         <location filename="utils.cpp" line="84"/>
         <source>Invalid package, contact package supplier</source>
-        <translation>Pacchetto non valido. Contattare il fornitore.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="installcontrol.cpp" line="354"/>

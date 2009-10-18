@@ -6,17 +6,17 @@
     <message>
         <location filename="char.cpp" line="40"/>
         <source>[Esc]</source>
-        <translation></translation>
+        <translation>[Esc]</translation>
     </message>
     <message>
         <location filename="char.cpp" line="41"/>
         <source>[Tab]</source>
-        <translation></translation>
+        <translation>[Tab]</translation>
     </message>
     <message>
         <location filename="char.cpp" line="42"/>
         <source>[BackSpace]</source>
-        <translation></translation>
+        <translation>[BackSpace]</translation>
     </message>
     <message>
         <location filename="char.cpp" line="43"/>

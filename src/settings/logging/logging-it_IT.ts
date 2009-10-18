@@ -14,7 +14,7 @@
     <message>
         <location filename="loggingview.cpp" line="34"/>
         <source>Log</source>
-        <translation>Logs</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="loggingview.cpp" line="39"/>

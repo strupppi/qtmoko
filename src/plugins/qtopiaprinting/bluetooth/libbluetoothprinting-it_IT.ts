@@ -6,7 +6,7 @@
     <message>
         <location filename="bluetoothplugin.cpp" line="215"/>
         <source>Bluetooth</source>
-        <translation>Bluetooth</translation>
+        <translation></translation>
     </message>
 </context>
 <context>

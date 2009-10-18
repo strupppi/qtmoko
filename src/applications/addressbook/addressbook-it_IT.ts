@@ -737,7 +737,7 @@
         <location filename="addressbook.cpp" line="2173"/>
         <source>&lt;qt&gt;%1 contacts received. Add to AddressBook?</source>
         <oldsource>&lt;qt&gt;&quot;%1&quot; contats received. Add to Address Book?</oldsource>
-        <translation>&lt;qt&gt;%1 contatti ricevuti. Aggiungerli alla rubrica?</translation>
+        <translation type="unfinished">&lt;qt&gt;%1 contatti ricevuti. Aggiungerli alla rubrica?</translation>
     </message>
     <message>
         <location filename="addressbook.cpp" line="2212"/>
@@ -1655,7 +1655,7 @@ text</source>
         <source>%n days</source>
         <comment>3 days</comment>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n giorni</numerusform>
         </translation>
     </message>
     <message numerus="yes">

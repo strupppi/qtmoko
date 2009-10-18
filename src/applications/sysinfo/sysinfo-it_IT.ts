@@ -7,21 +7,21 @@
         <location filename="cleanupwizard.cpp" line="46"/>
         <source>%n bytes</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>%n bytes</numerusform>
         </translation>
     </message>
     <message>
         <location filename="cleanupwizard.cpp" line="49"/>
         <source>%1 kB</source>
         <comment>kilobyte</comment>
-        <translation></translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <location filename="cleanupwizard.cpp" line="52"/>
         <location filename="cleanupwizard.cpp" line="54"/>
         <source>%1 MB</source>
         <comment>megabyte</comment>
-        <translation></translation>
+        <translation>%1 MB</translation>
     </message>
     <message>
         <location filename="cleanupwizard.cpp" line="73"/>

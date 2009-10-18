@@ -25,7 +25,7 @@
         <location filename="addwapui.cpp" line="431"/>
         <source>WAP Gateway</source>
         <oldsource>Gateway</oldsource>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="addwapui.cpp" line="434"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="networkui.cpp" line="796"/>
         <source>&lt;qt&gt;Received network settings.  Do you wish to apply them?&lt;/qt&gt;</source>
-        <translation>&lt;qt&gt;Ho ricevuto le impostazioni di rete. Vuoi che le applichi immediatamente?&lt;/qt&gt;</translation>
+        <translation>&lt;qt&gt;Ho ricevuto le impostazioni di configurazione per &quot;%1&quot;.  Vuoi che le applichi immediatamente?&lt;/qt&gt;&lt;qt&gt;Ho ricevuto le impostazioni di rete. Vuoi che le applichi immediatamente?&lt;/qt&gt;</translation>
     </message>
     <message>
         <location filename="networkui.cpp" line="819"/>

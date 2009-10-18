@@ -7,7 +7,7 @@
         <location filename="effectdialog.cpp" line="58"/>
         <location filename="effectdialog.cpp" line="77"/>
         <source>Effects</source>
-        <translation></translation>
+        <translation>Effetti</translation>
     </message>
 </context>
 <context>

@@ -106,7 +106,7 @@
     <message>
         <location filename="actionfoldermodel.cpp" line="151"/>
         <source>Email</source>
-        <translation>Leggi caselle email..</translation>
+        <translation>Scrivi email</translation>
     </message>
 </context>
 <context>
@@ -660,7 +660,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="2586"/>
         <source>The SIM card is not ready. Do you want to delete the message(s) without removal from the SIM card?</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>La carta SIM non é disponibile. Vuoi che cancelli i messaggi anche se non li posso rimuovere dalla carta SIM?</numerusform>
         </translation>
     </message>
     <message>
@@ -672,7 +672,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="2617"/>
         <source>Deleting message(s)</source>
         <translation>
-            <numerusform></numerusform>
+            <numerusform>Cacellazione messaggi..</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -680,7 +680,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="2674"/>
         <source>Moving message(s)</source>
         <translation>
-            <numerusform>Spostamento messaggi, attendere..</numerusform>
+            <numerusform>Spostamento messaggi..</numerusform>
         </translation>
     </message>
     <message>
@@ -692,7 +692,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="2634"/>
         <location filename="emailclient.cpp" line="3543"/>
         <source>Deleting</source>
-        <translation>Cancellazione messaggi, attendere..</translation>
+        <translation>Cancellazione messaggi..</translation>
     </message>
     <message numerus="yes">
         <location filename="emailclient.cpp" line="2635"/>
@@ -700,7 +700,7 @@ Do you want to connect to the network?</source>
         <source>Deleting %n message(s)</source>
         <comment>%1: number of messages</comment>
         <translation>
-            <numerusform>Cancello %n messaggi</numerusform>
+            <numerusform>Cancello %n messaggio/i</numerusform>
         </translation>
     </message>
     <message>
@@ -739,7 +739,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="2861"/>
         <source>Restoring message(s)</source>
         <translation>
-            <numerusform>Ripristino messaggi, attendere.. </numerusform>
+            <numerusform>Ripristino messaggi, attendere..</numerusform>
         </translation>
     </message>
     <message>
@@ -927,7 +927,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="4080"/>
         <source>%n new message(s) have arrived. Do you wish to view them now?</source>
         <translation>
-            <numerusform>Sono arrivati dei messaggi (%n). Vuoi visualizzarli adesso?</numerusform>
+            <numerusform>Sono arrivati dei messaggi (%n). Vuoi leggerli adesso?</numerusform>
         </translation>
     </message>
     <message>
@@ -1354,7 +1354,7 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="159"/>
         <location filename="emailclient.cpp" line="175"/>
         <source>Searching</source>
-        <translation>Ricerca in corso, attendere..</translation>
+        <translation></translation>
     </message>
 </context>
 <context>

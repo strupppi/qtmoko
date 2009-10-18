@@ -87,25 +87,11 @@
     </message>
 </context>
 <context>
-    <name>AsteriskManager</name>
+    <name>BTPinHelper</name>
     <message>
-        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="115"/>
-        <source>Asterisk</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="185"/>
-        <source>No Asterisk network</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="192"/>
-        <source>Searching for Asterisk network</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="195"/>
-        <source>Asterisk Authentication Failed</source>
+        <location filename="../bluetooth/pinhelper/btpinhelper.cpp" line="94"/>
+        <source>You are trying to pair with %1 [%2]. Please enter a PIN. You will need to enter the same PIN on the other device.</source>
+        <comment>%1=name, %2=address</comment>
         <translation></translation>
     </message>
 </context>
@@ -203,88 +189,105 @@
 <context>
     <name>BluetoothObexPushServer</name>
     <message>
+        <location filename="../bluetooth/obexpush/bluetoothobexpushservice.cpp" line="109"/>
         <source>Cannot access local bluetooth device</source>
-        <translation type="obsolete">Impossibile accedere al dispositivo bluetooth locale</translation>
+        <translation>Impossibile accedere al dispositivo bluetooth locale</translation>
     </message>
     <message>
+        <location filename="../bluetooth/obexpush/bluetoothobexpushservice.cpp" line="118"/>
         <source>Error registering with SDP server</source>
-        <translation type="obsolete">Errore di registrazione al server SDP</translation>
+        <translation>Errore di registrazione al server SDP</translation>
     </message>
     <message>
+        <location filename="../bluetooth/obexpush/bluetoothobexpushservice.cpp" line="126"/>
         <source>Error listening on OBEX Push Server</source>
-        <translation type="obsolete">Errore di connessione al server OBEX Push</translation>
+        <translation>Errore di connessione al server OBEX Push</translation>
     </message>
 </context>
 <context>
     <name>BluetoothObexPushService</name>
     <message>
+        <location filename="../bluetooth/obexpush/bluetoothobexpushservice.cpp" line="377"/>
         <source>OBEX Object Push</source>
-        <translation type="obsolete">Impostazioni OBEX Push</translation>
+        <translation>Impostazioni OBEX Push</translation>
     </message>
 </context>
 <context>
     <name>BluetoothObexPushServicePrivate</name>
     <message>
+        <location filename="../bluetooth/obexpush/bluetoothobexpushservice.cpp" line="292"/>
         <source>My business card</source>
-        <translation type="obsolete">Biglietto da Visita</translation>
+        <translation>Biglietto da Visita</translation>
     </message>
 </context>
 <context>
     <name>BtDialupServiceTask</name>
     <message>
+        <location filename="../bluetooth/dun/btdialupservice.cpp" line="58"/>
         <source>Dial-up Networking</source>
-        <translation type="obsolete">Reti Telefoniche</translation>
+        <translation>Reti Telefoniche</translation>
     </message>
 </context>
 <context>
     <name>BtFtpService</name>
     <message>
+        <location filename="../bluetooth/ftp/btftpservice.cpp" line="858"/>
         <source>OBEX File Transfer</source>
-        <translation type="obsolete">Trasferimento file OBEX</translation>
+        <translation>Trasferimento file OBEX</translation>
     </message>
     <message>
+        <location filename="../bluetooth/ftp/btftpservice.cpp" line="900"/>
         <source>Cannot access local bluetooth device</source>
-        <translation type="obsolete">Impossibile accedere al dispositivo bluetooth locale</translation>
+        <translation>Impossibile accedere al dispositivo bluetooth locale</translation>
     </message>
     <message>
+        <location filename="../bluetooth/ftp/btftpservice.cpp" line="920"/>
         <source>Error registering with SDP server</source>
-        <translation type="obsolete">Errore di registrazione al server SDP</translation>
+        <translation>Errore di registrazione al server SDP</translation>
     </message>
     <message>
+        <location filename="../bluetooth/ftp/btftpservice.cpp" line="932"/>
         <source>Error listening on OBEX Push Server</source>
-        <translation type="obsolete">Errore di connessione al server OBEX Push</translation>
+        <translation>Errore di connessione al server OBEX Push</translation>
     </message>
 </context>
 <context>
     <name>BtHandsfreeServiceTask</name>
     <message>
+        <location filename="../bluetooth/hf/bthandsfreetask.cpp" line="45"/>
         <source>Handsfree Audio Gateway</source>
-        <translation type="obsolete">Uscita audio Aucolari</translation>
+        <translation>Uscita audio Aucolari</translation>
     </message>
 </context>
 <context>
     <name>BtHeadsetServiceTask</name>
     <message>
+        <location filename="../bluetooth/hs/btheadsettask.cpp" line="45"/>
         <source>Headset Audio Gateway</source>
-        <translation type="obsolete">Uscita audio Cuffie</translation>
+        <translation>Uscita audio Cuffie</translation>
     </message>
 </context>
 <context>
     <name>BtPowerService</name>
     <message>
+        <location filename="../bluetooth/powermgr/btpowerservice.cpp" line="156"/>
+        <location filename="../bluetooth/powermgr/btpowerservice.cpp" line="221"/>
         <source>Could not bring up bluetooth device</source>
-        <translation type="obsolete">Impossibile attivare il dispositivo bluetooth</translation>
+        <translation>Impossibile attivare il dispositivo bluetooth</translation>
     </message>
     <message>
+        <location filename="../bluetooth/powermgr/btpowerservice.cpp" line="169"/>
+        <location filename="../bluetooth/powermgr/btpowerservice.cpp" line="224"/>
         <source>Could not bring down bluetooth device</source>
-        <translation type="obsolete">Impossibile disattivare il dispositivo bluetooth</translation>
+        <translation>Impossibile disattivare il dispositivo bluetooth</translation>
     </message>
 </context>
 <context>
     <name>BtSerialServiceTask</name>
     <message>
+        <location filename="../bluetooth/serial/bluetoothserialportservice.cpp" line="318"/>
         <source>Serial port profile</source>
-        <translation type="obsolete">Profilo di porta seriale</translation>
+        <translation>Profilo di porta seriale</translation>
     </message>
 </context>
 <context>
@@ -343,7 +346,7 @@ per ricalibrare lo schermo.
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="509"/>
         <source>Related Calls</source>
-        <translation>Registro chiamate</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="511"/>
@@ -371,22 +374,22 @@ per ricalibrare lo schermo.
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="819"/>
         <source>Dialed History</source>
-        <translation>Storico chiamate effettuate</translation>
+        <translation>Svuota cronologia chiamate effettuate</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="822"/>
         <source>Received History</source>
-        <translation>Storico chiamate ricevute</translation>
+        <translation>Svuota cronologia chiamate ricevute</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="825"/>
         <source>Missed History</source>
-        <translation>Storico chiamate perse</translation>
+        <translation>Svuota cronologia chiamate perse</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="831"/>
         <source>Clear Call History</source>
-        <translation>Storico completo</translation>
+        <translation>Cancellazione registro chiamate</translation>
     </message>
 </context>
 <context>
@@ -475,12 +478,12 @@ per ricalibrare lo schermo.
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="655"/>
         <source>Outgoing Call</source>
-        <translation>Chiamate effettuate</translation>
+        <translation>Chiamate in uscita</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="659"/>
         <source>Incoming Call</source>
-        <translation>Chiamate ricevute</translation>
+        <translation>Chiamate in arrivo</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="663"/>
@@ -581,25 +584,25 @@ per ricalibrare lo schermo.
         <location filename="../comm/obex/defaultobexpushservice.cpp" line="48"/>
         <location filename="../ui/filetransferwindow/filetransferwindow.cpp" line="45"/>
         <source>B</source>
-        <translation>B</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../comm/obex/defaultobexpushservice.cpp" line="49"/>
         <location filename="../ui/filetransferwindow/filetransferwindow.cpp" line="46"/>
         <source>KB</source>
-        <translation>KB</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../comm/obex/defaultobexpushservice.cpp" line="50"/>
         <location filename="../ui/filetransferwindow/filetransferwindow.cpp" line="47"/>
         <source>MB</source>
-        <translation>MB</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../comm/obex/defaultobexpushservice.cpp" line="51"/>
         <location filename="../ui/filetransferwindow/filetransferwindow.cpp" line="48"/>
         <source>GB</source>
-        <translation>GB</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -856,110 +859,6 @@ per ricalibrare lo schermo.
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="451"/>
         <source>Category: %1</source>
         <translation>Categoria: %1</translation>
-    </message>
-</context>
-<context>
-    <name>E2TaskManager</name>
-    <message>
-        <location filename="../phone/samples/e2/e2_taskmanager.cpp" line="103"/>
-        <source>System Memory Status</source>
-        <translation>Monitor di sistema</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e2/e2_taskmanager.cpp" line="119"/>
-        <source>Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e2/e2_taskmanager.cpp" line="129"/>
-        <source>Switch</source>
-        <comment>Switch task</comment>
-        <translation>Vai all&apos;applicazione..</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e2/e2_taskmanager.cpp" line="133"/>
-        <source>End</source>
-        <comment>End task</comment>
-        <translation>Chiudi</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e2/e2_taskmanager.cpp" line="137"/>
-        <source>Cancel</source>
-        <translation>Annulla</translation>
-    </message>
-</context>
-<context>
-    <name>E3BrowserScreen</name>
-    <message>
-        <location filename="../phone/samples/e3/e3_phonebrowser.cpp" line="207"/>
-        <source>Menu</source>
-        <translation>Menù</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e3/e3_phonebrowser.cpp" line="217"/>
-        <source>List View</source>
-        <translation>Visualizza Lista</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e3/e3_phonebrowser.cpp" line="218"/>
-        <source>Grid View</source>
-        <translation>Visualizza Griglia</translation>
-    </message>
-</context>
-<context>
-    <name>E3CalItem</name>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="475"/>
-        <source>No more entries today</source>
-        <comment>calendar entries</comment>
-        <translation>Nessun evento in calendario.</translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="479"/>
-        <source>No cal. entries for today</source>
-        <comment>cal=calendar</comment>
-        <translation>Nessun evento nel calendario di oggi.</translation>
-    </message>
-</context>
-<context>
-    <name>E3CallsItem</name>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="528"/>
-        <source>%1 call(s) in progress</source>
-        <comment>%1=a number</comment>
-        <translation></translation>
-    </message>
-</context>
-<context>
-    <name>E3ServerInterface</name>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="809"/>
-        <source>Not Registered</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="809"/>
-        <source>Cannot make call until network is registered.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="811"/>
-        <source>Active call</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="811"/>
-        <source>Cannot make call while other call in progress.</source>
-        <translation></translation>
-    </message>
-</context>
-<context>
-    <name>E3TodoItem</name>
-    <message>
-        <location filename="../phone/samples/e3/e3_launcher.cpp" line="575"/>
-        <source>%1 to-do notes not done</source>
-        <comment>%1 = number</comment>
-        <translation></translation>
     </message>
 </context>
 <context>
@@ -1261,50 +1160,6 @@ Premi sullo schermo per iniziare la configurazione del tuo cellulare..
     </message>
 </context>
 <context>
-    <name>IrObexPushServicePrivate</name>
-    <message>
-        <location filename="../infrared/obexpush/irobexpushservice.cpp" line="197"/>
-        <source>My business card</source>
-        <translation>Biglietto da Visita</translation>
-    </message>
-</context>
-<context>
-    <name>IrPowerService</name>
-    <message>
-        <location filename="../infrared/powermgr/irpowerservice.cpp" line="103"/>
-        <source>Could not bring up infrared device</source>
-        <translation>Impossibile avviare il dispositivo infrarossi</translation>
-    </message>
-    <message>
-        <location filename="../infrared/powermgr/irpowerservice.cpp" line="116"/>
-        <source>Could not bring down infrared device</source>
-        <translation>Impossibile disattivare il dispositivo infrarossi</translation>
-    </message>
-</context>
-<context>
-    <name>JabberManager</name>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="79"/>
-        <source>Jabber</source>
-        <translation>Jabber</translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="127"/>
-        <source>No Jabber network</source>
-        <translation>Nessuna rete Jabber</translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="134"/>
-        <source>Searching Jabber network</source>
-        <translation>Ricerca rete Jabber..</translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="137"/>
-        <source>Jabber Authentication Failed</source>
-        <translation>Accesso Jabber fallito!</translation>
-    </message>
-</context>
-<context>
     <name>LanguageSettings</name>
     <message>
         <location filename="../../settings/language/language.cpp" line="178"/>
@@ -1548,7 +1403,7 @@ Premi sullo schermo per iniziare la configurazione del tuo cellulare..
         <location filename="../phone/callhistory/default/callhistory.cpp" line="994"/>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1790"/>
         <source>Outgoing Calls</source>
-        <translation>Chiamate effettuate</translation>
+        <translation>Chiamate in arrivo</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1011"/>
@@ -1560,7 +1415,7 @@ Premi sullo schermo per iniziare la configurazione del tuo cellulare..
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1013"/>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1792"/>
         <source>Incoming Calls</source>
-        <translation>Chiamate ricevute</translation>
+        <translation>Chiamate in ingresso</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1030"/>
@@ -1584,7 +1439,7 @@ Premi sullo schermo per iniziare la configurazione del tuo cellulare..
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1237"/>
         <source>dialed</source>
         <comment>inserted into the context: all ... items</comment>
-        <translation>effettuate</translation>
+        <translation>chiamate</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="1240"/>
@@ -1766,105 +1621,113 @@ Please recharge now!</source>
     </message>
 </context>
 <context>
-    <name>PresenceEditor</name>
-    <message>
-        <location filename="../phone/ui/components/presenceeditor/presenceeditor.cpp" line="82"/>
-        <source>Select presence status.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../phone/ui/components/presenceeditor/presenceeditor.cpp" line="115"/>
-        <source>No presence provider(s)</source>
-        <translation></translation>
-    </message>
-</context>
-<context>
     <name>QBluetoothHandsfreeService</name>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="242"/>
         <source>Handsfree Audio Gateway already running.</source>
-        <translation type="obsolete">Gateway Audio Auricolari già attivo</translation>
+        <translation>Gateway Audio Auricolari già attivo</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="261"/>
         <source>Error registering with SDP server</source>
-        <translation type="obsolete">Errore di registrazione al server SDP</translation>
+        <translation>Errore di registrazione al server SDP</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="270"/>
         <source>Could not listen on channel.</source>
-        <translation type="obsolete">Impossibile ascoltare sul canale.</translation>
+        <translation>Impossibile ascoltare sul canale.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="332"/>
         <source>Connect failed.</source>
-        <translation type="obsolete">Connessione fallita</translation>
+        <translation>Connessione fallita</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="346"/>
         <source>Bluetooth Session could not be started</source>
-        <translation type="obsolete">La sessione bluetooth non può essere avviata.</translation>
+        <translation>La sessione bluetooth non può essere avviata.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="367"/>
         <source>Service not available.</source>
-        <translation type="obsolete">Servizio non disponibile.</translation>
+        <translation>Servizio non disponibile.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="373"/>
         <source>Connection in progress.</source>
-        <translation type="obsolete">Connessione in corso, attendere..</translation>
+        <translation>Connessione in corso, attendere..</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="381"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="387"/>
         <source>Already connected.</source>
-        <translation type="obsolete">Già connesso.</translation>
+        <translation>Già connesso.</translation>
     </message>
 </context>
 <context>
     <name>QBluetoothHeadsetService</name>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="153"/>
         <source>No suitable audio devices found!</source>
-        <translation type="obsolete">Nessun dispositivo audio trovato.</translation>
+        <translation>Nessun dispositivo audio trovato.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="159"/>
         <source>Headset Audio Gateway already running.</source>
-        <translation type="obsolete">Gateway Audio Cuffie già attivo</translation>
+        <translation>Gateway Audio Cuffie già attivo</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="178"/>
         <source>Error registering with SDP server</source>
-        <translation type="obsolete">Errore di registrazione al server SDP</translation>
+        <translation>Errore di registrazione al server SDP</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="186"/>
         <source>Could not listen on channel.</source>
-        <translation type="obsolete">Impossibile ascoltare sul canale.</translation>
+        <translation>Impossibile ascoltare sul canale.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="240"/>
         <source>Connect failed.</source>
-        <translation type="obsolete">Connessione fallita.</translation>
+        <translation>Connessione fallita.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="261"/>
         <source>Bluetooth Session could not be started</source>
-        <translation type="obsolete">Sessione bluetooth non avviabile.</translation>
+        <translation>Sessione bluetooth non avviabile.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="282"/>
         <source>Service not available.</source>
-        <translation type="obsolete">Servizio non disponibile</translation>
+        <translation>Servizio non disponibile</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="288"/>
         <source>Connection in progress.</source>
-        <translation type="obsolete">Connessione in corso, attendere..</translation>
+        <translation>Connessione in corso, attendere..</translation>
     </message>
     <message>
+        <location filename="../bluetooth/hs/qbluetoothhsservice.cpp" line="295"/>
         <source>Already connected.</source>
-        <translation type="obsolete">Già connesso.</translation>
+        <translation>Già connesso.</translation>
     </message>
 </context>
 <context>
     <name>QBluetoothSerialPortService</name>
     <message>
+        <location filename="../bluetooth/serial/bluetoothserialportservice.cpp" line="156"/>
         <source>%1 already running</source>
-        <translation type="obsolete">%1 già avviato</translation>
+        <translation>%1 già avviato</translation>
     </message>
     <message>
+        <location filename="../bluetooth/serial/bluetoothserialportservice.cpp" line="164"/>
         <source>Error registering with SDP server</source>
-        <translation type="obsolete">Errore di registrazione al server SDP</translation>
+        <translation>Errore di registrazione al server SDP</translation>
     </message>
     <message>
+        <location filename="../bluetooth/serial/bluetoothserialportservice.cpp" line="171"/>
         <source>Cannot listen for incoming connections.</source>
-        <translation type="obsolete">Impossibile attendere connessioni in ingresso.</translation>
+        <translation>Impossibile attendere connessioni in ingresso.</translation>
     </message>
 </context>
 <context>
@@ -1919,26 +1782,6 @@ Please recharge now!</source>
         <location filename="../ui/filetransferwindow/filetransferwindow.cpp" line="566"/>
         <source>Send/Receive Files</source>
         <translation>Invia/Ricevi files..</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="299"/>
-        <source>Infrared Error</source>
-        <translation>Errore Infrarossi</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="300"/>
-        <source>&lt;P&gt;No infrared devices found.</source>
-        <translation>&lt;P&gt;Nessun dispositivo disponibile.</translation>
-    </message>
-    <message>
-        <location filename="../infrared/powermgr/irpowerservice.cpp" line="135"/>
-        <source>Turn off Infrared?</source>
-        <translation>Vuoi davvero spegnere il servizio Infrarossi?</translation>
-    </message>
-    <message>
-        <location filename="../infrared/powermgr/irpowerservice.cpp" line="136"/>
-        <source>&lt;P&gt;There are applications using the infrared device.  Are you sure you want to turn it off?</source>
-        <translation>&lt;P&gt;Ci sono delle applicazioni che in questo momento stanno utilizzando il dispositivo. Sei sicuro di voler disattivare il servizio Infrarossi?</translation>
     </message>
 </context>
 <context>
@@ -2024,77 +1867,51 @@ Please recharge now!</source>
 <context>
     <name>SessionedBluetoothObexClient</name>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="204"/>
         <source>Preparing to send...</source>
-        <translation type="obsolete">Preparazione all&apos;invio, attendere..</translation>
+        <translation>Preparazione all&apos;invio, attendere..</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="211"/>
         <source>Closing...</source>
-        <translation type="obsolete">Chiusura in corso, attendere..</translation>
+        <translation>Chiusura in corso, attendere..</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="224"/>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="249"/>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="331"/>
         <source>Bluetooth Error</source>
-        <translation type="obsolete">Errore Bluetooth!</translation>
+        <translation>Errore Bluetooth!</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="225"/>
         <source>&lt;P&gt;The Bluetooth device is currently unavailable.</source>
-        <translation type="obsolete">&lt;P&gt;Il dispositivo bluetooth non é attualmente disponibile</translation>
+        <translation>&lt;P&gt;Il dispositivo bluetooth non é attualmente disponibile</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="244"/>
         <source>Connecting...</source>
-        <translation type="obsolete">Connessione in corso, attendere..</translation>
+        <translation>Connessione in corso, attendere..</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="250"/>
         <source>&lt;P&gt;Unable to set up the Bluetooth connection.</source>
-        <translation type="obsolete">&lt;P&gt;Impossibile stabilire connessione bluetooth..</translation>
+        <translation>&lt;P&gt;Impossibile stabilire connessione bluetooth..</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="285"/>
         <source>Transfer Error</source>
-        <translation type="obsolete">Errore di Trasferimento!</translation>
+        <translation>Errore di Trasferimento!</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="286"/>
         <source>&lt;P&gt;The selected device does not allow file transfer requests.</source>
-        <translation type="obsolete">&lt;P&gt;Il dispositivo selezionato non consente richieste di trasferimento.</translation>
+        <translation>&lt;P&gt;Il dispositivo selezionato non consente richieste di trasferimento.</translation>
     </message>
     <message>
+        <location filename="../bluetooth/filepush/bluetoothfilesendservice.cpp" line="332"/>
         <source>&lt;P&gt;Could not connect to the selected bluetooth device. Make sure the selected device is turned on and within range.</source>
-        <translation type="obsolete">&lt;P&gt;Impossibile collegarsi al dispositivo selezionato. Assicurati che esso sia acceso ovvero a portata.</translation>
-    </message>
-</context>
-<context>
-    <name>SessionedIrObexClient</name>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="185"/>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="202"/>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="231"/>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="269"/>
-        <source>Infrared Error</source>
-        <translation>Errore Infrarossi</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="186"/>
-        <source>&lt;P&gt;The Infrared device is currently unavailable.</source>
-        <translation>&lt;P&gt;Il dispositivo ad Infrarossi non é disponibile.</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="191"/>
-        <source>Beam File</source>
-        <translation>Invia file..</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="192"/>
-        <source>&lt;P&gt;Please align the infrared receivers and press OK when ready.</source>
-        <translation>&lt;P&gt;Allinea i dispositivi e premi OK quando pronto..</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="203"/>
-        <source>&lt;P&gt;There was an error while using the infrared device.</source>
-        <translation>&lt;P&gt;Si é verificato un errore durante l&apos;utilizzo del dispositivo ad Infrarossi</translation>
-    </message>
-    <message>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="232"/>
-        <location filename="../infrared/beaming/irfilesendservice.cpp" line="270"/>
-        <source>&lt;P&gt;Could not connect to the other device. Make sure the Infrared ports are aligned and the other device&apos;s Infrared capabilities are turned on.</source>
-        <translation>&lt;P&gt;Connessione non riuscita. Assicurati di aver ben allineato le porte dei dispositivi ad infrarossi che desideri mettere in comunicazione, e che entrambi abbiano il servizio Infrarossi attivo. Grazie. </translation>
+        <translation>&lt;P&gt;Impossibile collegarsi al dispositivo selezionato. Assicurati che esso sia acceso ovvero a portata.</translation>
     </message>
 </context>
 <context>
@@ -2561,7 +2378,7 @@ Please recharge now!</source>
     <message>
         <location filename="../processctrl/terminationhandler/terminationhandlerdlg.cpp" line="56"/>
         <source>Application terminated</source>
-        <translation>Applicazione terminata</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../processctrl/terminationhandler/terminationhandlerdlg.cpp" line="63"/>
@@ -2590,7 +2407,7 @@ Please recharge now!</source>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="642"/>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1829"/>
         <source>Send Busy</source>
-        <translation>Richiamami dopo</translation>
+        <translation>Sono Occupato</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="647"/>
@@ -2676,31 +2493,31 @@ Please recharge now!</source>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1180"/>
         <source>Unknown caller</source>
-        <translation>Numero sconosciuto</translation>
+        <translation>ID Sconosciuto</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1191"/>
         <source>Connected</source>
         <comment>call state</comment>
-        <translation>Connesso. Dialogo in corso..</translation>
+        <translation>Connesso</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1195"/>
         <source>Hold</source>
         <comment>call state</comment>
-        <translation>Chiamata in Pausa..</translation>
+        <translation>In Pausa..</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1204"/>
         <source>Dialing</source>
         <comment>call state</comment>
-        <translation>Connessione in corso..</translation>
+        <translation>Connessione..</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1209"/>
         <source>Incoming</source>
         <comment>call state</comment>
-        <translation>Chiamata in corso..</translation>
+        <translation>In arrivo..</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1216"/>
@@ -2718,7 +2535,7 @@ Please recharge now!</source>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1234"/>
         <source> (Disconnected)</source>
         <comment>describing call state, make sure keeping the space in the beginning</comment>
-        <translation> (Chiamata conclusa)</translation>
+        <translation> (Disconnesso)</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1265"/>
@@ -2739,7 +2556,7 @@ Please recharge now!</source>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1318"/>
         <source>Hold attempt failed</source>
-        <translation>Tentativo di mettere in pausa fallito</translation>
+        <translation>Tentativo di messa in pausa fallito</translation>
     </message>
     <message>
         <location filename="../phone/callscreen/themed/callscreen.cpp" line="1320"/>
@@ -2857,29 +2674,6 @@ Please recharge now!</source>
         <location filename="../comm/usbgadget/usbgadgettask.cpp" line="273"/>
         <source>USB Connection Mode</source>
         <translation>Modalità di connessione USB</translation>
-    </message>
-</context>
-<context>
-    <name>VoIPManager</name>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="79"/>
-        <source>VoIP</source>
-        <translation>VoIP</translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="124"/>
-        <source>No VoIP network</source>
-        <translation>Nessuna rete VoIP</translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="131"/>
-        <source>Searching VoIP network</source>
-        <translation>Ricerca rete VoIP</translation>
-    </message>
-    <message>
-        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="134"/>
-        <source>VoIP Authentication Failed</source>
-        <translation>Accesso VoIP fallito!</translation>
     </message>
 </context>
 <context>

@@ -134,12 +134,12 @@
     <message>
         <location filename="emailhandler.cpp" line="115"/>
         <source>Unable to transmit message with invalid address parameters.</source>
-        <translation>Non posso mandare messaggi che non abbiano un indirizzo di destinazione valido.</translation>
+        <translation>Non posso mandare messaggi che non abbiano un indirizzo ricevente valido.</translation>
     </message>
     <message>
         <location filename="emailhandler.cpp" line="185"/>
         <source>SMS</source>
-        <translation>SMS</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="emailhandler.cpp" line="193"/>

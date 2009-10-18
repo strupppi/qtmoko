@@ -121,7 +121,7 @@
         <location filename="config.cpp" line="474"/>
         <source>IP settings such as DNS, gateway, broadcast and subnet details.</source>
         <oldsource>Impostazioni per gli indirizzi IP, come servers DNS, gateway etc..</oldsource>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="config.cpp" line="478"/>
@@ -194,7 +194,7 @@
         <location filename="roamingconfig.cpp" line="143"/>
         <source>Moving %1</source>
         <comment>%1=essid</comment>
-        <translation>Mi connetto a %1..</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="roamingconfig.cpp" line="150"/>
@@ -354,7 +354,7 @@
         <location filename="wirelessbase.ui" line="39"/>
         <location filename="wirelessbase.ui" line="46"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="wirelessbase.ui" line="87"/>
