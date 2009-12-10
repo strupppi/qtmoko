@@ -59,6 +59,18 @@ bool NeoMultiplexerPlugin::detect( QSerialIODevice *device )
 {
     qLog(Hardware) << __PRETTY_FUNCTION__;
 
+    // Power on modem via sysfs
+    if(f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        f.write("0");
+        f.close();
+    }
+    if(f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        f.write("1");
+        f.close();
+    } else {
+        qWarning() << "Modem power on failed "<< f.errorString();
+    }
+    
     // The FIC needs a special line discipline set on the device.
     QSerialPort *port = qobject_cast<QSerialPort *>( device );
     if (port) {
@@ -105,11 +117,11 @@ bool NeoMultiplexerPlugin::detect( QSerialIODevice *device )
     QSerialIODeviceMultiplexer::chat(device, "ATE0");
     device->readAll();
 
-    if (isFreerunner) {
-        // Issue the AT+CMUX command to determine if this device
-        // uses GSM 07.10-style multiplexing.
-        return QGsm0710Multiplexer::cmuxChat( device, NEO_FRAME_SIZE, true );
-    }
+//     if (isFreerunner) {
+//         // Issue the AT+CMUX command to determine if this device
+//         // uses GSM 07.10-style multiplexing.
+//         return QGsm0710Multiplexer::cmuxChat( device, NEO_FRAME_SIZE, true );
+//     }
     return true;
 }
 
@@ -117,7 +129,7 @@ QSerialIODeviceMultiplexer *NeoMultiplexerPlugin::create( QSerialIODevice *devic
 {
     qLog(Hardware) << __PRETTY_FUNCTION__;
 
-    if (isFreerunner)
-        return new QGsm0710Multiplexer( device, NEO_FRAME_SIZE, true );
+//     if (isFreerunner)
+//         return new QGsm0710Multiplexer( device, NEO_FRAME_SIZE, true );
     return new QNullSerialIODeviceMultiplexer( device );
 }
