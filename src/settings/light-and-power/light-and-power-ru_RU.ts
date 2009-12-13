@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>LightSettings</name>
     <message>
-        <location filename="light.cpp" line="39"/>
+        <location filename="light.cpp" line="38"/>
         <source>Power Management</source>
         <translation>Управление питанием</translation>
     </message>
     <message>
-        <location filename="light.cpp" line="65"/>
+        <location filename="light.cpp" line="64"/>
         <source>Add to current profile</source>
         <translation>Добавить в текущий профиль</translation>
     </message>
@@ -37,27 +37,27 @@
         <translation>От зарядного устр.</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="143"/>
+        <location filename="lightsettingsbase.ui" line="122"/>
         <source>Brightness</source>
         <translation>Яркость</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="226"/>
+        <location filename="lightsettingsbase.ui" line="196"/>
         <source>Dim light</source>
         <translation>Уменьшать подсв.</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="236"/>
+        <location filename="lightsettingsbase.ui" line="231"/>
         <source>Display off</source>
         <translation>Откл. дисплей</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="246"/>
+        <location filename="lightsettingsbase.ui" line="266"/>
         <source>Suspend</source>
         <translation>Спящий режим</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="319"/>
+        <location filename="lightsettingsbase.ui" line="303"/>
         <source>Disable suspend while online</source>
         <translation>Откл. спящий режим, если онлайн</translation>
     </message>
@@ -65,7 +65,8 @@
 <context>
     <name>MinSecSpinBox</name>
     <message>
-        <location filename="minsecspinbox.cpp" line="57"/>
+        <location filename="minsecspinbox.cpp" line="41"/>
+        <location filename="minsecspinbox.cpp" line="55"/>
         <source>Off</source>
         <translation>Выкл.</translation>
     </message>

@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1">
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="helpbrowser.cpp" line="232"/>
+        <location filename="helpbrowser.cpp" line="153"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="helpbrowser.cpp" line="233"/>
+        <location filename="helpbrowser.cpp" line="154"/>
         <source>Move backward one page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="helpbrowser.cpp" line="238"/>
+        <location filename="helpbrowser.cpp" line="159"/>
         <source>Forward</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="helpbrowser.cpp" line="239"/>
+        <location filename="helpbrowser.cpp" line="160"/>
         <source>Move forward one page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="helpbrowser.cpp" line="244"/>
+        <location filename="helpbrowser.cpp" line="165"/>
         <source>Home</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="helpbrowser.cpp" line="245"/>
+        <location filename="helpbrowser.cpp" line="166"/>
         <source>Go to the home page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="helpbrowser.cpp" line="282"/>
+        <location filename="helpbrowser.cpp" line="182"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="helpbrowser.cpp" line="211"/>
         <source>Help Browser</source>
         <translation type="unfinished"></translation>
     </message>

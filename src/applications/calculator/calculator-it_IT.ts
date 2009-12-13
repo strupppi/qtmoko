@@ -124,9 +124,8 @@ decimal</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/phone.h" line="46"/>
         <source>Phone</source>
-        <translation>Telefono</translation>
+        <translation type="obsolete">Telefono</translation>
     </message>
 </context>
 <context>
@@ -134,7 +133,6 @@ decimal</source>
     <message>
         <location filename="calculator.cpp" line="112"/>
         <location filename="interfaces/simple.cpp" line="30"/>
-        <location filename="interfaces/simple.h" line="37"/>
         <source>Simple</source>
         <translation>Semplice</translation>
     </message>
@@ -292,11 +290,6 @@ decimal</source>
     <message>
         <location filename="interfaces/stdinputwidgets.cpp" line="201"/>
         <source>=</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/stdinputwidgets.h" line="69"/>
-        <source>Standard</source>
         <translation></translation>
     </message>
 </context>

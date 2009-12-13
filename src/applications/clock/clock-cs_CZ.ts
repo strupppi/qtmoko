@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="cs_CZ">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>Alarm</name>
     <message>
-        <location filename="alarm.cpp" line="120"/>
+        <location filename="alarm.cpp" line="177"/>
         <source>(Daily Alarm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarm.cpp" line="127"/>
         <source>Clock</source>
-        <translation>Hodiny</translation>
+        <translation type="obsolete">Hodiny</translation>
     </message>
     <message>
-        <location filename="alarm.cpp" line="256"/>
+        <location filename="alarm.cpp" line="119"/>
+        <source>Change</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarm.cpp" line="204"/>
+        <source>Snooze</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarm.cpp" line="315"/>
         <source>Every day</source>
         <translation>Každý den</translation>
     </message>
     <message>
-        <location filename="alarm.cpp" line="262"/>
+        <location filename="alarm.cpp" line="321"/>
         <source>Weekdays</source>
         <translation>Pracovní dny</translation>
     </message>
     <message>
-        <location filename="alarm.cpp" line="268"/>
+        <location filename="alarm.cpp" line="327"/>
         <source>Weekends</source>
         <translation>Víkendy</translation>
     </message>
     <message>
-        <location filename="alarm.cpp" line="320"/>
+        <location filename="alarm.cpp" line="378"/>
         <source>Set alarm days</source>
         <translation>Nastavit dny alarmu</translation>
     </message>
@@ -42,30 +51,57 @@
         <translation>Hodiny</translation>
     </message>
     <message>
-        <location filename="alarmbase.ui" line="34"/>
+        <location filename="alarmbase.ui" line="19"/>
         <source>Check to enable the daily alarm</source>
         <translation>Povolí denní budík</translation>
     </message>
     <message>
-        <location filename="alarmbase.ui" line="37"/>
+        <location filename="alarmbase.ui" line="22"/>
         <source>Alarm on</source>
         <comment>Activate Alarm</comment>
         <translation>Budík nastaven</translation>
     </message>
     <message>
-        <location filename="alarmbase.ui" line="71"/>
+        <location filename="alarmbase.ui" line="38"/>
         <source>Time:</source>
         <translation>Čas:</translation>
     </message>
     <message>
-        <location filename="alarmbase.ui" line="91"/>
+        <location filename="alarmbase.ui" line="75"/>
         <source>Days:</source>
         <translation>Dny:</translation>
     </message>
     <message>
-        <location filename="alarmbase.ui" line="117"/>
+        <location filename="alarmbase.ui" line="95"/>
+        <source>Snooze:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarmbase.ui" line="110"/>
+        <source> mins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Change...</source>
-        <translation>Změnit...</translation>
+        <translation type="obsolete">Změnit...</translation>
+    </message>
+</context>
+<context>
+    <name>AlarmDialog</name>
+    <message>
+        <location filename="alarm.cpp" line="52"/>
+        <source>Clock</source>
+        <translation type="unfinished">Hodiny</translation>
+    </message>
+    <message>
+        <location filename="alarm.cpp" line="53"/>
+        <source>Dismiss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarm.cpp" line="63"/>
+        <source>Snooze</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -76,6 +112,7 @@
         <translation>Hodiny</translation>
     </message>
     <message>
+        <location filename="clockbase.ui" line="96"/>
         <location filename="clockbase.ui" line="118"/>
         <source>...</source>
         <translation>...</translation>
@@ -84,22 +121,23 @@
 <context>
     <name>ClockMain</name>
     <message>
-        <location filename="clockmain.cpp" line="69"/>
+        <location filename="clockmain.cpp" line="53"/>
+        <location filename="clockmain.cpp" line="67"/>
         <source>Clock</source>
         <translation>Hodiny</translation>
     </message>
     <message>
-        <location filename="clockmain.cpp" line="56"/>
+        <location filename="clockmain.cpp" line="54"/>
         <source>Alarm</source>
         <translation>Budík</translation>
     </message>
     <message>
-        <location filename="clockmain.cpp" line="57"/>
+        <location filename="clockmain.cpp" line="55"/>
         <source>Stopwatch</source>
         <translation>Stopky</translation>
     </message>
     <message>
-        <location filename="clockmain.cpp" line="60"/>
+        <location filename="clockmain.cpp" line="58"/>
         <source>Set Time...</source>
         <translation>Nastavit čas...</translation>
     </message>
@@ -107,12 +145,12 @@
 <context>
     <name>StopWatch</name>
     <message>
-        <location filename="stopwatch.cpp" line="178"/>
+        <location filename="stopwatch.cpp" line="176"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="stopwatch.cpp" line="179"/>
+        <location filename="stopwatch.cpp" line="177"/>
         <source>Reset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -122,7 +160,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="stopwatch.cpp" line="240"/>
+        <location filename="stopwatch.cpp" line="196"/>
+        <location filename="stopwatch.cpp" line="242"/>
         <source>Lap/Split</source>
         <translation type="unfinished"></translation>
     </message>

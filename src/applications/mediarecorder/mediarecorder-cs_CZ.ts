@@ -1,75 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="cs_CZ">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>ConfigureRecorder</name>
     <message>
-        <location filename="confrecorder.cpp" line="71"/>
+        <location filename="confrecorder.cpp" line="59"/>
+        <source>Voice</source>
+        <translation type="unfinished">Hlas</translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="61"/>
+        <source>Music</source>
+        <translation type="unfinished">Hudba</translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="62"/>
+        <source>CD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="63"/>
+        <source>Custom</source>
+        <translation type="unfinished">Vlastní</translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="65"/>
+        <source>Quality</source>
+        <translation type="unfinished">Kvalita</translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="69"/>
+        <location filename="confrecorder.cpp" line="72"/>
+        <source>Mono</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="74"/>
+        <source>Stereo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="76"/>
+        <source>Channels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="80"/>
         <source>8 kHz</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="confrecorder.cpp" line="72"/>
+        <location filename="confrecorder.cpp" line="81"/>
         <source>11 kHz</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="confrecorder.cpp" line="73"/>
+        <location filename="confrecorder.cpp" line="82"/>
         <source>22 kHz</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="confrecorder.cpp" line="74"/>
+        <location filename="confrecorder.cpp" line="83"/>
         <source>44 kHz</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="88"/>
+        <source>Sample Rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="91"/>
+        <source>Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="confrecorder.cpp" line="97"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ConfigureRecorderBase</name>
     <message>
-        <location filename="confrecorderbase.ui" line="16"/>
         <source>Quality</source>
-        <translation>Kvalita</translation>
+        <translation type="obsolete">Kvalita</translation>
     </message>
     <message>
-        <location filename="confrecorderbase.ui" line="45"/>
         <source>Voice</source>
-        <translation>Hlas</translation>
+        <translation type="obsolete">Hlas</translation>
     </message>
     <message>
-        <location filename="confrecorderbase.ui" line="55"/>
         <source>Music</source>
-        <translation>Hudba</translation>
+        <translation type="obsolete">Hudba</translation>
     </message>
     <message>
-        <location filename="confrecorderbase.ui" line="62"/>
-        <source>CD</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="confrecorderbase.ui" line="69"/>
         <source>Custom</source>
-        <translation>Vlastní</translation>
+        <translation type="obsolete">Vlastní</translation>
     </message>
     <message>
-        <location filename="confrecorderbase.ui" line="96"/>
-        <source>Mono</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="confrecorderbase.ui" line="103"/>
-        <source>Stereo</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="confrecorderbase.ui" line="121"/>
         <source>Sample Rate:</source>
-        <translation>Vzorkovací frekvence:</translation>
+        <translation type="obsolete">Vzorkovací frekvence:</translation>
     </message>
     <message>
-        <location filename="confrecorderbase.ui" line="141"/>
         <source>Format:</source>
-        <translation>Formát:</translation>
+        <translation type="obsolete">Formát:</translation>
     </message>
 </context>
 <context>
@@ -80,93 +115,86 @@
         <translation>Hlasové poznámky</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="208"/>
-        <source>%1 kHz Mono - %2</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="mediarecorder.cpp" line="210"/>
-        <source>%1 kHz Stereo - %2</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="mediarecorder.cpp" line="276"/>
+        <location filename="mediarecorder.cpp" line="235"/>
         <source>%1 days</source>
         <translation>%1 dní</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="279"/>
+        <location filename="mediarecorder.cpp" line="237"/>
         <source>%1 days %2 hrs</source>
         <translation>%1 dní %2 hod.</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="284"/>
+        <location filename="mediarecorder.cpp" line="243"/>
         <source>%1 hrs</source>
         <translation>%1 hod.</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="287"/>
+        <location filename="mediarecorder.cpp" line="245"/>
         <source>%1 hrs %2 mins</source>
         <translation>%1 hod. %2 min.</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="292"/>
+        <location filename="mediarecorder.cpp" line="251"/>
         <source>%1 mins</source>
         <translation>%1 min.</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="294"/>
+        <location filename="mediarecorder.cpp" line="253"/>
         <source>%1 mins %2 secs</source>
         <translation>%1 min. %2 sek.</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="297"/>
+        <location filename="mediarecorder.cpp" line="256"/>
         <source>%1 secs</source>
         <translation>%1 sek.</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="329"/>
-        <source>%1 %2</source>
-        <comment>date,time</comment>
-        <translation></translation>
+        <location filename="mediarecorder.cpp" line="275"/>
+        <source>Voice, %1</source>
+        <comment>date</comment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="899"/>
+        <location filename="mediarecorder.cpp" line="417"/>
+        <location filename="mediarecorder.cpp" line="672"/>
+        <location filename="mediarecorder.cpp" line="863"/>
         <source>Record</source>
         <translation>Nahrát</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="652"/>
+        <location filename="mediarecorder.cpp" line="601"/>
         <source>No plugin found</source>
         <translation>Nenalezen žádný plugin</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="655"/>
+        <location filename="mediarecorder.cpp" line="602"/>
         <source>&lt;qt&gt;Voice Recorder was unable to locate a suitable plugin to record in the selected format.&lt;/qt&gt;</source>
         <translation>&lt;qt&gt;Hlasový záznamník nebyl schopen nalézt použitelný plugin k nahrávání ve zvoleném formátu.&lt;/qt&gt;</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="726"/>
+        <location filename="mediarecorder.cpp" line="675"/>
         <source>Play</source>
         <translation>Přehrát</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="903"/>
+        <location filename="mediarecorder.cpp" line="678"/>
+        <location filename="mediarecorder.cpp" line="867"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="786"/>
+        <location filename="mediarecorder.cpp" line="754"/>
         <source>Busy serving previous request</source>
         <translation>Zaneprázdněn vykonáním předchozího požadavku</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="879"/>
+        <location filename="mediarecorder.cpp" line="843"/>
         <source>Settings...</source>
         <translation>Nastavení...</translation>
     </message>
     <message>
-        <location filename="mediarecorder.cpp" line="881"/>
+        <location filename="mediarecorder.cpp" line="845"/>
         <source>Configure the recording quality settings.</source>
         <translation>Nastavte kvalitu nahrávání.</translation>
     </message>
@@ -184,37 +212,28 @@
         <translation>Nahrát</translation>
     </message>
     <message>
-        <location filename="mediarecorderbase.ui" line="92"/>
         <source>Quality</source>
-        <translation>Kvalita</translation>
+        <translation type="obsolete">Kvalita</translation>
     </message>
     <message>
-        <location filename="mediarecorderbase.ui" line="105"/>
         <source>Voice</source>
-        <translation>Hlas</translation>
+        <translation type="obsolete">Hlas</translation>
     </message>
     <message>
-        <location filename="mediarecorderbase.ui" line="110"/>
         <source>Music</source>
-        <translation>Hudba</translation>
+        <translation type="obsolete">Hudba</translation>
     </message>
     <message>
-        <location filename="mediarecorderbase.ui" line="115"/>
-        <source>CD</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="mediarecorderbase.ui" line="120"/>
         <source>Custom</source>
-        <translation>Vlastní</translation>
+        <translation type="obsolete">Vlastní</translation>
     </message>
     <message>
-        <location filename="mediarecorderbase.ui" line="149"/>
+        <location filename="mediarecorderbase.ui" line="92"/>
         <source>Storage Location</source>
         <translation>Umístění úložiště</translation>
     </message>
     <message>
-        <location filename="mediarecorderbase.ui" line="176"/>
+        <location filename="mediarecorderbase.ui" line="112"/>
         <source>Max Time:</source>
         <translation>Max. čas:</translation>
     </message>

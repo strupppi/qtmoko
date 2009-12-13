@@ -1,110 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>Security</name>
     <message>
-        <location filename="security.cpp" line="137"/>
+        <location filename="security.cpp" line="135"/>
         <source>Success</source>
         <translation>Выполнено</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="137"/>
+        <location filename="security.cpp" line="135"/>
         <source>&lt;p&gt;Successfully changed PIN.</source>
         <translation>&lt;p&gt;PIN успешно изменен.</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="149"/>
+        <location filename="security.cpp" line="137"/>
+        <location filename="security.cpp" line="147"/>
         <source>Failure</source>
         <translation>Неудача</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="139"/>
+        <location filename="security.cpp" line="137"/>
         <source>&lt;p&gt;Could not change PIN.</source>
         <translation>&lt;p&gt;Невозможно сменить PIN.</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="149"/>
+        <location filename="security.cpp" line="147"/>
         <source>&lt;p&gt;Could not change protection state.</source>
         <translation>&lt;p&gt;Невозможно сменить состояние защиты.</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="174"/>
+        <location filename="security.cpp" line="171"/>
         <source>Set code</source>
         <translation>Установить код</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="174"/>
+        <location filename="security.cpp" line="172"/>
         <source>Change code</source>
         <translation>Сменить код</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="188"/>
+        <location filename="security.cpp" line="186"/>
         <source>Enter SIM PIN</source>
         <translation>Введите SIM PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="190"/>
+        <location filename="security.cpp" line="188"/>
         <source>Enter Phone PIN</source>
         <translation>Введите PIN телефона</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="220"/>
+        <location filename="security.cpp" line="218"/>
         <source>Enter Security passcode</source>
         <translation>Введите пароль безопасности</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="222"/>
+        <location filename="security.cpp" line="220"/>
         <source>Passcode incorrect</source>
         <translation>Неверный пароль</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="223"/>
+        <location filename="security.cpp" line="221"/>
         <source>&lt;qt&gt;The passcode entered is incorrect. Access denied&lt;/qt&gt;</source>
         <translation>&lt;qt&gt;Введен неверный пароль. Доступ запрещен&lt;/qt&gt;</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="284"/>
+        <location filename="security.cpp" line="282"/>
         <source>Enter current PIN</source>
         <translation>Введите текущий PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="290"/>
+        <location filename="security.cpp" line="288"/>
         <source>Mismatch: Retry new PIN</source>
         <translation>Несоответствие: Повторите новый PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="292"/>
+        <location filename="security.cpp" line="290"/>
         <source>Invalid: Retry new PIN</source>
         <translation>Неверно: Повторите новый PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="294"/>
+        <location filename="security.cpp" line="292"/>
         <source>Enter new PIN</source>
         <translation>Введите новый PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="298"/>
+        <location filename="security.cpp" line="296"/>
         <source>Mismatch: Retry new code</source>
         <translation>Несоответствие: Повторите новый код</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="300"/>
+        <location filename="security.cpp" line="298"/>
         <source>Invalid: Retry new code</source>
         <translation>Неверно: Повторите новый код</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="302"/>
+        <location filename="security.cpp" line="300"/>
         <source>Enter new passcode</source>
         <translation>Введите новый пароль</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="315"/>
+        <location filename="security.cpp" line="313"/>
         <source>Re-enter new PIN</source>
         <translation>Введите новый PIN еще раз</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="317"/>
+        <location filename="security.cpp" line="315"/>
         <source>Re-enter new passcode</source>
         <translation>Введите новый пароль еще раз</translation>
     </message>
@@ -112,6 +113,7 @@
 <context>
     <name>SecurityBase</name>
     <message>
+        <location filename="securitybase.ui" line="13"/>
         <location filename="securityphone.ui" line="13"/>
         <source>Security</source>
         <translation>Безопасность</translation>
@@ -132,6 +134,7 @@
         <translation>PIN телефона</translation>
     </message>
     <message>
+        <location filename="securitybase.ui" line="61"/>
         <location filename="securityphone.ui" line="65"/>
         <source>Pass code protection provides a minimal level of protection from casual access to this device.</source>
         <translation>Защита паролем дает минимальный уровень защиты от случайного доступа к устройству.</translation>
@@ -175,7 +178,7 @@
 <context>
     <name>WaitScreen</name>
     <message>
-        <location filename="security.cpp" line="48"/>
+        <location filename="security.cpp" line="46"/>
         <source>Please wait ...</source>
         <translation>Пожалуйста, подождите...</translation>
     </message>

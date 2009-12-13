@@ -688,12 +688,12 @@
     </message>
 </context>
 <context>
-    <name>QNetworkConnection::Identity</name>
+    <name>QNetworkConnection</name>
     <message>
         <location filename="network/qnetworkconnection.cpp" line="232"/>
         <source>WLAN: %1</source>
         <comment>%1 name of WLAN ESSID</comment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -1,110 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="cs_CZ">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>Security</name>
     <message>
-        <location filename="security.cpp" line="137"/>
+        <location filename="security.cpp" line="135"/>
         <source>Success</source>
         <translation>Úspěch</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="137"/>
+        <location filename="security.cpp" line="135"/>
         <source>&lt;p&gt;Successfully changed PIN.</source>
         <translation>&lt;p&gt;PIN úspěšně změněn.</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="149"/>
+        <location filename="security.cpp" line="137"/>
+        <location filename="security.cpp" line="147"/>
         <source>Failure</source>
         <translation>Selhání</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="139"/>
+        <location filename="security.cpp" line="137"/>
         <source>&lt;p&gt;Could not change PIN.</source>
         <translation>&lt;p&gt;Nemohu změnit PIN.</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="149"/>
+        <location filename="security.cpp" line="147"/>
         <source>&lt;p&gt;Could not change protection state.</source>
         <translation>&lt;p&gt;Nemohu změnit stav ochrany.</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="174"/>
+        <location filename="security.cpp" line="171"/>
         <source>Set code</source>
         <translation>Nastavit kód</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="174"/>
+        <location filename="security.cpp" line="172"/>
         <source>Change code</source>
         <translation>Změnit kód</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="188"/>
+        <location filename="security.cpp" line="186"/>
         <source>Enter SIM PIN</source>
         <translation>Zadejte SIM PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="190"/>
+        <location filename="security.cpp" line="188"/>
         <source>Enter Phone PIN</source>
         <translation>Zadejte PIN telefonu</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="220"/>
+        <location filename="security.cpp" line="218"/>
         <source>Enter Security passcode</source>
         <translation>Zadejte bezpečnostní heslo</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="222"/>
+        <location filename="security.cpp" line="220"/>
         <source>Passcode incorrect</source>
         <translation>Nesprávné heslo</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="223"/>
+        <location filename="security.cpp" line="221"/>
         <source>&lt;qt&gt;The passcode entered is incorrect. Access denied&lt;/qt&gt;</source>
         <translation>&lt;qt&gt;Zadané heslo je nesprávné. Přístup zamítnut&lt;/qt&gt;</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="284"/>
+        <location filename="security.cpp" line="282"/>
         <source>Enter current PIN</source>
         <translation>Vlože aktuální PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="290"/>
+        <location filename="security.cpp" line="288"/>
         <source>Mismatch: Retry new PIN</source>
         <translation>Neshodný: Opakujte nový PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="292"/>
+        <location filename="security.cpp" line="290"/>
         <source>Invalid: Retry new PIN</source>
         <translation>Chybný: Opakujte nový PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="294"/>
+        <location filename="security.cpp" line="292"/>
         <source>Enter new PIN</source>
         <translation>Zadejte nový PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="298"/>
+        <location filename="security.cpp" line="296"/>
         <source>Mismatch: Retry new code</source>
         <translation>Neshodný: Opakujte nový kód</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="300"/>
+        <location filename="security.cpp" line="298"/>
         <source>Invalid: Retry new code</source>
         <translation>Chybný: Opakujte nový kód</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="302"/>
+        <location filename="security.cpp" line="300"/>
         <source>Enter new passcode</source>
         <translation>Zadejte nové heslo</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="315"/>
+        <location filename="security.cpp" line="313"/>
         <source>Re-enter new PIN</source>
         <translation>Zadejte znovu nový PIN</translation>
     </message>
     <message>
-        <location filename="security.cpp" line="317"/>
+        <location filename="security.cpp" line="315"/>
         <source>Re-enter new passcode</source>
         <translation>Zadejte znovu nové heslo</translation>
     </message>
@@ -112,6 +113,7 @@
 <context>
     <name>SecurityBase</name>
     <message>
+        <location filename="securitybase.ui" line="13"/>
         <location filename="securityphone.ui" line="13"/>
         <source>Security</source>
         <translation>Bezpečnost</translation>
@@ -132,6 +134,7 @@
         <translation>Vyčistit</translation>
     </message>
     <message>
+        <location filename="securitybase.ui" line="61"/>
         <location filename="securityphone.ui" line="65"/>
         <source>Pass code protection provides a minimal level of protection from casual access to this device.</source>
         <translation>Ochrana heslem přináší minimální stupeň ochrany před náhodným přístupem k zařízení.</translation>
@@ -175,7 +178,7 @@
 <context>
     <name>WaitScreen</name>
     <message>
-        <location filename="security.cpp" line="48"/>
+        <location filename="security.cpp" line="46"/>
         <source>Please wait ...</source>
         <translation>Čekejte prosím...</translation>
     </message>

@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="cs_CZ">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="calculator.cpp" line="54"/>
+        <location filename="calculator.cpp" line="52"/>
         <source>Calculator</source>
         <comment>application header</comment>
         <translation>Kalkulačka</translation>
     </message>
     <message>
-        <location filename="calculator.cpp" line="139"/>
+        <location filename="calculator.cpp" line="137"/>
         <source>Clear All</source>
         <translation>Vymazat vše</translation>
     </message>
     <message>
-        <location filename="calculator.cpp" line="145"/>
+        <location filename="calculator.cpp" line="140"/>
+        <source>Change sign</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="calculator.cpp" line="148"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="calculator.cpp" line="146"/>
+        <location filename="calculator.cpp" line="149"/>
         <source>Copy the last result.</source>
         <translation>Kopírovat poslední  výsledek.</translation>
     </message>
     <message>
-        <location filename="calculator.cpp" line="150"/>
+        <location filename="calculator.cpp" line="153"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="calculator.cpp" line="151"/>
+        <location filename="calculator.cpp" line="154"/>
         <source>Paste clipboard.</source>
         <translation>Vložit ze schránky.</translation>
     </message>
@@ -38,7 +43,7 @@
 <context>
     <name>DecimalInputWidget</name>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="297"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="258"/>
         <source>.</source>
         <comment>decimal point</comment>
         <translation></translation>
@@ -47,57 +52,57 @@
 <context>
     <name>Engine</name>
     <message>
-        <location filename="engine.cpp" line="610"/>
+        <location filename="engine.cpp" line="607"/>
         <source>Not a number</source>
         <translation>Není číslo</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="614"/>
+        <location filename="engine.cpp" line="611"/>
         <source>Negative infinity</source>
         <translation>Mínus nekonečno</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="618"/>
+        <location filename="engine.cpp" line="615"/>
         <source>Infinity</source>
         <translation>Nekonečno</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="622"/>
+        <location filename="engine.cpp" line="619"/>
         <source>Input is not a positive number</source>
         <translation>Vstup není kladné číslo</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="626"/>
+        <location filename="engine.cpp" line="623"/>
         <source>Not an integer</source>
         <translation>Není celé číslo</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="630"/>
+        <location filename="engine.cpp" line="627"/>
         <source>Out of range</source>
         <translation>Mimo rozsah</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="634"/>
+        <location filename="engine.cpp" line="631"/>
         <source>Divide by zero error</source>
         <translation>Chyba dělení nulou</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="638"/>
+        <location filename="engine.cpp" line="635"/>
         <source>Not solvable</source>
         <translation>Neřešitelné</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="642"/>
+        <location filename="engine.cpp" line="639"/>
         <source>No data factory found</source>
         <translation>Nenalezena žádný nástroj ke zpracování</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="645"/>
+        <location filename="engine.cpp" line="642"/>
         <source>Calc surpasses limit</source>
         <translation>Kalkulačka překročila omezení</translation>
     </message>
     <message>
-        <location filename="engine.cpp" line="655"/>
+        <location filename="engine.cpp" line="653"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
@@ -105,231 +110,95 @@
 <context>
     <name>FormAdvanced</name>
     <message>
-        <location filename="interfaces/advanced.cpp" line="96"/>
         <source>The scientific calculator plugin provides the most comprehensive interface. Many buttons have a second mode which can be activated via &lt;b&gt;INV&lt;/b&gt;.</source>
-        <translation>Zásuvný modul vědecké kalkulačky poskytuje nejúplnější rozhraní. Mnoho tlačítek má sekundární mód, který můžete aktivovat pomocí &lt;b&gt;INV&lt;/b&gt;.</translation>
+        <translation type="obsolete">Zásuvný modul vědecké kalkulačky poskytuje nejúplnější rozhraní. Mnoho tlačítek má sekundární mód, který můžete aktivovat pomocí &lt;b&gt;INV&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="interfaces/advanced.cpp" line="115"/>
-        <source>Deg</source>
-        <comment>Degree mode</comment>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="117"/>
         <source>Calculate in degree mode</source>
-        <translation>Počítat ve stupních</translation>
+        <translation type="obsolete">Počítat ve stupních</translation>
     </message>
     <message>
-        <location filename="interfaces/advanced.cpp" line="118"/>
-        <source>Rad</source>
-        <comment>Radian mode</comment>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="120"/>
         <source>Calculate in radian mode</source>
-        <translation>Počítat v radiánech</translation>
+        <translation type="obsolete">Počítat v radiánech</translation>
     </message>
     <message>
-        <location filename="interfaces/advanced.cpp" line="121"/>
-        <source>Gra</source>
-        <comment>Gradian mode</comment>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="123"/>
         <source>Calculate in gradian mode</source>
-        <translation>Počítat v gradiánech</translation>
+        <translation type="obsolete">Počítat v gradiánech</translation>
     </message>
     <message>
-        <location filename="interfaces/advanced.cpp" line="142"/>
-        <source>M+</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="146"/>
-        <source>MR</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="150"/>
-        <source>MC</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="154"/>
-        <source>CE/C</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="170"/>
-        <source>Pi</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="174"/>
-        <source>e</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="422"/>
-        <source>Sin</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="423"/>
-        <source>Cos</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="424"/>
         <source>Tan</source>
-        <translation>Tg</translation>
+        <translation type="obsolete">Tg</translation>
     </message>
     <message>
-        <location filename="interfaces/advanced.cpp" line="190"/>
-        <source>n!</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="197"/>
-        <source>INV</source>
-        <comment>inverse mode</comment>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="210"/>
-        <source>Log</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="418"/>
-        <source>ASin</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="419"/>
-        <source>ACos</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.cpp" line="420"/>
-        <source>ATan</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/advanced.h" line="80"/>
         <source>Scientific</source>
-        <translation>Vědecká</translation>
+        <translation type="obsolete">Vědecká</translation>
     </message>
 </context>
 <context>
     <name>FormConversion</name>
     <message>
-        <location filename="interfaces/conversion.cpp" line="60"/>
-        <source>CE/C</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/conversion.cpp" line="76"/>
         <source>Temperature</source>
-        <translation>Teplota</translation>
+        <translation type="obsolete">Teplota</translation>
     </message>
     <message>
-        <location filename="interfaces/conversion.cpp" line="91"/>
-        <source>fahrenheit</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/conversion.cpp" line="101"/>
-        <source>celcius</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/conversion.cpp" line="111"/>
-        <source>kelvin</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/conversion.h" line="91"/>
         <source>Conversion</source>
-        <translation>Převod</translation>
+        <translation type="obsolete">Převod</translation>
     </message>
 </context>
 <context>
     <name>FormFraction</name>
     <message>
-        <location filename="interfaces/fraction.cpp" line="62"/>
-        <source>M+</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/fraction.cpp" line="66"/>
-        <source>MC</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/fraction.cpp" line="70"/>
-        <source>MR</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/fraction.cpp" line="74"/>
-        <source>CE</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="interfaces/fraction.h" line="39"/>
         <source>Fraction</source>
-        <translation>Zlomek</translation>
+        <translation type="obsolete">Zlomek</translation>
     </message>
 </context>
 <context>
     <name>FormPhone</name>
     <message>
-        <location filename="interfaces/phone.cpp" line="49"/>
+        <location filename="interfaces/phone.cpp" line="40"/>
+        <location filename="interfaces/phone.cpp" line="47"/>
         <source>*
 decimal</source>
         <translation>*
 desítkově</translation>
     </message>
     <message>
-        <location filename="interfaces/phone.cpp" line="50"/>
+        <location filename="interfaces/phone.cpp" line="41"/>
+        <location filename="interfaces/phone.cpp" line="48"/>
         <source>#
 + - x /</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/phone.h" line="48"/>
         <source>Phone</source>
-        <translation>Telefon</translation>
+        <translation type="obsolete">Telefon</translation>
     </message>
 </context>
 <context>
     <name>FormSimple</name>
     <message>
-        <location filename="interfaces/simple.h" line="38"/>
+        <location filename="calculator.cpp" line="112"/>
+        <location filename="interfaces/simple.cpp" line="30"/>
         <source>Simple</source>
         <translation>Jednoduchý</translation>
     </message>
     <message>
-        <location filename="interfaces/simple.cpp" line="54"/>
+        <location filename="interfaces/simple.cpp" line="52"/>
         <source>M+</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/simple.cpp" line="58"/>
+        <location filename="interfaces/simple.cpp" line="56"/>
         <source>MC</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/simple.cpp" line="62"/>
+        <location filename="interfaces/simple.cpp" line="60"/>
         <source>MR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/simple.cpp" line="66"/>
+        <location filename="interfaces/simple.cpp" line="64"/>
         <source>CE/C</source>
         <translation></translation>
     </message>
@@ -337,7 +206,7 @@ desítkově</translation>
 <context>
     <name>FractionInputWidget</name>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="327"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="284"/>
         <source>/</source>
         <comment>separator numerator - denominator</comment>
         <translation></translation>
@@ -389,96 +258,95 @@ desítkově</translation>
 <context>
     <name>InputWidget</name>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="29"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="27"/>
         <source>Click to enter digit or operator</source>
         <translation>Kliknutím vložte číslici nebo znaménko</translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="125"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="123"/>
         <source>7</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="130"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="128"/>
         <source>4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="135"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="133"/>
         <source>1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="140"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="138"/>
         <source>0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="151"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="149"/>
         <source>8</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="156"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="154"/>
         <source>5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="161"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="159"/>
         <source>2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="167"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="165"/>
         <source>x</source>
         <comment>times</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="172"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="170"/>
         <source>9</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="177"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="175"/>
         <source>6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="182"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="180"/>
         <source>3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="187"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="185"/>
         <source>+/-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="193"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="191"/>
         <source>-</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="198"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="196"/>
         <source>+</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.cpp" line="203"/>
+        <location filename="interfaces/stdinputwidgets.cpp" line="201"/>
         <source>=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="interfaces/stdinputwidgets.h" line="71"/>
         <source>Standard</source>
-        <translation>Standratní</translation>
+        <translation type="obsolete">Standratní</translation>
     </message>
 </context>
 <context>
     <name>MyLcdDisplay</name>
     <message>
-        <location filename="display.cpp" line="34"/>
+        <location filename="display.cpp" line="33"/>
         <source>Displays the current input or result</source>
         <translation>Zobrazí aktuální vstup nebo výsledek</translation>
     </message>

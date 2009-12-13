@@ -1,77 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de_DE">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE">
 <context>
     <name>Categories</name>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="1"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="1"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="2"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="2"/>
         <source>Certificate</source>
         <translation>Zertifikat</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="3"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="4"/>
         <source>Recordings</source>
         <translation>Aufnahmen</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="4"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="3"/>
         <source>Personal</source>
         <translation>Persönliches</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="5"/>
         <source>Games</source>
-        <translation>Spiele</translation>
+        <translation type="obsolete">Spiele</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="6"/>
         <source>Settings</source>
-        <translation>Einstellungen</translation>
+        <translation type="obsolete">Einstellungen</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="7"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="5"/>
         <source>Security Key</source>
         <translation>Sicherheitsschlüssel</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="8"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="6"/>
         <source>Unfiled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="9"/>
         <source>Installed Applications</source>
-        <translation>Installierte Anwendungen</translation>
+        <translation type="obsolete">Installierte Anwendungen</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="10"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="7"/>
         <source>Applications</source>
         <translation>Anwendungen</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="11"/>
         <source>MainApplications</source>
-        <translation>Hauptanwendungen</translation>
+        <translation type="obsolete">Hauptanwendungen</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="12"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="8"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="13"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="9"/>
         <source>Business</source>
         <translation>Geschäftlich</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr6022.cpp" line="14"/>
         <source>Programs</source>
-        <translation>Programme</translation>
+        <translation type="obsolete">Programme</translation>
     </message>
 </context>
 </TS>

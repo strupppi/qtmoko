@@ -4,14 +4,14 @@
 <context>
     <name>home</name>
     <message numerus="yes">
-        <location filename="tr1876.cpp" line="1"/>
+        <location filename="tr6203.cpp" line="1"/>
         <source>%1 missed</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="tr1876.cpp" line="2"/>
+        <location filename="tr6203.cpp" line="2"/>
         <source>%1 new</source>
         <translation type="unfinished">
             <numerusform></numerusform>

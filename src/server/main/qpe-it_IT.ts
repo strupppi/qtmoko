@@ -87,6 +87,29 @@
     </message>
 </context>
 <context>
+    <name>AsteriskManager</name>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="115"/>
+        <source>Asterisk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="185"/>
+        <source>No Asterisk network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="192"/>
+        <source>Searching for Asterisk network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="195"/>
+        <source>Asterisk Authentication Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BTPinHelper</name>
     <message>
         <location filename="../bluetooth/pinhelper/btpinhelper.cpp" line="94"/>
@@ -1160,6 +1183,29 @@ Premi sullo schermo per iniziare la configurazione del tuo cellulare..
     </message>
 </context>
 <context>
+    <name>JabberManager</name>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="79"/>
+        <source>Jabber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="127"/>
+        <source>No Jabber network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="134"/>
+        <source>Searching Jabber network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="137"/>
+        <source>Jabber Authentication Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LanguageSettings</name>
     <message>
         <location filename="../../settings/language/language.cpp" line="178"/>
@@ -1618,6 +1664,19 @@ Please recharge now!</source>
         <location filename="../processctrl/startup/preloadcrashdlg.cpp" line="45"/>
         <source>&lt;qt&gt;&lt;b&gt;%1&lt;/b&gt; was terminated due to application error.  (Fast loading has been disabled. Select application icon and activate FastLoad option to reenable it.)&lt;/qt&gt;</source>
         <translation>&lt;qt&gt;L&apos;applicazione &lt;b&gt;%1&lt;/b&gt; é stata chiusa a causa di un errore della stessa.  (Il caricamento veloce é stato disabilitato. Sarà necessario riabilitarlo in seguito..)&lt;/qt&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>PresenceEditor</name>
+    <message>
+        <location filename="../phone/ui/components/presenceeditor/presenceeditor.cpp" line="82"/>
+        <source>Select presence status.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/ui/components/presenceeditor/presenceeditor.cpp" line="115"/>
+        <source>No presence provider(s)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2674,6 +2733,29 @@ Please recharge now!</source>
         <location filename="../comm/usbgadget/usbgadgettask.cpp" line="273"/>
         <source>USB Connection Mode</source>
         <translation>Modalità di connessione USB</translation>
+    </message>
+</context>
+<context>
+    <name>VoIPManager</name>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="79"/>
+        <source>VoIP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="124"/>
+        <source>No VoIP network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="131"/>
+        <source>Searching VoIP network</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="134"/>
+        <source>VoIP Authentication Failed</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

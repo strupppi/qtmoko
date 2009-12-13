@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>TextCodecSelector</name>
     <message>
-        <location filename="textedit.cpp" line="664"/>
+        <location filename="textedit.cpp" line="600"/>
         <source>Automatic</source>
         <translation>Авто</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="668"/>
+        <location filename="textedit.cpp" line="604"/>
         <source>&lt;qt&gt;Choose the encoding for this file:&lt;/qt&gt;</source>
         <translation>&lt;qt&gt;Выберите кодировку для этого файла:&lt;/qt&gt;</translation>
     </message>
@@ -17,159 +17,161 @@
 <context>
     <name>TextEdit</name>
     <message>
-        <location filename="textedit.cpp" line="224"/>
+        <location filename="textedit.cpp" line="234"/>
         <source>New</source>
         <translation>Новый</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="226"/>
+        <location filename="textedit.cpp" line="236"/>
         <source>Create a document.</source>
         <translation>Создать документ.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="228"/>
+        <location filename="textedit.cpp" line="238"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="230"/>
+        <location filename="textedit.cpp" line="240"/>
         <source>Open a document.</source>
         <translation>Открыть документ.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="232"/>
+        <location filename="textedit.cpp" line="242"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="234"/>
+        <location filename="textedit.cpp" line="244"/>
         <source>Edit the document properties.</source>
         <translation>Редактировать свойства документа.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="237"/>
         <source>Cut</source>
-        <translation>Вырезать</translation>
+        <translation type="obsolete">Вырезать</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="239"/>
         <source>Cut the currently selected text and move it to the clipboard.</source>
-        <translation>Вырезать выделенный текст и переместить его в буфер обмена.</translation>
+        <translation type="obsolete">Вырезать выделенный текст и переместить его в буфер обмена.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="242"/>
         <source>Copy</source>
-        <translation>Копировать</translation>
+        <translation type="obsolete">Копировать</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="244"/>
         <source>Copy the currently selected text to the clipboard.</source>
-        <translation>Копировать выделенный текст в буфер обмена.</translation>
+        <translation type="obsolete">Копировать выделенный текст в буфер обмена.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="247"/>
         <source>Paste</source>
-        <translation>Вставить</translation>
+        <translation type="obsolete">Вставить</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="249"/>
         <source>Paste the text in the clipboard at the cursor position.</source>
-        <translation>Вставить текст из буфера обмена на позиции курсора.</translation>
+        <translation type="obsolete">Вставить текст из буфера обмена на позиции курсора.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="253"/>
+        <location filename="textedit.cpp" line="246"/>
         <source>Find</source>
         <translation>Найти</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="256"/>
+        <location filename="textedit.cpp" line="249"/>
         <source>Click to find text in the document.
 Click again to hide the search bar.</source>
         <translation>Нажмите, чтобы найти текст в документе.
 Нажмите еще раз, чтобы убрать панель поиска.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="258"/>
+        <location filename="textedit.cpp" line="251"/>
         <source>Zoom In</source>
         <translation>Увеличить</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="260"/>
+        <location filename="textedit.cpp" line="253"/>
         <source>Increase the font size.</source>
         <translation>Увеличить размер шрифта.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="262"/>
+        <location filename="textedit.cpp" line="255"/>
         <source>Zoom Out</source>
         <translation>Уменьшить</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="264"/>
+        <location filename="textedit.cpp" line="257"/>
         <source>Decrease the font size.</source>
         <translation>Уменьшить размер шрифта.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="266"/>
+        <location filename="textedit.cpp" line="259"/>
         <source>Wrap Lines</source>
         <translation>Перенос по словам</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="268"/>
+        <location filename="textedit.cpp" line="261"/>
         <source>Break long lines into two or more lines.</source>
         <translation>Разделять длинные строки на две и более строк.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="275"/>
+        <location filename="textedit.cpp" line="270"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="289"/>
+        <location filename="textedit.cpp" line="279"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="290"/>
+        <location filename="textedit.cpp" line="280"/>
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="463"/>
+        <location filename="textedit.cpp" line="538"/>
+        <source>Find: reached start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Out of space</source>
-        <translation>Нехватка пространства</translation>
+        <translation type="obsolete">Нехватка пространства</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="467"/>
         <source>&lt;qt&gt;Notes was unable to save your changes. Free some space and try again.&lt;br&gt;Continue anyway?&lt;/qt&gt;</source>
-        <translation>&lt;qt&gt;Невозможно сохранить Ваши изменения. Освободите пространство на носителе и попробуйте снова.&lt;br&gt;Все равно продолжить?&lt;/qt&gt;</translation>
+        <translation type="obsolete">&lt;qt&gt;Невозможно сохранить Ваши изменения. Освободите пространство на носителе и попробуйте снова.&lt;br&gt;Все равно продолжить?&lt;/qt&gt;</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="605"/>
+        <location filename="textedit.cpp" line="539"/>
         <source>Find: reached end</source>
         <translation>Поиск: достигнут конец</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="610"/>
+        <location filename="textedit.cpp" line="545"/>
         <source>Find: not found</source>
         <translation>Поиск: не найдено</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="731"/>
+        <location filename="textedit.cpp" line="667"/>
         <source>File Too Large</source>
         <translation>Файл слишком большой</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="732"/>
+        <location filename="textedit.cpp" line="668"/>
         <source>&lt;qt&gt;This file is too large for Notes to open.</source>
         <translation>&lt;qt&gt;Этот файл слишком большой для открытия.</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="814"/>
+        <location filename="textedit.cpp" line="731"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="textedit.cpp" line="761"/>
         <source>Empty Text</source>
         <translation>Пустой текст</translation>
     </message>
     <message>
-        <location filename="textedit.cpp" line="853"/>
+        <location filename="textedit.cpp" line="798"/>
         <source>Notes</source>
         <translation>Заметки</translation>
     </message>

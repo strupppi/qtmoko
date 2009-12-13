@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>AccountPage</name>
     <message>
-        <location filename="network/accountconfig.cpp" line="89"/>
+        <location filename="network/accountconfig.cpp" line="88"/>
         <source>&lt;Bluetooth disabled&gt;</source>
         <translation>&lt;Bluetooth отключен&gt;</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="203"/>
+        <location filename="network/accountconfig.cpp" line="202"/>
         <source>Account name:</source>
         <translation>Имя учетной записи:</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="209"/>
+        <location filename="network/accountconfig.cpp" line="208"/>
         <source>Startup mode:</source>
         <translation>Режим запуска:</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="212"/>
+        <location filename="network/accountconfig.cpp" line="211"/>
         <source>When needed</source>
         <translation>По необходимости</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="212"/>
+        <location filename="network/accountconfig.cpp" line="211"/>
         <source>Always online</source>
         <translation>Всегда включен</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="222"/>
+        <location filename="network/accountconfig.cpp" line="221"/>
         <source>Username:</source>
         <translation>Имя пользователя:</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="229"/>
+        <location filename="network/accountconfig.cpp" line="228"/>
         <source>Password:</source>
         <translation>Пароль:</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="238"/>
+        <location filename="network/accountconfig.cpp" line="237"/>
         <source>Bluetooth partner:</source>
         <translation>Bluetooth партнер:</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="269"/>
+        <location filename="network/accountconfig.cpp" line="268"/>
         <source>APN:</source>
         <comment>GPRS access point</comment>
         <translation>APN:</translation>
     </message>
     <message>
-        <location filename="network/accountconfig.cpp" line="282"/>
+        <location filename="network/accountconfig.cpp" line="281"/>
         <source>Dialup number:</source>
         <translation>Номер дозвона:</translation>
     </message>
@@ -58,249 +58,211 @@
 <context>
     <name>CertificateOpenVPNBase</name>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="13"/>
         <source>Authentication</source>
-        <translation>Аутентификация</translation>
+        <translation type="obsolete">Аутентификация</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="25"/>
         <source>Authentication mode:</source>
-        <translation>Ражим аутентификации:</translation>
+        <translation type="obsolete">Ражим аутентификации:</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="36"/>
         <source>None</source>
-        <translation>Нет</translation>
+        <translation type="obsolete">Нет</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="41"/>
         <source>Static key</source>
-        <translation>Статический ключ</translation>
+        <translation type="obsolete">Статический ключ</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="46"/>
         <source>SSL/TLS</source>
-        <translation>SSL/TLS</translation>
+        <translation type="obsolete">SSL/TLS</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="77"/>
         <source>Secret:</source>
-        <translation>Секретный ключ:</translation>
+        <translation type="obsolete">Секретный ключ:</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="147"/>
         <source>Certificate:</source>
-        <translation>Сертификат:</translation>
+        <translation type="obsolete">Сертификат:</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="248"/>
         <source>Private Key:</source>
-        <translation>Личный ключ:</translation>
+        <translation type="obsolete">Личный ключ:</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="326"/>
         <source>CA:</source>
-        <translation>CA:</translation>
+        <translation type="obsolete">CA:</translation>
     </message>
     <message>
-        <location filename="vpn/certificateopenvpnbase.ui" line="410"/>
         <source>TLS auth:</source>
-        <translation>TLS аутентификация:</translation>
+        <translation type="obsolete">TLS аутентификация:</translation>
     </message>
 </context>
 <context>
     <name>CertificateOpenVPNPage</name>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="125"/>
         <source>Unknown certificate</source>
-        <translation>Неизвестный сертификат</translation>
+        <translation type="obsolete">Неизвестный сертификат</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="127"/>
         <source>(%1, %2)</source>
         <comment>e.g. %1=company %2=location</comment>
-        <translation>(%1, %2)</translation>
+        <translation type="obsolete">(%1, %2)</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="188"/>
         <source>Invalid</source>
-        <translation>Неверный</translation>
+        <translation type="obsolete">Неверный</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="177"/>
         <source>Unknown key</source>
-        <translation>Неизвестный ключ</translation>
+        <translation type="obsolete">Неизвестный ключ</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="179"/>
         <source>%1, %2 bit</source>
         <comment>e.g.: RSA, 1024 bit</comment>
-        <translation>%1, %2 бит</translation>
+        <translation type="obsolete">%1, %2 бит</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="181"/>
         <source>RSA</source>
-        <translation>RSA</translation>
+        <translation type="obsolete">RSA</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="181"/>
         <source>DSA</source>
-        <translation>DSA</translation>
+        <translation type="obsolete">DSA</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="365"/>
         <source>&lt;None&gt;</source>
         <comment>no certificate/key selected</comment>
-        <translation>&lt;Нет&gt;</translation>
+        <translation type="obsolete">&lt;Нет&gt;</translation>
     </message>
 </context>
 <context>
     <name>DeviceOpenVPNBase</name>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="13"/>
         <source>Device</source>
-        <translation>Устройство</translation>
+        <translation type="obsolete">Устройство</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="33"/>
         <source>Protocol:</source>
-        <translation>Протокол:</translation>
+        <translation type="obsolete">Протокол:</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="43"/>
         <source>Device type:</source>
-        <translation>Тип устройства:</translation>
+        <translation type="obsolete">Тип устройства:</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="66"/>
         <source>Port:</source>
-        <translation>Порт:</translation>
+        <translation type="obsolete">Порт:</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="80"/>
         <source>UDP</source>
-        <translation>UDP</translation>
+        <translation type="obsolete">UDP</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="85"/>
         <source>TCP client</source>
-        <translation>TCP клиент</translation>
+        <translation type="obsolete">TCP клиент</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="90"/>
         <source>TCP server</source>
-        <translation>TCP сервер</translation>
+        <translation type="obsolete">TCP сервер</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="100"/>
         <source>Local IP:</source>
-        <translation>Локальный IP:</translation>
+        <translation type="obsolete">Локальный IP:</translation>
     </message>
     <message>
-        <location filename="vpn/deviceopenvpnbase.ui" line="113"/>
         <source>Remote IP:</source>
-        <translation>Удаленный IP:</translation>
+        <translation type="obsolete">Удаленный IP:</translation>
     </message>
 </context>
 <context>
     <name>DeviceOpenVPNPage</name>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="514"/>
         <source>Subnet mask:</source>
-        <translation>Маска подсети:</translation>
+        <translation type="obsolete">Маска подсети:</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="517"/>
         <source>Remote IP:</source>
-        <translation>Удаленный IP:</translation>
+        <translation type="obsolete">Удаленный IP:</translation>
     </message>
 </context>
 <context>
     <name>GeneralOpenVPNBase</name>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="13"/>
         <source>General</source>
-        <translation>Общее</translation>
+        <translation type="obsolete">Общее</translation>
     </message>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="25"/>
         <source>Name:</source>
-        <translation>Имя:</translation>
+        <translation type="obsolete">Имя:</translation>
     </message>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="38"/>
         <source>Description:</source>
-        <translation>Описание:</translation>
+        <translation type="obsolete">Описание:</translation>
     </message>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="55"/>
         <source>Remote:</source>
-        <translation>Удаленный:</translation>
+        <translation type="obsolete">Удаленный:</translation>
     </message>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="105"/>
         <source>s</source>
         <comment>short for second</comment>
-        <translation>с</translation>
+        <translation type="obsolete">с</translation>
     </message>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="95"/>
         <source>Ping:</source>
-        <translation>Пинг:</translation>
+        <translation type="obsolete">Пинг:</translation>
     </message>
     <message>
-        <location filename="vpn/generalopenvpnbase.ui" line="121"/>
         <source>Ping Restart:</source>
-        <translation>Перезапуск пинг:</translation>
+        <translation type="obsolete">Перезапуск пинг:</translation>
     </message>
 </context>
 <context>
     <name>GeneralOpenVPNPage</name>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="83"/>
         <source>Remote peer</source>
-        <translation>Удаленный пользователь</translation>
+        <translation type="obsolete">Удаленный пользователь</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="84"/>
         <source>&lt;qt&gt;You must enter the address of the VPN peer.&lt;/qt&gt;</source>
-        <translation>&lt;qt&gt;Вы должны ввести адрес удаленного VPN пользователя&lt;/qt&gt;</translation>
+        <translation type="obsolete">&lt;qt&gt;Вы должны ввести адрес удаленного VPN пользователя&lt;/qt&gt;</translation>
     </message>
 </context>
 <context>
     <name>IPPage</name>
     <message>
-        <location filename="network/ipconfig.cpp" line="81"/>
+        <location filename="network/ipconfig.cpp" line="80"/>
         <source>Autom. IP (DHCP)</source>
         <translation>Автом. IP (DHCP)</translation>
     </message>
     <message>
-        <location filename="network/ipconfig.cpp" line="89"/>
+        <location filename="network/ipconfig.cpp" line="88"/>
         <source>IP Address:</source>
         <translation>IP Адрес:</translation>
     </message>
     <message>
-        <location filename="network/ipconfig.cpp" line="95"/>
+        <location filename="network/ipconfig.cpp" line="94"/>
         <source>First DNS:</source>
         <translation>Первичный DNS:</translation>
     </message>
     <message>
-        <location filename="network/ipconfig.cpp" line="101"/>
+        <location filename="network/ipconfig.cpp" line="100"/>
         <source>Second DNS:</source>
         <translation>Вторичный DNS:</translation>
     </message>
     <message>
-        <location filename="network/ipconfig.cpp" line="107"/>
+        <location filename="network/ipconfig.cpp" line="106"/>
         <source>Broadcast:</source>
         <translation>Широковещание:</translation>
     </message>
     <message>
-        <location filename="network/ipconfig.cpp" line="113"/>
+        <location filename="network/ipconfig.cpp" line="112"/>
         <source>Gateway:</source>
         <translation>Шлюз</translation>
     </message>
     <message>
-        <location filename="network/ipconfig.cpp" line="119"/>
+        <location filename="network/ipconfig.cpp" line="118"/>
         <source>Subnet mask:</source>
         <translation>Маска подсети:</translation>
     </message>
@@ -308,42 +270,31 @@
 <context>
     <name>OptionsOpenVPNBase</name>
     <message>
-        <location filename="vpn/optionsopenvpnbase.ui" line="13"/>
         <source>Options</source>
-        <translation>Опции</translation>
+        <translation type="obsolete">Опции</translation>
     </message>
     <message>
-        <location filename="vpn/optionsopenvpnbase.ui" line="25"/>
         <source>LZO compression</source>
-        <translation>LZO сжатие</translation>
+        <translation type="obsolete">LZO сжатие</translation>
     </message>
     <message>
-        <location filename="vpn/optionsopenvpnbase.ui" line="32"/>
-        <source>Pull parameter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="vpn/optionsopenvpnbase.ui" line="55"/>
         <source>Explicit exit notification:</source>
-        <translation>Явное оповещение о выходе:</translation>
+        <translation type="obsolete">Явное оповещение о выходе:</translation>
     </message>
     <message>
-        <location filename="vpn/optionsopenvpnbase.ui" line="88"/>
         <source>OpenVPN configuration script:</source>
-        <translation>Скрипт настройки OpenVPN:</translation>
+        <translation type="obsolete">Скрипт настройки OpenVPN:</translation>
     </message>
     <message>
-        <location filename="vpn/optionsopenvpnbase.ui" line="101"/>
         <source>Select...</source>
-        <translation>Выбор...</translation>
+        <translation type="obsolete">Выбор...</translation>
     </message>
 </context>
 <context>
     <name>OptionsOpenVPNPage</name>
     <message>
-        <location filename="vpn/qopenvpngui.cpp" line="456"/>
         <source>Select...</source>
-        <translation>Выбор...</translation>
+        <translation type="obsolete">Выбор...</translation>
     </message>
 </context>
 <context>
@@ -379,6 +330,7 @@
         <translation>Нет прокси для:</translation>
     </message>
     <message>
+        <location filename="network/proxiesconfigbase.ui" line="144"/>
         <location filename="network/proxiesconfigbase.ui" line="171"/>
         <source>:</source>
         <translation>:</translation>
@@ -397,385 +349,409 @@
 <context>
     <name>QBluetooth</name>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="260"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="146"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="158"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="228"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="249"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="259"/>
         <source>Uncategorized</source>
         <translation>Нет категории</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="148"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="147"/>
         <source>Desktop workstation</source>
         <translation>Домашний компьютер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="149"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="148"/>
         <source>Server-class computer</source>
         <translation>Сервер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="150"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="149"/>
         <source>Laptop</source>
         <translation>Ноутбук</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="151"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="150"/>
         <source>Handheld PC/PDA (clam shell)</source>
         <translation>Наладонник (раскладушка)</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="152"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="151"/>
         <source>Palm sized PC/PDA</source>
         <translation>Наладонник</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="153"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="152"/>
         <source>Wearable computer (Watch sized)</source>
         <translation>Наручный компьютер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="160"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="159"/>
         <source>Cellular</source>
         <translation>Мобильный телефон</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="161"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="160"/>
         <source>Cordless</source>
         <translation>Беспроводной телефон</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="162"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="161"/>
         <source>Smart phone</source>
         <translation>Смартфон</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="163"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="162"/>
         <source>Wired modem or voice gateway</source>
         <translation>Проводной модем или голосовой шлюз</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="164"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="163"/>
         <source>Common ISDN Access</source>
         <translation type="unfinished">Общий ISDN доступ</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="170"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="169"/>
         <source>Fully available</source>
         <translation type="unfinished">Полностью доступно</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="171"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="170"/>
         <source>17% utilized</source>
         <translation>17% используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="172"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="171"/>
         <source>17-33% utilized</source>
         <translation>17-33% используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="173"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="172"/>
         <source>33-50% utilized</source>
         <translation>33-50% используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="174"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="173"/>
         <source>50-67% utilized</source>
         <translation>50-67% используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="175"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="174"/>
         <source>67-83% utilized</source>
         <translation>67-83% используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="176"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="175"/>
         <source>83-99% utilized</source>
         <translation>83-99% используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="177"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="176"/>
         <source>No service available</source>
         <translation type="unfinished">Сервис недоступен</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="183"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="182"/>
         <source>Uncategorized, code not assigned</source>
         <translation type="unfinished">Вне категорий, код не присвоен</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="184"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="183"/>
         <source>Wearable Headset Device</source>
         <translation>Носимая гарнитура</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="185"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="184"/>
         <source>Hands-free Device</source>
         <translation>Устройство Hands-free</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="200"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="185"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="199"/>
         <source>(Reserved)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="187"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="186"/>
         <source>Microphone</source>
         <translation>Микрофон</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="188"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="187"/>
         <source>Loudspeaker</source>
         <translation>Динамик</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="189"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="188"/>
         <source>Headphones</source>
         <translation>Наушники</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="190"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="189"/>
         <source>Portable Audio</source>
         <translation>Портативное аудио</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="191"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="190"/>
         <source>Car audio</source>
         <translation>Автомобильная акустика</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="192"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="191"/>
         <source>Set-top box</source>
         <translation type="unfinished">Приставка</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="193"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="192"/>
         <source>HiFi Audio Device</source>
         <translation type="unfinished">HiFi-аудио</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="194"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="193"/>
         <source>VCR</source>
         <translation>Видеомагнитофон</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="195"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="194"/>
         <source>Video Camera</source>
         <translation>Видеокамера</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="196"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="195"/>
         <source>Camcorder</source>
         <translation>Камкордер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="197"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="196"/>
         <source>Video Monitor</source>
         <translation>Монитор</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="198"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="197"/>
         <source>Video Display and Loudspeaker</source>
         <translation>Дисплей и динамик</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="199"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="198"/>
         <source>Video Conferencing</source>
         <translation type="unfinished">Видеоконференц-связь</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="201"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="200"/>
         <source>Gaming/Toy</source>
         <translation type="unfinished">Игры/Игрушка</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="207"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="206"/>
         <source>Not Keyboard / Not Pointing Device</source>
         <translation type="unfinished">Не клавиатура / Не манипулятор</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="208"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="207"/>
         <source>Keyboard</source>
         <translation>Клавиатура</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="209"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="208"/>
         <source>Pointing device</source>
         <translation type="unfinished">Манипулятор</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="210"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="209"/>
         <source>Combo keyboard/pointing device</source>
         <translation type="unfinished">Комбо клавиатура/манипулятор</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="217"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="216"/>
         <source>Uncategorized device</source>
         <translation>Устройство вне категорий</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="218"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="217"/>
         <source>Joystick</source>
         <translation>Джойстик</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="219"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="218"/>
         <source>Gamepad</source>
         <translation>Геймпад</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="220"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="219"/>
         <source>Remote control</source>
         <translation>Пульт ДУ</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="221"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="220"/>
         <source>Sensing device</source>
         <translation>Сенсорное устройство</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="222"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="221"/>
         <source>Digitizer tablet</source>
         <translation>Графический планшет</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="223"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="222"/>
         <source>Card Reader</source>
         <translation>Кард-ридер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="230"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="229"/>
         <source>Display</source>
         <translation>Дисплей</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="232"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="230"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="231"/>
         <source>Camera</source>
         <translation>Камера</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="236"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="232"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="233"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="234"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="235"/>
         <source>Scanner</source>
         <translation>Сканер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="244"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="236"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="237"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="238"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="239"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="240"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="241"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="242"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="243"/>
         <source>Printer</source>
         <translation>Принтер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="251"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="250"/>
         <source>Wrist Watch</source>
         <translation>Наручные часы</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="252"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="251"/>
         <source>Pager</source>
         <translation>Пейджер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="253"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="252"/>
         <source>Jacket</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="254"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="253"/>
         <source>Helmet</source>
         <translation>Шлем</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="255"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="254"/>
         <source>Glasses</source>
         <translation>Очки</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="261"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="260"/>
         <source>Robot</source>
         <translation>Робот</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="262"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="261"/>
         <source>Vehicle</source>
         <translation type="unfinished">Автомобиль</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="263"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="262"/>
         <source>Doll / Action Figure</source>
         <translation>Кукла / Фигурка персонажа</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="264"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="263"/>
         <source>Controller</source>
         <translation>Контроллер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="265"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="264"/>
         <source>Game</source>
         <translation>Игра</translation>
     </message>
 </context>
 <context>
+    <name>QBluetoothAbstractService</name>
+    <message>
+        <location filename="bluetooth/qbluetoothabstractservice.cpp" line="446"/>
+        <source>File could not be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QBluetoothAbstractSocket</name>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="63"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="61"/>
         <source>Permission denied</source>
         <translation>Доступ запрещен</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="67"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="65"/>
         <source>Out of resources</source>
         <translation>Ресурсы исчерпаны</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="71"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="69"/>
         <source>Device busy</source>
         <translation>Усройство занято</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="75"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="73"/>
         <source>Host unreachable</source>
         <translation>Устройство недостижимо</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="79"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="77"/>
         <source>Could not bind socket</source>
         <translation>Невозможно назначить сокет</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="83"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="81"/>
         <source>Connection refused</source>
         <translation>Соединение отклонено</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="87"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="85"/>
         <source>Network error</source>
         <translation>Ошибка сети</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="91"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="89"/>
         <source>Network operation timed out</source>
         <translation>Таймаут операции</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="95"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="93"/>
         <source>Remote host closed the connection</source>
         <translation>Удаленный хост закрыл соединение</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="99"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="97"/>
         <source>Operation is not supported</source>
         <translation>Операция не поддерживается</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="103"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="101"/>
         <source>Address is in use</source>
         <translation>Адрес используется</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="107"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="105"/>
         <source>Address is not available</source>
         <translation>Адрес недоступен</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="111"/>
+        <location filename="bluetooth/qbluetoothsocketengine_unix.cpp" line="109"/>
         <source>Unknown error</source>
         <translation>Неизвестная ошибка</translation>
     </message>
@@ -783,83 +759,106 @@
 <context>
     <name>QBluetoothRemoteDeviceDialogPrivate</name>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="253"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="315"/>
         <source>Stop searching</source>
         <translation>Остановить поиск</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="279"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="342"/>
         <source>Select a device</source>
         <translation>Выбрать устройство</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="355"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="532"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="569"/>
         <source>Bluetooth not available.</source>
         <translation>Bluetooth не доступен.</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="331"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="545"/>
         <source>Searching for devices...</source>
         <translation>Поиск устройств...</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="372"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="586"/>
         <source>Canceling...</source>
         <translation>Отмена...</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="381"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="518"/>
         <source>No devices found</source>
         <translation>Устройства не найдены</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="383"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="520"/>
         <source>Found 1 device</source>
         <translation>Найдено 1 устройство</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="387"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="522"/>
         <source>Found %1 devices</source>
         <comment>%1 = number (#&gt;1) of devices</comment>
         <translation>Найдено устройств - %1</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="390"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="594"/>
         <source>Search again</source>
         <translation>Искать снова</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="464"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="568"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="682"/>
         <source>Bluetooth Error</source>
         <translation>Ошибка Bluetooth</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="465"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="364"/>
+        <source>All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="459"/>
+        <source>Show:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="466"/>
+        <source>Choose view option</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="469"/>
+        <source>Show...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="683"/>
         <source>&lt;P&gt;Bluetooth is not available, cannot verify services.</source>
         <translation>&lt;P&gt;Bluetooth не доступен, невозможно проверить службы.</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="508"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="699"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="726"/>
         <source>Service Error</source>
         <translation>Ошибка службы</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="482"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="700"/>
         <source>&lt;P&gt;Unable to verify services. Try again, or choose another device.</source>
         <translation>&lt;P&gt;Невозможно проверить службы. Попробуйте снова, или выберите другое устройство.</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="509"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="727"/>
         <source>&lt;P&gt;Device does not have the necessary services.  Try again, or choose another device.</source>
         <translation>Устройство не обладает необходимыми сервисами.  Попробуйте снова, или выберите другое устройство.</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="611"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="817"/>
         <source>Verifying services...</source>
         <translation>Проверка сервисов...</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="641"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="852"/>
         <source>Search for devices</source>
         <translation>Поиск устройств</translation>
     </message>
@@ -867,27 +866,27 @@
 <context>
     <name>QBluetoothRfcommSerialPort</name>
     <message>
-        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="666"/>
+        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="665"/>
         <source>Socket is not connected</source>
         <translation>Сокет не подключен</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="670"/>
+        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="669"/>
         <source>Connection failed</source>
         <translation>Ошибка соединения</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="674"/>
+        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="673"/>
         <source>Connection cancelled</source>
         <translation>Соединени отменено</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="678"/>
+        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="677"/>
         <source>Serial port could not be created</source>
         <translation>Невозможно создать последовательный порт</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="682"/>
+        <location filename="bluetooth/qbluetoothrfcommserialport.cpp" line="681"/>
         <source>Unknown error</source>
         <translation>Неизвестная ошибка</translation>
     </message>
@@ -895,102 +894,105 @@
 <context>
     <name>QIPSec</name>
     <message>
-        <location filename="vpn/qipsec.cpp" line="108"/>
         <source>IPSec connection</source>
-        <translation>IPSec соединение</translation>
+        <translation type="obsolete">IPSec соединение</translation>
     </message>
 </context>
 <context>
     <name>QIrSocket</name>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="62"/>
         <source>Permission denied</source>
-        <translation>Доступ запрещен</translation>
+        <translation type="obsolete">Доступ запрещен</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="66"/>
         <source>Out of resources</source>
-        <translation>Ресурсы исчерпаны</translation>
+        <translation type="obsolete">Ресурсы исчерпаны</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="70"/>
         <source>Device busy</source>
-        <translation>Усройство занято</translation>
+        <translation type="obsolete">Усройство занято</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="74"/>
         <source>Host unreachable</source>
-        <translation>Хост недоступен</translation>
+        <translation type="obsolete">Хост недоступен</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="78"/>
         <source>Connection refused</source>
-        <translation>Соединение отклонено</translation>
+        <translation type="obsolete">Соединение отклонено</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="82"/>
         <source>Network error</source>
-        <translation>Ошибка сети</translation>
+        <translation type="obsolete">Ошибка сети</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="86"/>
         <source>Network operation timed out</source>
-        <translation>Таймаут операции с сетью</translation>
+        <translation type="obsolete">Таймаут операции с сетью</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="90"/>
         <source>Remote host closed the connection</source>
-        <translation>Удаленный хост закрыл соединение</translation>
+        <translation type="obsolete">Удаленный хост закрыл соединение</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="94"/>
         <source>Operation is not supported</source>
-        <translation>Операция не поддерживается</translation>
+        <translation type="obsolete">Операция не поддерживается</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="98"/>
         <source>Address is in use</source>
-        <translation>Адрес используется</translation>
+        <translation type="obsolete">Адрес используется</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="102"/>
         <source>Address is not available</source>
-        <translation>Адрес недоступен</translation>
+        <translation type="obsolete">Адрес недоступен</translation>
     </message>
     <message>
-        <location filename="ir/qirsocketengine_unix.cpp" line="106"/>
         <source>Unknown error</source>
-        <translation>Неизвестная ошибка</translation>
+        <translation type="obsolete">Неизвестная ошибка</translation>
+    </message>
+</context>
+<context>
+    <name>QNetworkConnection</name>
+    <message>
+        <location filename="network/qnetworkconnection.cpp" line="232"/>
+        <source>WLAN: %1</source>
+        <comment>%1 name of WLAN ESSID</comment>
+        <translation type="unfinished">WLAN: %1</translation>
     </message>
 </context>
 <context>
     <name>QNetworkConnection::Identity</name>
     <message>
-        <location filename="network/qnetworkconnection.cpp" line="234"/>
         <source>WLAN: %1</source>
         <comment>%1 name of WLAN ESSID</comment>
-        <translation>WLAN: %1</translation>
+        <translation type="obsolete">WLAN: %1</translation>
     </message>
 </context>
 <context>
     <name>QObexClientSession</name>
     <message>
-        <location filename="obex/qobexsocket.cpp" line="526"/>
+        <location filename="obex/qobexclientsession.cpp" line="46"/>
+        <location filename="obex/qobexclientsession.cpp" line="233"/>
+        <location filename="obex/qobexsocket.cpp" line="355"/>
+        <location filename="obex/qobexsocket.cpp" line="457"/>
+        <location filename="obex/qobexsocket.cpp" line="475"/>
+        <location filename="obex/qobexsocket.cpp" line="499"/>
+        <location filename="obex/qobexsocket.cpp" line="528"/>
+        <location filename="obex/qobexsocket.cpp" line="546"/>
         <source>Unknown error</source>
         <translation>Неизвестная ошибка</translation>
     </message>
     <message>
-        <location filename="obex/qobexsocket.cpp" line="351"/>
+        <location filename="obex/qobexclientsession.cpp" line="772"/>
+        <location filename="obex/qobexsocket.cpp" line="370"/>
         <source>Connection error</source>
         <translation>Ошибка соединения</translation>
     </message>
     <message>
-        <location filename="obex/qobexsocket.cpp" line="363"/>
+        <location filename="obex/qobexsocket.cpp" line="382"/>
         <source>Invalid server response</source>
         <translation>Неверный ответ сервера</translation>
     </message>
     <message>
-        <location filename="obex/qobexclientsession.cpp" line="256"/>
+        <location filename="obex/qobexclientsession.cpp" line="254"/>
         <source>Not connected to server</source>
         <translation>Отсутствует подключение к серверу</translation>
     </message>
@@ -1025,6 +1027,7 @@
         <translation>Не получен ответ на аутентификацию</translation>
     </message>
     <message>
+        <location filename="obex/qobexclientsession.cpp" line="493"/>
         <location filename="obex/qobexclientsession.cpp" line="686"/>
         <source>Authentication failed</source>
         <translation>Ошибка аутентификации</translation>
@@ -1050,7 +1053,7 @@
         <translation>Неверный ответ сервера на аутентификацию</translation>
     </message>
     <message>
-        <location filename="obex/qobexclientsession.cpp" line="701"/>
+        <location filename="obex/qobexclientsession.cpp" line="700"/>
         <source>Invalid server authentication challenge</source>
         <translation>Неверная процедура аутентификации сервера</translation>
     </message>
@@ -1060,30 +1063,40 @@
         <translation>Клиент не предоставил имя пользователя или пароль для аутентификации</translation>
     </message>
     <message>
-        <location filename="obex/qobexclientsession.cpp" line="719"/>
+        <location filename="obex/qobexclientsession.cpp" line="718"/>
         <source>Error responding to authentication challenge</source>
         <translation>Ошибка ответа на запрос аутентификации</translation>
     </message>
 </context>
 <context>
+    <name>QObexPushService</name>
+    <message>
+        <location filename="obex/qobexpushservice.cpp" line="568"/>
+        <source>received_file</source>
+        <comment>placeholder name for a received file with no name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QObexServerSession</name>
     <message>
-        <location filename="obex/qobexsocket.cpp" line="355"/>
+        <location filename="obex/qobexserversession.cpp" line="401"/>
+        <location filename="obex/qobexsocket.cpp" line="374"/>
         <source>Connection error</source>
         <translation>Ошибка соединения</translation>
     </message>
     <message>
-        <location filename="obex/qobexsocket.cpp" line="367"/>
+        <location filename="obex/qobexsocket.cpp" line="386"/>
         <source>Invalid client request</source>
         <translation>Неверный запрос клиента</translation>
     </message>
     <message>
-        <location filename="obex/qobexsocket.cpp" line="378"/>
+        <location filename="obex/qobexsocket.cpp" line="397"/>
         <source>Request aborted</source>
         <translation>Запрос прерван</translation>
     </message>
     <message>
-        <location filename="obex/qobexserversession.cpp" line="209"/>
+        <location filename="obex/qobexserversession.cpp" line="208"/>
         <source>Did not receive authentication response</source>
         <translation>Не получен ответ аутнтификации</translation>
     </message>
@@ -1093,22 +1106,22 @@
         <translation>Невозможно прочитать запрос аутентификации</translation>
     </message>
     <message>
-        <location filename="obex/qobexserversession.cpp" line="250"/>
+        <location filename="obex/qobexserversession.cpp" line="249"/>
         <source>Received request of unknown type</source>
         <translation>Принят запрос неизвестного типа</translation>
     </message>
     <message>
-        <location filename="obex/qobexserversession.cpp" line="279"/>
+        <location filename="obex/qobexserversession.cpp" line="278"/>
         <source>Server did not provide username or password for authentication</source>
         <translation>Сервер не предоставил имя пользователя или пароль для аутентификации</translation>
     </message>
     <message>
-        <location filename="obex/qobexserversession.cpp" line="290"/>
+        <location filename="obex/qobexserversession.cpp" line="289"/>
         <source>Error responding to authentication challenge</source>
         <translation>Ошибка ответа на запрос аутентификации</translation>
     </message>
     <message>
-        <location filename="obex/qobexserversession.cpp" line="310"/>
+        <location filename="obex/qobexserversession.cpp" line="309"/>
         <source>Invalid client authentication response</source>
         <translation>Неверный ответ аутентификации от клиента</translation>
     </message>
@@ -1126,107 +1139,115 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="394"/>
+        <location filename="bluetooth/qbluetoothremotedevicedialog.cpp" line="123"/>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="290"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="344"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="393"/>
         <source>Uncategorized</source>
         <translation>Нет категории</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="397"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="347"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="396"/>
         <source>Invalid</source>
         <translation>Неверно</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="367"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="366"/>
         <source>Miscellaneous</source>
         <translation>Разное</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="370"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="369"/>
         <source>Computer</source>
         <translation>Компьютер</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="373"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="372"/>
         <source>Phone</source>
         <translation>Телефон</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="376"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="375"/>
         <source>LAN Access</source>
         <translation>LAN доступ</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="379"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="378"/>
         <source>Audio / Video</source>
         <translation>Аудио / Видео</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="382"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="381"/>
         <source>Peripheral</source>
         <translation>Устройство периферии</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="385"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="384"/>
         <source>Imaging</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="388"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="387"/>
         <source>Wearable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="391"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="390"/>
         <source>Toy</source>
         <translation>Игрушка</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="417"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="416"/>
         <source>Positioning</source>
         <translation type="unfinished">Позиционирование</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="421"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="420"/>
         <source>Networking</source>
         <translation type="unfinished">Работа в сети</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="425"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="424"/>
         <source>Rendering</source>
         <translation>Рендеринг</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="429"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="428"/>
         <source>Capturing</source>
         <translation>Захват</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="433"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="432"/>
         <source>Object Transfer</source>
         <translation>Передача объекта</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="437"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="436"/>
         <source>Audio</source>
         <translation>Аудио</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="441"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="440"/>
         <source>Telephony</source>
         <translation>Телефония</translation>
     </message>
     <message>
-        <location filename="bluetooth/qbluetoothnamespace.cpp" line="445"/>
+        <location filename="bluetooth/qbluetoothnamespace.cpp" line="444"/>
         <source>Information</source>
         <translation>Информация</translation>
     </message>
     <message>
-        <location filename="bluetooth/qsdpxmlparser.cpp" line="350"/>
+        <location filename="bluetooth/qsdpxmlparser.cpp" line="348"/>
         <source>The file is not an SDP XML file.</source>
         <translation>Файл не является SDP XML файлом.</translation>
     </message>
     <message>
-        <location filename="bluetooth/qsdpxmlparser.cpp" line="362"/>
+        <location filename="bluetooth/qsdpxmlparser.cpp" line="360"/>
         <source>&lt;attribute&gt; tag must have an id attribute</source>
         <translation>Тег &lt;attribute&gt; должен иметь атрибут ID</translation>
     </message>
@@ -1234,62 +1255,47 @@
 <context>
     <name>QOpenVPN</name>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="297"/>
         <source>OpenVPN connection</source>
-        <translation>OpenVPN соединение</translation>
+        <translation type="obsolete">OpenVPN соединение</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="133"/>
         <source>No remote server defined</source>
-        <translation>Не указан удаленный сервер</translation>
+        <translation type="obsolete">Не указан удаленный сервер</translation>
     </message>
 </context>
 <context>
     <name>QOpenVPNDialog</name>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="449"/>
-        <source>OpenVPN</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="vpn/qopenvpn.cpp" line="461"/>
         <source>Account</source>
-        <translation>Аккаунт</translation>
+        <translation type="obsolete">Аккаунт</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="464"/>
         <source>Device</source>
-        <translation>Устройство</translation>
+        <translation type="obsolete">Устройство</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="467"/>
         <source>Certificates</source>
-        <translation>Сертификаты</translation>
+        <translation type="obsolete">Сертификаты</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="470"/>
         <source>Options</source>
-        <translation>Опции</translation>
+        <translation type="obsolete">Опции</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="575"/>
         <source>General OpenVPN parameter.</source>
-        <translation type="unfinished">Общие параметры OpenVPN.</translation>
+        <translation type="obsolete">Общие параметры OpenVPN.</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="578"/>
         <source>Device type and IP parameter.</source>
-        <translation type="unfinished">Тип устройства и IP.</translation>
+        <translation type="obsolete">Тип устройства и IP.</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="581"/>
         <source>Certificate for authentication purposes.</source>
-        <translation>Сертификат для аутентификации.</translation>
+        <translation type="obsolete">Сертификат для аутентификации.</translation>
     </message>
     <message>
-        <location filename="vpn/qopenvpn.cpp" line="584"/>
         <source>Additional VPN options.</source>
-        <translation>Дополнительные опции VPN.</translation>
+        <translation type="obsolete">Дополнительные опции VPN.</translation>
     </message>
 </context>
 </TS>

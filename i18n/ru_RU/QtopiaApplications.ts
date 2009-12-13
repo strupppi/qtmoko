@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>Archives</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="17"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="21"/>
         <source>Archives</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Архивы</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="18"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="22"/>
         <source>Archive viewer</source>
         <translation>Просмотрщик архивов</translation>
     </message>
@@ -18,12 +18,12 @@
 <context>
     <name>Bluetooth</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="6"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="8"/>
         <source>Bluetooth Applications Suite</source>
         <translation>Набор приложений Bluetooth</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="7"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="9"/>
         <source>Bluetooth FTP</source>
         <translation>Bluetooth FTP</translation>
     </message>
@@ -31,63 +31,83 @@
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="24"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="28"/>
         <source>A Calculator Program</source>
         <translation>Приложение Калькулятор</translation>
     </message>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="25"/>
+    <message utf8="true">
         <source>Cal­cu­la­tor</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Калькулятор</translation>
+        <translation type="obsolete">Калькулятор</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="29"/>
+        <source>CalÂ­cuÂ­laÂ­tor</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Calendar</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="19"/>
+    <message utf8="true">
         <source>Cal­en­dar</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Календарь</translation>
+        <translation type="obsolete">Календарь</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="20"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="24"/>
         <source>A Calendar and Scheduling Program</source>
         <translation>Календарь и назначенные задания</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="23"/>
+        <source>CalÂ­enÂ­dar</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Call History</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="8"/>
+    <message utf8="true">
         <source>Call His­to­ry</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Журнал вызовов</translation>
+        <translation type="obsolete">Журнал вызовов</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="9"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="11"/>
         <source>Call History Application</source>
         <translation>Приложение История вызовов</translation>
     </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="10"/>
+        <source>Call HisÂ­toÂ­ry</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
-<context encoding="UTF-8">
+<context>
     <name>Camera</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="1"/>
+    <message utf8="true">
         <source>Cam­era</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Камера</translation>
+        <translation type="obsolete">Камера</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="1"/>
+        <source>CamÂ­era</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Clock</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="26"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="30"/>
         <source>A Clock Program</source>
         <translation>Приложение Часы</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="27"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="31"/>
         <source>Clock</source>
         <translation>Часы</translation>
     </message>
@@ -95,26 +115,31 @@
 <context>
     <name>Contacts</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="28"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="32"/>
         <source>An Address Book Program</source>
         <translation>Адресная книга</translation>
     </message>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="29"/>
+    <message utf8="true">
         <source>Con­tacts</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Контакты</translation>
+        <translation type="obsolete">Контакты</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="33"/>
+        <source>ConÂ­tacts</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Help</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="32"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="34"/>
         <source>A HTML Help Browser Program</source>
         <translation>Обзор HTML помощи</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="33"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="35"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
@@ -122,84 +147,131 @@
 <context>
     <name>MediaPlayer</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="2"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="2"/>
         <source>Media Player</source>
         <translation>Медиаплеер</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="3"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="3"/>
         <source>A media player application</source>
         <translation>Приложение Медиа плеер</translation>
     </message>
 </context>
-<context encoding="UTF-8">
+<context>
     <name>Messages</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="23"/>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="27"/>
+        <source>MesÂ­sages</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
         <source>Mes­sages</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Сообщения</translation>
+        <translation type="obsolete">Сообщения</translation>
+    </message>
+</context>
+<context>
+    <name>MusicPlayer</name>
+    <message>
+        <location filename="../../src/server/main/tr17033.cpp" line="17"/>
+        <source>Music Player</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/server/main/tr17033.cpp" line="18"/>
+        <source>A music player application</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Notes</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="15"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="20"/>
         <source>Notes</source>
         <translation>Заметки</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="16"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="19"/>
         <source>A Text Editing Program</source>
         <translation>Редактор текста</translation>
     </message>
 </context>
 <context>
-    <name>Pictures</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="10"/>
-        <source>Pic­tures</source>
-        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Изображения</translation>
+    <name>PhotoGallery</name>
+    <message>
+        <location filename="../../src/server/main/tr17033.cpp" line="6"/>
+        <source>A Photo Gallery</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="11"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="7"/>
+        <source>Photos</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Pictures</name>
+    <message utf8="true">
+        <source>Pic­tures</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="obsolete">Изображения</translation>
+    </message>
+    <message>
+        <location filename="../../src/server/main/tr17033.cpp" line="13"/>
         <source>A Photo Editor</source>
         <translation>Редактор фотографий</translation>
     </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="12"/>
+        <source>PicÂ­tures</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
-<context encoding="UTF-8">
+<context>
     <name>SimApp</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="14"/>
+    <message utf8="true">
         <source>SIM Ap­pli­ca­tions</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>SIM приложения</translation>
+        <translation type="obsolete">SIM приложения</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="14"/>
+        <source>SIM ApÂ­pliÂ­caÂ­tions</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>System Info</name>
-    <message encoding="UTF-8">
-        <location filename="../../src/server/tr13959.cpp" line="30"/>
+    <message utf8="true">
         <source>Sys­tem Info</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation>Сведения о системе</translation>
+        <translation type="obsolete">Сведения о системе</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="31"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="37"/>
         <source>System Information</source>
         <translation>Информация о системе</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr17033.cpp" line="36"/>
+        <source>SysÂ­tem Info</source>
+        <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Tasks</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="12"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="16"/>
         <source>Tasks</source>
         <translation>Задачи</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="13"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="15"/>
         <source>A Todo List Program</source>
         <translation>Список дел</translation>
     </message>
@@ -207,12 +279,12 @@
 <context>
     <name>Voice Notes</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="21"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="25"/>
         <source>A Voice Recording Program</source>
         <translation>Программа записи звуков</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="22"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="26"/>
         <source>Voice Notes</source>
         <translation>Голосовые заметки</translation>
     </message>
@@ -220,12 +292,12 @@
 <context>
     <name>World Time</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="4"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="4"/>
         <source>A World Clock and Time Zone Editor</source>
         <translation>Показ всемирного времени и изменение часового пояса</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="5"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="5"/>
         <source>World Time</source>
         <translation>Всемирное время</translation>
     </message>

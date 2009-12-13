@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>AdvancedBase</name>
     <message>
@@ -98,7 +98,10 @@
 <context>
     <name>AdvancedPage</name>
     <message>
-        <location filename="advanced.cpp" line="182"/>
+        <location filename="advanced.cpp" line="89"/>
+        <location filename="advanced.cpp" line="142"/>
+        <location filename="advanced.cpp" line="173"/>
+        <location filename="advanced.cpp" line="176"/>
         <source>&lt;Use PCMCIA&gt;</source>
         <translation>&lt;Использовать PCMCIA&gt;</translation>
     </message>
@@ -112,27 +115,34 @@
     </message>
     <message>
         <location filename="dialingbase.ui" line="33"/>
-        <source>Timeout</source>
-        <translation>Таймаут</translation>
+        <source>Timeout:</source>
+        <oldsource>Timeout</oldsource>
+        <translation type="unfinished">Таймаут</translation>
     </message>
     <message>
         <location filename="dialingbase.ui" line="40"/>
+        <source>None</source>
+        <comment>No timeout</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dialingbase.ui" line="43"/>
         <source>s</source>
         <comment>short for seconds</comment>
         <translation>с</translation>
     </message>
     <message>
-        <location filename="dialingbase.ui" line="58"/>
+        <location filename="dialingbase.ui" line="61"/>
         <source>Auto name server</source>
         <translation>Авто сервер имен</translation>
     </message>
     <message>
-        <location filename="dialingbase.ui" line="77"/>
+        <location filename="dialingbase.ui" line="80"/>
         <source>First DNS:</source>
         <translation>Первый DNS:</translation>
     </message>
     <message>
-        <location filename="dialingbase.ui" line="90"/>
+        <location filename="dialingbase.ui" line="93"/>
         <source>Second DNS:</source>
         <translation>Второй DNS:</translation>
     </message>
@@ -140,62 +150,63 @@
 <context>
     <name>DialupImpl</name>
     <message>
-        <location filename="dialup.cpp" line="202"/>
+        <location filename="dialup.cpp" line="97"/>
+        <location filename="dialup.cpp" line="200"/>
         <source>Interface hasn&apos;t been initialized yet.</source>
         <translation>Интерфейс не инициализирован.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="171"/>
+        <location filename="dialup.cpp" line="169"/>
         <source>Cannot set default gateway.</source>
         <translation>Невозможно установить шлюз по умолчанию.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="206"/>
+        <location filename="dialup.cpp" line="204"/>
         <source>Interface is not available.</source>
         <translation>Интерфейс недоступен.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="212"/>
+        <location filename="dialup.cpp" line="210"/>
         <source>Interface already started/active.</source>
         <translation>Интерфейс уже запущен/активен.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="238"/>
+        <location filename="dialup.cpp" line="236"/>
         <source>Missing network registration. Try again later.</source>
         <translation>Отсутствует регистрация в сети. Попробуйте позднее.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="249"/>
+        <location filename="dialup.cpp" line="247"/>
         <source>Missing external serial device.</source>
         <translation>Отсутствует внешнее последовательное устройство.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="269"/>
+        <location filename="dialup.cpp" line="267"/>
         <source>Missing peer ID. Please reconfigure device.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="362"/>
+        <location filename="dialup.cpp" line="360"/>
         <source>Device is not active.</source>
         <translation>Устройство не активно.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="632"/>
+        <location filename="dialup.cpp" line="630"/>
         <source>Connect chat failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="644"/>
+        <location filename="dialup.cpp" line="642"/>
         <source>Connect chat not responding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="681"/>
+        <location filename="dialup.cpp" line="679"/>
         <source>Authentication failed.</source>
         <translation>Сбой аутентификации.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="707"/>
+        <location filename="dialup.cpp" line="705"/>
         <source>Connect failed.</source>
         <translation>Сбой подключения.</translation>
     </message>
@@ -203,73 +214,72 @@
 <context>
     <name>DialupUI</name>
     <message>
-        <location filename="config.cpp" line="252"/>
+        <location filename="config.cpp" line="196"/>
         <source>Account</source>
         <translation>Аккаунт</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="220"/>
         <source>Proxy</source>
         <comment>for http traffic</comment>
-        <translation>Прокси</translation>
+        <translation type="obsolete">Прокси</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="260"/>
+        <location filename="config.cpp" line="204"/>
         <source>Network</source>
         <translation>Сеть</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="264"/>
+        <location filename="config.cpp" line="208"/>
         <source>Advanced</source>
         <translation>Расширенные</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="256"/>
+        <location filename="config.cpp" line="200"/>
         <source>Proxy Settings</source>
         <translation>Настройки прокси</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="345"/>
+        <location filename="config.cpp" line="285"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="418"/>
+        <location filename="config.cpp" line="356"/>
         <source>Missing dialup number</source>
         <translation>Отсутствует номер дозвона</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="452"/>
+        <location filename="config.cpp" line="390"/>
         <source>Cannot write chat file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="config.cpp" line="467"/>
+        <location filename="config.cpp" line="405"/>
         <source>Cannot write disconnect file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="config.cpp" line="530"/>
+        <location filename="config.cpp" line="468"/>
         <source>Cannot write peer file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="config.cpp" line="583"/>
+        <location filename="config.cpp" line="520"/>
         <source>General account information.</source>
         <translation>Общая информация аккаунта.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="586"/>
+        <location filename="config.cpp" line="523"/>
         <source>General dial-up parameter.</source>
         <translation>Общие параметры сеансового доступа.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="590"/>
+        <location filename="config.cpp" line="526"/>
         <source>Advanced dial-up parameter that should not usually require any adjustments.</source>
         <translation>Расширенные параметры сеансового доступа, как правило, не требующие настройки.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="593"/>
+        <location filename="config.cpp" line="530"/>
         <source>Proxy details used for HTTP and FTP data.</source>
         <translation>Настройки прокси, используемого для HTTP и FTP данных.</translation>
     </message>
@@ -277,12 +287,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="config.cpp" line="120"/>
+        <location filename="config.cpp" line="99"/>
+        <location filename="config.cpp" line="108"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="122"/>
+        <location filename="config.cpp" line="110"/>
         <source>Cost monitor</source>
         <comment>shows costs of online sessions</comment>
         <translation>Стоимость</translation>

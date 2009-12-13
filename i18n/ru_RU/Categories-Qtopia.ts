@@ -1,77 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="ru_RU">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="ru_RU">
 <context>
     <name>Categories</name>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="1"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="2"/>
         <source>Certificate</source>
         <translation>Сертификат</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="2"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="1"/>
         <source>Camera</source>
         <translation>Камера</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="3"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="4"/>
         <source>Recordings</source>
         <translation>Записи</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="4"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="3"/>
         <source>Personal</source>
         <translation>Личное</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="5"/>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation type="obsolete">Настройки</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="6"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="5"/>
         <source>Security Key</source>
         <translation>Ключ безопасности</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="7"/>
         <source>Games</source>
-        <translation>Игры</translation>
+        <translation type="obsolete">Игры</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="8"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="7"/>
         <source>Applications</source>
         <translation>Приложения</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="9"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="6"/>
         <source>Unfiled</source>
         <translation>Не указано</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="10"/>
         <source>Installed Applications</source>
-        <translation>Установленные приложения</translation>
+        <translation type="obsolete">Установленные приложения</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="11"/>
         <source>MainApplications</source>
-        <translation>Главные приложения</translation>
+        <translation type="obsolete">Главные приложения</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="12"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="8"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="13"/>
+        <location filename="../../src/server/main/tr17033.cpp" line="9"/>
         <source>Business</source>
         <translation>Работа</translation>
     </message>
     <message>
-        <location filename="../../src/server/tr13959.cpp" line="14"/>
         <source>Programs</source>
-        <translation>Программы</translation>
+        <translation type="obsolete">Программы</translation>
     </message>
 </context>
 </TS>

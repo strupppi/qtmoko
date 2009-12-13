@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="cs_CZ">
-<defaultcodec></defaultcodec>
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>AdvancedBase</name>
     <message>
@@ -98,7 +98,10 @@
 <context>
     <name>AdvancedPage</name>
     <message>
-        <location filename="advanced.cpp" line="182"/>
+        <location filename="advanced.cpp" line="89"/>
+        <location filename="advanced.cpp" line="142"/>
+        <location filename="advanced.cpp" line="173"/>
+        <location filename="advanced.cpp" line="176"/>
         <source>&lt;Use PCMCIA&gt;</source>
         <translation></translation>
     </message>
@@ -112,27 +115,34 @@
     </message>
     <message>
         <location filename="dialingbase.ui" line="33"/>
-        <source>Timeout</source>
-        <translation>Časový limit</translation>
+        <source>Timeout:</source>
+        <oldsource>Timeout</oldsource>
+        <translation type="unfinished">Časový limit</translation>
     </message>
     <message>
         <location filename="dialingbase.ui" line="40"/>
+        <source>None</source>
+        <comment>No timeout</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dialingbase.ui" line="43"/>
         <source>s</source>
         <comment>short for seconds</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="dialingbase.ui" line="58"/>
+        <location filename="dialingbase.ui" line="61"/>
         <source>Auto name server</source>
         <translation>Automaticky jmenný server</translation>
     </message>
     <message>
-        <location filename="dialingbase.ui" line="77"/>
+        <location filename="dialingbase.ui" line="80"/>
         <source>First DNS:</source>
         <translation>Primární DNS:</translation>
     </message>
     <message>
-        <location filename="dialingbase.ui" line="90"/>
+        <location filename="dialingbase.ui" line="93"/>
         <source>Second DNS:</source>
         <translation>Sekundární DNS:</translation>
     </message>
@@ -140,62 +150,63 @@
 <context>
     <name>DialupImpl</name>
     <message>
-        <location filename="dialup.cpp" line="202"/>
+        <location filename="dialup.cpp" line="97"/>
+        <location filename="dialup.cpp" line="200"/>
         <source>Interface hasn&apos;t been initialized yet.</source>
         <translation>Rozhraní zatím nebylo inicializováno.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="171"/>
+        <location filename="dialup.cpp" line="169"/>
         <source>Cannot set default gateway.</source>
         <translation>Nemohu nastavit výchozí bránu.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="206"/>
+        <location filename="dialup.cpp" line="204"/>
         <source>Interface is not available.</source>
         <translation>Rozhraní není dostupné.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="212"/>
+        <location filename="dialup.cpp" line="210"/>
         <source>Interface already started/active.</source>
         <translation>Rozhraní je již spuštěno/aktivní.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="238"/>
+        <location filename="dialup.cpp" line="236"/>
         <source>Missing network registration. Try again later.</source>
         <translation>Chybí registrace do sítě. Zkuste to znovu později.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="249"/>
+        <location filename="dialup.cpp" line="247"/>
         <source>Missing external serial device.</source>
         <translation>Chybí externí sériové zažízení.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="269"/>
+        <location filename="dialup.cpp" line="267"/>
         <source>Missing peer ID. Please reconfigure device.</source>
         <translation>Chybí účastnické ID. Prosím přenastavte zařízení.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="362"/>
+        <location filename="dialup.cpp" line="360"/>
         <source>Device is not active.</source>
         <translation>Zařízení není aktivní.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="632"/>
+        <location filename="dialup.cpp" line="630"/>
         <source>Connect chat failed.</source>
         <translation>Spojovací komunikace selhala.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="644"/>
+        <location filename="dialup.cpp" line="642"/>
         <source>Connect chat not responding.</source>
         <translation>Spojovací komunikace neodpovídá.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="681"/>
+        <location filename="dialup.cpp" line="679"/>
         <source>Authentication failed.</source>
         <translation>Ověření selhalo.</translation>
     </message>
     <message>
-        <location filename="dialup.cpp" line="707"/>
+        <location filename="dialup.cpp" line="705"/>
         <source>Connect failed.</source>
         <translation>Spojení selhalo.</translation>
     </message>
@@ -203,73 +214,67 @@
 <context>
     <name>DialupUI</name>
     <message>
-        <location filename="config.cpp" line="252"/>
+        <location filename="config.cpp" line="196"/>
         <source>Account</source>
         <translation>Účet</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="220"/>
-        <source>Proxy</source>
-        <comment>for http traffic</comment>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="config.cpp" line="260"/>
+        <location filename="config.cpp" line="204"/>
         <source>Network</source>
         <translation>Síť</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="264"/>
+        <location filename="config.cpp" line="208"/>
         <source>Advanced</source>
         <translation>Pokročílé</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="256"/>
+        <location filename="config.cpp" line="200"/>
         <source>Proxy Settings</source>
         <translation>Nastavení proxy</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="345"/>
+        <location filename="config.cpp" line="285"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="418"/>
+        <location filename="config.cpp" line="356"/>
         <source>Missing dialup number</source>
         <translation>Chybí vytáčecí číslo</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="452"/>
+        <location filename="config.cpp" line="390"/>
         <source>Cannot write chat file</source>
         <translation>Nemohu zapsat komunikační soubor</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="467"/>
+        <location filename="config.cpp" line="405"/>
         <source>Cannot write disconnect file</source>
         <translation>Nemohu zapsat odpojovací soubor</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="530"/>
+        <location filename="config.cpp" line="468"/>
         <source>Cannot write peer file</source>
         <translation>Nemohu zapsat účasnický soubor</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="583"/>
+        <location filename="config.cpp" line="520"/>
         <source>General account information.</source>
         <translation>Obecné informace účtu.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="586"/>
+        <location filename="config.cpp" line="523"/>
         <source>General dial-up parameter.</source>
         <translation>Obecný vytáčecí parametr.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="590"/>
+        <location filename="config.cpp" line="526"/>
         <source>Advanced dial-up parameter that should not usually require any adjustments.</source>
         <translation>Rozšířený vytáčecí parametr který by obvykle neměl pořebovat žádné úpravy.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="593"/>
+        <location filename="config.cpp" line="530"/>
         <source>Proxy details used for HTTP and FTP data.</source>
         <translation>Detaily proxy používané pro HTTP a FTP přenosy.</translation>
     </message>
@@ -277,12 +282,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="config.cpp" line="120"/>
+        <location filename="config.cpp" line="99"/>
+        <location filename="config.cpp" line="108"/>
         <source>Properties</source>
         <translation>Vlastnosti</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="122"/>
+        <location filename="config.cpp" line="110"/>
         <source>Cost monitor</source>
         <comment>shows costs of online sessions</comment>
         <translation>Sledování nákladů</translation>

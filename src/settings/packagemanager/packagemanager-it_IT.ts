@@ -29,9 +29,8 @@
         <translation>Dimensione di installazione:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.h" line="310"/>
         <source>Install</source>
-        <translation>Installa pacchetto!</translation>
+        <translation type="obsolete">Installa pacchetto!</translation>
     </message>
 </context>
 <context>
@@ -53,32 +52,27 @@
 <context>
     <name>InstalledPackageController</name>
     <message>
-        <location filename="packagecontroller.h" line="383"/>
         <source>Installed</source>
-        <translation>Pacchetti installati</translation>
+        <translation type="obsolete">Pacchetti installati</translation>
     </message>
     <message>
-        <location filename="packagecontroller.h" line="393"/>
         <source>Currently installed packages which may be removed to regain space</source>
-        <translation>Pacchetti attualmente installati sul sistema. Essi possono essere rimossi per guadagnare spazio su disco.</translation>
+        <translation type="obsolete">Pacchetti attualmente installati sul sistema. Essi possono essere rimossi per guadagnare spazio su disco.</translation>
     </message>
     <message>
-        <location filename="packagecontroller.h" line="398"/>
         <source>Uninstall</source>
-        <translation>Disinstalla/Rimuovi..</translation>
+        <translation type="obsolete">Disinstalla/Rimuovi..</translation>
     </message>
 </context>
 <context>
     <name>LocalPackageController</name>
     <message>
-        <location filename="packagecontroller.h" line="326"/>
         <source>Available locally</source>
-        <translation>Disponibili localmente</translation>
+        <translation type="obsolete">Disponibili localmente</translation>
     </message>
     <message>
-        <location filename="packagecontroller.h" line="336"/>
         <source>Packages already downloaded available for installation</source>
-        <translation>Pacchetti già scaricati e disponibili all&apos;installazione.</translation>
+        <translation type="obsolete">Pacchetti già scaricati e disponibili all&apos;installazione.</translation>
     </message>
 </context>
 <context>
@@ -123,14 +117,12 @@
         <translation>Errore durante download del pacchetto.</translation>
     </message>
     <message>
-        <location filename="packagecontroller.h" line="357"/>
         <source>Downloads available</source>
-        <translation>Pacchetti disponibili:</translation>
+        <translation type="obsolete">Pacchetti disponibili:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.h" line="372"/>
         <source>Network packages for download from servers:&lt;br/&gt;%1</source>
-        <translation>Pacchetti disponibili in rete sul server: &lt;br/&gt;%1</translation>
+        <translation type="obsolete">Pacchetti disponibili in rete sul server: &lt;br/&gt;%1</translation>
     </message>
 </context>
 <context>
