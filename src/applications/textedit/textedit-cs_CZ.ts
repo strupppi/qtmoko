@@ -166,6 +166,11 @@ Kliknutím znovu skryjete vyhledávací panel.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="textedit.cpp" line="732"/>
+        <source>&lt;qt&gt;Notes was unable to save your changes.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="textedit.cpp" line="761"/>
         <source>Empty Text</source>
         <translation>Prázdný text</translation>

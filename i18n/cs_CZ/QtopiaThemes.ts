@@ -4,37 +4,37 @@
 <context>
     <name>Themes</name>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="1"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Home_WVGA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="2"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Classic</source>
         <translation>Klasické</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="3"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>Deskphone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="4"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Finxi</source>
         <translation>Finxi</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="5"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Qtopia</source>
         <translation>Qtopia</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="6"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Smart</source>
         <translation>Smart</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="7"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Crisp</source>
         <translation>Crisp</translation>
     </message>

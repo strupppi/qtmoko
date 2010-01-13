@@ -4,32 +4,32 @@
 <context>
     <name>WebViewer</name>
     <message>
-        <location filename="tr6146.cpp" line="1"/>
+        <location filename="tr7308.cpp" line="2"/>
         <source>www.QtExtended.org</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="tr6146.cpp" line="2"/>
+        <location filename="tr7308.cpp" line="1"/>
         <source>A Web Viewer Example</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="tr6146.cpp" line="3"/>
+        <location filename="tr7308.cpp" line="3"/>
         <source>Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="tr6146.cpp" line="4"/>
+        <location filename="tr7308.cpp" line="5"/>
         <source>Active Homescreen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="tr6146.cpp" line="5"/>
+        <location filename="tr7308.cpp" line="4"/>
         <source>Active homescreen prototype</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="tr6146.cpp" line="6"/>
+        <location filename="tr7308.cpp" line="6"/>
         <source>Site for Qt Extended content, hints, and tips.</source>
         <translation type="unfinished"></translation>
     </message>

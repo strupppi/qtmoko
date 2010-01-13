@@ -4,7 +4,7 @@
 <context>
     <name>Czech</name>
     <message utf8="true">
-        <location filename="../../src/server/main/tr17033.cpp" line="5"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Čeština</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19,7 +19,7 @@
 <context>
     <name>English (U.S.)</name>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="3"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>English (U.S.)</source>
         <translation>Englisch (U.S.)</translation>
     </message>
@@ -27,7 +27,7 @@
 <context>
     <name>German</name>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="2"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Deutsch</source>
         <translation type="unfinished">Deutsch</translation>
     </message>
@@ -35,7 +35,7 @@
 <context>
     <name>Italian</name>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="4"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Italiano</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43,8 +43,16 @@
 <context>
     <name>Russian</name>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="1"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Russian</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Spain</name>
+    <message utf8="true">
+        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
+        <source>Español</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

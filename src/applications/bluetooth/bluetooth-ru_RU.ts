@@ -140,6 +140,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="mainwindow.cpp" line="824"/>
+        <source>The connection has been lost.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="mainwindow.cpp" line="839"/>
         <source>Connection failed.</source>
         <translation>Соединение прервано.</translation>

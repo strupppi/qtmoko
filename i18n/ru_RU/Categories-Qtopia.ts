@@ -4,22 +4,22 @@
 <context>
     <name>Categories</name>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="2"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Certificate</source>
         <translation>Сертификат</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="1"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Camera</source>
         <translation>Камера</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="4"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Recordings</source>
         <translation>Записи</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="3"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>Personal</source>
         <translation>Личное</translation>
     </message>
@@ -28,7 +28,7 @@
         <translation type="obsolete">Настройки</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="5"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Security Key</source>
         <translation>Ключ безопасности</translation>
     </message>
@@ -37,12 +37,12 @@
         <translation type="obsolete">Игры</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="7"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Applications</source>
         <translation>Приложения</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="6"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Unfiled</source>
         <translation>Не указано</translation>
     </message>
@@ -55,12 +55,12 @@
         <translation type="obsolete">Главные приложения</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="8"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr17033.cpp" line="9"/>
+        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>Business</source>
         <translation>Работа</translation>
     </message>
