@@ -1,86 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
-<context>
+<!DOCTYPE TS><TS>
+<context encoding="UTF-8">
     <name>Asteroids</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>Shoot the rocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispara a las rocas</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
+    <message encoding="UTF-8">
         <source>AsÂ­terÂ­oids</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Asteroids</translation>
     </message>
 </context>
 <context>
     <name>Fifteen Pieces</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
+    <message encoding="UTF-8">
         <source>FifÂ­teen PieÂ­ces</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Fifteen Pieces</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Fifteen Pieces Strategy Game</source>
-        <translation type="unfinished"></translation>
+        <translation>Fifteen Pieces es un Juego de Estrategia</translation>
     </message>
 </context>
 <context>
     <name>Mindbreaker</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
         <source>A Code Breaking Game</source>
-        <translation type="unfinished"></translation>
+        <translation>Un juego de romper códigos</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="12"/>
+    <message encoding="UTF-8">
         <source>MindÂ­breakÂ­er</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mindbreaker</translation>
     </message>
 </context>
 <context>
     <name>Mine Hunt</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Find the mines</source>
-        <translation type="unfinished"></translation>
+        <translation>Busca las minas</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Mine Hunt</source>
-        <translation type="unfinished"></translation>
+        <translation>Mine Hunt</translation>
     </message>
 </context>
 <context>
     <name>ParaShoot</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>A Parachute Attack Game</source>
-        <translation type="unfinished"></translation>
+        <translation>Un juego de ataque en paracaídas</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+    <message encoding="UTF-8">
         <source>ParaÂ­Shoot</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>ParaShoot</translation>
     </message>
 </context>
 <context>
     <name>Snake</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Snake</source>
-        <translation type="unfinished"></translation>
+        <translation>Snake</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>A Snake Game</source>
-        <translation type="unfinished"></translation>
+        <translation>Un juego de serpiente</translation>
     </message>
 </context>
 </TS>

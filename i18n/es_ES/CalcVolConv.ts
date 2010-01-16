@@ -1,62 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Volume</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>pt</source>
-        <translation type="unfinished"></translation>
+        <translation>pt</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+    <message encoding="UTF-8">
         <source>ft³</source>
-        <translation type="unfinished"></translation>
+        <translation>ft³</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>qt</source>
-        <translation type="unfinished"></translation>
+        <translation>qt</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volumen</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>ml</source>
-        <translation type="unfinished"></translation>
+        <translation>ml</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
+    <message encoding="UTF-8">
         <source>in³</source>
-        <translation type="unfinished"></translation>
+        <translation>in³</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>l</source>
-        <translation type="unfinished"></translation>
+        <translation>l</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>gal</source>
-        <translation type="unfinished"></translation>
+        <translation>gal</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>teasp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">teasp</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
         <source>tblsp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">tblsp</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
+    <message encoding="UTF-8">
         <source>cm³</source>
-        <translation type="unfinished"></translation>
+        <translation>cm³</translation>
     </message>
 </context>
 </TS>

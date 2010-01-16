@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Quoted ASCII</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Quoted ASCII</source>
-        <translation type="unfinished"></translation>
+        <translation>ASCII Citado</translation>
     </message>
 </context>
 <context>
     <name>Standard</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Standard</source>
-        <translation type="unfinished"></translation>
+        <translation>Estándar</translation>
     </message>
 </context>
 </TS>

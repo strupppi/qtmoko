@@ -1,769 +1,617 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Contacts</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="130"/>
         <source>Email %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Correo %1</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="131"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="132"/>
         <source>Business Fax</source>
-        <translation type="unfinished"></translation>
+        <translation>Fax Empresarial</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="133"/>
         <source>Home Mobile</source>
-        <translation type="unfinished"></translation>
+        <translation>Celular Personal</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="134"/>
         <source>Call %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Llamada %1</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="135"/>
         <source>Other</source>
-        <translation type="unfinished"></translation>
+        <translation>Otro</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="136"/>
         <source>Google Talk</source>
-        <translation type="unfinished"></translation>
+        <translation>Google Talk</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="137"/>
         <source>Home Fax</source>
-        <translation type="unfinished"></translation>
+        <translation>Fax Personal</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="138"/>
         <source>Business Mobile</source>
-        <translation type="unfinished"></translation>
+        <translation>Celular Empresarial</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="139"/>
         <source>Business VOIP</source>
-        <translation type="unfinished"></translation>
+        <translation>VOIP Empresarial</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="140"/>
         <source>Business</source>
-        <translation type="unfinished"></translation>
+        <translation>Negocios</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="141"/>
         <source>Chat to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chat con %1</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="142"/>
         <source>Home VOIP</source>
-        <translation type="unfinished"></translation>
+        <translation>VOIP Personal</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="143"/>
         <source>Mobile</source>
-        <translation type="unfinished"></translation>
+        <translation>Celular</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="144"/>
         <source>Last, First or Company</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Apellido, Nombre o Compañía</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="145"/>
         <source>Text %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto %1</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="146"/>
         <source>First Last or Company</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nombre Apellido o Compañía</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="147"/>
         <source>Business Pager</source>
-        <translation type="unfinished"></translation>
+        <translation>Localizador Empresarial</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="148"/>
         <source>VOIP</source>
-        <translation type="unfinished"></translation>
+        <translation>VOIP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="149"/>
         <source>Fax</source>
-        <translation type="unfinished"></translation>
+        <translation>Fax</translation>
     </message>
 </context>
 <context>
     <name>Logging</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>Verbose SIP debugging of incoming and outgoing audio data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Depuración detallada de datos de audio SIP entrante y saliente.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>Modem emulator related functionality.</source>
-        <translation type="unfinished"></translation>
+        <translation>Funcionalidad de emulador de módem relacionado.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
         <source>Infrared functionality.</source>
-        <translation type="unfinished"></translation>
+        <translation>Funcionalidad de Infrarrojo.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
         <source>DBUS activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad de DBUS.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="12"/>
         <source>Logging for Qt Extended Audio State Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro del estado de la capa de audio de Qt Extended</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="13"/>
         <source>Qt Extended Server tasks and startup.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tareas e Inicio del Servidor Qt Extended.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="14"/>
         <source>Anything to do with alternative behaviours in different languages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cualquier cosa para hacer con comportamientos alternativos en diferentes lenguajes.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="15"/>
         <source>Package management activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad del manejo de paquetes.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="16"/>
         <source>USB</source>
-        <translation type="unfinished"></translation>
+        <translation>USB</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="17"/>
         <source>Detailed logging of time, timezones.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro detallado del tiempo, zonas horarias.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="18"/>
         <source>Camera application.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicación para la cámara.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="19"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation>Varios</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="20"/>
         <source>Qt Extended Sound Server output activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad de salida del Servidor de Sonido de Qt Extended.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="21"/>
         <source>Virtual Private Network functionality.</source>
-        <translation type="unfinished"></translation>
+        <translation>Funcionalidad de Redes Virtuales Privadas.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="22"/>
         <source>User interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfaz de Usuario</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="23"/>
         <source>Bluetooth</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="24"/>
         <source>VoIP</source>
-        <translation type="unfinished"></translation>
+        <translation>VoIP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="25"/>
         <source>Power management activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad del administrador de energía.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="26"/>
         <source>Qt Extended Integration Layer Framework activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad de la capa de integración del framework de Qt Extended.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="27"/>
         <source>Modem Emulator</source>
-        <translation type="unfinished"></translation>
+        <translation>Emulador de Módem</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="28"/>
         <source>Component debugging</source>
-        <translation type="unfinished"></translation>
+        <translation>Depuración de componentes</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="29"/>
         <source>Verbose debugging of outgoing email data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Depuración detallada de datos de correos salientes.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="30"/>
         <source>Hardware</source>
-        <translation type="unfinished"></translation>
+        <translation>Hardware</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="31"/>
         <source>ALSA Audio Output.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salida de Audio ALSA.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="32"/>
         <source>Modem Other</source>
-        <translation type="unfinished"></translation>
+        <translation>Módem Otros</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="33"/>
         <source>Qt Extended Data Linking (QDL) activities.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividades de Qt Extended Data Linking (QDL).</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="34"/>
         <source>Personal Information Management</source>
-        <translation type="unfinished"></translation>
+        <translation>Manejo de Información Personal</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="35"/>
         <source>Qt Extended Sound Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Servidor de Sonido de Qt Extended</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="36"/>
         <source>Classes used in multiple components of Qt Extended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Clases usadas en multiples componentes de Qt Extended.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="37"/>
         <source>Verbose debugging of incoming email data from IMAP accounts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Depuración detallada de datos de correo entrante desde las cuentas IMAP.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="38"/>
         <source>Anything to do with Bluetooth support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Todo sobre el soporte Bluetooth.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="39"/>
         <source>Helps to identify missing dependencies resulting from a particular component selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda a identificar dependencias perdidas resultantes de una selección particular de componentes.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="40"/>
         <source>VPN</source>
-        <translation type="unfinished"></translation>
+        <translation>VPN</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="41"/>
         <source>Ini Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Capa Ini</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="42"/>
         <source>Package Management</source>
-        <translation type="unfinished"></translation>
+        <translation>Manejo de Paquetes</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="43"/>
         <source>Quicklauncher spawning and application loading.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Quicklauncher spawning and application loading.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="44"/>
         <source>Out Of Memory Handler.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Out Of Memory Handler.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="45"/>
         <source>Sip Audio Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos de Audio SIP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="46"/>
         <source>PIM</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PIM</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="47"/>
         <source>Anything to do with the user interface.</source>
-        <translation type="unfinished"></translation>
+        <translation>Todo sobre la interfaz de usuario.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="48"/>
         <source>DRM</source>
-        <translation type="unfinished"></translation>
+        <translation>DRM</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="49"/>
         <source>Performance logging of Qt Extended Server and Applications.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Registro del rendimiento del Servidor Qt Extended y Aplicaciones.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="50"/>
         <source>QtUitest Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>QtUitest Widgets</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="51"/>
         <source>Communication between Qt Extended and the Modem, in the form of AT commands and modem responses.</source>
-        <translation type="unfinished"></translation>
+        <translation>Comunicación entre Qt Extended y el Módem, en la forma de comandos AT y respuestas del módem.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="52"/>
         <source>Keypad and touchscreen plugins.</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadidos para el teclado y la pantalla táctil.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="53"/>
         <source>Voice-Over-IP specific logging messages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensajes específicos del registro de Voz-Sobre-IP.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="54"/>
         <source>Network activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad de la Red.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="55"/>
         <source>Qt Extended Data Sharing (QDS) activities.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividades de Qt Extended Data Sharing (QDS).</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="56"/>
         <source>Modem Multiplexing</source>
-        <translation type="unfinished"></translation>
+        <translation>Multiplexación del Módem</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="57"/>
         <source>Networking</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sistema de Redes</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="58"/>
         <source>Information on QtUitest widget wrappers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Información sobre las envolturas del widget QtUitest.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="59"/>
         <source>Text input methods</source>
-        <translation type="unfinished"></translation>
+        <translation>Métodos de entrada de texto</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="60"/>
         <source>DRM agent interactions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Agente de interacciones DRM.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="61"/>
         <source>Debug messages pertaining to sxemonitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensajes de depuración pertenecientes a sxemonitor</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="62"/>
         <source>Context-sensitive help interaction.</source>
-        <translation type="unfinished"></translation>
+        <translation>Interacción de ayuda sensitiva al contexto.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="63"/>
         <source>General services activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad de servicios generales.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="64"/>
         <source>Security Framework</source>
-        <translation type="unfinished"></translation>
+        <translation>Seguridad del framework</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="65"/>
         <source>Logging related to USB.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro relativo a USB.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="66"/>
         <source>Resource lookup information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Búsqueda de información de los recursos.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="67"/>
         <source>SMTP</source>
-        <translation type="unfinished"></translation>
+        <translation>SMTP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="68"/>
         <source>Cleanup Wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Asistente de limpieza</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="69"/>
         <source>Secure protocol and other SXE messages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Protocolo seguro y otros mensajes SXE.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="70"/>
         <source>SIM Toolkit</source>
-        <translation type="unfinished"></translation>
+        <translation>Toolkit del SIM</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="71"/>
         <source>Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Servidor</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="72"/>
         <source>Application Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Capa de Aplicación</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="73"/>
         <source>Camera</source>
-        <translation type="unfinished"></translation>
+        <translation>Cámara</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="74"/>
         <source>Power Management</source>
-        <translation type="unfinished"></translation>
+        <translation>Administración de Energía</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="75"/>
         <source>SQL table related interaction.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Interacación con la tabla SQL relacionada.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="76"/>
         <source>ALSA Audio Input.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrada de Audio ALSA.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="77"/>
         <source>Qt Extended Value Space - Ini Layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Extended Espacio de Valor - Capa Ini.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="78"/>
         <source>Qt Extended Value Space - application layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Extended Espacio de Valor - Capa Aplicación.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="79"/>
         <source>Application Execution</source>
-        <translation type="unfinished"></translation>
+        <translation>Ejecución de Aplicación</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="80"/>
         <source>Telepathy</source>
-        <translation type="unfinished"></translation>
+        <translation>Telepathy</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="81"/>
         <source>SimPhoneBook</source>
-        <translation type="unfinished"></translation>
+        <translation>LibretaSIMdelTeléfono</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="82"/>
         <source>Shared Memory Cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Caché de Memoria Compartida</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="83"/>
         <source>OBEX</source>
-        <translation type="unfinished"></translation>
+        <translation>OBEX</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="84"/>
         <source>OBEX functionality.</source>
-        <translation type="unfinished"></translation>
+        <translation>Funcionalidad OBEX.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="85"/>
         <source>Sip</source>
-        <translation type="unfinished"></translation>
+        <translation>SIP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="86"/>
         <source>Data Linking (QDL)</source>
-        <translation type="unfinished"></translation>
+        <translation>Data Linking (QDL)</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="87"/>
         <source>Modem AT communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Comunicación del Módem AT</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="88"/>
         <source>QSharedMemoryCache activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad QSharedMemoryCache.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="89"/>
         <source>POP</source>
-        <translation type="unfinished"></translation>
+        <translation>POP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="90"/>
         <source>AudioState</source>
-        <translation type="unfinished"></translation>
+        <translation>EstadodelAudio</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="91"/>
         <source>Multimedia</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Multimedia</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="92"/>
         <source>Data Sharing (QDS)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Data Sharing (QDS)</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="93"/>
         <source>Resource Lookup</source>
-        <translation type="unfinished"></translation>
+        <translation>Búsqueda de Recursos</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="94"/>
         <source>QtUitest</source>
-        <translation type="unfinished"></translation>
+        <translation>QtUitest</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="95"/>
         <source>Helpbrowser</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscador de Ayuda</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="96"/>
         <source>Document system</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="97"/>
         <source>QtUitest plugin activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad del añadido QtUitest.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="98"/>
         <source>Detailed logging of hardware messages.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Registro detallado de los mensajes de hardware.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="99"/>
         <source>DBUS</source>
-        <translation type="unfinished"></translation>
+        <translation>DBUS</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="100"/>
         <source>OOM</source>
-        <translation type="unfinished"></translation>
+        <translation>COM</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="101"/>
         <source>Verbose debugging of incoming email data from POP accounts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Depuración detallada de datos de correo entrante desde las cuentas POP.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="102"/>
         <source>Performance Analysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Análisis de Rendimiento</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="103"/>
         <source>Detailed packet information for SIM toolkit messages.</source>
-        <translation type="unfinished"></translation>
+        <translation>Información detallada del paquete para el SIM toolkit de mensajes.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="104"/>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="105"/>
         <source>Messaging activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad de la mensajería.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="106"/>
         <source>Logging related to loading the SIM card contact information into the database.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro detallado de la información de la carga de contactos de la tarjeta SIM en la base de datos.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="107"/>
         <source>Quicklauncher</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicio Rápido</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="108"/>
         <source>Application lifecycle management, from launching to termination.</source>
-        <translation type="unfinished"></translation>
+        <translation>Administración del ciclo de vida de las aplicaciones, desde su inicio hasta su terminación.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="109"/>
         <source>Cleanup wizard activity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad del asistente de limpieza.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="110"/>
         <source>Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Servicios</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="111"/>
         <source>IL Framework</source>
-        <translation type="unfinished"></translation>
+        <translation>IL Framework</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="112"/>
         <source>Detailed packet information for GSM 07.10 multiplexing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Información detallada de paquetes para la multiplexación GSM 07.10.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="113"/>
         <source>SXE security monitor</source>
-        <translation type="unfinished"></translation>
+        <translation>Monitor de seguridad SXE</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="114"/>
         <source>Logging related to Telepathy integration</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro relacionado a la integración de Telepathy</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="115"/>
         <source>Internationalization</source>
-        <translation type="unfinished"></translation>
+        <translation>Internacionalización</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="116"/>
         <source>Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Sincronización</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="117"/>
         <source>Debug messages pertaining to SIP sessions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensajes de depuración pertenecientes a las sesiones SIP.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="118"/>
         <source>Interactions with the document server. See also DRM.</source>
-        <translation type="unfinished"></translation>
+        <translation>Interacciones con el servidor de documentos. Ver también DRM.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="119"/>
         <source>Modem activity other than I/O.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actividad del módem y distintas de E/S.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="120"/>
         <source>SQL</source>
-        <translation type="unfinished"></translation>
+        <translation>SQL</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="121"/>
         <source>Infrared</source>
-        <translation type="unfinished"></translation>
+        <translation>Infrarrojo</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="122"/>
         <source>High level synchronization logging involving protocol messaging.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro de alto nivel de sincronización envuelta en el protocolo de mensajes.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="123"/>
         <source>Media related functionality.</source>
-        <translation type="unfinished"></translation>
+        <translation>Funcionalidad relacionada con medios.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="124"/>
         <source>Audio Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio de Entrada</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="125"/>
         <source>Messaging</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensajeria</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="126"/>
         <source>Audio Output</source>
-        <translation type="unfinished"></translation>
+        <translation>Audio de Salida</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="127"/>
         <source>IMAP</source>
-        <translation type="unfinished"></translation>
+        <translation>IMAP</translation>
     </message>
 </context>
 <context>
     <name>PhoneProfile</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Outdoor</source>
-        <translation type="unfinished"></translation>
+        <translation>Exteriores</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Silent</source>
-        <translation type="unfinished"></translation>
+        <translation>Silencio</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>Meeting</source>
-        <translation type="unfinished"></translation>
+        <translation>En Reunión</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Car</source>
-        <translation type="unfinished"></translation>
+        <translation>En el automóbil</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Handsfree</source>
-        <translation type="unfinished"></translation>
+        <translation>Manos Libres</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Airplane</source>
-        <translation type="unfinished"></translation>
+        <translation>En un Avión</translation>
     </message>
 </context>
 <context>
     <name>QPE</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="128"/>
         <source>6.4</source>
-        <translation type="unfinished"></translation>
+        <translation>6.4</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="129"/>
         <source>dejavu_sans_condensed</source>
-        <translation type="unfinished"></translation>
+        <translation>dejavu_sans_condensed</translation>
     </message>
 </context>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="150"/>
         <source>Call Voicemail</source>
-        <translation type="unfinished"></translation>
+        <translation>Llamar al Correo de Voz</translation>
     </message>
 </context>
 </TS>

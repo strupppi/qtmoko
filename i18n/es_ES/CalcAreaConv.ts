@@ -1,62 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Area</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+    <message encoding="UTF-8">
         <source>km²</source>
-        <translation type="unfinished"></translation>
+        <translation>km²</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+    <message encoding="UTF-8">
         <source>in²</source>
-        <translation type="unfinished"></translation>
+        <translation>in²</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
+    <message encoding="UTF-8">
         <source>cm²</source>
-        <translation type="unfinished"></translation>
+        <translation>cm²</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
+    <message encoding="UTF-8">
         <source>mi²</source>
-        <translation type="unfinished"></translation>
+        <translation>mi²</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
+    <message encoding="UTF-8">
         <source>m²</source>
-        <translation type="unfinished"></translation>
+        <translation>m²</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>acres</source>
-        <translation type="unfinished"></translation>
+        <translation>acres</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>hect</source>
-        <translation type="unfinished"></translation>
+        <translation>hect</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
+    <message encoding="UTF-8">
         <source>mm²</source>
-        <translation type="unfinished"></translation>
+        <translation>mm²</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
+    <message encoding="UTF-8">
         <source>ft²</source>
-        <translation type="unfinished"></translation>
+        <translation>ft²</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
+    <message encoding="UTF-8">
         <source>yd²</source>
-        <translation type="unfinished"></translation>
+        <translation>yd²</translation>
     </message>
 </context>
 </TS>

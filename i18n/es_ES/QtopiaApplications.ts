@@ -1,260 +1,221 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Archives</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="21"/>
         <source>Archives</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Archivos</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="22"/>
         <source>Archive viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Visor de archivos</translation>
     </message>
 </context>
 <context>
     <name>Bluetooth</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>Bluetooth Applications Suite</source>
-        <translation type="unfinished"></translation>
+        <translation>Suite de Aplicaciones Bluetooth</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>Bluetooth FTP</source>
-        <translation type="unfinished"></translation>
+        <translation>FTP Bluetooth</translation>
     </message>
 </context>
 <context>
     <name>Calculator</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="28"/>
         <source>A Calculator Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Una Calculadora</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="29"/>
+    <message encoding="UTF-8">
         <source>CalÂ­cuÂ­laÂ­tor</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Calculadora</translation>
     </message>
 </context>
 <context>
     <name>Calendar</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="23"/>
+    <message encoding="UTF-8">
         <source>CalÂ­enÂ­dar</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Calendario</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="24"/>
         <source>A Calendar and Scheduling Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Un calendario y un planificador</translation>
     </message>
 </context>
 <context>
     <name>Call History</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
+    <message encoding="UTF-8">
         <source>Call HisÂ­toÂ­ry</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Historial de Llamadas</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
         <source>Call History Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicación del Historial de Llamadas</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Camera</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+    <message encoding="UTF-8">
         <source>CamÂ­era</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Cámara</translation>
     </message>
 </context>
 <context>
     <name>Clock</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="30"/>
         <source>A Clock Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Un Reloj</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="31"/>
         <source>Clock</source>
-        <translation type="unfinished"></translation>
+        <translation>Reloj</translation>
     </message>
 </context>
 <context>
     <name>Contacts</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="32"/>
         <source>An Address Book Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Una Libreta de Contactos</translation>
     </message>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="33"/>
+    <message encoding="UTF-8">
         <source>ConÂ­tacts</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Contactos</translation>
     </message>
 </context>
 <context>
     <name>Help</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="36"/>
         <source>A HTML Help Browser Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Un Buscador de Ayuda HTML</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="37"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda</translation>
     </message>
 </context>
 <context>
     <name>MediaPlayer</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Media Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproductor Multimedia</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>A media player application</source>
-        <translation type="unfinished"></translation>
+        <translation>Un reproductor de medios</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Messages</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="27"/>
+    <message encoding="UTF-8">
         <source>MesÂ­sages</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mensajes</translation>
     </message>
 </context>
 <context>
     <name>MusicPlayer</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="15"/>
         <source>Music Player</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproductor de Música</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="16"/>
         <source>A music player application</source>
-        <translation type="unfinished"></translation>
+        <translation>Un reproductor de música</translation>
     </message>
 </context>
 <context>
     <name>Notes</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="19"/>
         <source>A Text Editing Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Un editor de texto</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="20"/>
         <source>Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Notas</translation>
     </message>
 </context>
 <context>
     <name>PhotoGallery</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>A Photo Gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>Una galería de fotos</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Photos</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Fotos</translation>
     </message>
 </context>
 <context>
     <name>Pictures</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="12"/>
+    <message encoding="UTF-8">
         <source>PicÂ­tures</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Imágenes</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="13"/>
         <source>A Photo Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Un editor de imágenes</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>SimApp</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="14"/>
+    <message encoding="UTF-8">
         <source>SIM ApÂ­pliÂ­caÂ­tions</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aplicaciones SIM</translation>
     </message>
 </context>
 <context>
     <name>System Info</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="34"/>
+    <message encoding="UTF-8">
         <source>SysÂ­tem Info</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Info del sistema</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="35"/>
         <source>System Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Información del Sistema</translation>
     </message>
 </context>
 <context>
     <name>Tasks</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="17"/>
         <source>A Todo List Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Una Lista de Tareas</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="18"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tareas</translation>
     </message>
 </context>
 <context>
     <name>Voice Notes</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="25"/>
         <source>A Voice Recording Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Un grabador de voz</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="26"/>
         <source>Voice Notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Notas de Voz</translation>
     </message>
 </context>
 <context>
     <name>World Time</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>A World Clock and Time Zone Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Un Reloj Mundial y Editor de Zonas Horarias</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>World Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo Mundial</translation>
     </message>
 </context>
 </TS>

@@ -1,107 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>ColorScheme</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Fern</source>
-        <translation type="unfinished"></translation>
+        <translation>Helecho</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Deskphone</source>
-        <translation type="unfinished"></translation>
+        <translation>Deskphone</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>Bright</source>
-        <translation type="unfinished"></translation>
+        <translation>Brillante</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Qtopia</source>
-        <translation type="unfinished"></translation>
+        <translation>Qtopia</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Greenish</source>
-        <translation type="unfinished"></translation>
+        <translation>Verdoso</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>home_wvga</source>
-        <translation type="unfinished"></translation>
+        <translation>home_wvga</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Lavender</source>
-        <translation type="unfinished"></translation>
+        <translation>Lavanda</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>Naranja</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>Classic</source>
-        <translation type="unfinished"></translation>
+        <translation>Clásico</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
         <source>Saffron</source>
-        <translation type="unfinished"></translation>
+        <translation>Azafrán</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
         <source>SteelBlue</source>
-        <translation type="unfinished"></translation>
+        <translation>Azul Acero</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="12"/>
         <source>Purple</source>
-        <translation type="unfinished"></translation>
+        <translation>Púrpura</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="13"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Rojo Oscuro</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="14"/>
         <source>Crisp</source>
-        <translation type="unfinished"></translation>
+        <translation>Crips</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="15"/>
         <source>Desert</source>
-        <translation type="unfinished"></translation>
+        <translation>Desierto</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="16"/>
         <source>Dark Qtopia</source>
-        <translation type="unfinished"></translation>
+        <translation>Qtopia Oscuro</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="17"/>
         <source>Blues</source>
-        <translation type="unfinished"></translation>
+        <translation>Blues</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="18"/>
         <source>Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Amarillo</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="19"/>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>Gris</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="20"/>
         <source>Carmine</source>
-        <translation type="unfinished"></translation>
+        <translation>Carmín</translation>
     </message>
 </context>
 </TS>

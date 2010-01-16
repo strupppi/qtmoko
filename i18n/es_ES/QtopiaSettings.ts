@@ -1,281 +1,245 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
-<context>
+<!DOCTYPE TS><TS>
+<context encoding="UTF-8">
     <name>Appearance</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="21"/>
+    <message encoding="UTF-8">
         <source>ApÂ­pearÂ­ance</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Apariencia</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Application Services</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+    <message encoding="UTF-8">
         <source>ApÂ­pliÂ­caÂ­tion SerÂ­vices</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Servicios de Aplicaciones</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>BTSettings</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="22"/>
+    <message encoding="UTF-8">
         <source>BlueÂ­tooth</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth</translation>
     </message>
 </context>
 <context>
     <name>Beaming</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="24"/>
         <source>Beaming</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Call Forwarding</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
+    <message encoding="UTF-8">
         <source>Call ForÂ­warding</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Desvío de Llamadas</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Call Networks</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
+    <message encoding="UTF-8">
         <source>Call NetÂ­works</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Redes de Llamadas</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Call Options</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="15"/>
+    <message encoding="UTF-8">
         <source>Call OpÂ­tions</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de Llamada</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Date/Time</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+    <message encoding="UTF-8">
         <source>Date/Â­Time</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Día/Hora</translation>
     </message>
 </context>
 <context>
     <name>GTalk</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="32"/>
         <source>A Google Talk Settings Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuración de la Aplicación Google Talk</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="33"/>
         <source>GTalk</source>
-        <translation type="unfinished"></translation>
+        <translation>GTalk</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Handwriting</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="25"/>
+    <message encoding="UTF-8">
         <source>HandÂ­wriÂ­ting</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Escritura con la mano</translation>
     </message>
 </context>
 <context>
     <name>Homescreen</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="31"/>
         <source>Homescreen</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Homescreen</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Language</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="20"/>
+    <message encoding="UTF-8">
         <source>LanÂ­guage</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Idioma</translation>
     </message>
 </context>
 <context>
     <name>Licenses</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
         <source>Digital Rights Management Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Información del manejo de Derechos Digitales</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="12"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencias</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Light &amp; Power</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
+    <message encoding="UTF-8">
         <source>PowÂ­er ManÂ­ageÂ­ment</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Administración de Energía</translation>
     </message>
 </context>
 <context>
     <name>Logging</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="26"/>
         <source>Logging</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Network</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="17"/>
+    <message encoding="UTF-8">
         <source>InÂ­terÂ­net</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Internet</translation>
     </message>
 </context>
 <context>
     <name>Profiles</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="28"/>
+    <message encoding="UTF-8">
         <source>ProÂ­files</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Perfiles</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="29"/>
         <source>Phone profile application</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicación de los perfiles del teléfono</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Recalibrate</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="23"/>
+    <message encoding="UTF-8">
         <source>ReÂ­calÂ­iÂ­brate</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Re-Calibrar</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Rotation</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="14"/>
+    <message encoding="UTF-8">
         <source>RoÂ­taÂ­tion</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Rotacion</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Security</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="16"/>
+    <message encoding="UTF-8">
         <source>SeÂ­cuÂ­riÂ­ty</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Seguridad</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>ServerWidgets</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="34"/>
+    <message encoding="UTF-8">
         <source>SerÂ­ver WidÂ­gets</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Shutdown</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
+    <message encoding="UTF-8">
         <source>ShutÂ­down</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Apagar</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>Software Packages</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="13"/>
+    <message encoding="UTF-8">
         <source>SoftÂ­ware PackÂ­ages</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Paquetes de software</translation>
     </message>
 </context>
 <context>
     <name>Speed Dial</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="30"/>
         <source>Speed Dial</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcador Rápido</translation>
     </message>
 </context>
 <context>
     <name>Startup Flags</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="18"/>
         <source>Startup Flags</source>
-        <translation type="unfinished"></translation>
+        <translation>Banderas de Inicio</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="19"/>
         <source>A Development tool for modifying startup flags</source>
-        <translation type="unfinished"></translation>
+        <translation>Una herramienta de desarrollo para modificar las banderas de inicio</translation>
     </message>
 </context>
 <context>
     <name>Task Manager</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Task Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Administrador de Tareas</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>USBConnectionMode</name>
-    <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
+    <message encoding="UTF-8">
         <source>USB ConÂ­necÂ­tion Mode</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="unfinished"></translation>
+        <translation>Modo de Conexión USB</translation>
     </message>
 </context>
 <context>
     <name>VoIP</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
         <source>VoIP</source>
-        <translation type="unfinished"></translation>
+        <translation>VoIP</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
         <source>A VoIP Settings Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Una Aplicación para la configuración de la VoIP</translation>
     </message>
 </context>
 <context>
     <name>Words</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="27"/>
         <source>Words</source>
-        <translation type="unfinished"></translation>
+        <translation>Palabras</translation>
     </message>
 </context>
 </TS>

@@ -1,42 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Themes</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Classic</source>
-        <translation type="unfinished"></translation>
+        <translation>Clásico</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Home_WVGA</source>
-        <translation type="unfinished"></translation>
+        <translation>Home_WVGA</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>Deskphone</source>
-        <translation type="unfinished"></translation>
+        <translation>Deskphone</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Finxi</source>
-        <translation type="unfinished"></translation>
+        <translation>Finxi</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Smart</source>
-        <translation type="unfinished"></translation>
+        <translation>Smart</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Qtopia</source>
-        <translation type="unfinished"></translation>
+        <translation>Qtopia</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Crisp</source>
-        <translation type="unfinished"></translation>
+        <translation>Crisp</translation>
     </message>
 </context>
 </TS>

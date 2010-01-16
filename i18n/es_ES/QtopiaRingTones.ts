@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>Content</name>
     <message>
-        <location filename="../../src/server/main/tr8039.cpp" line="1"/>
         <source>alarm</source>
-        <translation type="unfinished"></translation>
+        <translation>alarma</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr8039.cpp" line="2"/>
         <source>phonering</source>
-        <translation type="unfinished"></translation>
+        <translation>Ring del Teléfono</translation>
     </message>
 </context>
 </TS>

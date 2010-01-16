@@ -1,50 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0">
+<!DOCTYPE TS><TS>
 <context>
     <name>FullScreen</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Número</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>Lowercase latin 1 and digits.</source>
-        <translation type="unfinished"></translation>
+        <translation>Minúsculas latin 1 y dígitos.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Digits and Symbols used in phone numbers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dígitos y Símbolos usados en los números del teléfono.</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Full Screen Handwriting</source>
-        <translation type="unfinished"></translation>
+        <translation>Escritura con la mano a Pantalla Completa</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
         <source>Latin 1, with numeric and fs modal using natural strokes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto</translation>
     </message>
 </context>
 <context>
     <name>Popup</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
         <source>Popup</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventana Emergente</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
         <source>Latin 1 using natural strokes</source>
-        <translation type="unfinished"></translation>
+        <translation>Latin 1 usando trazos naturales</translation>
     </message>
 </context>
 </TS>
