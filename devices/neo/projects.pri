@@ -3,7 +3,9 @@ PROJECTS-=\
     games/qasteroids \
     games/parashoot \
     applications/camera \
-    settings/serverwidgets
+    settings/serverwidgets \
+    server/phone/ui/components/simapp \
+    ../examples/whereabouts/mappingdemo
 
 SERVER_PROJECTS-=\
     server/media/genericvolumeservice \
@@ -16,13 +18,12 @@ PROJECTS*=\
     settings/startupflags \
     tools/phonebounce \
     ../examples/scribble \
-    ../examples/webviewer \
-    ../examples/whereabouts/mappingdemo \
     3rdparty/applications/qterminal \
     3rdparty/applications/screenshot \
     3rdparty/applications/qmplayer \
     3rdparty/applications/qx \
     3rdparty/applications/qx_helper \
-    3rdparty/applications/gqsync \
     3rdparty/applications/simplefm \
+    3rdparty/applications/nerongps \
+    3rdparty/applications/arora/src \
     3rdparty/tools/atd
