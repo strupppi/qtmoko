@@ -1,5 +1,5 @@
 TEMPLATE=app
-TARGET=qmplayer
+TARGET=neocontrol
 
 CONFIG+=qtopia
 DEFINES+=QTOPIA
@@ -10,8 +10,8 @@ LANGUAGES=en_US
 
 # Package info
 pkg [
-    name=qmplayer
-    desc="MPlayer frontend"
+    name=neocontrol
+    desc="Openmoko control"
     license=GPLv2
     version=1.0
     maintainer="Radek Polak <psonek2@seznam.cz>"
@@ -19,11 +19,11 @@ pkg [
 
 # Input files
 HEADERS=\
-    qmplayer.h
+    neocontrol.h
 
 SOURCES=\
     main.cpp\
-    qmplayer.cpp
+    neocontrol.cpp
 
 # Install rules
 target [
@@ -33,13 +33,13 @@ target [
 
 desktop [
     hint=desktop
-    files=qmplayer.desktop
+    files=neocontrol.desktop
     path=/apps/Applications
 ]
 
 pics [
     hint=pics
     files=pics/*
-    path=/pics/qmplayer
+    path=/pics/neocontrol
 ]
 
