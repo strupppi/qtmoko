@@ -327,8 +327,9 @@
         <translation>Cicla</translation>
     </message>
     <message>
+        <location filename="slideshow/slideshowdialog.h" line="46"/>
         <source>Slide length ( %1 sec. )</source>
-        <translation type="obsolete">Durata presentazione (%1 sec.)</translation>
+        <translation type="unfinished">Durata presentazione (%1 sec.)</translation>
     </message>
 </context>
 </TS>

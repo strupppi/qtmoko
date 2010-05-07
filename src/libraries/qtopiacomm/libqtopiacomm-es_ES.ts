@@ -688,7 +688,7 @@
     </message>
 </context>
 <context>
-    <name>QNetworkConnection</name>
+    <name>QNetworkConnection::Identity</name>
     <message>
         <location filename="network/qnetworkconnection.cpp" line="232"/>
         <source>WLAN: %1</source>

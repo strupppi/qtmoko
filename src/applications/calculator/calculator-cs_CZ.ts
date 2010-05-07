@@ -170,8 +170,9 @@ desítkově</translation>
         <translation></translation>
     </message>
     <message>
+        <location filename="interfaces/phone.h" line="46"/>
         <source>Phone</source>
-        <translation type="obsolete">Telefon</translation>
+        <translation type="unfinished">Telefon</translation>
     </message>
 </context>
 <context>
@@ -179,6 +180,7 @@ desítkově</translation>
     <message>
         <location filename="calculator.cpp" line="112"/>
         <location filename="interfaces/simple.cpp" line="30"/>
+        <location filename="interfaces/simple.h" line="37"/>
         <source>Simple</source>
         <translation>Jednoduchý</translation>
     </message>
@@ -339,8 +341,9 @@ desítkově</translation>
         <translation></translation>
     </message>
     <message>
+        <location filename="interfaces/stdinputwidgets.h" line="69"/>
         <source>Standard</source>
-        <translation type="obsolete">Standratní</translation>
+        <translation type="unfinished">Standratní</translation>
     </message>
 </context>
 <context>

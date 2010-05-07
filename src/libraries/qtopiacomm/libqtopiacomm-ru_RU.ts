@@ -952,18 +952,18 @@
 <context>
     <name>QNetworkConnection</name>
     <message>
-        <location filename="network/qnetworkconnection.cpp" line="232"/>
         <source>WLAN: %1</source>
         <comment>%1 name of WLAN ESSID</comment>
-        <translation type="unfinished">WLAN: %1</translation>
+        <translation type="obsolete">WLAN: %1</translation>
     </message>
 </context>
 <context>
     <name>QNetworkConnection::Identity</name>
     <message>
+        <location filename="network/qnetworkconnection.cpp" line="232"/>
         <source>WLAN: %1</source>
         <comment>%1 name of WLAN ESSID</comment>
-        <translation type="obsolete">WLAN: %1</translation>
+        <translation type="unfinished">WLAN: %1</translation>
     </message>
 </context>
 <context>

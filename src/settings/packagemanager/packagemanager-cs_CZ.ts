@@ -28,6 +28,11 @@
         <source>Capabilities:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="packagecontroller.h" line="310"/>
+        <source>Install</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HttpFileReceiver</name>
@@ -42,6 +47,37 @@
     <message>
         <location filename="httpfetcher.cpp" line="287"/>
         <source>Too many packages available to display from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InstalledPackageController</name>
+    <message>
+        <location filename="packagecontroller.h" line="383"/>
+        <source>Installed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.h" line="393"/>
+        <source>Currently installed packages which may be removed to regain space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.h" line="398"/>
+        <source>Uninstall</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>LocalPackageController</name>
+    <message>
+        <location filename="packagecontroller.h" line="326"/>
+        <source>Available locally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.h" line="336"/>
+        <source>Packages already downloaded available for installation</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -84,6 +120,16 @@
     <message>
         <location filename="packagecontroller.cpp" line="427"/>
         <source>Error occurred while downloading package</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.h" line="357"/>
+        <source>Downloads available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.h" line="372"/>
+        <source>Network packages for download from servers:&lt;br/&gt;%1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

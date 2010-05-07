@@ -34,47 +34,47 @@
     <name>LanImpl</name>
     <message>
         <location filename="lan.cpp" line="116"/>
-        <location filename="lan.cpp" line="260"/>
+        <location filename="lan.cpp" line="266"/>
         <source>Interface hasn&apos;t been initialized yet.</source>
         <translation>Интерфейс не инициализирован.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="174"/>
+        <location filename="lan.cpp" line="180"/>
         <source>Cannot set default gateway.</source>
         <translation>Невозможно установить шлюз по умолчанию.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="244"/>
+        <location filename="lan.cpp" line="250"/>
         <source>No WLAN found in sourrounding area</source>
         <translation>Сеть WLAN не найдена в данной области</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="264"/>
+        <location filename="lan.cpp" line="270"/>
         <source>Interface is not available.</source>
         <translation>Интерфейс недоступен.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="270"/>
+        <location filename="lan.cpp" line="276"/>
         <source>Interface already started/active.</source>
         <translation>Интерфейс уже запущен/активен.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="310"/>
+        <location filename="lan.cpp" line="316"/>
         <source>IP address missing.</source>
         <translation>Отсутствует IP адрес.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="324"/>
+        <location filename="lan.cpp" line="330"/>
         <source>Subnet mask missing.</source>
         <translation>Отсутствует маска подсети.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="338"/>
+        <location filename="lan.cpp" line="344"/>
         <source>Broadcast address missing.</source>
         <translation>Отсутствует широковещательный адрес.</translation>
     </message>
     <message>
-        <location filename="lan.cpp" line="506"/>
+        <location filename="lan.cpp" line="512"/>
         <source>Interface is not running.</source>
         <translation>Интерфейс не запущен.</translation>
     </message>

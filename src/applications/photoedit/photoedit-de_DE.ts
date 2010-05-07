@@ -326,5 +326,10 @@
         <source>Loop through</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="slideshow/slideshowdialog.h" line="46"/>
+        <source>Slide length ( %1 sec. )</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

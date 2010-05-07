@@ -4,12 +4,12 @@
 <context>
     <name>Content</name>
     <message>
-        <location filename="../../src/server/main/tr8039.cpp" line="1"/>
+        <location filename="../../src/server/main/tr11307.cpp" line="1"/>
         <source>alarm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr8039.cpp" line="2"/>
+        <location filename="../../src/server/main/tr11307.cpp" line="2"/>
         <source>phonering</source>
         <translation type="unfinished"></translation>
     </message>

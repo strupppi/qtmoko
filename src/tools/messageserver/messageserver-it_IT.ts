@@ -157,18 +157,18 @@
         <translation>Sistema</translation>
     </message>
     <message>
-        <location filename="emailhandler.cpp" line="945"/>
+        <location filename="emailhandler.cpp" line="948"/>
         <source>Unable to send; message moved to Drafts folder</source>
         <translation>Invio impossibile. Salvo il messaggio nella cartella Bozze.</translation>
     </message>
     <message>
-        <location filename="emailhandler.cpp" line="952"/>
+        <location filename="emailhandler.cpp" line="955"/>
         <source>Unexpected response from server%1:</source>
         <comment>%1: server address preceded by space</comment>
         <translation>Risposta errata da parte del server%1</translation>
     </message>
     <message>
-        <location filename="emailhandler.cpp" line="960"/>
+        <location filename="emailhandler.cpp" line="963"/>
         <source>Error %1</source>
         <comment>%1 contains numeric error code</comment>
         <translation>Errore num. %1</translation>
@@ -459,17 +459,17 @@
 <context>
     <name>SmsClient</name>
     <message>
-        <location filename="smsclient.cpp" line="105"/>
+        <location filename="smsclient.cpp" line="108"/>
         <source>Messages cannot be sent in Airplane Mode.</source>
         <translation>Non é possibile inviare messaggi mentre sei in modalità Aereoplano.</translation>
     </message>
     <message>
-        <location filename="smsclient.cpp" line="380"/>
+        <location filename="smsclient.cpp" line="383"/>
         <source>(no subject)</source>
         <translation>(Nessun soggetto)</translation>
     </message>
     <message>
-        <location filename="smsclient.cpp" line="579"/>
+        <location filename="smsclient.cpp" line="582"/>
         <source>Cancelled by user</source>
         <translation>Annullato come da richiesta..</translation>
     </message>

@@ -28,36 +28,41 @@
     </message>
     <message>
         <location filename="lightsettingsbase.ui" line="53"/>
+        <source>When locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lightsettingsbase.ui" line="58"/>
         <source>On Battery</source>
         <translation>Da batteria</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="58"/>
+        <location filename="lightsettingsbase.ui" line="63"/>
         <source>Plugged In</source>
         <translation>Con cavo</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="122"/>
+        <location filename="lightsettingsbase.ui" line="127"/>
         <source>Brightness</source>
         <translation>Luminosità</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="196"/>
+        <location filename="lightsettingsbase.ui" line="201"/>
         <source>Dim light</source>
         <translation>Affievolisci</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="231"/>
+        <location filename="lightsettingsbase.ui" line="236"/>
         <source>Display off</source>
         <translation>Spegni display</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="266"/>
+        <location filename="lightsettingsbase.ui" line="271"/>
         <source>Suspend</source>
         <translation>Sospendi</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="303"/>
+        <location filename="lightsettingsbase.ui" line="308"/>
         <source>Disable suspend while online</source>
         <translation>Disabilita sospensione quando alimentato da rete elettrica</translation>
     </message>

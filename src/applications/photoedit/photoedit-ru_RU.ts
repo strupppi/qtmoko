@@ -312,8 +312,9 @@
 <context>
     <name>SlideShowDialog</name>
     <message>
+        <location filename="slideshow/slideshowdialog.h" line="46"/>
         <source>Slide length ( %1 sec. )</source>
-        <translation type="obsolete">Задержка ( %1с )</translation>
+        <translation type="unfinished">Задержка ( %1с )</translation>
     </message>
     <message>
         <location filename="slideshow/slideshowdialog.cpp" line="32"/>

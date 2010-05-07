@@ -4,12 +4,12 @@
 <context>
     <name>QDSync</name>
     <message>
-        <location filename="tr5634.cpp" line="1"/>
+        <location filename="tr6050.cpp" line="1"/>
         <source>Synchronization</source>
         <translation>Sincronizzazione</translation>
     </message>
     <message>
-        <location filename="tr5634.cpp" line="2"/>
+        <location filename="tr6050.cpp" line="2"/>
         <source>Sync with Qt Extended Sync Agent.</source>
         <translation>Sincronizzazione con l&apos;agente Qt Extended Sync</translation>
     </message>

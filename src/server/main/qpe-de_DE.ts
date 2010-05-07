@@ -121,90 +121,90 @@
 <context>
     <name>BasicHomeScreen</name>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="160"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="161"/>
         <source>Screen Lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="163"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="164"/>
         <source>Key Lock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="167"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="168"/>
         <source>Profile...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="177"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="178"/>
         <source>Missed Calls...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="183"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="184"/>
         <source>New Messages...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="302"/>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="415"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="303"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="416"/>
         <source>Unlock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="311"/>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="722"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="312"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="723"/>
         <source>Calls</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="324"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="325"/>
         <source>Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="393"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="394"/>
         <source>Emergency number &lt;b&gt;%1&lt;/b&gt;&lt;br&gt;Press &lt;font color=#008800&gt;Call&lt;/font&gt; to dial.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="397"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="398"/>
         <source>Call</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="412"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="413"/>
         <source>Press %1 then * to unlock phone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="421"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="422"/>
         <source>Now press * to unlock phone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="435"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="436"/>
         <source>Please Wait...</source>
         <comment>please wait while the phone checks to see if it needs a pin number, or if the most recently entered pin number is correct</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="439"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="440"/>
         <source>Enter PIN then press %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="442"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="443"/>
         <source>Enter PUK then press %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="445"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="446"/>
         <source>Enter new PIN then press %1&lt;br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="449"/>
+        <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="450"/>
         <source>Please Wait...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1627,23 +1627,23 @@ recalibrate the screen.</source>
 <context>
     <name>PowerAlertDialogTask</name>
     <message>
-        <location filename="../ui/poweralert/poweralerttask.cpp" line="98"/>
+        <location filename="../ui/poweralert/poweralerttask.cpp" line="105"/>
         <source>Battery is running very low.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/poweralert/poweralerttask.cpp" line="103"/>
+        <location filename="../ui/poweralert/poweralerttask.cpp" line="110"/>
         <source>Battery level is critical!
 Please recharge now!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/poweralert/poweralerttask.cpp" line="113"/>
+        <location filename="../ui/poweralert/poweralerttask.cpp" line="120"/>
         <source>Battery Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/poweralert/poweralerttask.cpp" line="113"/>
+        <location filename="../ui/poweralert/poweralerttask.cpp" line="120"/>
         <source>Low Battery</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1894,13 +1894,13 @@ Please recharge now!</source>
 <context>
     <name>QtopiaPowerConstraintManager</name>
     <message>
-        <location filename="../core_server/qtopiapowermanager.cpp" line="633"/>
+        <location filename="../core_server/qtopiapowermanager.cpp" line="673"/>
         <source>&lt;qt&gt;The running applications disabled power saving for more than the allowed time (%1).&lt;br&gt;The system was forced to suspend&lt;/qt&gt;</source>
         <comment>%1 = time span</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../core_server/qtopiapowermanager.cpp" line="636"/>
+        <location filename="../core_server/qtopiapowermanager.cpp" line="676"/>
         <source>Forced suspend</source>
         <translation type="unfinished"></translation>
     </message>

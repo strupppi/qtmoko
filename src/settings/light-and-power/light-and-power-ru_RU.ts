@@ -28,36 +28,41 @@
     </message>
     <message>
         <location filename="lightsettingsbase.ui" line="53"/>
+        <source>When locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lightsettingsbase.ui" line="58"/>
         <source>On Battery</source>
         <translation>От батареи</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="58"/>
+        <location filename="lightsettingsbase.ui" line="63"/>
         <source>Plugged In</source>
         <translation>От зарядного устр.</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="122"/>
+        <location filename="lightsettingsbase.ui" line="127"/>
         <source>Brightness</source>
         <translation>Яркость</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="196"/>
+        <location filename="lightsettingsbase.ui" line="201"/>
         <source>Dim light</source>
         <translation>Уменьшать подсв.</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="231"/>
+        <location filename="lightsettingsbase.ui" line="236"/>
         <source>Display off</source>
         <translation>Откл. дисплей</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="266"/>
+        <location filename="lightsettingsbase.ui" line="271"/>
         <source>Suspend</source>
         <translation>Спящий режим</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="303"/>
+        <location filename="lightsettingsbase.ui" line="308"/>
         <source>Disable suspend while online</source>
         <translation>Откл. спящий режим, если онлайн</translation>
     </message>

@@ -28,36 +28,41 @@
     </message>
     <message>
         <location filename="lightsettingsbase.ui" line="53"/>
-        <source>On Battery</source>
+        <source>When locked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lightsettingsbase.ui" line="58"/>
+        <source>On Battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lightsettingsbase.ui" line="63"/>
         <source>Plugged In</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="122"/>
+        <location filename="lightsettingsbase.ui" line="127"/>
         <source>Brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="196"/>
+        <location filename="lightsettingsbase.ui" line="201"/>
         <source>Dim light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="231"/>
+        <location filename="lightsettingsbase.ui" line="236"/>
         <source>Display off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="266"/>
+        <location filename="lightsettingsbase.ui" line="271"/>
         <source>Suspend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="303"/>
+        <location filename="lightsettingsbase.ui" line="308"/>
         <source>Disable suspend while online</source>
         <translation type="unfinished"></translation>
     </message>

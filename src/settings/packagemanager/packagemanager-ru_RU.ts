@@ -4,8 +4,9 @@
 <context>
     <name>AbstractPackageController</name>
     <message>
+        <location filename="packagecontroller.h" line="310"/>
         <source>Install</source>
-        <translation type="obsolete">Установить</translation>
+        <translation type="unfinished">Установить</translation>
     </message>
     <message>
         <location filename="packagecontroller.cpp" line="177"/>
@@ -52,38 +53,45 @@
 <context>
     <name>InstalledPackageController</name>
     <message>
+        <location filename="packagecontroller.h" line="383"/>
         <source>Installed</source>
-        <translation type="obsolete">Установлен</translation>
+        <translation type="unfinished">Установлен</translation>
     </message>
     <message>
+        <location filename="packagecontroller.h" line="393"/>
         <source>Currently installed packages which may be removed to regain space</source>
-        <translation type="obsolete">Установленные сейчас пакеты, которые могут быть удалены для освобождения пространства</translation>
+        <translation type="unfinished">Установленные сейчас пакеты, которые могут быть удалены для освобождения пространства</translation>
     </message>
     <message>
+        <location filename="packagecontroller.h" line="398"/>
         <source>Uninstall</source>
-        <translation type="obsolete">Удалить</translation>
+        <translation type="unfinished">Удалить</translation>
     </message>
 </context>
 <context>
     <name>LocalPackageController</name>
     <message>
+        <location filename="packagecontroller.h" line="326"/>
         <source>Available locally</source>
-        <translation type="obsolete">Доступен локально</translation>
+        <translation type="unfinished">Доступен локально</translation>
     </message>
     <message>
+        <location filename="packagecontroller.h" line="336"/>
         <source>Packages already downloaded available for installation</source>
-        <translation type="obsolete">Загруженные пакеты, доступные для установки</translation>
+        <translation type="unfinished">Загруженные пакеты, доступные для установки</translation>
     </message>
 </context>
 <context>
     <name>NetworkPackageController</name>
     <message>
+        <location filename="packagecontroller.h" line="357"/>
         <source>Downloads available</source>
-        <translation type="obsolete">Доступные загрузки</translation>
+        <translation type="unfinished">Доступные загрузки</translation>
     </message>
     <message>
+        <location filename="packagecontroller.h" line="372"/>
         <source>Network packages for download from servers:&lt;br/&gt;%1</source>
-        <translation type="obsolete">Пакеты для загрузки с сервера по сети:&lt;br/&gt;%1</translation>
+        <translation type="unfinished">Пакеты для загрузки с сервера по сети:&lt;br/&gt;%1</translation>
     </message>
     <message>
         <location filename="packagecontroller.cpp" line="325"/>
