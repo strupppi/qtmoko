@@ -490,7 +490,7 @@ rm -rf /tmp/qtmoko-debian/boot/*
 
 * Make jffs2 image:
 
-mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/tmp/qtmoko-debian
+mkfs.jffs2 --pad=0x700000 -o qtmoko-debian-gta01.jffs2 -e 0x4000 -n -d/tmp/qtmoko-debian
 
 
 Boot speedup
