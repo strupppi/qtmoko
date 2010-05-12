@@ -639,7 +639,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="33"/>
         <source>SMS Arrival Handling</source>
-        <translationObsuga Przybycia Nowego SMSa></translation>
+        <translation>Obsuga Przybycia Nowego SMSa></translation>
     </message>
 </context>
 <context>
@@ -795,7 +795,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="111"/>
         <source>Favorites</source>
-        <translation>Ulubione<translation>
+        <translation>Ulubione</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="110"/>
