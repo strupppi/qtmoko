@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="pl_PL">
 <context>
@@ -90,7 +90,7 @@
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="18"/>
-        <source>São Tomé and Príncipe</source>
+        <source>Sao Tomé and Príncipe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

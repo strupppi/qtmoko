@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
 <context>
@@ -441,22 +441,22 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="41"/>
         <source>Installs an OMA DRM v1 WBXML rights object.</source>
-        <translation>Instaluje obiekt uprawnieñ OMA DRM v1 WBXML</translation>
+        <translation>Instaluje obiekt uprawnie OMA DRM v1 WBXML</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="42"/>
         <source>Installs an OMA DRM v2 protected rights object.</source>
-        <translation>Instaluje obiekt uprawnieñ OMA DRM v2</translation>
+        <translation>Instaluje obiekt uprawnie OMA DRM v2</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="43"/>
         <source>Installs an OMA DRM v1 XML rights object.</source>
-        <translation>Instaluje obiekt uprawnieñ OMA DRM v1 XML</translation>
+        <translation>Instaluje obiekt uprawnie OMA DRM v1 XML</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="44"/>
         <source>Processes a recieved OMA DRM v2 ROAP trigger.</source>
-        <translation>Proces otrzyma³ wyzwalacz OMA DRM v2 ROAP</translation>
+        <translation>Proces otrzyma wyzwalacz OMA DRM v2 ROAP</translation>
     </message>
 </context>
 <context>
@@ -464,17 +464,17 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="67"/>
         <source>This service installs a package.</source>
-        <translation>Ta us³uga instaluje pakiet.</translation>
+        <translation>Ta usuga instaluje pakiet.</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="68"/>
         <source>Package Manager</source>
-        <translation>Manager Pakietów</translation>
+        <translation>Manager Pakietw</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="69"/>
         <source>PackageManager</source>
-        <translation>ManagerPakietów</translation>
+        <translation>ManagerPakietw</translation>
     </message>
 </context>
 <context>
@@ -482,17 +482,17 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="102"/>
         <source>Photo Edit</source>
-        <translation>Edytor zdjêæ</translation>
+        <translation>Edytor zdj</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="103"/>
         <source>Edit image</source>
-        <translation>Edytój obraz</translation>
+        <translation>Edytj obraz</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="104"/>
         <source>Pictures</source>
-        <translation>Zdjêcia</translation>
+        <translation>Zdjcia</translation>
     </message>
 </context>
 <context>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="98"/>
         <source>Photo Gallery</source>
-        <translation>Galeria Zdjêæ</translation>
+        <translation>Galeria Zdj</translation>
     </message>
 </context>
 <context>
@@ -508,12 +508,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="107"/>
         <source>Open Media File</source>
-        <translation>Otwó¿ plik z mediami</translation>
+        <translation>Otw plik z mediami</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="108"/>
         <source>Play Media</source>
-        <translation>Odtwó¿ media</translation>
+        <translation>Odtw media</translation>
     </message>
 </context>
 <context>
@@ -521,7 +521,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="113"/>
         <source>Enable or disable Do not disturb status</source>
-        <translation>W³¹cz lub wy³¹cz status "Nie przeszkaszaæ"</translation>
+        <translation>Wcz lub wycz status "Nie przeszkasza"</translation>
     </message>
 </context>
 <context>
@@ -529,7 +529,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="71"/>
         <source>Set Plane Mode</source>
-        <translation>W³¹cz tryb samolotu</translation>
+        <translation>Wcz tryb samolotu</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="72"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="91"/>
         <source>Qt Extended Printing Service</source>
-        <translation>Us³uga Drukowania Qt Extended</translation>
+        <translation>Usuga Drukowania Qt Extended</translation>
     </message>
 </context>
 <context>
@@ -563,7 +563,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="119"/>
         <source>Media Server</source>
-        <translation>Serwer Mediów</translation>
+        <translation>Serwer Mediw</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="121"/>
@@ -578,12 +578,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="123"/>
         <source>SystemMessages</source>
-        <translation>Wiadomoœæ Systemowa</translation>
+        <translation>Wiadomo Systemowa</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="124"/>
         <source>Web Access</source>
-        <translation>Dostêp do Internetu</translation>
+        <translation>Dostp do Internetu</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="125"/>
@@ -603,7 +603,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="128"/>
         <source>Media Session</source>
-        <translation>Sesja Mediów</translation>
+        <translation>Sesja Mediw</translation>
     </message>
 </context>
 <context>
@@ -611,17 +611,17 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="62"/>
         <source>Call Forwarding</source>
-        <translation>Przekazywanie po³¹czeñ</translation>
+        <translation>Przekazywanie pocze</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="64"/>
         <source>Appearance</source>
-        <translation>Wygl¹d</translation>
+        <translation>Wygld</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="63"/>
         <source>Power Management</source>
-        <translation>Zarz¹dzanie Zasilaniem</translation>
+        <translation>Zarzdzanie Zasilaniem</translation>
     </message>
 </context>
 <context>
@@ -634,12 +634,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="32"/>
         <source>Handle New SMS Arrival</source>
-        <translation>Obs³ó¿ Przybycie Nowego SMSa</translation>
+        <translation>Obs Przybycie Nowego SMSa</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="33"/>
         <source>SMS Arrival Handling</source>
-        <translationObs³uga Przybycia Nowego SMSa></translation>
+        <translationObsuga Przybycia Nowego SMSa></translation>
     </message>
 </context>
 <context>
@@ -647,7 +647,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="84"/>
         <source>Cleanup System</source>
-        <translation>Uprz¹tnij System</translation>
+        <translation>Uprztnij System</translation>
     </message>
 </context>
 <context>
@@ -655,17 +655,17 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="34"/>
         <source>System Message Arrival Handling</source>
-        <translation>Obs³ugiwanie Przybycia Wiadomoœci Systemowej</translation>
+        <translation>Obsugiwanie Przybycia Wiadomoci Systemowej</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="36"/>
         <source>New System Message Arrival</source>
-        <translation>Przybycie Nowej Wiadomoœci Systemowej</translation>
+        <translation>Przybycie Nowej Wiadomoci Systemowej</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="35"/>
         <source>Handle New System Message Arrival</source>
-        <translation>Obs³u¿ Przybycie Nowej Wiadomoœci Systemowej</translation>
+        <translation>Obsu Przybycie Nowej Wiadomoci Systemowej</translation>
     </message>
 </context>
 <context>
@@ -678,12 +678,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="38"/>
         <source>Activate a link to a task</source>
-        <translation>Aktywój link do zadania</translation>
+        <translation>Aktywj link do zadania</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="39"/>
         <source>Request links to tasks</source>
-        <translation>Zarz¹daj linka do zadania</translation>
+        <translation>Zarzdaj linka do zadania</translation>
     </message>
 </context>
 <context>
@@ -691,7 +691,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="86"/>
         <source>Edit Time</source>
-        <translation>Edytój Czas</translation>
+        <translation>Edytj Czas</translation>
     </message>
 </context>
 <context>
@@ -699,12 +699,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Update Task</source>
-        <translation>Zmieñ Zadanie</translation>
+        <translation>Zmie Zadanie</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="6"/>
         <source>Remove Task</source>
-        <translation>Usuñ Zadanie</translation>
+        <translation>Usu Zadanie</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="8"/>
@@ -727,7 +727,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="106"/>
         <source>USB Gadget</source>
-        <translation>Gad¿et USB</translation>
+        <translation>Gadet USB</translation>
     </message>
 </context>
 <context>
@@ -735,12 +735,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="3"/>
         <source>USB Ethernet Networking</source>
-        <translation>Sieæ Ethernet USB</translation>
+        <translation>Sie Ethernet USB</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="4"/>
         <source>USB Ethernet Service</source>
-        <translation>Us³uga Sieci Ethernetowej USB</translation>
+        <translation>Usuga Sieci Ethernetowej USB</translation>
     </message>
 </context>
 <context>
@@ -748,7 +748,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="65"/>
         <source>USB Serial Service</source>
-        <translation>Us³uga Szeregowa USB</translation>
+        <translation>Usuga Szeregowa USB</translation>
     </message>
 </context>
 <context>
@@ -756,12 +756,12 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="88"/>
         <source>USB Storage Service</source>
-        <translation>Us³uga Pamiêci Masowej USB</translation>
+        <translation>Usuga Pamici Masowej USB</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="89"/>
         <source>USB Mass Storage</source>
-        <translation>Pamiêæ Masowa USB</translation>
+        <translation>Pami Masowa USB</translation>
     </message>
 </context>
 <context>
@@ -774,7 +774,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="93"/>
         <source>Record Audio</source>
-        <translation>Nagraj DŸwiêk</translation>
+        <translation>Nagraj Dwik</translation>
     </message>
 </context>
 <context>
@@ -782,7 +782,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="90"/>
         <source>Edit Voice Mail Number</source>
-        <translation>Edytój Numer Poczty G³osowej</translation>
+        <translation>Edytj Numer Poczty Gosowej</translation>
     </message>
 </context>
 <context>
@@ -790,7 +790,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="112"/>
         <source>Task Manager</source>
-        <translation>Manager Zadañ</translation>
+        <translation>Manager Zada</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="111"/>
@@ -800,7 +800,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="110"/>
         <source>Multitask</source>
-        <translation>Wielozadaniowoœæ</translation>
+        <translation>Wielozadaniowo</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="109"/>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="pl_PL">
 <context>
@@ -6,7 +6,7 @@
     <message utf8="true">
         <source>ApÂ­pearÂ­ance</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Wygl¹d</translation>
+        <translation type="obsolete">Wygld</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="21"/>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="24"/>
         <source>Beaming</source>
-        <translation>Przesy³anie</translation>
+        <translation>Przesyanie</translation>
     </message>
 </context>
 <context>
@@ -51,7 +51,7 @@
     <message utf8="true">
         <source>Call ForÂ­warding</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Przekazywanie Po³¹czeñ</translation>
+        <translation type="obsolete">Przekazywanie Pocze</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="7"/>
@@ -120,7 +120,7 @@
     <message utf8="true">
         <source>HandÂ­wriÂ­ting</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Pisanie Odrêczne</translation>
+        <translation type="obsolete">Pisanie Odrczne</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="25"/>
@@ -143,7 +143,7 @@
     <message utf8="true">
         <source>LanÂ­guage</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Jêzyk</translation>
+        <translation type="obsolete">Jzyk</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="20"/>
@@ -170,7 +170,7 @@
     <message utf8="true">
         <source>PowÂ­er ManÂ­ageÂ­ment</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Zarz¹dzanie Energi¹</translation>
+        <translation type="obsolete">Zarzdzanie Energi</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="8"/>
@@ -248,7 +248,7 @@
     <message utf8="true">
         <source>SeÂ­cuÂ­riÂ­ty</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Bezpieczeñstwo</translation>
+        <translation type="obsolete">Bezpieczestwo</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="16"/>
@@ -271,7 +271,7 @@
     <message utf8="true">
         <source>ShutÂ­down</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
-        <translation type="obsolete">Wy³¹cz</translation>
+        <translation type="obsolete">Wycz</translation>
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="3"/>
@@ -312,7 +312,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="19"/>
         <source>A Development tool for modifying startup flags</source>
-        <translation>Narzêdzie deweloperskie do modyfikowania ustawieñ pocz¹tkowych</translation>
+        <translation>Narzdzie deweloperskie do modyfikowania ustawie pocztkowych</translation>
     </message>
 </context>
 <context>
@@ -320,7 +320,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="5"/>
         <source>Task Manager</source>
-        <translation>Mened¿er Zadañ</translation>
+        <translation>Meneder Zada</translation>
     </message>
 </context>
 <context>
@@ -342,7 +342,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="10"/>
         <source>A VoIP Settings Application</source>
-        <translation>Applikacja Ustawieñ VoIP</translation>
+        <translation>Applikacja Ustawie VoIP</translation>
     </message>
 </context>
 <context>
@@ -350,7 +350,7 @@
     <message>
         <location filename="../../src/server/main/tr7818.cpp" line="27"/>
         <source>Words</source>
-        <translation>S³owa</translation>
+        <translation>Sowa</translation>
     </message>
 </context>
 </TS>

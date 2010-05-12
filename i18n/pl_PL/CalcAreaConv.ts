@@ -1,32 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS><TS version="1.1" language="pl_PL">
 <defaultcodec></defaultcodec>
 <context>
     <name>Area</name>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="1"/>
-        <source>km²</source>
-        <translation">km²</translation>
+        <source>km2</source>
+        <translation">km2</translation>
     </message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="2"/>
-        <source>in²</source>
-        <translation>in²</translation>
+        <source>in2</source>
+        <translation>in2</translation>
 	</message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="3"/>
-        <source>cm²</source>
-        <translation>cm²</translation>
+        <source>cm2</source>
+        <translation>cm2</translation>
     </message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="4"/>
-        <source>mi²</source>
+        <source>mi2</source>
         <translation type="unfinished"></translation>
     </message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="5"/>
-        <source>m²</source>
-        <translation>m²</translation>
+        <source>m2</source>
+        <translation>m2</translation>
     </message>
     <message>
         <location filename="../../src/server/tr6022.cpp" line="6"/>
@@ -45,17 +45,17 @@
     </message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="9"/>
-        <source>mm²</source>
-        <translation>mm²</translation>
+        <source>mm2</source>
+        <translation>mm2</translation>
     </message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="10"/>
-        <source>ft²</source>
+        <source>ft2</source>
         <translation type="unfinished"></translation>
     </message>
     <message encoding="UTF-8">
         <location filename="../../src/server/tr6022.cpp" line="11"/>
-        <source>yd²</source>
+        <source>yd2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

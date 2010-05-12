@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="pl_PL">
 <context>
@@ -10,7 +10,7 @@
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="2"/>
-        <source>ft³</source>
+        <source>ft3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -30,7 +30,7 @@
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="6"/>
-        <source>in³</source>
+        <source>in3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -55,8 +55,8 @@
     </message>
     <message utf8="true">
         <location filename="../../src/server/main/tr7818.cpp" line="11"/>
-        <source>cm³</source>
-        <translation>cm³</translation>
+        <source>cm3</source>
+        <translation>cm3</translation>
     </message>
 </context>
 </TS>
