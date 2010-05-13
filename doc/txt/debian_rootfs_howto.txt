@@ -25,6 +25,14 @@ Step 1
 
 cdebootstrap --flavour=minimal --include=ifupdown,udev,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,pciutils,linux-sound-base,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,bluez-utils,dosfstools,fbset,klogd,psmisc,iptables,dash,xserver-xglamo,xfonts-base,x11-xserver-utils,matchbox,xterm stable /media/card/ http://ftp.de.debian.org/debian/
 
+* Minimal rootfs for gta01 jffs2:
+
+cdebootstrap --flavour=minimal --include=ifupdown,udev,procps,netbase,nano,module-init-tools,openssh-server,libts-0.0-0,libasound2,linux-sound-base,ppp,iputils-ping,bluez-utils,dosfstools,fbset,klogd,psmisc,dash stable /media/card/ http://ftp.de.debian.org/debian/
+
+* You need to set correct date and time if you get this error:
+
+E: Couldn't validate Release!
+
 * For bluetooth headset bluez-audio package is needed. But because of stupid
   dependencies on gstreamer it takes 4MB. With this package and some tweaks you
   can have mplayer working with btluethooth headset.
@@ -212,7 +220,6 @@ nano /media/card/etc/init.d/qpe.sh
 case "$1" in
   start)
 	echo '1' > /proc/sys/kernel/printk
-	echo 5000000 > /sys/module/glamo_mci/parameters/sd_max_clk
 	rm -rf /var/run/ppp
 	mkdir /var/run/ppp
 	mkdir -p /var/cache/apt/archives/partial
