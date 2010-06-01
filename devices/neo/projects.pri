@@ -5,7 +5,24 @@ PROJECTS-=\
     applications/camera \
     settings/serverwidgets \
     server/phone/ui/components/simapp \
-    ../examples/whereabouts/mappingdemo
+    ../examples/whereabouts/mappingdemo \
+    plugins/network/lan \
+    games/fifteen \
+    games/snake \
+    games/minesweep \
+    games/mindbreaker \
+    3rdparty/games/qnetwalk \
+    3rdparty/games/qtmaze \
+    3rdparty/applications/simplefm \
+    3rdparty/applications/screenshot \
+    libraries/handwriting \
+    3rdparty/libraries/inputmatch \
+    settings/words \
+    plugins/inputmethods/predictivekeyboard \
+    3rdparty/plugins/inputmethods/pkim \
+    server/phone/telephony/cell/simcontrolevent \
+    server/phone/ui/components/simapp \
+
 
 SERVER_PROJECTS-=\
     server/media/genericvolumeservice \
