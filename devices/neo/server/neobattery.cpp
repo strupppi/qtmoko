@@ -147,17 +147,8 @@ int NeoBattery::getDumbCapacity()
 {
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
     int voltage = 0;
-    QString batteryVoltage;
+    QFile battvolt("/sys/class/power_supply/battery/voltage_now");
     QString inStr;
-    if ( QFileInfo("/sys/devices/platform/s3c2440-i2c/i2c-adapter/i2c-0/0-0073").exists()) {
-        //gta02
-        batteryVoltage = "/sys/devices/platform/s3c2440-i2c/i2c-adapter/i2c-0/0-0073/battvolt";
-    } else {
-        //gta01
-        batteryVoltage = "/sys/devices/platform/s3c2410-i2c/i2c-adapter/i2c-0/0-0008/battvolt";
-    }
-
-    QFile battvolt( batteryVoltage);
     battvolt.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&battvolt);
     in >> inStr;
@@ -169,11 +160,11 @@ int NeoBattery::getDumbCapacity()
     // 2 minutes left of battery life till neo shuts off might
     // as well be empty
 
-    voltage = voltage - 3400;
+    voltage = voltage - 3400000;
     float perc = voltage  / 8;
     percentCharge = (int)round( perc + 0.5);
     percentCharge = qBound<quint16>(0, percentCharge, 100);
-    qLog(PowerManagement)<<"Battery volt"<< voltage + 3400 << percentCharge<<"%";
+    qLog(PowerManagement)<<"Battery volt"<< voltage + 3400000 << percentCharge<<"%";
     return voltage;
 }
 
@@ -181,7 +172,7 @@ int NeoBattery::getDumbCapacity()
 bool NeoBattery::batteryIsFull()
 {
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
-    if(getDumbCapacity() + 3400 > 4170)
+    if(getDumbCapacity() + 3400000 > 4170000)
         return true;
     return false;
 }
@@ -209,18 +200,8 @@ bool NeoBattery::isCharging()
 {
 
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
-    QString chargeFile;
-    if (QFileInfo("/sys/devices/platform/bq27000-battery.0/power_supply/bat/status").exists()) {
-         //freerunner
-        chargeFile = "/sys/devices/platform/bq27000-battery.0/power_supply/bat/status";
-    }else if ( QFileInfo("/sys/class/power_supply/battery/status").exists()) {
-        chargeFile = "/sys/class/power_supply/battery/status";
-    }
-
-
     QString charge;
-
-    QFile chargeState( chargeFile);
+    QFile chargeState("/sys/class/power_supply/battery/status");
     chargeState.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&chargeState);
     in >> charge;
@@ -263,17 +244,9 @@ int NeoBattery::getCapacity()
         return 0;
 
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
-    QString strCapacityFile;
-    if (QFileInfo("/sys/devices/platform/bq27000-battery.0/power_supply/bat/capacity").exists()) {
-         //freerunner
-        strCapacityFile = "/sys/devices/platform/bq27000-battery.0/power_supply/bat/capacity";
-    }else if ( QFileInfo("/sys/class/power_supply/battery/capacity").exists()) {
-        strCapacityFile = "/sys/class/power_supply/battery/capacity";
-    }
 
     int capacity = 0;
-
-    QFile capacityState( strCapacityFile);
+    QFile capacityState("/sys/class/power_supply/battery/capacity");
     capacityState.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&capacityState);
     in >> capacity;
@@ -299,15 +272,8 @@ int NeoBattery::getTimeToFull()
         return 0;
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
 
-    QString timeToFullFile;
-    if (QFileInfo("/sys/devices/platform/bq27000-battery.0/power_supply/bat/time_to_full_now").exists()) {
-         //freerunner
-        timeToFullFile = "/sys/devices/platform/bq27000-battery.0/power_supply/bat/time_to_full_now";
-    }else if ( QFileInfo("/sys/class/power_supply/battery/time_to_full_now").exists()) {
-        timeToFullFile = "/sys/class/power_supply/battery/time_to_full_now";
-    }
-
     int time = 0;
+    QString timeToFullFile("/sys/class/power_supply/battery/time_to_full_now");	
     QFile timeState( timeToFullFile);
 
     timeState.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -328,15 +294,9 @@ int NeoBattery::getTimeRemaining()
     if (!isSmartBattery)
         return 0;
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
-    QString timeToEmptyFile;
-    if (QFileInfo("/sys/devices/platform/bq27000-battery.0/power_supply/bat/time_to_empty_now").exists()) {
-         //freerunner
-        timeToEmptyFile = "/sys/devices/platform/bq27000-battery.0/power_supply/bat/time_to_empty_now";
-    }else if ( QFileInfo("/sys/class/power_supply/battery/time_to_empty_now").exists()) {
-        timeToEmptyFile = "/sys/class/power_supply/battery/time_to_empty_now";
-    }
 
     int time = 0;
+    QString timeToEmptyFile("/sys/class/power_supply/battery/time_to_empty_now");
     QFile timeState( timeToEmptyFile);
 
     timeState.open(QIODevice::ReadOnly | QIODevice::Text);

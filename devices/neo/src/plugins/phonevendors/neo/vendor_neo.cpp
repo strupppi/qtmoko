@@ -820,11 +820,7 @@ void NeoVibrateAccessory::setVibrateOnRing( const bool value )
 void NeoVibrateAccessory::setVibrateNow( const bool value )
 {
     qLog(Modem)<<"setVibrateNow "<<value;
-    QString vibFile;
-    if (QFileInfo("/sys/class/leds/gta01:vibrator").exists())
-        vibFile = "/sys/class/leds/gta01:vibrator";
-    else
-        vibFile = "/sys/class/leds/neo1973:vibrator";
+    QString vibFile("/sys/class/leds/neo1973:vibrator");
     QString cmd;
     if ( value ) { //turn on
         QFile trigger( vibFile + "/trigger");

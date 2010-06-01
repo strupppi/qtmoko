@@ -232,20 +232,9 @@ bool NeoHardware::getCableStatus()
     // These code from NeoBattery::isCharging()
     // Seems better than the origin method
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
-    QString chargeFile;
-    if (QFileInfo("/sys/devices/platform/bq27000-battery.0/power_supply/bat/status").exists()) {
-         //freerunner
-        chargeFile = "/sys/devices/platform/bq27000-battery.0/power_supply/bat/status";
-    }
-    else if (QFileInfo("/sys/class/power_supply/battery/status").exists()) {
-         //freerunner kernel > 2.6.28
-        chargeFile = "/sys/class/power_supply/battery/status";
-    }
-
 
     QString charge;
-
-    QFile chargeState( chargeFile);
+    QFile chargeState("/sys/class/power_supply/battery/status");
     chargeState.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&chargeState);
     in >> charge;

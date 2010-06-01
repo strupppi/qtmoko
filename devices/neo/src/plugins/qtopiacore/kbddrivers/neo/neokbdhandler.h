@@ -72,7 +72,6 @@ class NeoKbdHandler : public QObject, public QWSKeyboardHandler
 public:
     NeoKbdHandler();
     ~NeoKbdHandler();
-    bool isFreerunner;
 
 private:
     QSocketNotifier *auxNotify;

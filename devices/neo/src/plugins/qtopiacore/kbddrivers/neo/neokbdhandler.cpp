@@ -138,17 +138,15 @@ void FicLinuxInputEventHandler::readData()
 NeoKbdHandler::NeoKbdHandler()
 
 {
-    isFreerunner = true;
-
     qLog(Input) << "Loaded Neo keypad plugin";
     setObjectName( "Neo Keypad Handler" );
 
     auxHandler = new FicLinuxInputEventHandler(this);
-    if (auxHandler->openByPhysicalBus("neo1973kbd/input0")) {
+    if (auxHandler->openByName("Neo1973 Buttons")) {
         connect(auxHandler, SIGNAL(inputEvent(struct input_event&)),
                 SLOT(inputEvent(struct input_event&)));
     } else {
-        qWarning("Cannot open a device for the neo1973kbd");
+        qWarning("Cannot open a device for the Neo1973 Buttons");
         delete auxHandler;
         auxHandler = 0;
     }
@@ -156,28 +154,16 @@ NeoKbdHandler::NeoKbdHandler()
     bool ok;
 
     powerHandler = new FicLinuxInputEventHandler(this);
-    if (QFileInfo("/dev/input/event4").exists()){
-        ok =  powerHandler->openByName("PCF50633 PMU events");
-        if(!ok) {
-            ok =  powerHandler->openByName("GTA02 PMU events");
-        }
-        isFreerunner = true;
-    } else {
-        ok =  powerHandler->openByName("FIC Neo1973 PMU events");
-        isFreerunner = false;
-    }
-    if (ok) {
+    if (powerHandler->openByName("PCF50606 PMU events")) {
         connect(powerHandler, SIGNAL(inputEvent(struct input_event&)),
                 SLOT(inputEvent(struct input_event&)));
     } else {
-        qWarning("Cannot open a device for the neo1973kbd 4");
+        qWarning("Cannot open a device for the PCF50606 PMU events");
         delete powerHandler;
         powerHandler = 0;
     }
 
-
     shift = false;
-
 }
 
 NeoKbdHandler::~NeoKbdHandler()
@@ -209,10 +195,7 @@ void NeoKbdHandler::inputEvent(struct input_event& event)
     case SW_HEADPHONE_INSERT: //x02
     {
         QtopiaIpcEnvelope e("QPE/NeoHardware", "headphonesInserted(bool)");
-        if (isFreerunner)
-            e <<  isPress;
-        else
-            e <<  !isPress;
+        e <<  !isPress;
     }
     break;
     case KEY_POWER2:
