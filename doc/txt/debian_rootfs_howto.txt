@@ -389,6 +389,21 @@ rm -rf /media/card/usr/share/man/*
 rm -rf /media/card/usr/share/sounds/alsa/*
 rm -rf /media/card/usr/share/ssh/blacklist*
 
+Step 7.8
+========
+
+* Remove unused fonts. We need just DejaVuSansCondensed-Bold.ttf and
+  DejaVuSansCondensed.ttf:
+
+cd /media/card/usr/share/fonts/truetype/ttf-dejavu/
+mv DejaVuSansCondensed.ttf DejaVuSansCondensed.ttf.keep
+mv DejaVuSansCondensed-Bold.ttf DejaVuSansCondensed-Bold.ttf.keep
+mv DejaVuSansMono.ttf DejaVuSansMono.ttf.keep
+rm *.ttf
+mv DejaVuSansCondensed.ttf.keep DejaVuSansCondensed.ttf
+mv DejaVuSansCondensed-Bold.ttf.keep DejaVuSansCondensed-Bold.ttf
+mv DejaVuSansMono.ttf.keep DejaVuSansMono.ttf
+
 Step 8 - compile Qtopia
 =======================
 
