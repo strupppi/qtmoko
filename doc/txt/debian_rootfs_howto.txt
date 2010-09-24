@@ -58,7 +58,6 @@ rootfs  /                auto    defaults,errors=remount-ro,noatime 0 1
 /dev/mmcblk0p1 /media/card auto  defaults                           0 0
 /dev/mmcblk0p4 swap      swap    defaults                           0 0
 proc    /proc            proc    defaults                           0 0
-none    /dev/pts         devpts  defaults                           0 0
 #tmpfs   /var/cache/apt   tmpfs   defaults,noatime                   0 0
 192.168.0.200:/ /mnt/nfs  nfs noauto,nolock,soft,rsize=32768,wsize=32768 0 0
 __END__
@@ -88,25 +87,6 @@ Step 4
 
 echo g_ether > /media/card/etc/modules
 echo ppp_generic >> /media/card/etc/modules
-* Old modules were:
-
-# echo g_ether >> /media/card/etc/modules
-
-* Modem device nodes
-
-cat > /media/card/etc/udev/rules.d/50-qtmoko.rules << __END__
-# Samsung UARTS
-KERNEL=="s3c2410_serial[0-9]",   NAME="ttySAC%n"
-
-# Fix bluetooth after resume
-KERNEL=="hci0", SUBSYSTEM=="bluetooth", ACTION=="add", \\
-        RUN+="/opt/qtmoko/bin/btfix.sh"
-
-# Fix wifi after resume
-KERNEL=="eth0", SUBSYSTEM=="net", ACTION=="add", \
-        RUN+="/opt/qtmoko/bin/wifi-suspend-resume.sh"
-
-__END__
 
 * Unpack alsa scenarios to /usr/share/openmoko - you can find these files
   in any openmoko distro.
@@ -237,9 +217,12 @@ nano /media/card/etc/init.d/qpe.sh
 
 case "$1" in
   start)
-	mknod /dev/ttySAC0 c 204 64 -m 660
-	mknod /dev/ttySAC1 c 204 65 -m 660
-	mknod /dev/ttySAC2 c 204 66 -m 660
+	if [ ! -d /dev/pts ]; then
+		# running on devtmpfs
+		mkdir -p /dev/pts
+		mount -t devpts none /dev/pts
+		modprobe joydev
+	fi
 	rm -f /dev/input/mice
 	echo '1' > /proc/sys/kernel/printk
 	echo 1 > /sys/devices/platform/gta02-pm-bt.0/power_on
