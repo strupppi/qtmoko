@@ -1,11 +1,13 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>Volume</name>
     <message>
         <source>pt</source>
         <translation>pt</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>ft³</source>
         <translation>ft³</translation>
     </message>
@@ -21,7 +23,7 @@
         <source>ml</source>
         <translation>ml</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>in³</source>
         <translation>in³</translation>
     </message>
@@ -41,7 +43,7 @@
         <source>tblsp</source>
         <translation type="unfinished">tblsp</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>cm³</source>
         <translation>cm³</translation>
     </message>

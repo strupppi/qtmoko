@@ -4,12 +4,12 @@
 <context>
     <name>QPE</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="1"/>
         <source>dejavu_sans_condensed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="2"/>
         <source>9</source>
         <translation type="unfinished"></translation>
     </message>

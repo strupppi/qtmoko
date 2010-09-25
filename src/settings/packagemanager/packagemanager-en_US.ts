@@ -4,7 +4,7 @@
 <context>
     <name>NetworkPackageController</name>
     <message numerus="yes">
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>%n program(s) found</source>
         <comment>%n =# of packages</comment>
         <translation type="unfinished">

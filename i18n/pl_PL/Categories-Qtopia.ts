@@ -1,25 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="pl_PL">
 <context>
     <name>Categories</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="2"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="1"/>
         <source>Certificate</source>
         <translation>Certyfikat</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="3"/>
         <source>Recordings</source>
         <translation>Nagrania</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="4"/>
         <source>Personal</source>
         <translation>Osobiste</translation>
     </message>
@@ -32,12 +32,12 @@
         <translation type="obsolete">Ustawienia</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="5"/>
         <source>Security Key</source>
         <translation>Hasło</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="7"/>
         <source>Unfiled</source>
         <translation>Puste</translation>
     </message>
@@ -46,7 +46,7 @@
         <translation type="obsolete">Zainstalowane Aplikacje</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="6"/>
         <source>Applications</source>
         <translation>Aplikacje</translation>
     </message>
@@ -55,12 +55,12 @@
         <translation type="obsolete">Główne Aplikacje</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="8"/>
         <source>All</source>
         <translation>Wszystko</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="9"/>
         <source>Business</source>
         <translation>Biznes</translation>
     </message>

@@ -27,17 +27,17 @@
         <translation>Impostazioni per alimentazione</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="53"/>
+        <location filename="lightsettingsbase.ui" line="63"/>
         <source>When locked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="58"/>
+        <location filename="lightsettingsbase.ui" line="53"/>
         <source>On Battery</source>
         <translation>Da batteria</translation>
     </message>
     <message>
-        <location filename="lightsettingsbase.ui" line="63"/>
+        <location filename="lightsettingsbase.ui" line="58"/>
         <source>Plugged In</source>
         <translation>Con cavo</translation>
     </message>

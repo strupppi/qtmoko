@@ -1677,43 +1677,43 @@ Please recharge now!</source>
 <context>
     <name>QBluetoothHandsfreeService</name>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="242"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="243"/>
         <source>Handsfree Audio Gateway already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="261"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="262"/>
         <source>Error registering with SDP server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="270"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="271"/>
         <source>Could not listen on channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="332"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="333"/>
         <source>Connect failed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="346"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="347"/>
         <source>Bluetooth Session could not be started</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="367"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="368"/>
         <source>Service not available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="373"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="374"/>
         <source>Connection in progress.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="381"/>
-        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="387"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="382"/>
+        <location filename="../bluetooth/hf/qbluetoothhfservice.cpp" line="388"/>
         <source>Already connected.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -31,5 +31,9 @@
         <source>Crisp</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>FinxiMod</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

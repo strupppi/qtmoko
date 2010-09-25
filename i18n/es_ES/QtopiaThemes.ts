@@ -1,4 +1,6 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>Themes</name>
     <message>
@@ -28,6 +30,10 @@
     <message>
         <source>Crisp</source>
         <translation>Crisp</translation>
+    </message>
+    <message>
+        <source>FinxiMod</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

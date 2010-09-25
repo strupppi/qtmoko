@@ -9,7 +9,7 @@
         <translation type="obsolete">Vzhled</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="21"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="21"/>
         <source>ApÂ­pearÂ­ance</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -18,7 +18,7 @@
 <context>
     <name>Application Services</name>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="1"/>
         <source>ApÂ­pliÂ­caÂ­tion SerÂ­vices</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -32,7 +32,7 @@
         <translation type="obsolete">Bluetooth</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="22"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="22"/>
         <source>BlueÂ­tooth</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -41,7 +41,7 @@
 <context>
     <name>Beaming</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="24"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="24"/>
         <source>Beaming</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54,7 +54,7 @@
         <translation type="obsolete">Přesměrování hovorů</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="7"/>
         <source>Call ForÂ­warding</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -68,7 +68,7 @@
         <translation type="obsolete">Mobilní síť</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="4"/>
         <source>Call NetÂ­works</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -82,7 +82,7 @@
         <translation type="obsolete">Nastavení hovorů</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="15"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="15"/>
         <source>Call OpÂ­tions</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -96,7 +96,7 @@
         <translation type="obsolete">Datum a čas</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="3"/>
         <source>Date/Â­Time</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -105,12 +105,12 @@
 <context>
     <name>GTalk</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="32"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="32"/>
         <source>A Google Talk Settings Application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="33"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="33"/>
         <source>GTalk</source>
         <translation type="unfinished"></translation>
     </message>
@@ -123,7 +123,7 @@
         <translation type="obsolete">Psaní rukou</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="25"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="25"/>
         <source>HandÂ­wriÂ­ting</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -132,7 +132,7 @@
 <context>
     <name>Homescreen</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="31"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="31"/>
         <source>Homescreen</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Domovská obrazovka</translation>
@@ -146,7 +146,7 @@
         <translation type="obsolete">Jazyk</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="20"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="20"/>
         <source>LanÂ­guage</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -155,12 +155,12 @@
 <context>
     <name>Licenses</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="11"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="11"/>
         <source>Digital Rights Management Information</source>
         <translation>Správa DRM</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="12"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="12"/>
         <source>Licenses</source>
         <translation>Licence</translation>
     </message>
@@ -173,7 +173,7 @@
         <translation type="obsolete">Správa napájení</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="8"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="8"/>
         <source>PowÂ­er ManÂ­ageÂ­ment</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -182,7 +182,7 @@
 <context>
     <name>Logging</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="26"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="26"/>
         <source>Logging</source>
         <translation>Záznamy</translation>
     </message>
@@ -195,7 +195,7 @@
         <translation type="obsolete">Internet</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="17"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="17"/>
         <source>InÂ­terÂ­net</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -204,7 +204,7 @@
 <context>
     <name>Profiles</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="29"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="27"/>
         <source>Phone profile application</source>
         <translation>Správa profilů</translation>
     </message>
@@ -214,7 +214,7 @@
         <translation type="obsolete">Profily</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="28"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="28"/>
         <source>ProÂ­files</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -228,7 +228,7 @@
         <translation type="obsolete">Rekalibrace</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="23"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="23"/>
         <source>ReÂ­calÂ­iÂ­brate</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -237,7 +237,7 @@
 <context>
     <name>Rotation</name>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="14"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="14"/>
         <source>RoÂ­taÂ­tion</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -251,7 +251,7 @@
         <translation type="obsolete">Bezpečnost</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="16"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="16"/>
         <source>SeÂ­cuÂ­riÂ­ty</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -260,7 +260,7 @@
 <context>
     <name>ServerWidgets</name>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="34"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="34"/>
         <source>SerÂ­ver WidÂ­gets</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -274,7 +274,7 @@
         <translation type="obsolete">Vypínání</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="2"/>
         <source>ShutÂ­down</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -288,7 +288,7 @@
         <translation type="obsolete">Správce balíčků</translation>
     </message>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="13"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="13"/>
         <source>SoftÂ­ware PackÂ­ages</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -297,7 +297,7 @@
 <context>
     <name>Speed Dial</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="30"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="30"/>
         <source>Speed Dial</source>
         <translation>Rychlé vytáčení</translation>
     </message>
@@ -305,12 +305,12 @@
 <context>
     <name>Startup Flags</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="18"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="18"/>
         <source>Startup Flags</source>
         <translation>Příznaky při spuštění</translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="19"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="19"/>
         <source>A Development tool for modifying startup flags</source>
         <translation>Vývojářský nástroj pro nastavování příznaků při spuštění</translation>
     </message>
@@ -318,7 +318,7 @@
 <context>
     <name>Task Manager</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="5"/>
         <source>Task Manager</source>
         <translation>Správce úloh</translation>
     </message>
@@ -326,7 +326,7 @@
 <context>
     <name>USBConnectionMode</name>
     <message utf8="true">
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="6"/>
         <source>USB ConÂ­necÂ­tion Mode</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation type="unfinished"></translation>
@@ -335,12 +335,12 @@
 <context>
     <name>VoIP</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="9"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="9"/>
         <source>VoIP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="10"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="10"/>
         <source>A VoIP Settings Application</source>
         <translation type="unfinished"></translation>
     </message>
@@ -348,7 +348,7 @@
 <context>
     <name>Words</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="27"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="29"/>
         <source>Words</source>
         <translation>Slova</translation>
     </message>

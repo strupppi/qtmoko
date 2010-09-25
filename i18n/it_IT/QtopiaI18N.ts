@@ -9,6 +9,13 @@
     </message>
 </context>
 <context>
+    <name>Danish</name>
+    <message>
+        <source>Danske</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>English (U.S.)</name>
     <message>
         <source>English (U.S.)</source>
@@ -26,6 +33,13 @@
     <name>Italian</name>
     <message>
         <source>Italiano</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Polish</name>
+    <message utf8="true">
+        <source>Język polski</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

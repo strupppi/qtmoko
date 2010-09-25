@@ -244,42 +244,42 @@
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="356"/>
+        <location filename="config.cpp" line="358"/>
         <source>Missing dialup number</source>
         <translation>Отсутствует номер дозвона</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="390"/>
+        <location filename="config.cpp" line="392"/>
         <source>Cannot write chat file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="config.cpp" line="405"/>
+        <location filename="config.cpp" line="407"/>
         <source>Cannot write disconnect file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="config.cpp" line="468"/>
+        <location filename="config.cpp" line="470"/>
         <source>Cannot write peer file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="config.cpp" line="520"/>
+        <location filename="config.cpp" line="522"/>
         <source>General account information.</source>
         <translation>Общая информация аккаунта.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="523"/>
+        <location filename="config.cpp" line="525"/>
         <source>General dial-up parameter.</source>
         <translation>Общие параметры сеансового доступа.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="526"/>
+        <location filename="config.cpp" line="528"/>
         <source>Advanced dial-up parameter that should not usually require any adjustments.</source>
         <translation>Расширенные параметры сеансового доступа, как правило, не требующие настройки.</translation>
     </message>
     <message>
-        <location filename="config.cpp" line="530"/>
+        <location filename="config.cpp" line="532"/>
         <source>Proxy details used for HTTP and FTP data.</source>
         <translation>Настройки прокси, используемого для HTTP и FTP данных.</translation>
     </message>

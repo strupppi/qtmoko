@@ -19,17 +19,22 @@
         <translation>Описание:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="477"/>
+        <location filename="packagecontroller.cpp" line="179"/>
+        <source>Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.cpp" line="478"/>
         <source>Installation Size:</source>
         <translation>Размер после установки:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="179"/>
+        <location filename="packagecontroller.cpp" line="180"/>
         <source>MD5Sum:</source>
         <translation>MD5:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="190"/>
+        <location filename="packagecontroller.cpp" line="191"/>
         <source>Capabilities:</source>
         <translation>Возможности:</translation>
     </message>
@@ -94,27 +99,27 @@
         <translation type="unfinished">Пакеты для загрузки с сервера по сети:&lt;br/&gt;%1</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="325"/>
+        <location filename="packagecontroller.cpp" line="326"/>
         <source>Getting package list from %1</source>
         <translation>Получение списка пакетов от %1</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="350"/>
+        <location filename="packagecontroller.cpp" line="351"/>
         <source>Error connecting to server, check server URL is correct and/or contact server administrator</source>
         <translation>Ошибка соединения с сервером, проверьте правильность URL сервера и/или свяжитесь с администратором сервера</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="356"/>
+        <location filename="packagecontroller.cpp" line="357"/>
         <source>Not connected</source>
         <translation>Не подключен</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>Connected</source>
         <translation>Подключен</translation>
     </message>
     <message numerus="yes">
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>%n program(s) found</source>
         <comment>%n =# of packages</comment>
         <translation>
@@ -124,13 +129,13 @@
         </translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="402"/>
+        <location filename="packagecontroller.cpp" line="403"/>
         <source>Getting package %1 from %2</source>
         <comment>%1 package name, %2 server name</comment>
         <translation>Получение пакета %1 от %2</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="427"/>
+        <location filename="packagecontroller.cpp" line="428"/>
         <source>Error occurred while downloading package</source>
         <translation>При загрузке пакета произошла ошибка</translation>
     </message>
@@ -312,7 +317,7 @@
         <translation>Список серверов</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="184"/>
+        <location filename="packagecontroller.cpp" line="185"/>
         <location filename="packageview.cpp" line="570"/>
         <source>The package &lt;font color=&quot;#0000FF&quot;&gt;%1&lt;/font&gt; &lt;b&gt;cannot be installed&lt;/b&gt; as it utilizes protected resources</source>
         <translation>Пакет &lt;font color=&quot;#0000FF&quot;&gt;%1&lt;/font&gt; &lt;b&gt;не может быть установлен&lt;/b&gt;, т.к. использует защищенные ресурсы</translation>
@@ -339,7 +344,7 @@
         <translation>Установить пакет?</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="444"/>
+        <location filename="packagecontroller.cpp" line="445"/>
         <location filename="packageview.cpp" line="633"/>
         <source>Installing...</source>
         <translation>Установка...</translation>
@@ -388,7 +393,7 @@
     </message>
     <message>
         <location filename="packagecontroller.cpp" line="168"/>
-        <location filename="packagecontroller.cpp" line="481"/>
+        <location filename="packagecontroller.cpp" line="482"/>
         <source>Download Size:</source>
         <translation>Размер загрузки:</translation>
     </message>
@@ -500,7 +505,7 @@
         <translation type="obsolete">Не достаточно места для пакета, освободите %1</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="380"/>
+        <location filename="packagecontroller.cpp" line="381"/>
         <source>Package already installed</source>
         <translation>Пакет уже установлен</translation>
     </message>
