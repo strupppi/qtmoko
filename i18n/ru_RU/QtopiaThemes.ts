@@ -4,37 +4,42 @@
 <context>
     <name>Themes</name>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="2"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="3"/>
         <source>Home_WVGA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="1"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="1"/>
         <source>Classic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="3"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="2"/>
+        <source>FinxiMod</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/server/main/tr31980.cpp" line="4"/>
         <source>Deskphone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="4"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="8"/>
         <source>Finxi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="5"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="5"/>
         <source>Smart</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="7"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="6"/>
         <source>Crisp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/server/main/tr7818.cpp" line="6"/>
+        <location filename="../../src/server/main/tr31980.cpp" line="7"/>
         <source>Qtopia</source>
         <translation type="unfinished"></translation>
     </message>

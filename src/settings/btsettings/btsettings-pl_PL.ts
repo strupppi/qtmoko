@@ -4,47 +4,107 @@
 <context>
     <name>AudioDeviceConnectionStatus</name>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="335"/>
+        <location filename="remotedeviceinfodialog.cpp" line="348"/>
         <source>Connect headset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="336"/>
+        <location filename="remotedeviceinfodialog.cpp" line="349"/>
         <source>Connect handsfree unit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="337"/>
+        <location filename="remotedeviceinfodialog.cpp" line="350"/>
+        <source>Connect audio (A2DP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="351"/>
         <source>Disconnect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="386"/>
+        <location filename="remotedeviceinfodialog.cpp" line="407"/>
         <source>Connected to headset.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="388"/>
+        <location filename="remotedeviceinfodialog.cpp" line="409"/>
         <source>Connected to handsfree unit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="436"/>
+        <location filename="remotedeviceinfodialog.cpp" line="411"/>
+        <source>Connected to A2DP.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="502"/>
+        <source>A2DP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="502"/>
+        <source>Make bluetooth default device?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="531"/>
+        <source>Problems expected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="531"/>
+        <source>All programs will play through bluetooth now, but it could make problems with sound in gsm calls.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="540"/>
+        <source>Install bluez-audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="540"/>
+        <source>Install bluez-audio?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="543"/>
+        <source>Restart needed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="543"/>
+        <source>You might need to restart your phone and maybe pair with the device again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="547"/>
+        <source>Connecting A2DP...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="558"/>
+        <source>Connection failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="564"/>
         <source>Connecting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="463"/>
+        <location filename="remotedeviceinfodialog.cpp" line="591"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="464"/>
+        <location filename="remotedeviceinfodialog.cpp" line="592"/>
         <source>&lt;qt&gt;Connection failed.&lt;/qt&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="475"/>
+        <location filename="remotedeviceinfodialog.cpp" line="601"/>
         <source>Disconnecting...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -189,23 +249,23 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="253"/>
+        <location filename="remotedeviceinfodialog.cpp" line="259"/>
         <source>Disconnect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="274"/>
+        <location filename="remotedeviceinfodialog.cpp" line="280"/>
         <source>Connected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="278"/>
-        <location filename="remotedeviceinfodialog.cpp" line="410"/>
+        <location filename="remotedeviceinfodialog.cpp" line="284"/>
+        <location filename="remotedeviceinfodialog.cpp" line="436"/>
         <source>Not connected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="403"/>
+        <location filename="remotedeviceinfodialog.cpp" line="428"/>
         <source>Connectivity not available. Another device is using Bluetooth audio.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -266,38 +326,38 @@
 <context>
     <name>RemoteDeviceInfoDialog</name>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="542"/>
-        <location filename="remotedeviceinfodialog.cpp" line="702"/>
+        <location filename="remotedeviceinfodialog.cpp" line="692"/>
+        <location filename="remotedeviceinfodialog.cpp" line="854"/>
         <source>Other details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="543"/>
+        <location filename="remotedeviceinfodialog.cpp" line="693"/>
         <source>Supported services</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="546"/>
+        <location filename="remotedeviceinfodialog.cpp" line="696"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="686"/>
+        <location filename="remotedeviceinfodialog.cpp" line="838"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="687"/>
+        <location filename="remotedeviceinfodialog.cpp" line="839"/>
         <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="688"/>
+        <location filename="remotedeviceinfodialog.cpp" line="840"/>
         <source>Vendor:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="689"/>
+        <location filename="remotedeviceinfodialog.cpp" line="841"/>
         <source>Company:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -305,29 +365,29 @@
 <context>
     <name>ServicesDisplay</name>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="73"/>
+        <location filename="remotedeviceinfodialog.cpp" line="74"/>
         <source>Querying services...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="remotedeviceinfodialog.cpp" line="86"/>
-        <location filename="remotedeviceinfodialog.cpp" line="98"/>
-        <source>Services Query Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="remotedeviceinfodialog.cpp" line="87"/>
         <location filename="remotedeviceinfodialog.cpp" line="99"/>
+        <source>Services Query Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="remotedeviceinfodialog.cpp" line="88"/>
+        <location filename="remotedeviceinfodialog.cpp" line="100"/>
         <source>&lt;P&gt;Unable to request device services</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="126"/>
+        <location filename="remotedeviceinfodialog.cpp" line="132"/>
         <source>Supported services</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="remotedeviceinfodialog.cpp" line="137"/>
+        <location filename="remotedeviceinfodialog.cpp" line="143"/>
         <source>(No available services.)</source>
         <translation type="unfinished"></translation>
     </message>

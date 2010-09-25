@@ -1,11 +1,13 @@
-<!DOCTYPE TS><TS>
-<context encoding="UTF-8">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
+<context>
     <name>Asteroids</name>
     <message>
         <source>Shoot the rocks</source>
         <translation>Dispara a las rocas</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>AsÂ­terÂ­oids</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Asteroids</translation>
@@ -13,7 +15,7 @@
 </context>
 <context>
     <name>Fifteen Pieces</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>FifÂ­teen PieÂ­ces</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Fifteen Pieces</translation>
@@ -29,7 +31,7 @@
         <source>A Code Breaking Game</source>
         <translation>Un juego de romper códigos</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>MindÂ­breakÂ­er</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Mindbreaker</translation>
@@ -52,7 +54,7 @@
         <source>A Parachute Attack Game</source>
         <translation>Un juego de ataque en paracaídas</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>ParaÂ­Shoot</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>ParaShoot</translation>

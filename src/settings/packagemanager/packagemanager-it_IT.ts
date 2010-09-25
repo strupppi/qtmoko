@@ -14,17 +14,17 @@
         <translation>Descrizione:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="179"/>
+        <location filename="packagecontroller.cpp" line="180"/>
         <source>MD5Sum:</source>
         <translation>Valore MD5:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="190"/>
+        <location filename="packagecontroller.cpp" line="191"/>
         <source>Capabilities:</source>
         <translation>Capacità:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="477"/>
+        <location filename="packagecontroller.cpp" line="478"/>
         <source>Installation Size:</source>
         <translation>Dimensione di installazione:</translation>
     </message>
@@ -32,6 +32,11 @@
         <location filename="packagecontroller.h" line="310"/>
         <source>Install</source>
         <translation type="unfinished">Installa pacchetto!</translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.cpp" line="179"/>
+        <source>Version:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -84,27 +89,27 @@
 <context>
     <name>NetworkPackageController</name>
     <message>
-        <location filename="packagecontroller.cpp" line="325"/>
+        <location filename="packagecontroller.cpp" line="326"/>
         <source>Getting package list from %1</source>
         <translation>Ricevo lista pacchetti da %1, attendere..</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="350"/>
+        <location filename="packagecontroller.cpp" line="351"/>
         <source>Error connecting to server, check server URL is correct and/or contact server administrator</source>
         <translation>Errore di connessione. Verifica l&apos;indirizzo del server (URL) o contatta l&apos;amministratore di quel server.</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="356"/>
+        <location filename="packagecontroller.cpp" line="357"/>
         <source>Not connected</source>
         <translation>Non connesso.</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>Connected</source>
         <translation>Connesso.</translation>
     </message>
     <message numerus="yes">
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>%n program(s) found</source>
         <comment>%n =# of packages</comment>
         <translation>
@@ -112,13 +117,13 @@
         </translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="402"/>
+        <location filename="packagecontroller.cpp" line="403"/>
         <source>Getting package %1 from %2</source>
         <comment>%1 package name, %2 server name</comment>
         <translation>Scarico il pacchetto %1 da %2</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="427"/>
+        <location filename="packagecontroller.cpp" line="428"/>
         <source>Error occurred while downloading package</source>
         <translation>Errore durante download del pacchetto.</translation>
     </message>
@@ -264,7 +269,7 @@
     </message>
     <message>
         <location filename="packagecontroller.cpp" line="168"/>
-        <location filename="packagecontroller.cpp" line="481"/>
+        <location filename="packagecontroller.cpp" line="482"/>
         <source>Download Size:</source>
         <translation>Dimensione Download:</translation>
     </message>
@@ -299,13 +304,13 @@
         <translation>Fidato:</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="184"/>
+        <location filename="packagecontroller.cpp" line="185"/>
         <location filename="packageview.cpp" line="570"/>
         <source>The package &lt;font color=&quot;#0000FF&quot;&gt;%1&lt;/font&gt; &lt;b&gt;cannot be installed&lt;/b&gt; as it utilizes protected resources</source>
         <translation>Il pacchetto &lt;font color=&quot;#0000FF&quot;&gt;%1&lt;/font&gt; &lt;b&gt;non può essere installato.&lt;/b&gt; Esso utilizza risorse protette.</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="444"/>
+        <location filename="packagecontroller.cpp" line="445"/>
         <location filename="packageview.cpp" line="633"/>
         <source>Installing...</source>
         <translation>Installazione in corso, attendere..</translation>
@@ -531,7 +536,7 @@
         <translation>Il pacchetto non é compatibile con il dispositivo in uso.</translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="380"/>
+        <location filename="packagecontroller.cpp" line="381"/>
         <source>Package already installed</source>
         <translation>Il pacchetto é già installato.</translation>
     </message>

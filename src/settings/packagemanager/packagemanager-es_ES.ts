@@ -14,23 +14,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="179"/>
+        <location filename="packagecontroller.cpp" line="180"/>
         <source>MD5Sum:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="190"/>
+        <location filename="packagecontroller.cpp" line="191"/>
         <source>Capabilities:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="477"/>
+        <location filename="packagecontroller.cpp" line="478"/>
         <source>Installation Size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="packagecontroller.h" line="310"/>
         <source>Install</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="packagecontroller.cpp" line="179"/>
+        <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -84,27 +89,27 @@
 <context>
     <name>NetworkPackageController</name>
     <message>
-        <location filename="packagecontroller.cpp" line="325"/>
+        <location filename="packagecontroller.cpp" line="326"/>
         <source>Getting package list from %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="350"/>
+        <location filename="packagecontroller.cpp" line="351"/>
         <source>Error connecting to server, check server URL is correct and/or contact server administrator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="356"/>
+        <location filename="packagecontroller.cpp" line="357"/>
         <source>Not connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>Connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="packagecontroller.cpp" line="361"/>
+        <location filename="packagecontroller.cpp" line="362"/>
         <source>%n program(s) found</source>
         <comment>%n =# of packages</comment>
         <translation type="unfinished">
@@ -112,13 +117,13 @@
         </translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="402"/>
+        <location filename="packagecontroller.cpp" line="403"/>
         <source>Getting package %1 from %2</source>
         <comment>%1 package name, %2 server name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="427"/>
+        <location filename="packagecontroller.cpp" line="428"/>
         <source>Error occurred while downloading package</source>
         <translation type="unfinished"></translation>
     </message>
@@ -264,7 +269,7 @@
     </message>
     <message>
         <location filename="packagecontroller.cpp" line="168"/>
-        <location filename="packagecontroller.cpp" line="481"/>
+        <location filename="packagecontroller.cpp" line="482"/>
         <source>Download Size:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -299,13 +304,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="184"/>
+        <location filename="packagecontroller.cpp" line="185"/>
         <location filename="packageview.cpp" line="570"/>
         <source>The package &lt;font color=&quot;#0000FF&quot;&gt;%1&lt;/font&gt; &lt;b&gt;cannot be installed&lt;/b&gt; as it utilizes protected resources</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="444"/>
+        <location filename="packagecontroller.cpp" line="445"/>
         <location filename="packageview.cpp" line="633"/>
         <source>Installing...</source>
         <translation type="unfinished"></translation>
@@ -531,7 +536,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="packagecontroller.cpp" line="380"/>
+        <location filename="packagecontroller.cpp" line="381"/>
         <source>Package already installed</source>
         <translation type="unfinished"></translation>
     </message>

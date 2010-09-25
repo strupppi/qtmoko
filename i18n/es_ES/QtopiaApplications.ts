@@ -1,4 +1,6 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0">
 <context>
     <name>Archives</name>
     <message>
@@ -28,7 +30,7 @@
         <source>A Calculator Program</source>
         <translation>Una Calculadora</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>CalÂ­cuÂ­laÂ­tor</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Calculadora</translation>
@@ -36,7 +38,7 @@
 </context>
 <context>
     <name>Calendar</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>CalÂ­enÂ­dar</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Calendario</translation>
@@ -48,7 +50,7 @@
 </context>
 <context>
     <name>Call History</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>Call HisÂ­toÂ­ry</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Historial de Llamadas</translation>
@@ -58,9 +60,9 @@
         <translation>Aplicación del Historial de Llamadas</translation>
     </message>
 </context>
-<context encoding="UTF-8">
+<context>
     <name>Camera</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>CamÂ­era</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Cámara</translation>
@@ -83,7 +85,7 @@
         <source>An Address Book Program</source>
         <translation>Una Libreta de Contactos</translation>
     </message>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>ConÂ­tacts</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Contactos</translation>
@@ -111,9 +113,9 @@
         <translation>Un reproductor de medios</translation>
     </message>
 </context>
-<context encoding="UTF-8">
+<context>
     <name>Messages</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>MesÂ­sages</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Mensajes</translation>
@@ -155,7 +157,7 @@
 </context>
 <context>
     <name>Pictures</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>PicÂ­tures</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Imágenes</translation>
@@ -165,9 +167,9 @@
         <translation>Un editor de imágenes</translation>
     </message>
 </context>
-<context encoding="UTF-8">
+<context>
     <name>SimApp</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>SIM ApÂ­pliÂ­caÂ­tions</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Aplicaciones SIM</translation>
@@ -175,7 +177,7 @@
 </context>
 <context>
     <name>System Info</name>
-    <message encoding="UTF-8">
+    <message utf8="true">
         <source>SysÂ­tem Info</source>
         <comment>Use soft hyphen (char U00AD) to indicate hyphenation</comment>
         <translation>Info del sistema</translation>
