@@ -23,7 +23,7 @@ apt-get install cdebootstrap
 Step 1
 ======
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,pciutils,linux-sound-base,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,bluez-utils,dosfstools,fbset,klogd,psmisc,iptables,dash,xfonts-base,x11-xserver-utils,matchbox,xterm,timeout stable /media/card/ http://ftp.de.debian.org/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,dropbear,screen,mc,libts-0.0-0,libasound2,pciutils,linux-sound-base,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,bluez-utils,dosfstools,fbset,klogd,psmisc,iptables,dash,xfonts-base,x11-xserver-utils,xterm,timeout stable /media/card/ http://ftp.de.debian.org/debian/
 
 * For bluetooth headset bluez-audio package is needed. But because of stupid
   dependencies on gstreamer it takes 4MB. With this package and some tweaks you
@@ -226,6 +226,7 @@ case "$1" in
 	rm -f /dev/input/mice
 	echo '1' > /proc/sys/kernel/printk
 	echo 1 > /sys/devices/platform/gta02-pm-bt.0/power_on
+	echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink
 	rm -rf /var/run/ppp
 	mkdir /var/run/ppp
 	mkdir -p /var/cache/apt/archives/partial
@@ -234,7 +235,7 @@ case "$1" in
 	;;
   stop)
 	rm -f /tmp/restart-qtopia
-	killall -q qpe atd qx_helper quicklauncher mediaserver mediaplayer sipagent
+	killall -q qpe atd quicklauncher mediaserver mediaplayer sipagent
 	;;
   restart)
 	/etc/init.d/qpe.sh stop
@@ -243,7 +244,6 @@ case "$1" in
   *)
 	touch /tmp/restart-qtopia
 	while [ -e /tmp/restart-qtopia ]; do
-	qx_helper &
 	qpe 2>&1 | logger -t 'Qtopia'
 	if [ -e /tmp/restart-qtopia-qvga ]; then
 		rm -rf /tmp/restart-qtopia-qvga
@@ -276,21 +276,22 @@ tail -n 100 /var/log/messages
 
 chmod +x /media/card/sbin/logread
 
-Step 7.3 - terminal.sh
-======================
+Step 7.3 - xterm desktop file
+=============================
 
-* This is shell script that starts xterm with matchbox keyboard
+* Xterm does not have .desktop file by default, but we want to launch it easily
+  from QX:
 
-nano /media/card/bin/terminal.sh
+cat > /media/card/usr/share/applications/xterm.desktop << __END__
+[Desktop Entry]
+Name=xterm
+Comment=x terminal emulator 
+Exec=xterm
+Type=Application
+Icon=xterm-color_48x48.xpm
+Categories=System;TerminalEmulator
 
-#!/bin/sh
-matchbox-window-manager &
-sleep 5
-matchbox-keyboard &
-xterm
-
-
-chmod +x /media/card/bin/terminal.sh
+__END__
 
 Step 7.4 - wpa_supplicant
 =========================
@@ -463,7 +464,7 @@ make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm
 make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm  modules_install INSTALL_MOD_PATH=GTA02
 find  GTA02/lib/modules -name *.ko -exec /opt/toolchains/arm920t-eabi/bin/arm-linux-strip -R .not -R .comment --strip-unneeded {} \;
 /opt/toolchains/arm920t-eabi/bin/arm-linux-objcopy -O binary -R .note -R .comment -S arch/arm/boot/compressed/vmlinux linux.bin
-mkimage -A arm -O linux -T kernel -C none -a 30008000 -e 30008000 -n "qtmoko-v26" -d linux.bin uImage-GTA02.bin
+mkimage -A arm -O linux -T kernel -C none -a 30008000 -e 30008000 -n "qtmoko-v28" -d linux.bin uImage-GTA02.bin
 
 * Copy kernel to /media/card/boot
 
@@ -491,22 +492,57 @@ umount /media/card
 cd /media/card
 tar -czvf ../qtmoko-debian.tar.gz .
 
-Step 11
-=======
-
-* Make jffs image
+Step 11 - make jffs2 and ubifs images
+=====================================
 
 * Copy your rootfs dir to /tmp/qtmoko-debian
-
-* Uncomment the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
 
 * Delete contents of boot, because for NAND it's not needed:
 
 rm -rf /tmp/qtmoko-debian/boot/*
 
+* Uncomment the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
+
 * Make jffs2 image:
 
 mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/tmp/qtmoko-debian
+
+* Ubifs image:
+
+* Comment back the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
+
+* Edit the mount for root in /tmp/qtmoko-debian/etc/fstab so that it reads:
+
+rootfs  /                auto    defaults,no_chk_data_crc,bulk_read 0 1
+
+* Create config for ubinize and create the resulting image:
+
+cat > ubinize.cfg <<__END__
+[ubifs]
+mode=ubi
+image=qtmoko-debian.ubifs
+vol_id=0
+vol_size=230MiB
+vol_type=dynamic
+vol_name=om-gta02-rootfs
+vol_flags=autoresize
+__END__
+
+mkfs.ubifs -r /tmp/qtmoko-debian -o qtmoko-debian.ubifs -x zlib -m 2048 -e 126976 -c 2047
+ubinize -o qtmoko-debian.ubi -m 2048 -p 128KiB -s 2048 -O 2048 ubinize.cfg
+rm qtmoko-debian.ubifs
+
+
+Step 12 - qi for booting ubi image
+==================================
+
+* Standard qi from openmoko git has jffs2 hardcoded as root file system. If your
+  want to use ubi image you need patched qi.
+
+git clone git://github.com/radekp/qi.git
+cd qi
+git checkout qtmoko-v28
+make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- CPU=s3c2442
 
 
 Boot speedup
