@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
@@ -6,133 +5,109 @@
     <message>
         <location filename="addatt.cpp" line="78"/>
         <source>Add Attachment</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Tilføj vedhæftning</translation></message>
 </context>
 <context>
     <name>AddAttDialog</name>
     <message>
         <location filename="addatt.cpp" line="221"/>
         <source>Attachments</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Vedhæftninger</translation></message>
     <message>
         <location filename="addatt.cpp" line="224"/>
         <location filename="addatt.cpp" line="244"/>
         <source>Add attachment</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Tilføj vedhæftning</translation></message>
     <message>
         <location filename="addatt.cpp" line="226"/>
         <source>Attach a document to this mail.</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Vedhæft et dokument til denne e-mail.</translation></message>
     <message>
         <location filename="addatt.cpp" line="228"/>
         <source>Remove attachment</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Fjern vedhæftning</translation></message>
 </context>
 <context>
     <name>EmailComposerInterface</name>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="330"/>
         <source>(no subject)</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">(intet emne)</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="364"/>
         <location filename="emailcomposer.cpp" line="531"/>
         <source>Fwd</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Fwd</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="365"/>
         <location filename="emailcomposer.cpp" line="532"/>
         <source>Fw</source>
         <comment>2 letter short version of Fwd for forward</comment>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Fw</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="366"/>
         <location filename="emailcomposer.cpp" line="533"/>
         <source>Re</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Re</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="496"/>
         <location filename="emailcomposer.cpp" line="672"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Opret</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="496"/>
         <location filename="emailcomposer.cpp" line="672"/>
         <source>Forward</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Videresend</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="499"/>
         <location filename="emailcomposer.cpp" line="675"/>
         <source>Reply</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Svar</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="501"/>
         <location filename="emailcomposer.cpp" line="677"/>
         <source>Reply to all</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Svar til alle</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="511"/>
         <location filename="emailcomposer.cpp" line="208"/>
         <source>No documents</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Ingen dokumenter</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="512"/>
         <location filename="emailcomposer.cpp" line="209"/>
         <source>There are no existing documents to attach</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Der er ingen eksisterende dokumenter at vedhæfte</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="513"/>
         <location filename="emailcomposer.cpp" line="210"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">O.k.</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="534"/>
         <source>Select Contacts</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Vælg kontakter</translation></message>
     <message numerus="yes">
         <location filename="deskphone_emailcomposer.cpp" line="563"/>
         <location filename="emailcomposer.cpp" line="180"/>
         <source>%n Attachment(s): %1KB</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation type="unfinished"><numerusform>%n vedhæftning: %1KB</numerusform><numerusform>%n vedhæftninger: %1KB</numerusform></translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="581"/>
         <source>Subject</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Emne</translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="589"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Til</translation></message>
     <message>
         <location filename="emailcomposer.cpp" line="193"/>
         <source>details</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">detaljer</translation></message>
     <message>
         <location filename="emailcomposer.cpp" line="296"/>
         <source>Attachments</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation type="unfinished">Vedhæftninger</translation></message>
 </context>
 </TS>
