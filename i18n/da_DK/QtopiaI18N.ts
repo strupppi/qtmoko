@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="da_DK" sourcelanguage="en_US">
 <context>
     <name>Czech</name>
     <message utf8="true">
         <location filename="../../src/server/main/tr31980.cpp" line="8"/>
         <source>Čeština</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tjekkisk</translation>
     </message>
 </context>
 <context>
@@ -14,7 +13,7 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="7"/>
         <source>Danske</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dansk</translation>
     </message>
 </context>
 <context>
@@ -22,7 +21,7 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="2"/>
         <source>English (U.S.)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Engelsk</translation>
     </message>
 </context>
 <context>
@@ -30,7 +29,7 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="4"/>
         <source>Deutsch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tysk</translation>
     </message>
 </context>
 <context>
@@ -38,7 +37,7 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="5"/>
         <source>Italiano</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Italiensk</translation>
     </message>
 </context>
 <context>
@@ -46,7 +45,7 @@
     <message utf8="true">
         <location filename="../../src/server/main/tr31980.cpp" line="3"/>
         <source>Język polski</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polsk</translation>
     </message>
 </context>
 <context>
@@ -54,7 +53,7 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="1"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Russisk</translation>
     </message>
 </context>
 <context>
@@ -62,7 +61,7 @@
     <message utf8="true">
         <location filename="../../src/server/main/tr31980.cpp" line="6"/>
         <source>Español</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spansk</translation>
     </message>
 </context>
 </TS>
