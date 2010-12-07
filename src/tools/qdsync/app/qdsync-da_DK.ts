@@ -6,6 +6,6 @@
         <location filename="qdsync.cpp" line="199"/>
         <location filename="qdsync.cpp" line="330"/>
         <source>Sync</source>
-        <translation type="unfinished">Synkronisering</translation></message>
+        <translation>Synkronisering</translation></message>
 </context>
 </TS>

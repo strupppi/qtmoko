@@ -5,19 +5,19 @@
     <message>
         <location filename="conversationviewer.cpp" line="53"/>
         <source>From:</source>
-        <translation type="unfinished">Fra:</translation></message>
+        <translation>Fra:</translation></message>
     <message>
         <location filename="conversationviewer.cpp" line="54"/>
         <location filename="conversationviewer.cpp" line="387"/>
         <source>Reply</source>
-        <translation type="unfinished">Svar</translation></message>
+        <translation>Svar</translation></message>
     <message>
         <location filename="conversationviewer.cpp" line="55"/>
         <source>Delete</source>
-        <translation type="unfinished">Slet</translation></message>
+        <translation>Slet</translation></message>
     <message>
         <location filename="conversationviewer.cpp" line="56"/>
         <source>Back</source>
-        <translation type="unfinished">Tilbage</translation></message>
+        <translation>Tilbage</translation></message>
 </context>
 </TS>
