@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
@@ -5,6 +6,6 @@
     <message>
         <location filename="speeddialedit.cpp" line="34"/>
         <source>Speed Dial</source>
-        <translation type="unfinished">Hurtig opkald</translation></message>
+        <translation>Hurtigopkald</translation></message>
 </context>
 </TS>
