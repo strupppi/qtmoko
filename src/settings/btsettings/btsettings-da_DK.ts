@@ -175,12 +175,12 @@
     <message>
         <location filename="mydevicesdisplay.cpp" line="324"/>
         <source>Checking services...</source>
-        <translation type="unfinished">Kontrollerer tjenester...</translation></message>
+        <translation>Kontrollerer tjenester...</translation></message>
     <message>
         <location filename="mydevicesdisplay.cpp" line="327"/>
         <location filename="mydevicesdisplay.cpp" line="336"/>
         <source>&lt;P&gt;Unable to request device services</source>
-        <translation>&lt;P&gt;Kan ikke forespørge enhedstjenester</translation></message>
+        <translation>&lt;P&gt;Kan ikke anmode enhedstjenester</translation></message>
     <message>
         <location filename="mydevicesdisplay.cpp" line="362"/>
         <location filename="mydevicesdisplay.cpp" line="397"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="remotedeviceinfodialog.cpp" line="74"/>
         <source>Querying services...</source>
-        <translation>Forespørger tjenester...</translation></message>
+        <translation>Anmoder tjenester...</translation></message>
     <message>
         <location filename="remotedeviceinfodialog.cpp" line="87"/>
         <location filename="remotedeviceinfodialog.cpp" line="99"/>
@@ -309,7 +309,7 @@
         <location filename="remotedeviceinfodialog.cpp" line="88"/>
         <location filename="remotedeviceinfodialog.cpp" line="100"/>
         <source>&lt;P&gt;Unable to request device services</source>
-        <translation>&lt;P&gt;Kan ikke forespørge enhedstjenester</translation></message>
+        <translation>&lt;P&gt;Kan ikke anmode enhedstjenester</translation></message>
     <message>
         <location filename="remotedeviceinfodialog.cpp" line="132"/>
         <source>Supported services</source>
@@ -345,7 +345,7 @@
     <message>
         <location filename="settingsdisplay.cpp" line="66"/>
         <source>Options</source>
-        <translation>Indstillinger</translation></message>
+        <translation>Tilvalg</translation></message>
     <message>
         <location filename="settingsdisplay.cpp" line="70"/>
         <source>Name:</source>

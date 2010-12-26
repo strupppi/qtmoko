@@ -56,6 +56,6 @@
         <location filename="qbluetoothobexagent.cpp" line="306"/>
         <source>B</source>
         <comment>byte</comment>
-        <translation type="unfinished">B</translation></message>
+        <translation>B</translation></message>
 </context>
 </TS>

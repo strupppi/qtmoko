@@ -257,7 +257,7 @@
     <message>
         <location filename="phonesettings.cpp" line="913"/>
         <source>Location</source>
-        <translation>Placering</translation></message>
+        <translation>Sted</translation></message>
     <message>
         <location filename="phonesettings.cpp" line="920"/>
         <source>Index</source>
@@ -378,7 +378,7 @@
         <location filename="phonesettings.cpp" line="1305"/>
         <source>&lt;qt&gt;Cannot store more than %n phone number(s).&lt;/qt&gt;</source>
         <comment>%n = number of phone numbers</comment>
-        <translation><numerusform>&lt;qt&gt;Kan ikke gemme mere end %n telefon numre.&lt;/qt&gt;</numerusform><numerusform>&lt;qt&gt;Kan ikke gemme mere end %n telefon nummer.&lt;/qt&gt;</numerusform></translation></message>
+        <translation><numerusform>&lt;qt&gt;Kan ikke gemme mere end %n telefon nummer.&lt;/qt&gt;</numerusform><numerusform>&lt;qt&gt;Kan ikke gemme mere end %n telefon numre.&lt;/qt&gt;</numerusform></translation></message>
     <message>
         <location filename="phonesettings.cpp" line="1340"/>
         <source>&lt;p&gt;Number '%1' contains unacceptable characters for Fixed Dialing</source>
@@ -404,7 +404,7 @@
     <message>
         <location filename="phonesettings.cpp" line="186"/>
         <source>Call Options</source>
-        <translation>Opkaldsindstillinger</translation></message>
+        <translation>Opkaldstilvalg</translation></message>
     <message>
         <location filename="phonesettings.cpp" line="197"/>
         <source>Call Barring</source>

@@ -21,7 +21,7 @@
     <message>
         <location filename="mmscomposer.cpp" line="1125"/>
         <source>Slide options...</source>
-        <translation>Dias indstillinger...</translation></message>
+        <translation>Dias tilvalg...</translation></message>
     <message>
         <location filename="mmscomposer.cpp" line="2038"/>
         <source>Slide %1 of %2</source>
@@ -29,7 +29,7 @@
     <message>
         <location filename="mmscomposer.cpp" line="2054"/>
         <source>Slide options</source>
-        <translation>Dias indstillinger</translation></message>
+        <translation>Dias tilvalg</translation></message>
     <message>
         <location filename="mmscomposer.cpp" line="2062"/>
         <source>secs</source>

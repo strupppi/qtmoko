@@ -31,7 +31,7 @@
     <message>
         <location filename="language.cpp" line="70"/>
         <source>Options</source>
-        <translation>Indstillinger</translation></message>
+        <translation>Tilvalg</translation></message>
     <message>
         <location filename="language.cpp" line="73"/>
         <source>Use for Input</source>
