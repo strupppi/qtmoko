@@ -62,7 +62,7 @@
     <message>
         <location filename="confrecorder.cpp" line="97"/>
         <source>Location</source>
-        <translation>Placering</translation></message>
+        <translation>Sted</translation></message>
 </context>
 <context>
     <name>MediaRecorder</name>
@@ -152,7 +152,7 @@
     <message>
         <location filename="mediarecorderbase.ui" line="92"/>
         <source>Storage Location</source>
-        <translation>Lager placering</translation></message>
+        <translation>Lagringssted</translation></message>
     <message>
         <location filename="mediarecorderbase.ui" line="112"/>
         <source>Max Time:</source>

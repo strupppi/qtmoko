@@ -36,7 +36,7 @@
     <message>
         <location filename="loggingview.cpp" line="171"/>
         <source>&lt;h3&gt;Not available&lt;/h3&gt;&lt;p&gt;This tool requires the &lt;tt&gt;logread&lt;/tt&gt; program and the corresponding &lt;tt&gt;syslogd&lt;/tt&gt;. &lt;p&gt;You may still adjust logging categories from Options &lt;img src=:icon/options&gt;.</source>
-        <translation>&lt;h3&gt;Ikke tilgængelig&lt;/h3&gt;&lt;p&gt;Dette værktøj kræver &lt;tt&gt;logread&lt;/tt&gt; programmet og tilhørende &lt;tt&gt;syslogd&lt;/tt&gt;. &lt;p&gt;Du kan stadig indstille log kategorier fra  Indstillinger &lt;img src=:icon/options&gt;.</translation></message>
+        <translation>&lt;h3&gt;Ikke tilgængelig&lt;/h3&gt;&lt;p&gt;Dette værktøj kræver &lt;tt&gt;logread&lt;/tt&gt; programmet og tilhørende &lt;tt&gt;syslogd&lt;/tt&gt;. &lt;p&gt;Du kan stadig justere log kategorier fra tilvalg &lt;img src=:icon/options&gt;.</translation></message>
     <message>
         <location filename="loggingview.cpp" line="179"/>
         <source>Syslogd seems to be stopped, enable it?</source>

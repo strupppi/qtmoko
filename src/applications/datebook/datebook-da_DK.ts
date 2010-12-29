@@ -207,7 +207,7 @@
         <location filename="appointmentdetails.cpp" line="242"/>
         <source>every %1 days</source>
         <comment>eg. every 2 days</comment>
-        <translation><numerusform>hver %1 dage</numerusform><numerusform>hver %1 dag</numerusform></translation></message>
+        <translation><numerusform>hver %1 dag</numerusform><numerusform>hver %1 dage</numerusform></translation></message>
     <message>
         <location filename="appointmentdetails.cpp" line="244"/>
         <source>every day</source>
@@ -216,7 +216,7 @@
         <location filename="appointmentdetails.cpp" line="257"/>
         <source>every %2 weeks on %1</source>
         <comment>eg. every 2 weeks on: Monday, Wednesday</comment>
-        <translation><numerusform>hver %2 uger på %1</numerusform><numerusform>hver %2 uge på %1</numerusform></translation></message>
+        <translation><numerusform>hver %2 uge på %1</numerusform><numerusform>hver %2 uger på %1</numerusform></translation></message>
     <message>
         <location filename="appointmentdetails.cpp" line="259"/>
         <source>every week on %1</source>
@@ -231,7 +231,7 @@
         <location filename="appointmentdetails.cpp" line="286"/>
         <source>every %1 months</source>
         <comment>eg. every 2 months</comment>
-        <translation><numerusform>hver %1 måneder</numerusform><numerusform>hver %1 måned</numerusform></translation></message>
+        <translation><numerusform>hver %1 måned</numerusform><numerusform>hver %1 måneder</numerusform></translation></message>
     <message>
         <location filename="appointmentdetails.cpp" line="288"/>
         <source>every month</source>
@@ -240,7 +240,7 @@
         <location filename="appointmentdetails.cpp" line="291"/>
         <source>every %1 years</source>
         <comment>eg. every 2 years</comment>
-        <translation><numerusform>hvert %1 år</numerusform><numerusform>hvert %1 år</numerusform></translation></message>
+        <translation><numerusform>hver %1 år</numerusform><numerusform>hver %1 år</numerusform></translation></message>
     <message>
         <location filename="appointmentdetails.cpp" line="293"/>
         <source>every year</source>
@@ -748,7 +748,7 @@
         <source>The %1 %2
 from the end</source>
         <comment>eg. The third Tuesday from the end (of the month)</comment>
-        <translation type="unfinished">Den %1 %2
+        <translation>Den %1 %2
 fra slutningen</translation></message>
     <message>
         <location filename="../todolist/recurrencedetails.cpp" line="141"/>
@@ -916,17 +916,17 @@ fra slutningen</translation></message>
         <location filename="../todolist/reminderpicker.cpp" line="388"/>
         <source>%n days</source>
         <comment>3 days</comment>
-        <translation><numerusform>%n dage</numerusform><numerusform>%n dag</numerusform></translation></message>
+        <translation><numerusform>%n dag</numerusform><numerusform>%n dage</numerusform></translation></message>
     <message numerus="yes">
         <location filename="../todolist/reminderpicker.cpp" line="368"/>
         <source>%n hours</source>
         <comment>3 hours</comment>
-        <translation><numerusform>%n timer</numerusform><numerusform>%n time</numerusform></translation></message>
+        <translation><numerusform>%n time</numerusform><numerusform>%n timer</numerusform></translation></message>
     <message numerus="yes">
         <location filename="../todolist/reminderpicker.cpp" line="373"/>
         <source>%n minutes</source>
         <comment>15 minutes</comment>
-        <translation><numerusform>%n minutter</numerusform><numerusform>%n minut</numerusform></translation></message>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minutter</numerusform></translation></message>
     <message>
         <location filename="../todolist/reminderpicker.cpp" line="376"/>
         <source>%1 before (%2)</source>

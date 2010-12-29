@@ -92,7 +92,7 @@
         <location filename="deskphone_emailcomposer.cpp" line="563"/>
         <location filename="emailcomposer.cpp" line="180"/>
         <source>%n Attachment(s): %1KB</source>
-        <translation><numerusform>%n vedhæftninger: %1kB</numerusform><numerusform>%n vedhæftning: %1kB</numerusform></translation></message>
+        <translation><numerusform>%n vedhæftning: %1kB</numerusform><numerusform>%n vedhæftninger: %1kB</numerusform></translation></message>
     <message>
         <location filename="deskphone_emailcomposer.cpp" line="581"/>
         <source>Subject</source>

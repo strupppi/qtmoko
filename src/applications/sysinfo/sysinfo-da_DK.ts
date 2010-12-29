@@ -5,7 +5,7 @@
     <message numerus="yes">
         <location filename="cleanupwizard.cpp" line="46"/>
         <source>%n bytes</source>
-        <translation><numerusform>%n bytes</numerusform><numerusform>%n byte</numerusform></translation></message>
+        <translation><numerusform>%n byte</numerusform><numerusform>%n bytes</numerusform></translation></message>
     <message>
         <location filename="cleanupwizard.cpp" line="49"/>
         <source>%1 kB</source>
@@ -79,7 +79,7 @@
         <location filename="cleanupwizard.cpp" line="384"/>
         <source>%n document(s) using %1.</source>
         <comment>%n=number,%1=filesize (ie 5 kB)</comment>
-        <translation><numerusform>%n dokumenter bruger %1.</numerusform><numerusform>%n dokument bruger %1.</numerusform></translation></message>
+        <translation><numerusform>%n dokument bruger %1.</numerusform><numerusform>%n dokumenter bruger %1.</numerusform></translation></message>
     <message>
         <location filename="cleanupwizard.cpp" line="413"/>
         <source>Deleting %1</source>
@@ -123,7 +123,7 @@
     <message>
         <location filename="documenttypeselector.ui" line="87"/>
         <source>Location</source>
-        <translation>Placering</translation></message>
+        <translation>Sted</translation></message>
     <message>
         <location filename="documenttypeselector.ui" line="111"/>
         <source>Document types</source>
@@ -184,7 +184,7 @@
     <message numerus="yes">
         <location filename="cleanupwizard.cpp" line="690"/>
         <source>&lt;li&gt;%n document(s)</source>
-        <translation><numerusform>&lt;li&gt;%n dokumenter</numerusform><numerusform>&lt;li&gt;%n dokument</numerusform></translation></message>
+        <translation><numerusform>&lt;li&gt;%n dokument</numerusform><numerusform>&lt;li&gt;%n dokumenter</numerusform></translation></message>
     <message>
         <location filename="cleanupwizard.cpp" line="692"/>
         <source>( cleanup aborted )</source>

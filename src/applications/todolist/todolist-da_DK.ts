@@ -265,17 +265,17 @@ fra slutningen</translation></message>
         <location filename="reminderpicker.cpp" line="388"/>
         <source>%n days</source>
         <comment>3 days</comment>
-        <translation><numerusform>%n dage</numerusform><numerusform>%n dag</numerusform></translation></message>
+        <translation><numerusform>%n dag</numerusform><numerusform>%n dage</numerusform></translation></message>
     <message numerus="yes">
         <location filename="reminderpicker.cpp" line="368"/>
         <source>%n hours</source>
         <comment>3 hours</comment>
-        <translation><numerusform>%n timer</numerusform><numerusform>%n time</numerusform></translation></message>
+        <translation><numerusform>%n time</numerusform><numerusform>%n timer</numerusform></translation></message>
     <message numerus="yes">
         <location filename="reminderpicker.cpp" line="373"/>
         <source>%n minutes</source>
         <comment>15 minutes</comment>
-        <translation><numerusform>%n minutter</numerusform><numerusform>%n minut</numerusform></translation></message>
+        <translation><numerusform>%n minut</numerusform><numerusform>%n minutter</numerusform></translation></message>
     <message>
         <location filename="reminderpicker.cpp" line="376"/>
         <source>%1 before (%2)</source>

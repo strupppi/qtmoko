@@ -41,7 +41,7 @@
         <location filename="callforwarding.cpp" line="355"/>
         <source>forward to %1</source>
         <comment>When busy forward to %1&lt;phone number&gt;</comment>
-        <translation>videresend til %1</translation></message>
+        <translation>viderestil til %1</translation></message>
     <message>
         <location filename="callforwarding.cpp" line="373"/>
         <source>Please select</source>
@@ -88,12 +88,12 @@
     <message>
         <location filename="callforwarding.cpp" line="661"/>
         <source>Forwarding</source>
-        <translation>Videresend</translation></message>
+        <translation>Viderestilling</translation></message>
     <message>
         <location filename="callforwarding.cpp" line="804"/>
         <location filename="callforwarding.cpp" line="809"/>
         <source>Forwarding failed</source>
-        <translation>Videresend mislykkedes</translation></message>
+        <translation>Viderestilling mislykkedes</translation></message>
     <message>
         <location filename="callforwarding.cpp" line="805"/>
         <source>&lt;qt&gt;The operation is not allowed. Please consult your network operator.&lt;/qt&gt;</source>

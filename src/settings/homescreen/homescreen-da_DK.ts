@@ -62,7 +62,7 @@
     <message>
         <location filename="homescreen.cpp" line="112"/>
         <source>Location</source>
-        <translation>Placering</translation></message>
+        <translation>Sted</translation></message>
     <message>
         <location filename="homescreen.cpp" line="129"/>
         <source>Display</source>
@@ -103,7 +103,7 @@
     <message>
         <location filename="homescreen.cpp" line="233"/>
         <source>Idle</source>
-        <translation>naktiv</translation></message>
+        <translation>Inaktiv</translation></message>
     <message>
         <location filename="homescreen.cpp" line="291"/>
         <location filename="homescreen.cpp" line="343"/>
@@ -112,7 +112,7 @@
     <message>
         <location filename="homescreen.cpp" line="405"/>
         <source>Note: 'Display off' option is currently disabled by the power management.</source>
-        <translation>Note: 'Skærm slukket' indstillingen er i øjeblikket deaktiveret af strømstyringen.</translation></message>
+        <translation>Note: 'Skærm slukket' tilvalg er i øjeblikket deaktiveret af strømstyringen.</translation></message>
     <message>
         <location filename="homescreen.cpp" line="414"/>
         <source>Note: Suspension is currently disabled by the power management.</source>
