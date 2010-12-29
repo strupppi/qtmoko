@@ -387,7 +387,7 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
 
         if(kbd)
         {
-            height -= 164;      // hack: keyboard height - how to get correct size?
+            height -= 137;      // hack: keyboard height - how to get correct size?
         }
 
         //qDebug() << " top=" << top << " appRunScr size: " << width << "x" << height;
@@ -427,7 +427,10 @@ void QX::pauseApp()
     {
         system("xrandr -o 0");
     }
-    wmTimer->stop();
+    if(wm)
+    {
+        wmTimer->stop();
+    }
 
     system(QString("kill -STOP %1").arg(process->pid()).toAscii());
     if(xprocess)
@@ -444,7 +447,10 @@ void QX::resumeApp()
         system(QString("kill -CONT %1").arg(xprocess->pid()).toAscii());
     }
     system(QString("kill -CONT %1").arg(process->pid()).toAscii());
-    wmTimer->start(10);
+    if(wm)
+    {
+        wmTimer->start(10);
+    }
     showScreen(QX::ScreenRunning);
 }
 
