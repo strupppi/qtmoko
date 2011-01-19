@@ -28,7 +28,9 @@ apt-get install cdebootstrap mtd-utils
 Step 1
 ======
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,pciutils,linux-sound-base,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez-utils,dosfstools,fbset,klogd,psmisc,iptables,dash,xfonts-base,x11-xserver-utils,xterm,libxtst6,timeout stable /media/card/ http://ftp.de.debian.org/debian/
+* We will be installing new image to /media/card:
+
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libxtst6 squeeze /media/card/ http://ftp.de.debian.org/debian/
 
 
 * For bluetooth headset bluez-audio package is needed. But because of stupid
@@ -72,16 +74,17 @@ APT::Install-Recommends "0";
 __END__
 sed -i 's/\(PermitEmptyPasswords\) no/\1 yes/' /media/card/etc/ssh/sshd_config
 chroot /media/card /bin/sh -e <<__END_CHROOT__
-echo root: | chpasswd
+echo root: root | chpasswd
+sed -i 's/root:.*/root:C0XOiCyzQDtsA:14973:0:99999:7:::/' /etc/shadow
 apt-get --yes --purge remove cdebootstrap-helper-rc.d
 __END_CHROOT__
+
 
 Step 3 - add more package repositories
 ========================================
 
-echo "deb http://ftp.de.debian.org/debian lenny contrib" >> /media/card/etc/apt/sources.list
-echo "deb http://ftp.de.debian.org/debian lenny non-free" >> /media/card/etc/apt/sources.list
-echo "deb http://pkg-fso.alioth.debian.org/debian unstable main" >> /media/card/etc/apt/sources.list
+echo "deb http://ftp.de.debian.org/debian squeeze contrib" >> /media/card/etc/apt/sources.list
+echo "deb http://ftp.de.debian.org/debian squeeze non-free" >> /media/card/etc/apt/sources.list
 
 Step 4
 ======
@@ -116,8 +119,16 @@ endmode
 
 __END__
 
-  Calling "fbset qvga" and "echo qvga-normal > /sys/bus/spi/devices/spi2.0/state"
+  Calling "fbset qvga" and "echo qvga > /sys/class/lcd/jbt6k74-lcd/device/resolution"
   is needed for mplayer in 320x240 with correct colors.
+
+* Configure bluez4 for handsfreee calls, otherwise there is no sounds:
+
+nano /media/card/etc/bluetooth/audio.conf
+
+  and uncomment SCORouting=PCM setting in [General]:
+
+SCORouting=PCM
 
 Step 4.1 - DHCP server - not using now
 ======================================
@@ -143,30 +154,6 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
 }
 __END__
 
-
-Step 4.5 - alsa utils without python dependency
-===============================================
-
-* To avoid python and save precious space, we will intall customized alsa-utils
-  package which does not have python as dependency.
-
-chroot /media/card
-wget http://activationrecord.net/radekp/pub/alsa-utils_1.0.16-2_armel.deb
-dpkg -i alsa-utils_1.0.16-2_armel.deb
-rm alsa-utils_1.0.16-2_armel.deb
-exit
-
-* If you wonder how to build customized alsa-utils then just edit the source
-  package and remove python dependency from the control files.
-
-Step 4.6 - pkg-fso-keyring
-==========================
-
-chroot /media/card
-wget http://pkg-fso.alioth.debian.org/debian/pool/main/p/pkg-fso-keyring/pkg-fso-keyring_2009.09.12_all.deb
-dpkg -i pkg-fso-keyring_2009.09.12_all.deb
-rm pkg-fso-keyring_2009.09.12_all.deb
-exit
 
 Step 4.7 - disable logging by defaults
 ======================================
@@ -215,6 +202,13 @@ ln -s libts-0.0.so.0 libts-1.0.so.0
 cd /media/card/dev
 rm -rf .udev
 
+* Remove udev from startup scripts, we have devtmpfs in kernel and it's faster:
+
+chroot /media/card
+update-rc.d -f udev-mtab remove
+update-rc.d -f udev remove
+exit
+
 * Remove /etc/network/run and do make dir /etc/network/run
   Otherwise fstab mounting will fail for this directory
 
@@ -233,6 +227,14 @@ Step 6 - qpe bootscript
 nano /media/card/etc/init.d/qpe.sh
 
 #!/bin/sh
+### BEGIN INIT INFO
+# Provides: qtopia
+# Required-Start:    $local_fs $syslog $remote_fs dbus bluetooth
+# Required-Stop:     $local_fs $syslog $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start qtopia phone
+### END INIT INFO
 
 . /opt/qtmoko/qpe.env
 
@@ -280,9 +282,12 @@ esac
 
 exit 0
 
+* Make it executable and add it to startup scripts:
+
 chmod +x /media/card/etc/init.d/qpe.sh
-cd /media/card/etc/rc2.d/
-ln -s ../init.d/qpe.sh S09qpe
+chroot /media/card
+update-rc.d qpe.sh defaults
+exit
 
 Step 7 - logread utility
 ========================
@@ -290,30 +295,12 @@ Step 7 - logread utility
 * Used for displaying log in settings. It's not presented in debian. Instead we
   provide simple bash script:
 
-nano /media/card/sbin/logread
-
+cat > /media/card/sbin/logread <<__END__
 #!/bin/sh
 tail -n 100 /var/log/messages
+__END__
 
 chmod +x /media/card/sbin/logread
-
-Step 7.3 - xterm desktop file
-=============================
-
-* Xterm does not have .desktop file by default, but we want to launch it easily
-  from QX:
-
-mkdir -p /media/card/usr/share/applications
-cat > /media/card/usr/share/applications/xterm.desktop << __END__
-[Desktop Entry]
-Name=xterm
-Comment=x terminal emulator 
-Exec=xterm
-Type=Application
-Icon=xterm-color_48x48.xpm
-Categories=System;TerminalEmulator
-
-__END__
 
 Step 7.4 - wpa_supplicant
 =========================
@@ -333,78 +320,9 @@ cd /media/card/bin/
 rm sh
 ln -s dash sh 
 
-Step 7.6
-========
-
-* Install xserver-xglamo - download it from alioth repo and install it manually
-
-chroot /media/card
-wget http://pkg-fso.alioth.debian.org/debian/pool/main/x/xglamo/xserver-xglamo_1.3.0.0+git20080807-3_armel.deb
-dpkg -i xserver-xglamo_1.3.0.0+git20080807-3_armel.deb
-rm xserver-xglamo_1.3.0.0+git20080807-3_armel.deb
-exit
-
-* Create xorg.conf and configure it for Xglamo
-
-nano /media/card/etc/X11/xorg.conf
-
-# xorg.conf (X.Org X Window System server configuration file)
-#
-# This file was generated by dexconf, the Debian X Configuration tool, using
-# values from the debconf database.
-#
-# Edit this file with caution, and see the xorg.conf manual page.
-# (Type "man xorg.conf" at the shell prompt.)
-#
-# This file is automatically updated on xserver-xorg package upgrades *only*
-# if it has not been modified since the last upgrade of the xserver-xorg
-# package.
-#
-# If you have edited this file but would like it to be automatically updated
-# again, run the following command:
-#   sudo dpkg-reconfigure -phigh xserver-xorg
-
-Section "InputDevice"
-        Identifier      "Generic Keyboard"
-        Driver          "kbd"
-        Option          "XkbRules"      "xorg"
-        Option          "XkbModel"      "pc104"
-        Option          "XkbLayout"     "us"
-EndSection
-
-Section "InputDevice"
-        Identifier      "Configured Mouse"
-        Driver          "mouse"
-EndSection
-
-Section "Device"
-        Identifier      "Configured Video Device"
-        Driver          "Xglamo"
-#       Driver          "fbdev"
-EndSection
-
-Section "Monitor"
-        Identifier      "Configured Monitor"
-EndSection
-
-Section "Screen"
-        Identifier      "Default Screen"
-        Monitor         "Configured Monitor"
-EndSection
-
 
 Step 7.7
 ========
-
-* Remove all doc - we dont have space for it
-
-find /media/card/usr/share/locale/ -type f -exec rm -f '{}' \;
-find /media/card/usr/share/doc/ -type f -exec rm -f '{}' \;
-find /media/card/usr/share/doc-base/ -type f -exec rm -f '{}' \;
-find /media/card/usr/share/info/ -type f -exec rm -f '{}' \;
-find /media/card/usr/share/man/ -type f -exec rm -f '{}' \;
-rm -rf /media/card/usr/share/sounds/alsa/*
-rm -rf /media/card/usr/share/ssh/blacklist*
 
 * We need just 3 fonts
 
@@ -557,21 +475,25 @@ nameserver 8.8.8.8
 __END__
 
 
-Step 10
-=======
+Step 9.7 - fix owner on files that were compiled on PC
+======================================================
 
-* Unmount nfs on Neo
+* Ouput on PC is usually with local user that compiled stuff, we want it to be
+  root on Neo:
 
-sync
-umount /media/card
+chown -R root:root /media/card/boot
+chown -R root:root /media/card/lib/modules
+chown -R root:root /media/card/lib/firmware/
+chown -R root:root /media/card/opt
 
-* Pack it all on your desktop
+Step 10 - release tarball
+=========================
 
 cd /media/card
 tar -czvf ../qtmoko-debian.tar.gz .
 
-Step 11 - make jffs2 and ubifs images
-=====================================
+Step 11 - make ubifs images
+===========================
 
 * Copy your rootfs dir to /tmp/qtmoko-debian
 
@@ -579,15 +501,15 @@ Step 11 - make jffs2 and ubifs images
 
 rm -rf /tmp/qtmoko-debian/boot/*
 
-* Uncomment the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
+* Remove doc and stuff that is not needed and makes NAND image slower:
 
-* Make jffs2 image:
-
-mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/tmp/qtmoko-debian
-
-* Ubifs image:
-
-* Comment back the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
+find /tmp/qtmoko-debian/usr/share/locale/ -type f -exec rm -f '{}' \;
+find /tmp/qtmoko-debian/usr/share/doc/ -type f -exec rm -f '{}' \;
+find /tmp/qtmoko-debian/usr/share/doc-base/ -type f -exec rm -f '{}' \;
+find /tmp/qtmoko-debian/usr/share/info/ -type f -exec rm -f '{}' \;
+find /tmp/qtmoko-debian/usr/share/man/ -type f -exec rm -f '{}' \;
+rm -rf /tmp/qtmoko-debian/usr/share/sounds/alsa/*
+rm -rf /tmp/qtmoko-debian/usr/share/ssh/blacklist*
 
 * Edit the mount for root in /tmp/qtmoko-debian/etc/fstab so that it reads:
 
@@ -609,6 +531,18 @@ __END__
 mkfs.ubifs -r /tmp/qtmoko-debian -o qtmoko-debian.ubifs -x zlib -m 2048 -e 126976 -c 2047
 ubinize -o qtmoko-debian.ubi -m 2048 -p 128KiB -s 2048 -O 2048 ubinize.cfg
 rm qtmoko-debian.ubifs
+
+Step 12 - jffs2 image (not using anymore)
+=========================================
+
+* Same first 2 steps as with ubi (copy&delete /boot)
+
+* Uncomment the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
+
+* Make jffs2 image:
+
+mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/tmp/qtmoko-debian
+
 
 
 Step 12 - qi for booting ubi image
