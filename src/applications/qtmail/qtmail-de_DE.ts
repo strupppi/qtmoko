@@ -27,7 +27,7 @@
     <message>
         <location filename="accountsettings.cpp" line="282"/>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>E-Mail</translation>
     </message>
     <message>
         <location filename="accountsettings.cpp" line="282"/>
@@ -101,12 +101,12 @@
     <message>
         <location filename="actionfoldermodel.cpp" line="138"/>
         <source>New message</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Nachricht</translation>
     </message>
     <message>
         <location filename="actionfoldermodel.cpp" line="151"/>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>E-Mail</translation>
     </message>
 </context>
 <context>
@@ -296,7 +296,7 @@
     <message>
         <location filename="editaccountbasephone.ui" line="531"/>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>E-Mail</translation>
     </message>
     <message>
         <location filename="editaccountbasephone.ui" line="650"/>
@@ -861,7 +861,7 @@ Do you want to connect to the network?</source>
     <message>
         <location filename="emailclient.cpp" line="3694"/>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>E-Mail</translation>
     </message>
     <message>
         <location filename="emailclient.cpp" line="3736"/>
@@ -934,12 +934,12 @@ Do you want to connect to the network?</source>
         <location filename="emailclient.cpp" line="4093"/>
         <location filename="emailclient.cpp" line="4112"/>
         <source>New message</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Nachricht</translation>
     </message>
     <message>
         <location filename="emailclient.cpp" line="4162"/>
         <source>New messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Nachrichten</translation>
     </message>
     <message>
         <location filename="emailclient.cpp" line="4183"/>
@@ -1397,32 +1397,32 @@ Do you want to connect to the network?</source>
     <message>
         <location filename="searchviewbasephone.ui" line="71"/>
         <source>Inbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingang</translation>
     </message>
     <message>
         <location filename="searchviewbasephone.ui" line="76"/>
         <source>Outbox</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgang</translation>
     </message>
     <message>
         <location filename="searchviewbasephone.ui" line="81"/>
         <source>Drafts</source>
-        <translation type="unfinished"></translation>
+        <translation>Entwürfe</translation>
     </message>
     <message>
         <location filename="searchviewbasephone.ui" line="86"/>
         <source>Sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesendet</translation>
     </message>
     <message>
         <location filename="searchviewbasephone.ui" line="91"/>
         <source>Trash</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelöscht</translation>
     </message>
     <message>
         <location filename="searchviewbasephone.ui" line="99"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Status</translation>
     </message>
     <message>
         <location filename="searchviewbasephone.ui" line="112"/>

@@ -717,12 +717,12 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="2"/>
         <source>Silent</source>
-        <translation>Still</translation>
+        <translation>Stumm</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="3"/>
         <source>Handsfree</source>
-        <translation type="unfinished"></translation>
+        <translation>Frei sprechen</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="4"/>
@@ -732,7 +732,7 @@
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="5"/>
         <source>Meeting</source>
-        <translation>Meeting</translation>
+        <translation>Treffen</translation>
     </message>
     <message>
         <location filename="../../src/server/main/tr31980.cpp" line="6"/>
