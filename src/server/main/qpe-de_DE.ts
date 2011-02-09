@@ -6,12 +6,12 @@
     <message>
         <location filename="../core_server/alarmcontrol.cpp" line="79"/>
         <source>Out of Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein Speicherplatz mehr verfügbar</translation>
     </message>
     <message>
         <location filename="../core_server/alarmcontrol.cpp" line="80"/>
         <source>&lt;qt&gt;Unable to schedule alarm. Free some memory and try again.&lt;/qt&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;qt&gt;Alarm kann nicht ausgelöst werden. Geben Sie Speicher frei und probieren Sie es erneut.&lt;/qt&gt;</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../ui/launcherviews/appview/applicationlauncherview.cpp" line="61"/>
         <source>Add to Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Favoriten hinzufügen</translation>
     </message>
     <message>
         <location filename="../ui/launcherviews/appview/applicationlauncherview.cpp" line="66"/>
@@ -78,12 +78,12 @@
     <message>
         <location filename="../ui/components/homescreenwidgets/homescreenwidgets.cpp" line="449"/>
         <source>Today</source>
-        <translation type="unfinished"></translation>
+        <translation>Heute</translation>
     </message>
     <message>
         <location filename="../ui/components/homescreenwidgets/homescreenwidgets.cpp" line="453"/>
         <source>Tomorrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Morgen</translation>
     </message>
 </context>
 <context>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../phone/telephony/callpolicymanager/asterisk/asteriskmanager.cpp" line="195"/>
         <source>Asterisk Authentication Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Asterisk-Authentifizierung schlug fehl</translation>
     </message>
 </context>
 <context>
@@ -123,12 +123,12 @@
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="161"/>
         <source>Screen Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bildschirmsperre</translation>
     </message>
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="164"/>
         <source>Key Lock</source>
-        <translation type="unfinished"></translation>
+        <translation>Tastensperre</translation>
     </message>
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="168"/>
@@ -143,24 +143,24 @@
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="184"/>
         <source>New Messages...</source>
-        <translation type="unfinished"></translation>
+        <translation>Neue Nachrichten …</translation>
     </message>
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="303"/>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="416"/>
         <source>Unlock</source>
-        <translation type="unfinished"></translation>
+        <translation>Entsperren</translation>
     </message>
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="312"/>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="723"/>
         <source>Calls</source>
-        <translation type="unfinished"></translation>
+        <translation>Anrufe</translation>
     </message>
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="325"/>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menü</translation>
     </message>
     <message>
         <location filename="../phone/homescreen/basic/basichomescreen.cpp" line="394"/>
@@ -356,12 +356,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="505"/>
         <source>Open Contact</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontakt öffnen</translation>
     </message>
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="507"/>
         <source>Send Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachricht senden</translation>
     </message>
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="509"/>
@@ -371,7 +371,7 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="511"/>
         <source>All Calls</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Anrufe</translation>
     </message>
     <message>
         <location filename="../phone/ui/callcontactmodelview/callcontactlist.cpp" line="514"/>
@@ -418,7 +418,7 @@ recalibrate the screen.</source>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="408"/>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="717"/>
         <source>Open Contact</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontakt öffnen</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="410"/>
@@ -429,17 +429,17 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="412"/>
         <source>Send Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Nachricht senden</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="414"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="448"/>
         <source>Time Zone:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeitzone:</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="479"/>
@@ -450,7 +450,7 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="483"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Name:</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="489"/>
@@ -467,12 +467,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="501"/>
         <source>Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum:</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="502"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeit:</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="503"/>
@@ -498,12 +498,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="655"/>
         <source>Outgoing Call</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausgehender Anruf</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="659"/>
         <source>Incoming Call</source>
-        <translation type="unfinished"></translation>
+        <translation>Eingehender Anruf</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="663"/>
@@ -523,12 +523,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="760"/>
         <source>Today</source>
-        <translation type="unfinished"></translation>
+        <translation>Heute</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="762"/>
         <source>Yesterday</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestern</translation>
     </message>
     <message>
         <location filename="../phone/callhistory/default/callhistory.cpp" line="767"/>
@@ -569,28 +569,28 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="943"/>
         <source>No modem</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein Modem</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="945"/>
         <source>Airplane safe mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Flugzeugmodus</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="947"/>
         <source>Missing SIM</source>
-        <translation type="unfinished"></translation>
+        <translation>SIM-Karte fehlt</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="949"/>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="963"/>
         <source>No network</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein Netzwerk</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="956"/>
         <source>Searching for network</source>
-        <translation type="unfinished"></translation>
+        <translation>Netzwerk wird gesucht</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/cell/cellmodemmanager.cpp" line="959"/>
@@ -653,21 +653,21 @@ recalibrate the screen.</source>
     <message>
         <location filename="../ui/taskmanager/taskmanager.cpp" line="132"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Favoriten</translation>
     </message>
     <message>
         <location filename="../ui/taskmanager/taskmanager.cpp" line="133"/>
-        <source>Recent</source>
+        <source>Kürzlich</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/taskmanager/taskmanager.cpp" line="134"/>
-        <source>Frequent</source>
+        <source>Häufig</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/taskmanager/taskmanager.cpp" line="136"/>
-        <source>Running</source>
+        <source>Laufend</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -704,7 +704,7 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/telephony/dialproxy/dialproxy.cpp" line="317"/>
         <source>No GSM/VoIP Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein GSM/VoIP-Netzwerk</translation>
     </message>
     <message>
         <location filename="../phone/telephony/dialproxy/dialproxy.cpp" line="318"/>
@@ -731,7 +731,7 @@ recalibrate the screen.</source>
         <location filename="../phone/telephony/dialproxy/dialproxy.cpp" line="438"/>
         <location filename="../phone/telephony/dialproxy/dialproxy.cpp" line="580"/>
         <source>End current call?</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuellen Anruf beenden?</translation>
     </message>
     <message>
         <location filename="../phone/telephony/dialproxy/dialproxy.cpp" line="439"/>
@@ -816,7 +816,7 @@ recalibrate the screen.</source>
     <message>
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="172"/>
         <source>Rescan System</source>
-        <translation type="unfinished"></translation>
+        <translation>System neu scannen</translation>
     </message>
     <message>
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="186"/>
@@ -848,17 +848,17 @@ recalibrate the screen.</source>
     <message>
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="382"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild</translation>
     </message>
     <message>
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="383"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="384"/>
         <source>Video</source>
-        <translation type="unfinished"></translation>
+        <translation>Video</translation>
     </message>
     <message>
         <location filename="../ui/launcherviews/documentview/documentview.cpp" line="393"/>
@@ -932,12 +932,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../ui/components/firstuse/firstuse.cpp" line="102"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprache</translation>
     </message>
     <message>
         <location filename="../ui/components/firstuse/firstuse.cpp" line="103"/>
         <source>Date/Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum/Zeit</translation>
     </message>
     <message>
         <location filename="../ui/components/firstuse/firstuse.cpp" line="193"/>
@@ -964,12 +964,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../ui/components/firstuse/firstuse.cpp" line="584"/>
         <source>Finish</source>
-        <translation type="unfinished"></translation>
+        <translation>Beenden</translation>
     </message>
     <message>
         <location filename="../ui/components/firstuse/firstuse.cpp" line="595"/>
         <source>Accept</source>
-        <translation type="unfinished"></translation>
+        <translation>Akzeptieren</translation>
     </message>
 </context>
 <context>
@@ -1187,17 +1187,17 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="127"/>
         <source>No Jabber network</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein Jabber-Netzwerk</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="134"/>
         <source>Searching Jabber network</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche nach Jabber-Netzwerk</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/jabber/jabbermanager.cpp" line="137"/>
         <source>Jabber Authentication Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Jabber-Authentifizierung schlug fehl</translation>
     </message>
 </context>
 <context>
@@ -1205,17 +1205,17 @@ recalibrate the screen.</source>
     <message>
         <location filename="../../settings/language/language.cpp" line="178"/>
         <source>Use for input</source>
-        <translation type="unfinished"></translation>
+        <translation>Für Eingabe verwenden</translation>
     </message>
     <message>
         <location filename="../../settings/language/language.cpp" line="287"/>
         <source>Language Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprache wechseln</translation>
     </message>
     <message>
         <location filename="../../settings/language/language.cpp" line="288"/>
         <source>&lt;qt&gt;This will cause Qt Extended to restart, closing all applications.&lt;p&gt;Change Language?&lt;/qt&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;qt&gt;Dies wird Qt Extended neu starten und damit alle Anwendungen schließen.&lt;p&gt;Sprache ändern?&lt;/qt&gt;</translation>
     </message>
 </context>
 <context>
@@ -1223,12 +1223,12 @@ recalibrate the screen.</source>
     <message>
         <location filename="../../settings/language/languagesettingsbase.ui" line="13"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprache</translation>
     </message>
     <message>
         <location filename="../../settings/language/languagesettingsbase.ui" line="34"/>
         <source>Select language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprachauswahl:</translation>
     </message>
 </context>
 <context>
@@ -1530,7 +1530,7 @@ recalibrate the screen.</source>
     <message>
         <location filename="../phone/browserscreen/gridbrowser/phonelauncherview.cpp" line="480"/>
         <source>Main Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Hauptmenü</translation>
     </message>
 </context>
 <context>
@@ -1565,7 +1565,7 @@ recalibrate the screen.</source>
         <location filename="../ui/abstractinterfaces/stdmessagebox/messagebox.cpp" line="165"/>
         <location filename="../ui/abstractinterfaces/stdmessagebox/messagebox.cpp" line="180"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbruch</translation>
     </message>
 </context>
 <context>
@@ -2174,7 +2174,7 @@ Please recharge now!</source>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="87"/>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="96"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe</translation>
     </message>
 </context>
 <context>
@@ -2200,17 +2200,17 @@ Please recharge now!</source>
     <message>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="534"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe</translation>
     </message>
     <message>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="538"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="539"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nein</translation>
     </message>
 </context>
 <context>
@@ -2218,7 +2218,7 @@ Please recharge now!</source>
     <message>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="745"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe</translation>
     </message>
 </context>
 <context>
@@ -2263,7 +2263,7 @@ Please recharge now!</source>
     <message>
         <location filename="../phone/ui/components/simapp/simwidgets.cpp" line="247"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe</translation>
     </message>
 </context>
 <context>
@@ -2361,7 +2361,7 @@ Please recharge now!</source>
     <message>
         <location filename="../ui/abstractinterfaces/slideinmessagebox/slideinmessagebox.cpp" line="292"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbruch</translation>
     </message>
 </context>
 <context>
@@ -2685,7 +2685,7 @@ Please recharge now!</source>
     <message>
         <location filename="../../settings/language/language.cpp" line="83"/>
         <source>Activate</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivieren</translation>
     </message>
 </context>
 <context>
@@ -2740,17 +2740,17 @@ Please recharge now!</source>
     <message>
         <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="124"/>
         <source>No VoIP network</source>
-        <translation type="unfinished"></translation>
+        <translation>Kein VoIP-Netzwerk</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="131"/>
         <source>Searching VoIP network</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche nach VoIP-Netzwerk</translation>
     </message>
     <message>
         <location filename="../phone/telephony/callpolicymanager/voip/voipmanager.cpp" line="134"/>
         <source>VoIP Authentication Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>VoIP-Authentifizierung schlug fehl</translation>
     </message>
 </context>
 <context>
@@ -2759,7 +2759,7 @@ Please recharge now!</source>
         <location filename="../ui/volumedlg/volume.ui" line="13"/>
         <location filename="../ui/volumedlg/volume.ui" line="38"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Lautstärke</translation>
     </message>
 </context>
 </TS>
