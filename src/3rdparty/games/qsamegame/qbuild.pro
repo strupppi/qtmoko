@@ -1,5 +1,5 @@
 TEMPLATE=app
-CONFIG+=qtopia singleexec quicklaunch
+CONFIG+=qtopia
 TARGET=qsamegame
 QT+=svg
 
@@ -28,7 +28,7 @@ desktop [
 
 pics [
     hint=pics
-    files=pics/qsamegame.png
+    files=pics/*
     path=/pics/qsamegame
 ]
 

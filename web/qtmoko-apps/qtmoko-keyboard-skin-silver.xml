@@ -1,0 +1,11 @@
+<package
+      name="qtmoko-keyboard-skin-silver"
+      arch="all"
+      version="1-1_armel"
+      title="Silver skin"
+      summary="Silver skin for finger keyboard"
+      category="input"
+      >
+          <tag>keyboard</tag>
+</package>
+  
