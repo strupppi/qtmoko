@@ -903,15 +903,13 @@ bool QMplayer::startMencoder(QString srcFile, QString dstFile)
     args.append("-ovc");
     args.append("lavc");
     args.append("-lavcopts");
-    args.append("vcodec=mpeg4:vhq:vbitrate=300");
+    args.append("vcodec=mpeg4:vhq:vbitrate=300:acodec=ac3");
     args.append("-vf");
     args.append("scale=320:240,eq2=1.2:0.5:-0.25,rotate=2");
     args.append("-oac");
-    args.append("mp3lame");
+    args.append("lavc");
     args.append("-ofps");
     args.append("15");
-    args.append("-lameopts");
-    args.append("br=64:cbr");
     args.append("-o");
     args.append(dstFile);
 
@@ -939,16 +937,6 @@ bool QMplayer::startMencoder(QString srcFile, QString dstFile)
     {
         return false;
     }
-    download("http://www.debian-multimedia.org/pool/main/d/debian-multimedia-keyring/debian-multimedia-keyring_2008.10.16_all.deb",
-             "/debian-multimedia-keyring_2008.10.16_all.deb", "debian-multimedia-keyring_2008.10.16_all.deb", false);
-    QProcess::execute("dpkg", QStringList() << "-i" << "/debian-multimedia-keyring_2008.10.16_all.deb");
-    QFile::remove("/debian-multimedia-keyring_2008.10.16_all.deb");
-    QFile f("/etc/apt/sources.list");
-    if(f.open(QFile::Append))
-    {
-        f.write("\ndeb http://www.debian-multimedia.org lenny main non-free\n");
-        f.close();
-    }
     QProcess::execute("raptor", QStringList() << "-u" << "-i" << "mencoder");
 
     return startMencoder(srcFile, dstFile);
@@ -958,6 +946,7 @@ void QMplayer::mencoderReadyRead()
 {
     QString txt = process->readAll().trimmed();
     label->setText(txt);
+    qDebug() << txt;
 
     // Search for percents - e.g. (34%)
     int index = txt.indexOf("%)");
@@ -1478,27 +1467,34 @@ void QMplayer::setRes(int xy)
 bool QMplayer::installMplayer()
 {
 #ifdef QTOPIA
-    QDir("/home/root").mkdir(".mplayer");
-    QFile f("/home/root/.mplayer/config");
-    f.open(QFile::WriteOnly);
-    f.write("vo=glamo\n\n[default]\nafm=ffmpeg\nvfm=ffmpeg\n");
-    f.close();
+    if(QMessageBox::question(this, tr("qmplayer"),
+            tr("Install glamo mplayer (YES) or distribution mplayer (NO)?"),
+            QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
+    {
+        QDir("/home/root").mkdir(".mplayer");
+        QFile f("/home/root/.mplayer/config");
+        f.open(QFile::WriteOnly);
+        f.write("vo=glamo\n\n[default]\nafm=ffmpeg\nvfm=ffmpeg\n");
+        f.close();
 
-    return download("http://72.249.85.183/radekp/qmplayer/download/mplayer",
-                    "/usr/bin/mplayer", "mplayer", false) &&
-    QFile::setPermissions("/usr/bin/mplayer", QFile::ReadOwner |
-                          QFile::WriteOwner | QFile::ExeOwner |
-                          QFile::ReadUser | QFile::ExeUser |
-                          QFile::ReadGroup | QFile::ExeGroup |
-                          QFile::ReadOther | QFile::ExeOther);
+        return download("http://72.249.85.183/radekp/qmplayer/download/mplayer",
+                        "/usr/bin/mplayer", "mplayer", false) &&
+        QFile::setPermissions("/usr/bin/mplayer", QFile::ReadOwner |
+                            QFile::WriteOwner | QFile::ExeOwner |
+                            QFile::ReadUser | QFile::ExeUser |
+                            QFile::ReadGroup | QFile::ExeGroup |
+                            QFile::ReadOther | QFile::ExeOther);
+    }
+    else
+    {
+        QProcess::execute("raptor", QStringList() << "-u" << "-i" << "mplayer");
 
-//    QProcess::execute("raptor", QStringList() << "-u" << "-i" << "mplayer");
-//
-//    QDir("/home/root").mkdir(".mplayer");
-//    QFile f("/home/root/.mplayer/config");
-//    f.open(QFile::WriteOnly);
-//    f.write("vo=fbdev\n\n[default]\nafm=ffmpeg\nvfm=ffmpeg\n");
-//    f.close();
+        QDir("/home/root").mkdir(".mplayer");
+        QFile f("/home/root/.mplayer/config");
+        f.open(QFile::WriteOnly);
+        f.write("vo=fbdev\n\n[default]\nafm=ffmpeg\nvfm=ffmpeg\n");
+        f.close();
+    }
 
 #else
     QMessageBox::critical(this, tr("qmplayer"), tr("You must install mplayer"));
@@ -1531,6 +1527,7 @@ void QMplayer::removeMplayer()
             QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
     {
         bool res = runCmd("rm /usr/bin/mplayer", 10) && runCmd("rm /home/root/.mplayer/config", 10);
+        runCmd("apt-get remove mplayer");
         showScreen(QMplayer::ScreenInit);
         if (res)
             QMessageBox::information(this, tr("qmplayer"), tr("mplayer has been removed"));
