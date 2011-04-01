@@ -11,8 +11,6 @@
 # FIXME Enable this once it actually works
 #-add-mediaengine gstreamer
 
--languages cs_CZ,en_US,it_IT,ru_RU,de_DE,es_ES,pl_PL,da_DK,fr_FR
-
 # Features that are controlled via modules.
 
 -add-mediaengine cruxus
