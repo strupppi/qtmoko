@@ -1,0 +1,35 @@
+#!/usr/bin/make -f
+
+CONFIGURE = $(PWD)/configure
+
+build:
+	mkdir -p ../build
+	cd ../build && "$(CONFIGURE)" -device neo -xplatform linux-native-g++ -remove-module pkgmanagement -languages cs_CZ,en_US,it_IT,ru_RU,de_DE,es_ES,pl_PL,da_DK,fr_FR -l dbus-1 -I /usr/include/dbus-1.0/ -I /usr/lib/dbus-1.0/include
+	cd ../build && make
+
+clean:
+	rm -rf debian/tmp
+	rm -f debian/files
+
+binary: build
+	cd ../build && make install
+	mkdir -p debian/tmp/opt/qtmoko
+	cp -r ../build/image/* debian/tmp/opt/qtmoko
+	rm -rf /tmp/qtmoko
+	mv ../build /tmp/qtmoko
+
+	# remove patented stuff - can be installed via package later
+	rm -f debian/tmp/opt/qtmoko/plugins/codecs/libmadplugin.so
+	rm -f debian/tmp/opt/qtmoko/lib/libmad.so.0
+
+	# symlink to ttfont installed together with X
+	rm -rf debian/tmp/opt/qtmoko/lib/fonts
+	ln -s /usr/share/fonts/truetype/ttf-dejavu/ debian/tmp/opt/qtmoko/lib/fonts
+
+	install -d debian/tmp/DEBIAN
+	dpkg-gencontrol
+	dh_installdeb -P debian/tmp
+	dh_installinit -P debian/tmp
+	chown -R root:root debian/tmp/opt
+	chmod -R u+w,go=rX debian/tmp/opt
+	dpkg --build debian/tmp ..

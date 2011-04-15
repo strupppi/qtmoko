@@ -29,13 +29,11 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     label = new QLabel(this);
     lineEdit = new QLineEdit(this);
 
+    label4 = new QLabel(this);
     label5 = new QLabel(this);
-    label12 = new QLabel(this);
-    label48 = new QLabel(this);
 
+    slider4 = new MixerSlider(this);
     slider5 = new MixerSlider(this);
-    slider12 = new MixerSlider(this);
-    slider48 = new MixerSlider(this);
 
     buttonLayout = new QHBoxLayout();
     buttonLayout->setAlignment(Qt::AlignBottom);
@@ -45,12 +43,10 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     layout = new QVBoxLayout(this);
     layout->addWidget(bQvga);
     layout->addWidget(label);
+    layout->addWidget(label4);
+    layout->addWidget(slider4);
     layout->addWidget(label5);
     layout->addWidget(slider5);
-    layout->addWidget(label12);
-    layout->addWidget(slider12);
-    layout->addWidget(label48);
-    layout->addWidget(slider48);
     layout->addWidget(bSave);
     layout->addWidget(lineEdit);
     layout->addWidget(chkDeepSleep);
@@ -152,12 +148,10 @@ void NeoControl::showScreen(NeoControl::Screen scr)
     lineEdit->setVisible(false);
     chkDeepSleep->setVisible(scr == ScreenModem);
     chkMux->setVisible(scr == ScreenModem);
+    label4->setVisible(scr == ScreenMixer);
     label5->setVisible(scr == ScreenMixer);
-    label12->setVisible(scr == ScreenMixer);
-    label48->setVisible(scr == ScreenMixer);
+    slider4->setVisible(scr == ScreenMixer);
     slider5->setVisible(scr == ScreenMixer);
-    slider12->setVisible(scr == ScreenMixer);
-    slider48->setVisible(scr == ScreenMixer);
     bSave->setVisible(scr == ScreenMixer);
 
     switch(scr)
@@ -235,16 +229,15 @@ void NeoControl::updateMixer()
     {
         return;
     }
-    if(slider5->sliding || slider12->sliding || slider48->sliding)
+    if(slider4->sliding || slider5->sliding)
     {
         QTimer::singleShot(100, this, SLOT(updateMixer()));
         return;
     }
 
     snd_mixer_elem_t *elem;
+    snd_mixer_elem_t *elem4 = NULL;
     snd_mixer_elem_t *elem5 = NULL;
-    snd_mixer_elem_t *elem12 = NULL;
-    snd_mixer_elem_t *elem48 = NULL;
 
     for (elem = snd_mixer_first_elem(mixerFd); elem;
     elem = snd_mixer_elem_next(elem)) {
@@ -252,25 +245,19 @@ void NeoControl::updateMixer()
 
         if(elemName == "Speaker")
         {
+            elem4 = elem;
+        }
+        else if(elemName == "Mono Playback")
+        {
             elem5 = elem;
-        }
-        else if(elemName == "Mono Sidetone")
-        {
-            elem12 = elem;
-        }
-        else if(elemName == "Mic2")
-        {
-            elem48 = elem;
         }
     }
 
+    slider4->setMixerElem(elem4, true);
     slider5->setMixerElem(elem5, true);
-    slider12->setMixerElem(elem12, true);
-    slider48->setMixerElem(elem48, false);
 
-    label5->setText(tr("Playback (control.5) %1").arg(slider5->volume));        // Mono Playback Volume
-    label12->setText(tr("Sidetone (control.12) %1").arg(slider12->volume));     // Mono Sidetone Playback Volume
-    label48->setText(tr("Mic2 (control.48) %1").arg(slider48->volume));         // Mic2 Capture Volume
+    label4->setText(tr("Playback (control.4) %1").arg(slider4->volume));        // Mono Playback Volume
+    label5->setText(tr("Microphone (control.5) %1").arg(slider5->volume));      // Mono Sidetone Playback Volume
 
     label->setText(tr("Call volume settings"));
 
@@ -358,9 +345,9 @@ void NeoControl::updateSysfs()
     QString text;
     appendValue(tr("Battery status"), "/sys/class/power_supply/battery/status", &text);
     appendValue(tr("Current"), "/sys/class/power_supply/battery/current_now", &text);
-    appendValue(tr("Modem power"), "/sys/bus/platform/devices/neo1973-pm-gsm.0/power_on", &text);
-    appendValue(tr("GPS power"), "/sys/bus/platform/devices/neo1973-pm-gps.0/power_on", &text);
-    appendValue(tr("Bluetooth power"), "/sys/bus/platform/devices/neo1973-pm-bt.0/power_on", &text);
+    appendValue(tr("Modem power"), "/sys/devices/platform/s3c2440-i2c/i2c-0/0-0073/pcf50633-gpio.0/reg-fixed-voltage.1/gta02-pm-gsm.0/power_on", &text);
+    appendValue(tr("GPS power"), "/sys/devices/platform/gta02-pm-gps.0/power_on", &text);
+    appendValue(tr("Bluetooth power"), "/sys/devices/platform/gta02-pm-bt.0/power_on", &text);
     label->setText(text);
 
     QTimer::singleShot(1000, this, SLOT(updateSysfs()));

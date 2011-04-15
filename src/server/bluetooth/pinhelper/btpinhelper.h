@@ -20,7 +20,7 @@
 #ifndef BTPINHELPER_H
 #define BTPINHELPER_H
 
-#include <qbluetoothpasskeyagent.h>
+#include <qbluetoothdefaultpasskeyagent.h>
 
 class QPasswordDialog;
 class QValueSpaceItem;
@@ -35,24 +35,6 @@ protected slots:
     void delayedAgentStart();
 private:
     QValueSpaceItem* serverWidgetVsi;
-};
-
-class BTPinHelper : public QBluetoothPasskeyAgent {
-    Q_OBJECT
-public:
-    BTPinHelper(QObject *parent = 0);
-    ~BTPinHelper();
-
-    virtual void requestPasskey(QBluetoothPasskeyRequest &req);
-    virtual void cancelRequest(const QString &localDevice,
-                               const QBluetoothAddress &remoteAddr);
-    virtual void release();
-
-private slots:
-    void stopVibration();
-
-private:
-    QPasswordDialog *m_passDialog;
 };
 
 #endif

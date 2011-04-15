@@ -1,0 +1,9 @@
+<package
+      name="qtmoko-chess"
+      version="35-1"
+      title="Chess"
+      summary="Frontend for gnuchess"
+      category="games"
+      >  
+</package>
+  

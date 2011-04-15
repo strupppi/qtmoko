@@ -32,10 +32,6 @@
 #include <QValueSpaceItem>
 #include <QtopiaIpcEnvelope>
 
-/* gtaa01
-   cat /sys/devices/platform/s3c2410-i2c/i2c-adapter/i2c-0/0-0008/battvol
-*/
-
 NeoBattery::NeoBattery(QObject *parent)
 : QObject(parent),
   ac(0),
@@ -47,8 +43,7 @@ NeoBattery::NeoBattery(QObject *parent)
   percentCharge(0)
 {
     bool apm = APMEnabled();
-    if(!apm) return;
-    qWarning()<<"NeoBattery::NeoBattery";
+    qLog(PowerManagement)<<"NeoBattery::NeoBattery";
 
     QtopiaServerApplication::taskValueSpaceSetAttribute("NeoBattery",
                                                         "APMAvailable", apm);
@@ -64,14 +59,11 @@ NeoBattery::NeoBattery(QObject *parent)
 
     startTimer(60 * 1000);
 
-    if ( QFileInfo("/sys/devices/platform/bq27000-battery.0/power_supply/bat/status").exists()) {
-        QTimer::singleShot( 10 * 1000, this, SLOT(updateSysStatus()));
-        isSmartBattery = true;
-    }else if ( QFileInfo("/sys/class/power_supply/battery/status").exists()) {
+    if ( QFileInfo("/sys/class/power_supply/battery/status").exists()) {
         QTimer::singleShot( 10 * 1000, this, SLOT(updateSysStatus()));
         isSmartBattery = true;
     } else {
-// 1973 only has dumb battery and must use apm
+        // 1973 only has dumb battery and must use apm
         QTimer::singleShot( 10 * 1000, this, SLOT(updateDumbStatus()));
         isSmartBattery = false;
     }
@@ -147,8 +139,8 @@ int NeoBattery::getDumbCapacity()
 {
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
     int voltage = 0;
-    QFile battvolt("/sys/class/power_supply/battery/voltage_now");
     QString inStr;
+    QFile battvolt("/sys/class/power_supply/battery/voltage_now");
     battvolt.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&battvolt);
     in >> inStr;
@@ -273,11 +265,10 @@ int NeoBattery::getTimeToFull()
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
 
     int time = 0;
-    QString timeToFullFile("/sys/class/power_supply/battery/time_to_full_now");	
-    QFile timeState( timeToFullFile);
+    QFile timeState("/sys/class/power_supply/battery/time_to_full_now");
 
     timeState.open(QIODevice::ReadOnly | QIODevice::Text);
-    QTextStream in(&timeToFullFile);
+    QTextStream in(&timeState);
     in >> time;
 
     timeState.close();
@@ -296,8 +287,7 @@ int NeoBattery::getTimeRemaining()
     qLog(PowerManagement) << __PRETTY_FUNCTION__;
 
     int time = 0;
-    QString timeToEmptyFile("/sys/class/power_supply/battery/time_to_empty_now");
-    QFile timeState( timeToEmptyFile);
+    QFile timeState("/sys/class/power_supply/battery/time_to_empty_now");
 
     timeState.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&timeState);

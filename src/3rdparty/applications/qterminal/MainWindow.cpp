@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags f)
   // setup the ui
 #ifdef QTOPIA_PHONE
   QMenu *m = QSoftMenuBar::menuFor(this);
+  QSoftMenuBar::setLabel(this, Qt::Key_Back, QSoftMenuBar::NoLabel);
 #else
   resize(800,600);
   QMenu *m = menuBar()->addMenu(tr("Options"));
@@ -50,9 +51,13 @@ MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags f)
   connect(acNewSession, SIGNAL(triggered()), this, SLOT(newSession()));
   connect(acCloseSession, SIGNAL(triggered()), this, SLOT(closeSession()));
   connect(acPreferences, SIGNAL(triggered()), this, SLOT(showPreferences()));
+ 
+  centralWidget = new QWidget(this);
   tabs = new QTabWidget();
-   
-  setCentralWidget(tabs);
+  firstDisplay = NULL;
+ 
+  setCentralWidget(centralWidget);
+  
   setWindowTitle(tr("qterminal"));
 #ifdef QTOPIA_PHONE
   if (Qtopia::mousePreferred) {
@@ -95,7 +100,20 @@ void MainWindow::addSession(const char *name)
   
   session->addView(display);
 
-  int tabid = tabs->addTab(display,QIcon(":icon/konsole"), tr(name));
+  if(firstDisplay == NULL) {
+    QGridLayout *layout = new QGridLayout(centralWidget);
+    layout->addWidget(display);
+    firstDisplay = display;
+  } else if(tabs->count() == 0) {
+    setCentralWidget(tabs);
+    firstDisplay->setParent(tabs);
+    tabs->addTab(firstDisplay,QIcon(":icon/konsole"), tr(name));
+  }
+  if(tabs->count() > 0) {
+    int index = tabs->addTab(display,QIcon(":icon/konsole"), tr(name));
+    tabs->setCurrentIndex(index);
+  }
+  
   session->setTitle(Session::NameRole,name);
   session->setProgram(profile->command());
   session->setHistoryType( HistoryTypeBuffer(profile->historyLines()) );
@@ -108,7 +126,6 @@ void MainWindow::addSession(const char *name)
   _sessionCount++;
   _Sessions.append(session);
   session->run();
-  tabs->setCurrentIndex(tabid);
   display->setFocus(Qt::OtherFocusReason);
 }
 
@@ -116,9 +133,14 @@ void MainWindow::finished(QObject *obj)
 {
   Session *session = (Session *)obj;
   _sessionCount--;
-  int tabid = tabs->indexOf(session->views()[0]);
-  tabs->removeTab(tabid);   
-  _Sessions.removeAt(tabid);
+  int index = tabs->indexOf(session->views()[0]);
+  if(index >= 0) {
+    tabs->removeTab(index);
+  } else {
+    index = 0;      // first display - no tabs yet
+  }
+  
+  _Sessions.removeAt(index);
   //is it done automagically
   //delete session;
     
@@ -149,10 +171,12 @@ void MainWindow::newSession()
 
 void MainWindow::closeSession()
 {
-  if (tabs->currentIndex()>=0) {
-    Session *session = _Sessions.at(tabs->currentIndex());
-    session->close();
+  int index = tabs->currentIndex();
+  if (index < 0) {
+    index = 0;      // no tabs yet
   }
+  Session *session = _Sessions.at(index);
+  session->close();
 }
 
 void MainWindow::closeAll()
@@ -168,7 +192,11 @@ void MainWindow::closeAll()
 
 void MainWindow::showPreferences()
 {
-  Session *sess =  _Sessions.at(tabs->currentIndex());
+  int index = tabs->currentIndex();
+  if (index < 0) {
+    index = 0;      // no tabs yet
+  }
+  Session *sess =  _Sessions.at(index);
   Profile *prof = new Profile(sess->profileKey());
   Preferences *pd = new Preferences(prof);
   pd->setModal(true);

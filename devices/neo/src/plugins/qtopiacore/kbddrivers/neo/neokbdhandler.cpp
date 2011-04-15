@@ -138,11 +138,15 @@ void FicLinuxInputEventHandler::readData()
 NeoKbdHandler::NeoKbdHandler()
 
 {
+    bool ok;
     qLog(Input) << "Loaded Neo keypad plugin";
     setObjectName( "Neo Keypad Handler" );
 
     auxHandler = new FicLinuxInputEventHandler(this);
     if (auxHandler->openByName("Neo1973 Buttons")) {
+         auxHandler->openByPhysicalBus("neo1973kbd/input0");
+
+    if(ok) {
         connect(auxHandler, SIGNAL(inputEvent(struct input_event&)),
                 SLOT(inputEvent(struct input_event&)));
     } else {
@@ -150,8 +154,6 @@ NeoKbdHandler::NeoKbdHandler()
         delete auxHandler;
         auxHandler = 0;
     }
-
-    bool ok;
 
     powerHandler = new FicLinuxInputEventHandler(this);
     if (powerHandler->openByName("PCF50606 PMU events")) {
@@ -163,6 +165,16 @@ NeoKbdHandler::NeoKbdHandler()
         powerHandler = 0;
     }
 
+    jackHandler = new FicLinuxInputEventHandler(this);
+    ok = jackHandler->openByName("neo1973gta02 Headset Jack");
+    if (ok) {
+        connect(jackHandler, SIGNAL(inputEvent(struct input_event&)),
+                SLOT(inputEvent(struct input_event&)));
+    } else {
+        qWarning("Cannot open input device for Headset Jack");
+        delete jackHandler;
+        jackHandler = 0;
+    }
     shift = false;
 }
 

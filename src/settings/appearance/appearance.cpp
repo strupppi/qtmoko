@@ -39,6 +39,7 @@
 #include <QScrollArea>
 #include <QMenu>
 #include <QTimer>
+#include <QProcess>
 
 #include <QtopiaServiceRequest>
 #include <QtopiaIpcEnvelope>
@@ -401,8 +402,10 @@ void Theme::getSoftMenuBarPreview(QPixmap *pixmap, QSoftMenuBar::LabelType label
 void Theme::getBackgroundPreview(QPixmap *pixmap)
 {
     ensureLoaded();
-    QString fileName = AppearanceSettings::findFile("pics/themes/"
-        + m_uniqueName + '/' + m_backgrounds.value(m_backgroundIndex) + ".png");
+    QString name = "pics/themes/" + m_uniqueName + '/' + m_backgrounds.value(m_backgroundIndex);
+    QString fileName = AppearanceSettings::findFile(name + ".png");
+    if(fileName.isEmpty())
+        fileName = AppearanceSettings::findFile(name + ".jpg");
 
     QPixmap bg(fileName);
     *pixmap = bg;
@@ -494,7 +497,9 @@ void Theme::setAvailableColorSchemes(const QHash<QString, QString> &schemes)
 
 AppearanceSettings::AppearanceSettings(QWidget* parent, Qt::WFlags fl)
     : QDialog(parent, fl),
-      m_isStatusView(false)
+      m_isStatusView(false),
+      m_moreThemes(tr("More themes...")),
+      m_prevIndex(-1)
 {
     initUi();
     loadThemes();
@@ -525,10 +530,31 @@ Theme *AppearanceSettings::currentTheme() const
 
 void AppearanceSettings::themeChanged(int index)
 {
+    // Launch web browser for more themes
+    if(index == (m_themeCombo->count() - 1)) {
+        QProcess::execute("arora", QStringList() << "http://qtmoko.sourceforge.net/apps/category-themes.html");
+        QStringListModel *model = qobject_cast<QStringListModel *>(m_themeCombo->model());
+        QStringList oldThemes = model->stringList();
+        loadThemes();
+        
+        // Find theme which was installed
+        model = qobject_cast<QStringListModel *>(m_themeCombo->model());
+        QStringList newThemes = model->stringList();
+        for(int i = 0; i < newThemes.count(); i++) {
+            if(oldThemes.count() <= i || oldThemes[i] != newThemes[i]) {
+                m_prevIndex = i;
+                break;
+            }
+        }
+        m_themeCombo->setCurrentIndex(m_prevIndex);
+        return;
+    }
+
     Theme *theme = m_themes.value(index, 0);
     if (!theme)
         return;
 
+    m_prevIndex = index;
     QStringListModel *model;
 
     model = qobject_cast<QStringListModel *>(m_colorCombo->model());
@@ -733,6 +759,8 @@ void AppearanceSettings::loadThemes()
 {
     QStringList themeNames;
     QStringList installPaths = Qtopia::installPaths();
+    qDeleteAll(m_themes);
+    m_themes.clear();
     for (int i=0; i<installPaths.size(); i++) {
         QString path(installPaths[i] + "etc/themes/");
         QDir dir;
@@ -754,6 +782,7 @@ void AppearanceSettings::loadThemes()
             }
         }
     }
+    themeNames << m_moreThemes;
 
     QStringListModel *model;
     model = qobject_cast<QStringListModel *>(m_themeCombo->model());

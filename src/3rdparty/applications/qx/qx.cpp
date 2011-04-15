@@ -123,7 +123,7 @@ QX::QX(QWidget *parent, Qt::WFlags f)
     BuildMenu();
     favouritesAction->setChecked(true);
 
-    lineEdit = new QLineEdit("terminal.sh", this);
+    lineEdit = new QLineEdit("xterm", this);
 
     bOk = new QPushButton(this);
     bOk->setMinimumWidth(100);
@@ -161,10 +161,14 @@ QX::QX(QWidget *parent, Qt::WFlags f)
 
     appRunScr = new AppRunningScreen();
     connect(appRunScr, SIGNAL(deactivated()), this, SLOT(pauseApp()));
+    connect(appRunScr, SIGNAL(keyPress(QKeyEvent *)), this, SLOT(keyPress(QKeyEvent *)));
+    connect(appRunScr, SIGNAL(keyRelease(QKeyEvent *)), this, SLOT(keyRelease(QKeyEvent *)));
 
     process = NULL;
     xprocess = NULL;
     rotHelper = new RotateHelper(this, 0);
+    wmTimer = new QTimer(this);
+    connect(wmTimer, SIGNAL(timeout()), this, SLOT(processWmEvents()));
     screen = QX::ScreenMain;
 #if QTOPIA
     powerConstraint = QtopiaApplication::Disable;
@@ -203,29 +207,12 @@ QxMainWindow::~QxMainWindow()
 #ifdef QTOPIA
 static void gpsPower(const char *powerStr)
 {
-    QFile f("/sys/class/i2c-adapter/i2c-0/0-0073/pcf50633-regltr.7/neo1973-pm-gps.0/power_on");
+    QFile f("/sys/devices/platform/gta02-pm-gps.0/power_on");
     f.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate);
     f.write(powerStr);
     f.close();
 }
 
-static void switchToVt7()
-{
-    int fd;
-
-    if((fd = open("/dev/tty7", O_RDWR|O_NDELAY, 0)) < 0)
-    {
-        perror("QX: Cannot open /dev/tty7");
-        return;
-    }
-
-    if(ioctl(fd, VT_ACTIVATE, 7) != 0)
-    {
-        fprintf(stderr, "QX: VT_ACTIVATE failed\n");
-    }
-
-    close(fd);
-}
 #endif
 
 void QX::showScreen(QX::Screen scr)
@@ -246,7 +233,7 @@ void QX::showScreen(QX::Screen scr)
     }
     if(scr >= QX::ScreenFullscreen && this->screen < QX::ScreenFullscreen)
     {
-        appRunScr->showScreen();
+        appRunScr->showScreen(fullscreen, kbd);
         if(rotate)
         {
             //system("xrandr -o 1");
@@ -295,6 +282,16 @@ void QX::showScreen(QX::Screen scr)
 
 void QX::stopX()
 {
+    if(dpy != NULL)
+    {
+        XCloseDisplay(dpy);
+        dpy = NULL;
+    }
+    if(wm)
+    {
+        wmTimer->stop();
+        wm_stop();
+    }
     if(xprocess == NULL)
     {
         return;
@@ -310,9 +307,79 @@ void QX::stopX()
     }
     delete(xprocess);
     xprocess = NULL;
-#ifdef QTOPIA
-    switchToVt7();  // switch to vt7 which has cursor disabled
-#endif
+}
+
+static bool saveConf(QX * parent, const char * srcFilename, const char * dstDir, const char * dstFile)
+{
+    QFile src(srcFilename);
+    QFile dst(dstDir + QString("/") + dstFile);
+
+    if(!QDir::root().mkpath(dstDir))
+    {
+        QMessageBox::critical(parent, QObject::tr("QX"), QObject::tr("Unable to create directory") + " " + dstDir);
+        return false;
+    }
+    if(!src.open(QIODevice::ReadOnly))
+    {
+        QMessageBox::critical(parent, QObject::tr("QX"), QObject::tr("Unable to open") + " " + srcFilename + ": " + src.errorString());
+        return false;
+    }
+    if(!dst.open(QIODevice::WriteOnly))
+    {
+        QMessageBox::critical(parent, QObject::tr("QX"), QObject::tr("Unable to save ") + " " + dstFile + ": " + dst.errorString());
+        src.close();
+        return false;
+    }
+    QByteArray content = src.readAll();
+    src.close();
+    dst.write(content);
+    dst.close();
+    return true;
+}
+
+bool QX::checkX()
+{
+    if(QFile::exists("/usr/bin/Xorg") ||
+       QFile::exists("/usr/bin/Xglamo"))
+    {
+        return true;
+    }
+    int val = QMessageBox::question(this, tr("X server not found"),
+                                    tr("You don't have X server. Choose X server to install:"),
+                                    tr("Xorg"),
+                                    tr("Xglamo"),
+                                    tr("Cancel"), 0, 2);
+
+    if(val == 2)
+    {
+        return false;
+    }
+    if(val == 0)
+    {
+        QStringList args;
+        args << "-u";
+        args << "-i";
+        args << "xserver-xorg-video-glamo";
+        args << "xserver-xorg-input-tslib";
+        args << "xinput";
+        args << "xterm";
+        QProcess::execute("raptor", args);
+
+        return saveConf(this, ":/xorg-glamo.conf", "/etc/X11", "xorg.conf") &&
+                saveConf(this, ":/xterm.desktop", "/usr/share/applications", "xterm.desktop");
+    }
+
+    QProcess::execute("raptor", QStringList() << "-u" << "-i" << "xfonts-base" << "xterm" << "x11-xserver-utils");
+    QProcess::execute("raptor", QStringList() << "-i" << "http://qtmoko.sourceforge.net/download/Xglamo.deb");
+
+    return saveConf(this, ":/xglamo.conf", "/etc/X11", "xorg.conf") &&
+            saveConf(this, ":/xterm.desktop", "/usr/share/applications", "xterm.desktop");
+}
+
+void QX::fixTs()
+{
+    system("DISPLAY=:0 xinput set-int-prop \"Touchscreen\" \"Evdev Axis Calibration\" 32 107 918 911 98");
+    system("DISPLAY=:0 xinput set-int-prop \"Touchscreen\" \"Evdev Axes Swap\" 8 1");
 }
 
 void QX::runApp(QString filename, QString applabel, bool rotate)
@@ -321,6 +388,7 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
     this->appName = applabel;
     this->rotate = rotate;
     terminating = false;
+    bool xorg = QFile::exists("/usr/bin/Xorg");
 
     showScreen(QX::ScreenStarting);
 
@@ -329,11 +397,17 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
         xprocess = new QProcess(this);
         xprocess->setProcessChannelMode(QProcess::ForwardedChannels);
         QStringList args;
-        args.append("-hide-cursor");
-        args.append("vt7");
-        args.append("-dpi");
-        args.append("128");
-        xprocess->start("X", args);
+        if(xorg)
+        {
+            xprocess->start("/usr/bin/Xorg", args);
+        }
+        else
+        {
+            args.append("-hide-cursor");
+            args.append("-dpi");
+            args.append("128");
+            xprocess->start("/usr/bin/Xglamo", args);
+        }
         if(!xprocess->waitForStarted())
         {
             showScreen(QX::ScreenMain);
@@ -342,7 +416,6 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
         }
     }
 
-    Display *dpy;
     for(int i = 0; i < 3; i++)
     {
         dpy = XOpenDisplay(NULL);
@@ -359,7 +432,29 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
         QMessageBox::critical(this, tr("QX"), tr("Unable to connect to X server"));
         return;
     }
-    XCloseDisplay(dpy);
+    fakeKey = fakekey_init(dpy);
+
+    showScreen(QX::ScreenRunning);
+    QApplication::processEvents();
+
+    if(wm)
+    {
+        // Hack - if not in fullscreen we want apps to be started below qtopia
+        // status bar
+        int top = fullscreen ? 0 : 80;
+        int width = appRunScr->width();
+        int height = 640 - top;
+
+        if(kbd)
+        {
+            height -= 137;      // hack: keyboard height - how to get correct size?
+        }
+
+        //qDebug() << " top=" << top << " appRunScr size: " << width << "x" << height;
+
+        wm_start(dpy, 0, top, width, height);
+        wmTimer->start(10);
+    }
 
     process = new QProcess(this);
     connect(process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(processFinished(int, QProcess::ExitStatus)));
@@ -376,7 +471,15 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
         return;
     }
 
-    showScreen(QX::ScreenRunning);
+    if(xorg)
+    {
+        QTimer::singleShot(1000, this, SLOT(fixTs()));
+    }
+}
+
+void QX::processWmEvents()
+{
+    wm_process_events();
 }
 
 void QX::pauseApp()
@@ -388,6 +491,10 @@ void QX::pauseApp()
     if(rotate)
     {
         system("xrandr -o 0");
+    }
+    if(wm)
+    {
+        wmTimer->stop();
     }
 
     system(QString("kill -STOP %1").arg(process->pid()).toAscii());
@@ -405,11 +512,16 @@ void QX::resumeApp()
         system(QString("kill -CONT %1").arg(xprocess->pid()).toAscii());
     }
     system(QString("kill -CONT %1").arg(process->pid()).toAscii());
+    if(wm)
+    {
+        wmTimer->start(10);
+    }
     showScreen(QX::ScreenRunning);
 }
 
 void QX::okClicked()
 {
+    if(!checkX()) return;
     //if (screen == QX::ScreenMain)
     runApp(lineEdit->text(), lineEdit->text(), false);
 }
@@ -419,6 +531,41 @@ void QX::resumeClicked()
     //if (screen == QX::ScreenPaused)
     resumeApp();
 }
+
+void QX::keyPress(QKeyEvent *e)
+{
+    QString text = e->text();
+    if(text.length() > 0)
+    {
+        QByteArray buf = text.toUtf8();
+        fakekey_press(fakeKey, (unsigned char *)(buf.constData()), buf.length(), 0);
+        return;
+    }
+    // See keysymdef.h for KeySym values
+    KeySym sym = -1;
+    switch(e->key())
+    {
+    case Qt::Key_Left:
+        sym = 0xff51;
+        break;
+    case Qt::Key_Right:
+        sym = 0xff53;
+        break;
+    case Qt::Key_Up:
+        sym = 0xff52;
+        break;
+    case Qt::Key_Down:
+        sym = 0xff54;
+        break;
+    }
+    fakekey_press_keysym(fakeKey, sym, 0);
+}
+
+void QX::keyRelease(QKeyEvent *)
+{
+    fakekey_release(fakeKey);
+}
+
 
 /*
 void QX::tangoClicked()
@@ -481,6 +628,8 @@ void QX::launch_clicked()
     int sel = GetClickedId();
     if (sel<0) return;
 
+    if(!checkX()) return;
+
     DesktopEntry entry = scanner->entries[sel];
     QString appname = entry.file;
 
@@ -508,21 +657,35 @@ void QX::launch_clicked()
     //if (prof.qvga) { }
 
     QString cmd = entry.exec;
+    this->wm = prof.wm;
+    this->kbd = prof.kbd;
+    this->fullscreen = prof.fullscreen;
 
-    if ((prof.wm) || (prof.kbd))
+    if (prof.matchbox)
     {
-        QString script = "/tmp/.QX_app_launcher.sh";
-        QFile f(script);
-        if (f.open(QIODevice::WriteOnly))
+        if(!QFile::exists("/usr/bin/matchbox-window-manager") &&
+           QMessageBox::question(this, "qx", tr("Install matchbox?"),
+                                 QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
         {
-            f.write("matchbox-window-manager &\n");
-            f.write("sleep 5\n");
-            if (prof.kbd)
-                f.write("matchbox-keyboard &\n");
-            f.write(entry.exec.toUtf8());
-            f.close();
+            QProcess::execute("raptor", QStringList() << "-u" << "-i" << "matchbox");
         }
-        cmd = "sh " + script;
+
+        if(prof.wm || prof.kbd)
+        {
+            QString script = "/tmp/.QX_app_launcher.sh";
+            QFile f(script);
+            if (f.open(QIODevice::WriteOnly))
+            {
+                f.write("matchbox-window-manager &\n");
+                f.write("sleep 5\n");
+                if (prof.kbd)
+                    f.write("matchbox-keyboard &\n");
+                f.write(entry.exec.toUtf8());
+                f.close();
+            }
+            cmd = "sh " + script;
+            this->wm = this->kbd = false;
+        }
     }
 
     QString applabel = "<b>"+entry.name+"</b><br/>"+entry.exec;

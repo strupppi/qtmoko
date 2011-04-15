@@ -223,7 +223,8 @@ void KeyboardPicks::initialise()
 
 QSize KeyboardPicks::sizeHint() const
 {
-    return QSize(240,fontMetrics().lineSpacing());
+    //return QSize(240,fontMetrics().lineSpacing());    // <-- uncomment to enable text hints (quite useless for this type of keyboard)
+    return QSize(240, 0);
 }
 
 
@@ -270,6 +271,8 @@ static const uchar * const keyboard_opti[5] = {
     (const uchar *const) "\001\223\003\206\002\44\002\31\002\57\002\42\002\46\002\25\002\207\003\204\001\223\002\013\002\064\002\015\002\230"
 };
 
+/* Original keyboard - it has huge SPACE, small BACKSPACE and no arrows if not
+ * expanded.
 
 static const uchar * const keyboard_standard[5] = {
 
@@ -294,10 +297,44 @@ static const uchar * const keyboard_standard[5] = {
 
 };
 
+*/
+
+/* Keyboard layout shamelessly stolen from SHR
+
+` 1 2 3 4 5 6 7 8 9 0 - = <---
+TABq w e r t y u i o p [ ] \ >
+CAP a s d f g h j k l ; ' <===
+SHIF z x c v b n m , . / InDel
+CtrlAlSPACE < > ^ _ PuPdHoEnEs
+
+*/
+static const uchar * const keyboard_standard[5] = {
+
+    (const uchar *const)"\002`\0021\0022\0023\0024\0025\0026\0027\0028\0029\0020\002-\002=\004\200"                         "\002\223\002\215\002\216\002\217",
+    (const uchar *const)"\003\201\002q\002w\002e\002r\002t\002y\002u\002i\002o\002p\002[\002]\002\\\001\224"                "\002\223\002\221\002\220\002\222",
+    (const uchar *const)"\004\202\002a\002s\002d\002f\002g\002h\002j\002k\002l\002;\002'\004\203",
+    (const uchar *const)"\005\204\002z\002x\002c\002v\002b\002n\002m\002,\002.\002/\002\215\003\221"                        "\002\223\002\223\002\211",
+    (const uchar *const)"\004\205\002\206\006\207\002\212\002\214\002\211\002\213\002\217\002\222\002\216\002\220\002\240"  "\002\223\002\212\002\213\002\214"
+};
+
 
 struct ShiftMap {
     char normal;
     char shifted;
+};
+
+enum modsIndex {
+    ShiftMod = 0,
+    AltMod = 1,
+    CtrlMod = 2
+};
+
+struct keyLocation {
+    int x, y;
+};
+
+static const keyLocation modsLocMap[] = {
+  {0, 3}, {1, 4}, {0, 4}
 };
 
 
@@ -402,7 +439,7 @@ void KeyboardFrame::paintEvent(QPaintEvent* e)
     QPainter painter(this);
     painter.setClipRect(e->rect());
     drawKeyboard( painter, e->rect() );
-    picks->dc->draw( &painter );
+    //picks->dc->draw( &painter );
 }
 
 
@@ -596,7 +633,7 @@ void KeyboardFrame::mousePressEvent(QMouseEvent *e)
 
         qwsServer->processKeyEvent( unicode, qkeycode, modifiers, true, false );
 
-        shift = alt = ctrl = false;
+	clearMods();
 
         KeyboardConfig *dc = picks->dc;
 
@@ -667,6 +704,44 @@ void KeyboardFrame::repeat()
         qwsServer->processKeyEvent( unicode, qkeycode, modifiers, true, true );
     } else
         repeatTimer->stop();
+}
+
+void KeyboardFrame::clearMod(int modindex) {
+    const keyLocation* loc = &modsLocMap[modindex];
+
+    const uchar **keyboard = (const uchar **)((useOptiKeys) ? keyboard_opti : keyboard_standard);
+
+    const uchar *row = keyboard[loc->y];
+
+    int x = 0;
+
+    for ( int id = 0; id != loc->x; row += 2, id++ )
+	x += *row;
+
+    QRect toRepaint = QRect(
+	x*defaultKeyWidth/2+xoffs,
+        loc->y*keyHeight+picks->height(),
+        *row*defaultKeyWidth/2,keyHeight
+    );
+
+    repaint (toRepaint);
+}
+
+void KeyboardFrame::clearMods()
+{
+    if (shift) {
+	shift = false;
+	clearMod(ShiftMod);
+
+    }
+    if (alt) {
+	alt = false;
+	clearMod(AltMod);
+    }
+    if (ctrl) {
+	ctrl = false;
+	clearMod(CtrlMod);
+    }
 }
 
 void KeyboardFrame::clearHighlight()

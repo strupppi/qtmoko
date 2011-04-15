@@ -17,4 +17,4 @@ enable_sxe {
 
 PROJECTS*=\
     3rdparty/libraries/tar\
-    settings/packagemanager \
+    settings/packagemanager

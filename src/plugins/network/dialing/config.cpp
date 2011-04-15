@@ -340,10 +340,12 @@ int DialupUI::writeSystemFiles()
 
     // write chat scripts
     QString st;
-    st = "ABORT \"NO CARRIER\"\n" // No tr
+    st = "\"\" \"\\K\\K\\K\\d+++ATH\"\n" // No tr
+        "ABORT \"NO CARRIER\"\n" // No tr
         "ABORT \"NO DIALTONE\"\n" // No tr
         "ABORT \"BUSY\"\n" // No tr
-        "\"\" "; // No tr
+        "TIMEOUT 30 \n" // No tr
+        "OK "; // No tr
 
     QString dial;
     if ( gprs ) {
