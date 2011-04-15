@@ -36,8 +36,10 @@
 
 QTOPIABASE_EXPORT int qpe_sysBrightnessSteps()
 {
-    QFile maxBrightness("/sys/class/backlight/gta01-bl/max_brightness");
+    QFile f("/sys/class/backlight/gta01-bl/max_brightness");
     if(!f.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "qpe_sysBrightnessSteps: " + f.errorString();
+        return 0;
     }
     QTextStream in(&f);
     QString str;
