@@ -143,7 +143,7 @@ NeoKbdHandler::NeoKbdHandler()
     setObjectName( "Neo Keypad Handler" );
 
     auxHandler = new FicLinuxInputEventHandler(this);
-    if (auxHandler->openByName("Neo1973 Buttons")) {
+    ok = auxHandler->openByName("gpio-keys") ||
          auxHandler->openByPhysicalBus("neo1973kbd/input0");
 
     if(ok) {
