@@ -76,18 +76,18 @@ PhoneServer::PhoneServer( QObject* parent )
 {
     // Launch the third-party telephony agents.
     int serviceCount = executeTelephony( "Telephony::start()" );       // No tr
-    if (!serviceCount)
+    if (!serviceCount) {
         qLog(VoIP) << "No third-party telephony agents found to send \"Telephony::start()\" to";
+    }
 
     status = new QValueSpaceObject("/Telephony", this);
 
-    // Create the AT-based modem service.  If QTOPIA_PHONE_DUMMY is set,
-    // we create a dummy handler for testing purposes.
-    char *env = getenv( "QTOPIA_PHONE_DUMMY" );
+    // Create the AT-based modem service. If QTOPIA_PHONE is set we create a
+    // handler for it. Possible case sensitive values are:
+    // QTOPIA_PHONE=Dummy, QTOPIA_PHONE=AT, QTOPIA_PHONE=Fso
+    char *env = getenv( "QTOPIA_PHONE" );
     QTelephonyService *service = 0;
-    QByteArray target("ATModemService");
-    if ( env && *env == '1' )
-        target = "DummyModemService";
+    QByteArray target(env ? env : "AT");
 
     QList<TelephonyServiceFactory *> providers = ::qtopiaTasks<TelephonyServiceFactory>();
     foreach( TelephonyServiceFactory* factory, providers )

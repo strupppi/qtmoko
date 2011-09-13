@@ -26,16 +26,17 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     chkMux = new QCheckBox(tr("Multiplexing"), this);
     connect(chkMux, SIGNAL(stateChanged(int)), this, SLOT(muxStateChanged(int)));
 
+    chkFso = new QCheckBox(tr("Use FSO (freesmatphone.org)"), this);
+    connect(chkFso, SIGNAL(stateChanged(int)), this, SLOT(fsoStateChanged(int)));
+
     label = new QLabel(this);
     lineEdit = new QLineEdit(this);
 
     label4 = new QLabel(this);
-    label12 = new QLabel(this);
-    label48 = new QLabel(this);
+    label5 = new QLabel(this);
 
     slider4 = new MixerSlider(this);
-    slider12 = new MixerSlider(this);
-    slider48 = new MixerSlider(this);
+    slider5 = new MixerSlider(this);
 
     buttonLayout = new QHBoxLayout();
     buttonLayout->setAlignment(Qt::AlignBottom);
@@ -47,14 +48,13 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     layout->addWidget(label);
     layout->addWidget(label4);
     layout->addWidget(slider4);
-    layout->addWidget(label12);
-    layout->addWidget(slider12);
-    layout->addWidget(label48);
-    layout->addWidget(slider48);
+    layout->addWidget(label5);
+    layout->addWidget(slider5);
     layout->addWidget(bSave);
     layout->addWidget(lineEdit);
     layout->addWidget(chkDeepSleep);
     layout->addWidget(chkMux);
+    layout->addWidget(chkFso);
     layout->addLayout(buttonLayout);
 
     showScreen(NeoControl::ScreenInit);
@@ -152,12 +152,11 @@ void NeoControl::showScreen(NeoControl::Screen scr)
     lineEdit->setVisible(false);
     chkDeepSleep->setVisible(scr == ScreenModem);
     chkMux->setVisible(scr == ScreenModem);
+    chkFso->setVisible(scr == ScreenModem);
     label4->setVisible(scr == ScreenMixer);
-    label12->setVisible(scr == ScreenMixer);
-    label48->setVisible(scr == ScreenMixer);
+    label5->setVisible(scr == ScreenMixer);
     slider4->setVisible(scr == ScreenMixer);
-    slider12->setVisible(scr == ScreenMixer);
-    slider48->setVisible(scr == ScreenMixer);
+    slider5->setVisible(scr == ScreenMixer);
     bSave->setVisible(scr == ScreenMixer);
 
     switch(scr)
@@ -235,7 +234,7 @@ void NeoControl::updateMixer()
     {
         return;
     }
-    if(slider4->sliding || slider12->sliding || slider48->sliding)
+    if(slider4->sliding || slider5->sliding)
     {
         QTimer::singleShot(100, this, SLOT(updateMixer()));
         return;
@@ -243,8 +242,7 @@ void NeoControl::updateMixer()
 
     snd_mixer_elem_t *elem;
     snd_mixer_elem_t *elem4 = NULL;
-    snd_mixer_elem_t *elem12 = NULL;
-    snd_mixer_elem_t *elem48 = NULL;
+    snd_mixer_elem_t *elem5 = NULL;
 
     for (elem = snd_mixer_first_elem(mixerFd); elem;
     elem = snd_mixer_elem_next(elem)) {
@@ -254,23 +252,17 @@ void NeoControl::updateMixer()
         {
             elem4 = elem;
         }
-        else if(elemName == "Mono Sidetone")
+        else if(elemName == "Mono Playback")
         {
-            elem12 = elem;
-        }
-        else if(elemName == "Mic2")
-        {
-            elem48 = elem;
+            elem5 = elem;
         }
     }
 
     slider4->setMixerElem(elem4, true);
-    slider12->setMixerElem(elem12, true);
-    slider48->setMixerElem(elem48, false);
+    slider5->setMixerElem(elem5, true);
 
     label4->setText(tr("Playback (control.4) %1").arg(slider4->volume));        // Mono Playback Volume
-    label12->setText(tr("Sidetone (control.12) %1").arg(slider12->volume));     // Mono Sidetone Playback Volume
-    label48->setText(tr("Mic2 (control.48) %1").arg(slider48->volume));         // Mic2 Capture Volume
+    label5->setText(tr("Microphone (control.5) %1").arg(slider5->volume));      // Mono Sidetone Playback Volume
 
     label->setText(tr("Call volume settings"));
 
@@ -304,6 +296,52 @@ void NeoControl::muxStateChanged(int state)
     cfg.sync();
 
     QMessageBox::information(this, tr("Multiplexing"), tr("Settings will be activated after restarting QtExtended with POWER button"));
+}
+
+void NeoControl::setQpeEnv(bool fso)
+{
+    QFile f("/opt/qtmoko/qpe.env");
+    if(!f.open(QFile::ReadOnly))
+    {
+        QMessageBox::critical(this, tr("FSO"), tr("Failed to read") + " " + f.fileName());
+        return;
+    }
+    QString content = f.readAll();
+    f.close();
+    QString fsoStr = "export QTOPIA_PHONE=Fso";
+    QString atStr = "export QTOPIA_PHONE=AT";
+    if(fso)
+    {
+        content = content.replace(atStr, fsoStr);
+    }
+    else
+    {
+        content = content.replace(fsoStr, atStr);
+    }
+    if(!f.open(QFile::WriteOnly))
+    {
+        QMessageBox::critical(this, tr("FSO"), tr("Failed to write to") + " " + f.fileName());
+        return;
+    }
+    f.write(content.toLatin1());
+    f.close();
+    QMessageBox::information(this, tr("FSO"), tr("You have to restart your phone for changes to take place"));
+}
+
+void NeoControl::fsoStateChanged(int state)
+{
+    if(state != Qt::Checked)
+    {
+        setQpeEnv(false);     // disable FSO
+        return;
+    }
+    QMessageBox::information(this, tr("FSO"), tr("FSO packages have to be downloaded and installed. Please make sure you have internet connection now."));
+
+    if(!QFile::exists("/usr/sbin/fsogsmd"))
+    {
+        QProcess::execute("raptor", QStringList() << "-u" << "-i" << "fso-gsmd-openmoko" << "fso-usaged-openmoko");
+    }
+    setQpeEnv(true);
 }
 
 void NeoControl::updateModem()

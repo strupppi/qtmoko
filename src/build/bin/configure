@@ -906,6 +906,14 @@ set_optvar("bluetooth", +{
     "module" => "bluetooth",
     "module_setfunc" => sub { opt("dbus") = 1; },
 });
+set_optvar("fso", +{
+    "type" => "bool",
+    "set" => [ "%", "Enable FSO (freesmartphone.org stack)." ],
+    "unset" => [ "no-%", "Disable FSO." ],
+    "config_pri" => "CONFIG+=enable_fso",
+    # This hides the option (it's controlled by -modules)
+    "module" => "fso",
+});
 set_optvar("infrared", +{
     "type" => "bool",
     "set" => [ "%", "Enable Infrared." ],
@@ -5271,7 +5279,7 @@ sub setup_dqt_config
     }
     map { $args .= " -no-sql-".basename($_) if ( basename($_) ne "tmp" && -d $_ ); } glob("$qt_depot_path/src/plugins/sqldrivers/*");
     $args .= " -qt-sql-sqlite";
-    $args .= " -no-dbus -no-openssl".
+    $args .= " -no-openssl".
              " -nomake examples -nomake demos -nomake docs";
     $args .= " -prefix ".fixpath("$SDKROOT/qtopiacore/host");
     if ( opt("release") ) {

@@ -94,3 +94,12 @@
 [submodule "src/3rdparty/games/chess"]
 	path = src/3rdparty/games/chess
 	url = git://github.com/radekp/qtmoko-chess.git
+[submodule "src/3rdparty/games/qphysics"]
+	path = src/3rdparty/games/qphysics
+	url = git://github.com/radekp/qphysics.git
+[submodule "src/libraries/qfso/specs"]
+	path = src/libraries/qfso/specs
+	url = git://github.com/radekp/fso-specs.git
+[submodule "src/tools/indent"]
+	path = src/tools/indent
+	url = git://github.com/radekp/indent.git
