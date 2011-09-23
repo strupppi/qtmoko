@@ -71,6 +71,7 @@ private:
     void showScreen(NeoControl::Screen scr);
     int openAlsaMixer();
     void closeAlsaMixer();
+    QString getQpeEnv();
     void setQpeEnv(bool);
 
 private slots:
@@ -84,6 +85,7 @@ private slots:
     void deepSleepStateChanged(int);
     void muxStateChanged(int);
     void fsoStateChanged(int);
+    void fsoChange();
 };
 
 #endif // NEOCONTROL_H

@@ -47,7 +47,7 @@ void FsoSMSReader::test()
 void FsoSMSReader::deviceStatus(QString status)
 {
     bool oldReady = ready();
-    bool newReady = status == "alive-registered";
+    bool newReady = (status == "alive-registered" || status == "alive-sim-ready");
 
     qDebug() << "FsoSMSReader::deviceStatus oldReady=" << oldReady <<
         ", newReady=" << newReady;
@@ -202,6 +202,7 @@ void FsoSMSReader::deleteMessage(const QString & id)
         QFsoSIMMessage f = messages.at(i);
         QString msgId = getMsgId(f.contents, f.timestamp);
         if (msgId != id) {
+    
             continue;
         }
         QFsoDBusPendingReply <> delReply =

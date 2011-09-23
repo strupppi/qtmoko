@@ -298,16 +298,22 @@ void NeoControl::muxStateChanged(int state)
     QMessageBox::information(this, tr("Multiplexing"), tr("Settings will be activated after restarting QtExtended with POWER button"));
 }
 
-void NeoControl::setQpeEnv(bool fso)
+QString NeoControl::getQpeEnv()
 {
     QFile f("/opt/qtmoko/qpe.env");
     if(!f.open(QFile::ReadOnly))
     {
         QMessageBox::critical(this, tr("FSO"), tr("Failed to read") + " " + f.fileName());
-        return;
+        return "";
     }
     QString content = f.readAll();
     f.close();
+    return content;
+}
+
+void NeoControl::setQpeEnv(bool fso)
+{
+    QString content = getQpeEnv();
     QString fsoStr = "export QTOPIA_PHONE=Fso";
     QString atStr = "export QTOPIA_PHONE=AT";
     if(fso)
@@ -318,6 +324,7 @@ void NeoControl::setQpeEnv(bool fso)
     {
         content = content.replace(fsoStr, atStr);
     }
+    QFile f("/opt/qtmoko/qpe.env");
     if(!f.open(QFile::WriteOnly))
     {
         QMessageBox::critical(this, tr("FSO"), tr("Failed to write to") + " " + f.fileName());
@@ -328,19 +335,33 @@ void NeoControl::setQpeEnv(bool fso)
     QMessageBox::information(this, tr("FSO"), tr("You have to restart your phone for changes to take place"));
 }
 
-void NeoControl::fsoStateChanged(int state)
+void NeoControl::fsoStateChanged(int)
 {
-    if(state != Qt::Checked)
+    if(updatingModem)
     {
+        return;
+    }
+    QTimer::singleShot(0, this, SLOT(fsoChange()));
+}
+
+void NeoControl::fsoChange()
+{
+    bool checked = chkFso->isChecked();
+    if(!checked)
+    {
+        QProcess::execute("qterminal", QStringList() << "-c" << "update-rc.d" << "-f" << "fso-deviced" << "remove");
         setQpeEnv(false);     // disable FSO
         return;
     }
-    QMessageBox::information(this, tr("FSO"), tr("FSO packages have to be downloaded and installed. Please make sure you have internet connection now."));
-
     if(!QFile::exists("/usr/sbin/fsogsmd"))
     {
+        QMessageBox::information(this, tr("FSO"), tr("FSO packages have to be downloaded and installed. Please make sure you have internet connection now."));
         QProcess::execute("raptor", QStringList() << "-u" << "-i" << "fso-gsmd-openmoko" << "fso-usaged-openmoko");
+        QMessageBox::information(this, tr("FSO"), tr("QtMoko needs very recent FSO, it will be downloaded from http://activationrecord.net/radekp/pub/libfsogsm.so.0.0.0"));
+        QProcess::execute("qterminal", QStringList() << "-c" << "wget" << "http://activationrecord.net/radekp/pub/libfsogsm.so.0.0.0");
+        QProcess::execute("qterminal", QStringList() << "-c" << "mv" << "libfsogsm.so.0.0.0" << "/usr/lib/cornucopia/libs/fsogsm/libfsogsm.so.0.0.0");
     }
+    QProcess::execute("qterminal", QStringList() << "-c" << "update-rc.d" << "fso-deviced" << "defaults");
     setQpeEnv(true);
 }
 
@@ -364,6 +385,10 @@ void NeoControl::updateModem()
     chkMux->setChecked(multiplexing != "no");
 
     label->setText(text);
+
+    QString qpeEnv = getQpeEnv();
+    QString fsoStr = "export QTOPIA_PHONE=Fso";
+    chkFso->setChecked(qpeEnv.indexOf(fsoStr) >= 0);
 
     updatingModem = false;
     QTimer::singleShot(1000, this, SLOT(updateModem()));
