@@ -115,7 +115,6 @@ private slots:
     //void tangoClicked();
     //void scummvmClicked();
     bool checkX();
-    void fixTs();
     void keyPress(QKeyEvent *);
     void keyRelease(QKeyEvent *);
     void processWmEvents();
