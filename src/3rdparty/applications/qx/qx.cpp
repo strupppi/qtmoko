@@ -385,10 +385,8 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
 
     showScreen(QX::ScreenStarting);
 
-    qDebug() << "1";
     if(!QFile::exists("/tmp/.X0-lock"))
     {
-        qDebug() << "2";
         xprocess = new QProcess(this);
         xprocess->setProcessChannelMode(QProcess::ForwardedChannels);
         QStringList args;
@@ -403,17 +401,14 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
             args.append("128");
             xprocess->start("/usr/bin/Xfbdev", args);
         }
-        qDebug() << "3";
         if(!xprocess->waitForStarted())
         {
             showScreen(QX::ScreenMain);
             QMessageBox::critical(this, tr("QX"), tr("Unable to start X server"));
             return;
         }
-        qDebug() << "4";
     }
 
-    qDebug() << "5";
     for(int i = 0; i < 3; i++)
     {
         dpy = XOpenDisplay(NULL);
@@ -422,9 +417,7 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
             break;
         }
         Sleeper::msleep(1000);
-        qDebug() << "6";
     }
-    qDebug() << "7";
     if(dpy == NULL)
     {
         stopX();
