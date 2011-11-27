@@ -60,7 +60,6 @@ private:
     QPushButton *bBack;
     QPushButton *bNext;
     QPushButton *bSave;
-    QCheckBox *chkDeepSleep;
     QCheckBox *chkMux;
     QCheckBox *chkFso;
     QLabel *label4;
@@ -82,7 +81,6 @@ private slots:
     void updateMixer();
     void updateModem();
     void updateSysfs();
-    void deepSleepStateChanged(int);
     void muxStateChanged(int);
     void fsoStateChanged(int);
     void fsoChange();

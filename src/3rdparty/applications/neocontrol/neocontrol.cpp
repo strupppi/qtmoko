@@ -20,9 +20,6 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     bSave = new QPushButton(tr("Save"), this);
     connect(bSave, SIGNAL(clicked()), this, SLOT(saveClicked()));
 
-    chkDeepSleep = new QCheckBox(tr("Deep sleep"), this);
-    connect(chkDeepSleep, SIGNAL(stateChanged(int)), this, SLOT(deepSleepStateChanged(int)));
-
     chkMux = new QCheckBox(tr("Multiplexing"), this);
     connect(chkMux, SIGNAL(stateChanged(int)), this, SLOT(muxStateChanged(int)));
 
@@ -52,7 +49,6 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     layout->addWidget(slider5);
     layout->addWidget(bSave);
     layout->addWidget(lineEdit);
-    layout->addWidget(chkDeepSleep);
     layout->addWidget(chkMux);
     layout->addWidget(chkFso);
     layout->addLayout(buttonLayout);
@@ -112,7 +108,7 @@ void NeoControl::saveClicked()
 {
     if(screen == ScreenMixer)
     {
-        system("alsactl -f /usr/share/openmoko/scenarios/gsmhandset.state store");
+        system("alsactl -f /opt/qtmoko/etc/alsa/gta04_initial_alsa.state store");
     }
 }
 
@@ -150,7 +146,6 @@ void NeoControl::showScreen(NeoControl::Screen scr)
     label->setVisible(scr == ScreenInit || scr == ScreenMixer || scr == ScreenModem || scr == ScreenSysfs);
     bBack->setText(scr == ScreenInit ? tr("Quit") : tr("Back"));
     lineEdit->setVisible(false);
-    chkDeepSleep->setVisible(scr == ScreenModem);
     chkMux->setVisible(scr == ScreenModem);
     chkFso->setVisible(scr == ScreenModem);
     label4->setVisible(scr == ScreenMixer);
@@ -183,8 +178,6 @@ void NeoControl::showScreen(NeoControl::Screen scr)
 
 int NeoControl::openAlsaMixer()
 {
-    system("alsactl -f /usr/share/openmoko/scenarios/gsmhandset.state restore");
-
     int ret = 0;
     QString text(tr("Call volume settings\n\n"));
 
@@ -225,7 +218,7 @@ void NeoControl::closeAlsaMixer()
         mixerFd = NULL;
     }
 
-    system("alsactl -f /usr/share/openmoko/scenarios/stereoout.state restore");
+    system("alsactl -f /opt/qtmoko/etc/alsa/gta04_initial_alsa.state restore");
 }
 
 void NeoControl::updateMixer()
@@ -248,40 +241,25 @@ void NeoControl::updateMixer()
     elem = snd_mixer_elem_next(elem)) {
         QString elemName = QString(snd_mixer_selem_get_name(elem));
 
-        if(elemName == "Speaker")
+        if(elemName == "DAC2 Digital Fine")
         {
             elem4 = elem;
         }
-        else if(elemName == "Mono Playback")
+        else if(elemName == "Analog")
         {
             elem5 = elem;
         }
     }
 
     slider4->setMixerElem(elem4, true);
-    slider5->setMixerElem(elem5, true);
+    slider5->setMixerElem(elem5, false);
 
-    label4->setText(tr("Playback (control.4) %1").arg(slider4->volume));        // Mono Playback Volume
-    label5->setText(tr("Microphone (control.5) %1").arg(slider5->volume));      // Mono Sidetone Playback Volume
+    label4->setText(tr("Playback %1").arg(slider4->volume));        // Mono Playback Volume
+    label5->setText(tr("Microphone %1").arg(slider5->volume));      // Mono Sidetone Playback Volume
 
     label->setText(tr("Call volume settings"));
 
     QTimer::singleShot(1000, this, SLOT(updateMixer()));
-}
-
-
-void NeoControl::deepSleepStateChanged(int state)
-{
-    if(updatingModem)
-    {
-        return;
-    }
-    QString val = (state == Qt::Checked ? "always" : "never");
-    QSettings cfg("Trolltech", "Modem");
-    cfg.setValue("DeepSleep/Active", val);
-    cfg.sync();
-
-    QMessageBox::information(this, tr("Deep sleep"), tr("Settings will be activated after restarting QtExtended with POWER button"));
 }
 
 void NeoControl::muxStateChanged(int state)
@@ -376,10 +354,6 @@ void NeoControl::updateModem()
     QString text(tr("Modem settings\n\n"));
     QSettings cfg("Trolltech", "Modem");
 
-    QString deepSleep = cfg.value("DeepSleep/Active").toString();
-    text += tr("Deep sleep") + ": " + deepSleep + "\n";
-    chkDeepSleep->setChecked(deepSleep != "never");
-
     QString multiplexing = cfg.value("Multiplexing/Active", "yes").toString();
     text += tr("Multiplexing") + ": " + multiplexing;
     chkMux->setChecked(multiplexing != "no");
@@ -419,11 +393,15 @@ void NeoControl::updateSysfs()
     }
 
     QString text;
-    appendValue(tr("Battery status"), "/sys/class/power_supply/battery/status", &text);
-    appendValue(tr("Current"), "/sys/class/power_supply/battery/current_now", &text);
-    appendValue(tr("Modem power"), "/sys/devices/platform/s3c2440-i2c/i2c-0/0-0073/pcf50633-gpio.0/reg-fixed-voltage.1/gta02-pm-gsm.0/power_on", &text);
-    appendValue(tr("GPS power"), "/sys/devices/platform/gta02-pm-gps.0/power_on", &text);
-    appendValue(tr("Bluetooth power"), "/sys/devices/platform/gta02-pm-bt.0/power_on", &text);
+    appendValue(tr("Battery type"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/type", &text);
+    appendValue(tr("  Status"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/status", &text);
+    appendValue(tr("  Voltage"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/voltage_now", &text);
+    appendValue(tr("  Current"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/current_now", &text);
+    appendValue(tr("  Online"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/online", &text);
+    appendValue(tr("  Temperature"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/temp", &text);
+    appendValue(tr("Backup battery type"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_bk_battery/type", &text);
+    appendValue(tr("  Voltage"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_bk_battery/voltage_now", &text);
+    appendValue(tr("Wifi/BT power"), "/sys/class/leds/tca6507:6/brightness", &text);
     label->setText(text);
 
     QTimer::singleShot(1000, this, SLOT(updateSysfs()));
