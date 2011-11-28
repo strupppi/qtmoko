@@ -906,11 +906,9 @@ bool QMplayer::startMencoder(QString srcFile, QString dstFile)
     args.append("-lavcopts");
     args.append("vcodec=mpeg4:vhq:vbitrate=300:acodec=ac3");
     args.append("-vf");
-    args.append("scale=320:240,eq2=1.2:0.5:-0.25,rotate=2");
+    args.append("scale=640:480,eq2=1.2:0.5:-0.25,rotate=2");
     args.append("-oac");
     args.append("lavc");
-    args.append("-ofps");
-    args.append("15");
     args.append("-o");
     args.append(dstFile);
 
