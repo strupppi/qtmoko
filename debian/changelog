@@ -1,3 +1,9 @@
+qtmoko (37-1) unstable; urgency=low
+
+  * GTA04 support
+
+ -- Radek Polak <psonek2@seznam.cz>  Wed, 30 Nov 2011 10:57:00 +0100
+
 qtmoko (36-1) unstable; urgency=low
 
   * Can use freesmartphone.org stack as modem backend
