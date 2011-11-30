@@ -340,14 +340,14 @@ static bool saveConf(QX * parent, const char * srcFilename, const char * dstDir,
 bool QX::checkX()
 {
     if(QFile::exists("/usr/bin/Xorg") ||
-       QFile::exists("/usr/bin/Xglamo"))
+       QFile::exists("/usr/bin/Xfbdev"))
     {
         return true;
     }
     int val = QMessageBox::question(this, tr("X server not found"),
                                     tr("You don't have X server. Choose X server to install:"),
                                     tr("Xorg"),
-                                    tr("Xglamo"),
+                                    tr("Xfbdev"),
                                     tr("Cancel"), 0, 2);
 
     if(val == 2)
@@ -359,27 +359,20 @@ bool QX::checkX()
         QStringList args;
         args << "-u";
         args << "-i";
-        args << "xserver-xorg-video-glamo";
+        args << "xserver-xorg-video-fbdev";
         args << "xserver-xorg-input-tslib";
         args << "xinput";
         args << "xterm";
         QProcess::execute("raptor", args);
 
-        return saveConf(this, ":/xorg-glamo.conf", "/etc/X11", "xorg.conf") &&
+        return saveConf(this, ":/xorg.conf", "/etc/X11", "xorg.conf") &&
                 saveConf(this, ":/xterm.desktop", "/usr/share/applications", "xterm.desktop");
     }
 
-    QProcess::execute("raptor", QStringList() << "-u" << "-i" << "xfonts-base" << "xterm" << "x11-xserver-utils");
-    QProcess::execute("raptor", QStringList() << "-i" << "http://qtmoko.sourceforge.net/download/Xglamo.deb");
+    QProcess::execute("raptor", QStringList() << "-u" << "-i" << "xfonts-base" << "xterm" << "x11-xserver-utils" << "xserver-xfbdev");
 
-    return saveConf(this, ":/xglamo.conf", "/etc/X11", "xorg.conf") &&
+    return saveConf(this, ":/xfbdev.conf", "/etc/X11", "xorg.conf") &&
             saveConf(this, ":/xterm.desktop", "/usr/share/applications", "xterm.desktop");
-}
-
-void QX::fixTs()
-{
-    system("DISPLAY=:0 xinput set-int-prop \"Touchscreen\" \"Evdev Axis Calibration\" 32 107 918 911 98");
-    system("DISPLAY=:0 xinput set-int-prop \"Touchscreen\" \"Evdev Axes Swap\" 8 1");
 }
 
 void QX::runApp(QString filename, QString applabel, bool rotate)
@@ -392,6 +385,15 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
 
     showScreen(QX::ScreenStarting);
 
+    // Ask to delete X temporary files - hack for recovering from crashed X
+    if(QFile::exists("/tmp/.X0-lock"))
+    {
+        if(QMessageBox::question(this, tr("QX"), tr("The X lock file exists (X is running), delete it and start new X server?"),
+                                                 QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+        {
+            system("rm -rf /tmp/.X*");
+        }
+    }
     if(!QFile::exists("/tmp/.X0-lock"))
     {
         xprocess = new QProcess(this);
@@ -406,7 +408,7 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
             args.append("-hide-cursor");
             args.append("-dpi");
             args.append("128");
-            xprocess->start("/usr/bin/Xglamo", args);
+            xprocess->start("/usr/bin/Xfbdev", args);
         }
         if(!xprocess->waitForStarted())
         {
@@ -459,6 +461,10 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
     process = new QProcess(this);
     connect(process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(processFinished(int, QProcess::ExitStatus)));
     process->setProcessChannelMode(QProcess::ForwardedChannels);
+
+    // Remove QtMoko LD_LIBRARY_PATH so that X11-QT programs work ok
+    unsetenv("LD_LIBRARY_PATH");
+
     process->start(filename, NULL);
 
     if(!process->waitForStarted())
@@ -469,11 +475,6 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
         showScreen(QX::ScreenMain);
         QMessageBox::critical(this, tr("QX"), tr("Unable to start") + " " + filename);
         return;
-    }
-
-    if(xorg)
-    {
-        QTimer::singleShot(1000, this, SLOT(fixTs()));
     }
 }
 

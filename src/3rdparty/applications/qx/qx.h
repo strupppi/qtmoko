@@ -38,6 +38,7 @@
 #include "wm.h"
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdlib.h>
 #include <linux/vt.h>
 #include <sys/ioctl.h>
 #include <X11/Xlib.h>
@@ -114,7 +115,6 @@ private slots:
     //void tangoClicked();
     //void scummvmClicked();
     bool checkX();
-    void fixTs();
     void keyPress(QKeyEvent *);
     void keyRelease(QKeyEvent *);
     void processWmEvents();
