@@ -1256,7 +1256,7 @@ void ConsoleApplicationLauncher::launch(const QString &app)
 
             ConsoleApplicationLauncherPrivate::App *capp = new
                 ConsoleApplicationLauncherPrivate::App();
-            capp->app = app;
+            capp->app = exe;
             capp->state = Starting;
             capp->process->setReadChannelMode(QProcess::ForwardedChannels);
             capp->process->closeWriteChannel();
@@ -1270,12 +1270,12 @@ void ConsoleApplicationLauncher::launch(const QString &app)
             QObject::connect(capp->process,SIGNAL(error(QProcess::ProcessError)),
                              this,SLOT(appError(QProcess::ProcessError)));
 
-            d->apps.insert(app, capp);
+            d->apps.insert(exe, capp);
 
             ApplicationIpcRouter *r = qtopiaTask<ApplicationIpcRouter>();
             if(r) r->addRoute(exe, this);
 
-            emit applicationStateChanged(app, Starting);
+            emit applicationStateChanged(exe, Starting);
             return;
         }
     }
