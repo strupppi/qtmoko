@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libxtst6 squeeze /media/card/ http://ftp.de.debian.org/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libxtst6 squeeze /media/card/ http://cdn.debian.net/debian/
 
 
 * Minimal rootfs for gta01 jffs2:
@@ -91,18 +91,10 @@ __END_CHROOT__
 Step 3 - add more package repositories
 ========================================
 
-echo "deb http://ftp.de.debian.org/debian squeeze contrib" >> /media/card/etc/apt/sources.list
-echo "deb http://ftp.de.debian.org/debian squeeze non-free" >> /media/card/etc/apt/sources.list
+echo "deb http://cdn.debian.net/debian squeeze contrib" >> /media/card/etc/apt/sources.list
+echo "deb http://cdn.debian.net/debian squeeze non-free" >> /media/card/etc/apt/sources.list
+echo "deb http://security.debian.org/ squeeze/updates main contrib non-free" >> /media/card/etc/apt/sources.list
 echo "deb http://qtmoko.sourceforge.net/debian/ /" >> /media/card/etc/apt/sources.list
-
-Step 3.1 - use geo mirrors
-==========================
-
-* As described here
-
-http://wiki.debian.org/DebianGeoMirror#cdn.debian.net
-
-
 
 Step 4
 ======
@@ -293,12 +285,12 @@ Step 6.5 - omhacks
   and can't be used with > 2.6.34 kernels, so install from sid:
 
 chroot /media/card
-wget http://ftp.de.debian.org/debian/pool/main/o/omhacks/libomhacks0_0.14-1_armel.deb
-wget http://ftp.de.debian.org/debian/pool/main/o/omhacks/omhacks_0.14-1_armel.deb
-dpkg -i libomhacks0_0.14-1_armel.deb
-dpkg -i omhacks_0.14-1_armel.deb
-rm libomhacks0_0.14-1_armel.deb
-rm omhacks_0.14-1_armel.deb
+wget http://cdn.debian.net/debian/pool/main/o/omhacks/libomhacks0_0.15-1_armel.deb
+wget http://cdn.debian.net/debian/pool/main/o/omhacks/omhacks_0.15-1_armel.deb
+dpkg -i libomhacks0_0.15-1_armel.deb
+dpkg -i omhacks_0.15-1_armel.deb
+rm libomhacks0_0.15-1_armel.deb
+rm omhacks_0.15-1_armel.deb
 exit
 
 
@@ -443,25 +435,23 @@ tar -czvf ../qtmoko-debian.tar.gz .
 Step 11 - make ubifs images
 ===========================
 
-* Copy your rootfs dir to /tmp/qtmoko-debian
-
 * Delete contents of boot, because for NAND it's not needed:
 
-rm -rf /tmp/qtmoko-debian/boot/*
+rm -rf /media/card/boot/*
 
 * Remove doc and stuff that is not needed and makes NAND image slower:
 
-find /tmp/qtmoko-debian/usr/share/locale/ -type f -exec rm -f '{}' \;
-find /tmp/qtmoko-debian/usr/share/doc/ -type f -exec rm -f '{}' \;
-find /tmp/qtmoko-debian/usr/share/doc-base/ -type f -exec rm -f '{}' \;
-find /tmp/qtmoko-debian/usr/share/info/ -type f -exec rm -f '{}' \;
-find /tmp/qtmoko-debian/usr/share/man/ -type f -exec rm -f '{}' \;
-rm -rf /tmp/qtmoko-debian/usr/share/sounds/alsa/*
-rm -rf /tmp/qtmoko-debian/usr/share/ssh/blacklist*
+find /media/card/usr/share/locale/ -type f -exec rm -f '{}' \;
+find /media/card/usr/share/doc/ -type f -exec rm -f '{}' \;
+find /media/card/usr/share/doc-base/ -type f -exec rm -f '{}' \;
+find /media/card/usr/share/info/ -type f -exec rm -f '{}' \;
+find /media/card/usr/share/man/ -type f -exec rm -f '{}' \;
+rm -rf /media/card/usr/share/sounds/alsa/*
+rm -rf /media/card/usr/share/ssh/blacklist*
 
 * We need just 3 fonts
 
-cd /tmp/qtmoko-debian/usr/share/fonts/truetype/ttf-dejavu/
+cd /media/card/usr/share/fonts/truetype/ttf-dejavu/
 mv DejaVuSansCondensed-Bold.ttf 1
 mv DejaVuSansCondensed.ttf 2
 mv DejaVuSansMono.ttf 3
@@ -471,7 +461,7 @@ mv 2 DejaVuSansCondensed.ttf
 mv 3 DejaVuSansMono.ttf
 
 
-* Edit the mount for root in /tmp/qtmoko-debian/etc/fstab so that it reads:
+* Edit the mount for root in /media/card/etc/fstab so that it reads:
 
 rootfs  /                auto    defaults,no_chk_data_crc,bulk_read 0 1
 
@@ -490,7 +480,7 @@ vol_name=om-gta02-rootfs
 vol_flags=autoresize
 __END__
 
-mkfs.ubifs -r /tmp/qtmoko-debian -o qtmoko-debian.ubifs -x zlib -m 2048 -e 126976 -c 2047
+mkfs.ubifs -r /media/card -o qtmoko-debian.ubifs -x zlib -m 2048 -e 126976 -c 2047
 ubinize -o qtmoko-debian.ubi -m 2048 -p 128KiB -s 2048 -O 2048 ubinize.cfg
 rm qtmoko-debian.ubifs
 
@@ -499,11 +489,11 @@ Step 12 - jffs2 image (not using anymore)
 
 * Same first 2 steps as with ubi (copy&delete /boot)
 
-* Uncomment the /var/cache/apt mount in /tmp/qtmoko-debian/etc/fstab
+* Uncomment the /var/cache/apt mount in /media/card/etc/fstab
 
 * Make jffs2 image:
 
-mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/tmp/qtmoko-debian
+mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/media/card
 
 
 

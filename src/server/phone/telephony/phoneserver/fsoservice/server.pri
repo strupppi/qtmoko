@@ -16,7 +16,10 @@ HEADERS+=\
         fsorffunctionality.h\
         fsocallprovider.h\
         fsophonecall.h\
-        fsosmssender.h
+        fsosmssender.h\
+        fsosmsreader.h\
+        fsosiminfo.h\
+        fsophonebook.h
 
 SOURCES+=\
         fsoutil.cpp\
@@ -28,5 +31,8 @@ SOURCES+=\
         fsorffunctionality.cpp\
         fsocallprovider.cpp\
         fsophonecall.cpp\
-        fsosmssender.cpp
+        fsosmssender.cpp\
+        fsosmsreader.cpp\
+        fsosiminfo.cpp\
+        fsophonebook.cpp
 

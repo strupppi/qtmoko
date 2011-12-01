@@ -17,8 +17,8 @@
 // Waits for reply to finish if waitForFinished is true.
 // Returns value specified in ok if success.
 // Returns value specified in err if error.
-template <class T, class T2, class T3>
-        int QFSO_EXPORT checkReply(QFsoDBusPendingReply<T, T2, T3> & reply,
+template <class T1, class T2, class T3, class T4, class T5, class T6, class T7, class T8>
+        int QFSO_EXPORT checkReply(QFsoDBusPendingReply<T1, T2, T3, T4, T5, T6, T7, T8> & reply,
                                    bool waitForFinished = true,
                                    int ok = 1,
                                    int err = 0,
@@ -36,7 +36,36 @@ template <class T, class T2, class T3>
     }
     if(reply.isFinished() && reply.isValid())
     {
-        qDebug() << "    dbus call " + reply.methodCall + " ok";
+        // Dump result
+        QString resStr;
+        for(int i = 0; i < reply.count(); i++)
+        {
+            QVariant arg = reply.argumentAt(i);
+            if(arg.canConvert<QDBusArgument>())
+            {
+                QDBusArgument dbusArg = arg.value<QDBusArgument>();
+                QString signature = dbusArg.currentSignature();
+                if(signature == "a{sv}")
+                {
+                    QVariantMap map;
+                    dbusArg >> map;
+                    for(int j = 0; j < map.count(); j++)
+                    {
+                        QString key = map.keys().at(j);
+                        resStr += " " + key + "=" + map.value(key).toString();
+                    }
+                }
+                //else
+                //{
+                    //qWarning() << "checkReply: unknown signature " << signature;
+                //}
+            }
+            else
+            {
+                resStr += " " + arg.toString();
+            }
+        }
+        qDebug() << "    dbus call " + reply.methodCall + " returned" + resStr;
         return ok;
     }
     return unfinished;
@@ -58,13 +87,14 @@ public:
 public:
     QFsoDBusPendingCall pendingCall;            // current call, we can have just one pending call at a time
     bool pendingNotified;                       // true if we already signalled finish
-    const QObject * pendingReceiver;            // object to receive finish signal
+    QObject * pendingReceiver;                  // object to receive finish signal
+    const char * pendingFinished;               // finish method to be called
     int checkInterval;                          // we start checking with small intervals and then make them longer
 
     static QFsoUtil instance;
 
     void watchCall(QFsoDBusPendingCall & call,
-                   const QObject * receiver,
+                   QObject * receiver,
                    const char * finishedMethod);
 
     static void waitForFinished();              // wait for current pending call to be finished
@@ -74,10 +104,11 @@ Q_SIGNALS:
 
 private slots:
     void pendingCheck();
+    void emitFinished(QObject * receiver, const char * finishedMethod, QFsoDBusPendingCall & call);
 };
 
 void QFSO_EXPORT watchFsoCall(QFsoDBusPendingCall & call,
-                              const QObject * receiver,
+                              QObject * receiver,
                               const char * finishedMethod);
 
 #endif // QFSOUTIL_H

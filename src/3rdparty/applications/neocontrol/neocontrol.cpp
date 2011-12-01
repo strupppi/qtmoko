@@ -26,6 +26,9 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     chkMux = new QCheckBox(tr("Multiplexing"), this);
     connect(chkMux, SIGNAL(stateChanged(int)), this, SLOT(muxStateChanged(int)));
 
+    chkFso = new QCheckBox(tr("Use FSO (freesmatphone.org)"), this);
+    connect(chkFso, SIGNAL(stateChanged(int)), this, SLOT(fsoStateChanged(int)));
+
     label = new QLabel(this);
     lineEdit = new QLineEdit(this);
 
@@ -51,6 +54,7 @@ NeoControl::NeoControl(QWidget *parent, Qt::WFlags f)
     layout->addWidget(lineEdit);
     layout->addWidget(chkDeepSleep);
     layout->addWidget(chkMux);
+    layout->addWidget(chkFso);
     layout->addLayout(buttonLayout);
 
     showScreen(NeoControl::ScreenInit);
@@ -148,6 +152,7 @@ void NeoControl::showScreen(NeoControl::Screen scr)
     lineEdit->setVisible(false);
     chkDeepSleep->setVisible(scr == ScreenModem);
     chkMux->setVisible(scr == ScreenModem);
+    chkFso->setVisible(scr == ScreenModem);
     label4->setVisible(scr == ScreenMixer);
     label5->setVisible(scr == ScreenMixer);
     slider4->setVisible(scr == ScreenMixer);
@@ -293,6 +298,73 @@ void NeoControl::muxStateChanged(int state)
     QMessageBox::information(this, tr("Multiplexing"), tr("Settings will be activated after restarting QtExtended with POWER button"));
 }
 
+QString NeoControl::getQpeEnv()
+{
+    QFile f("/opt/qtmoko/qpe.env");
+    if(!f.open(QFile::ReadOnly))
+    {
+        QMessageBox::critical(this, tr("FSO"), tr("Failed to read") + " " + f.fileName());
+        return "";
+    }
+    QString content = f.readAll();
+    f.close();
+    return content;
+}
+
+void NeoControl::setQpeEnv(bool fso)
+{
+    QString content = getQpeEnv();
+    QString fsoStr = "export QTOPIA_PHONE=Fso";
+    QString atStr = "export QTOPIA_PHONE=AT";
+    if(fso)
+    {
+        content = content.replace(atStr, fsoStr);
+    }
+    else
+    {
+        content = content.replace(fsoStr, atStr);
+    }
+    QFile f("/opt/qtmoko/qpe.env");
+    if(!f.open(QFile::WriteOnly))
+    {
+        QMessageBox::critical(this, tr("FSO"), tr("Failed to write to") + " " + f.fileName());
+        return;
+    }
+    f.write(content.toLatin1());
+    f.close();
+    QMessageBox::information(this, tr("FSO"), tr("You have to restart your phone for changes to take place"));
+}
+
+void NeoControl::fsoStateChanged(int)
+{
+    if(updatingModem)
+    {
+        return;
+    }
+    QTimer::singleShot(0, this, SLOT(fsoChange()));
+}
+
+void NeoControl::fsoChange()
+{
+    bool checked = chkFso->isChecked();
+    if(!checked)
+    {
+        QProcess::execute("qterminal", QStringList() << "-c" << "update-rc.d" << "-f" << "fso-deviced" << "remove");
+        setQpeEnv(false);     // disable FSO
+        return;
+    }
+    if(!QFile::exists("/usr/sbin/fsogsmd"))
+    {
+        QMessageBox::information(this, tr("FSO"), tr("FSO packages have to be downloaded and installed. Please make sure you have internet connection now."));
+        QProcess::execute("raptor", QStringList() << "-u" << "-i" << "fso-gsmd-openmoko" << "fso-usaged-openmoko");
+        QMessageBox::information(this, tr("FSO"), tr("QtMoko needs very recent FSO, it will be downloaded from http://activationrecord.net/radekp/pub/libfsogsm.so.0.0.0"));
+        QProcess::execute("qterminal", QStringList() << "-c" << "wget" << "http://activationrecord.net/radekp/pub/libfsogsm.so.0.0.0");
+        QProcess::execute("qterminal", QStringList() << "-c" << "mv" << "libfsogsm.so.0.0.0" << "/usr/lib/cornucopia/libs/fsogsm/libfsogsm.so.0.0.0");
+    }
+    QProcess::execute("qterminal", QStringList() << "-c" << "update-rc.d" << "fso-deviced" << "defaults");
+    setQpeEnv(true);
+}
+
 void NeoControl::updateModem()
 {
     if(screen != ScreenModem)
@@ -313,6 +385,10 @@ void NeoControl::updateModem()
     chkMux->setChecked(multiplexing != "no");
 
     label->setText(text);
+
+    QString qpeEnv = getQpeEnv();
+    QString fsoStr = "export QTOPIA_PHONE=Fso";
+    chkFso->setChecked(qpeEnv.indexOf(fsoStr) >= 0);
 
     updatingModem = false;
     QTimer::singleShot(1000, this, SLOT(updateModem()));

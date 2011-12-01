@@ -392,6 +392,15 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
 
     showScreen(QX::ScreenStarting);
 
+    // Ask to delete X temporary files - hack for recovering from crashed X
+    if(QFile::exists("/tmp/.X0-lock"))
+    {
+        if(QMessageBox::question(this, tr("QX"), tr("The X lock file exists (X is running), delete it and start new X server?"),
+                                                 QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+        {
+            system("rm -rf /tmp/.X*");
+        }
+    }
     if(!QFile::exists("/tmp/.X0-lock"))
     {
         xprocess = new QProcess(this);
@@ -459,6 +468,10 @@ void QX::runApp(QString filename, QString applabel, bool rotate)
     process = new QProcess(this);
     connect(process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(processFinished(int, QProcess::ExitStatus)));
     process->setProcessChannelMode(QProcess::ForwardedChannels);
+
+    // Remove QtMoko LD_LIBRARY_PATH so that X11-QT programs work ok
+    unsetenv("LD_LIBRARY_PATH");
+
     process->start(filename, NULL);
 
     if(!process->waitForStarted())

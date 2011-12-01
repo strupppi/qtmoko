@@ -35,10 +35,16 @@ public:
 
     FsoTelephonyService * service;
 
+    void deviceStatus(QString status);  // called by fso telephony service to report device status
+    void networkStatusChange(const QVariantMap &);
+
 public slots:
     void setCurrentOperator( QTelephony::OperatorMode mode,
                              const QString& id, const QString& technology );
     void requestAvailableOperators();
+
+private slots:
+    void registerFinished(QFsoDBusPendingCall &);
     void getStatusFinished(QFsoDBusPendingCall &);
 };
 

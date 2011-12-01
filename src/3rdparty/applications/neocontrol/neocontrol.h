@@ -62,6 +62,7 @@ private:
     QPushButton *bSave;
     QCheckBox *chkDeepSleep;
     QCheckBox *chkMux;
+    QCheckBox *chkFso;
     QLabel *label4;
     QLabel *label5;
     MixerSlider *slider4;
@@ -70,6 +71,8 @@ private:
     void showScreen(NeoControl::Screen scr);
     int openAlsaMixer();
     void closeAlsaMixer();
+    QString getQpeEnv();
+    void setQpeEnv(bool);
 
 private slots:
     void qvgaClicked();
@@ -81,6 +84,8 @@ private slots:
     void updateSysfs();
     void deepSleepStateChanged(int);
     void muxStateChanged(int);
+    void fsoStateChanged(int);
+    void fsoChange();
 };
 
 #endif // NEOCONTROL_H

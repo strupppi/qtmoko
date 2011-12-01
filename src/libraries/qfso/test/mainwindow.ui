@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="tabInit">
        <attribute name="title">
@@ -327,9 +327,110 @@ Held</string>
          <widget class="QTextEdit" name="tbSmsContent"/>
         </item>
         <item>
+         <widget class="QPushButton" name="bRetrieveTextMessages">
+          <property name="text">
+           <string>Retrieve text messages</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_11"/>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="tabSim">
+       <attribute name="title">
+        <string>SIM</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QPushButton" name="bSimInfo">
+          <property name="text">
+           <string>Sim info</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabPdp">
+       <attribute name="title">
+        <string>PDP</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>APN:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="tbApn">
+          <property name="text">
+           <string>internet</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Username:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="tbUsername"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Password:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="tbPassword"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="bSetCredentials">
+          <property name="text">
+           <string>Set credentials</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="tbActivateContext">
+          <property name="text">
+           <string>Activate context</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="bDeactivateContext">
+          <property name="text">
+           <string>Deactivate context</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabPim">
+       <attribute name="title">
+        <string>Pim</string>
+       </attribute>
+       <widget class="QPushButton" name="bQueryMessages">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>311</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Query messages</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tabLog">
        <attribute name="title">

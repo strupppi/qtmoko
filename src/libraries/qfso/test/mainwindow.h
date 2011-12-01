@@ -14,6 +14,11 @@
 #include "qfsogsmnetwork.h"
 #include "qfsogsmcall.h"
 #include "qfsogsmsms.h"
+#include "qfsopimmessages.h"
+#include "qfsopimmessagequery.h"
+#include "qfsogsmsim.h"
+#include "qfsogsmpdp.h"
+#include "qfsousage.h"
 
 namespace Ui {
     class MainWindow;
@@ -37,12 +42,17 @@ private:
     QFsoGSMNetwork gsmNet;
     QFsoGSMCall gsmCall;
     QFsoGSMSMS gsmSms;
+    QFsoGSMSIM gsmSim;
+    QFsoGSMPDP gsmPdp;
+    QFsoPIMMessages pimMsg;
+    QFsoUsage fsoUsage;
 
     QFsoDBusPendingReply<QString> gsmStatusReply;
     QFsoDBusPendingReply<int> gsmSignalReply;
     QDBusPendingCallWatcher gsmMessageSizeWatcher;
 
     void checkIface(QDBusAbstractInterface *iface);
+    void showVariantMap(QVariantMap map, QString caption);
     void showVariantMapResult(QFsoDBusPendingReply<QVariantMap> reply, QString caption);
 
     template <class T, class T2, class T3>
@@ -60,6 +70,12 @@ Q_SIGNALS:
     void finished(QDBusPendingReply<> *reply);
 
 private slots:
+    void on_bRetrieveTextMessages_clicked();
+    void on_bDeactivateContext_clicked();
+    void on_tbActivateContext_clicked();
+    void on_bSetCredentials_clicked();
+    void on_bSimInfo_clicked();
+    void on_bQueryMessages_clicked();
     void on_tbSmsContent_textChanged();
     void on_bGetStatus_clicked();
     void on_bGetFunctionality_clicked();
