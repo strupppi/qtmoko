@@ -812,15 +812,15 @@ void SimpleExeApplicationLauncher::launch(const QString &app)
 
 /*! \internal */
 QStringList
-SimpleExeApplicationLauncher::applicationExecutable(const QString &app)
+SimpleExeApplicationLauncher::applicationExecutable(const QString &exe)
 {
-    if ( app.startsWith( "/" )) // app is a path, not just in standard location
-        return QStringList() << app;
+    if ( exe.startsWith( "/" )) // app is a path, not just in standard location
+        return QStringList() << exe;
 
     QStringList rv;
     QStringList paths = Qtopia::installPaths();
     for(int ii = 0; ii < paths.count(); ++ii)
-        rv.append(paths.at(ii) + "bin/" + app);
+        rv.append(paths.at(ii) + "bin/" + exe);
 
     return rv;
 }
@@ -1238,12 +1238,19 @@ bool ConsoleApplicationLauncher::canLaunch(const QString &app)
 /*! \internal */
 void ConsoleApplicationLauncher::launch(const QString &app)
 {
-    if(d->apps.find(app) != d->apps.end())
+    QString exe = app;
+    QStringList args;
+    if(app.contains(' ')) {
+        args = app.split(' ');
+        exe = args.takeAt(0);
+    }
+    
+    if(d->apps.find(exe) != d->apps.end())
         return;
 
-    Q_ASSERT(canLaunch(app));
+    Q_ASSERT(canLaunch(exe));
 
-    QStringList exes = applicationExecutable(app);
+    QStringList exes = applicationExecutable(exe);
     for(int ii = 0; ii < exes.count(); ++ii) {
         if(QFile::exists(exes.at(ii))) {
 
@@ -1254,7 +1261,7 @@ void ConsoleApplicationLauncher::launch(const QString &app)
             capp->process->setReadChannelMode(QProcess::ForwardedChannels);
             capp->process->closeWriteChannel();
             qLog(QtopiaServer) << "Starting" << exes.at(ii);
-            capp->process->start(exes.at(ii));
+            capp->process->start(exes.at(ii), args);
 
             QObject::connect(capp->process, SIGNAL(started()),
                              this, SLOT(appStarted()));
@@ -1266,7 +1273,7 @@ void ConsoleApplicationLauncher::launch(const QString &app)
             d->apps.insert(app, capp);
 
             ApplicationIpcRouter *r = qtopiaTask<ApplicationIpcRouter>();
-            if(r) r->addRoute(app, this);
+            if(r) r->addRoute(exe, this);
 
             emit applicationStateChanged(app, Starting);
             return;
