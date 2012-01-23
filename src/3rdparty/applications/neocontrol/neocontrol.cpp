@@ -380,7 +380,15 @@ static void appendValue(QString desc, QString file, QString *text)
     }
     else
     {
-        text->append(f.readAll());
+        QByteArray content = f.readAll();
+        if(content.length() == 0)
+        {
+            text->append('\n');
+        }
+        else
+        {
+            text->append(content);
+        }
         f.close();
     }
 }
@@ -393,15 +401,25 @@ void NeoControl::updateSysfs()
     }
 
     QString text;
-    appendValue(tr("Battery type"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/type", &text);
-    appendValue(tr("  Status"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/status", &text);
-    appendValue(tr("  Voltage"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/voltage_now", &text);
-    appendValue(tr("  Current"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/current_now", &text);
-    appendValue(tr("  Online"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/online", &text);
-    appendValue(tr("  Temperature"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_battery/temp", &text);
-    appendValue(tr("Backup battery type"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_bk_battery/type", &text);
-    appendValue(tr("  Voltage"), "/sys/bus/platform/devices/twl4030-bci-battery/power_supply/twl4030_bci_bk_battery/voltage_now", &text);
-    appendValue(tr("Wifi/BT power"), "/sys/class/leds/tca6507:6/brightness", &text);
+    appendValue(tr("Battery type"), "/sys/class/power_supply/bq27000-battery/type", &text);
+    appendValue(tr("  Status"), "/sys/class/power_supply/bq27000-battery/status", &text);
+    text[text.length() - 1] = ' ';
+    appendValue(tr("  Present"), "/sys/class/power_supply/bq27000-battery/present", &text);
+    appendValue(tr("  Capacity"), "/sys/class/power_supply/bq27000-battery/capacity", &text);
+    appendValue(tr("  Current now"), "/sys/class/power_supply/bq27000-battery/current_now", &text);
+    appendValue(tr("  Voltage now"), "/sys/class/power_supply/bq27000-battery/voltage_now", &text);
+    //appendValue(tr("  Time to empty avg"), "/sys/class/power_supply/bq27000-battery/time_to_empty_avg", &text);
+    appendValue(tr("  Time to empty now"), "/sys/class/power_supply/bq27000-battery/time_to_empty_now", &text);
+    appendValue(tr("  Time to full now"), "/sys/class/power_supply/bq27000-battery/time_to_full_now", &text);
+    appendValue(tr("  Charge full"), "/sys/class/power_supply/bq27000-battery/charge_full", &text);
+    appendValue(tr("  Charge now"), "/sys/class/power_supply/bq27000-battery/charge_now", &text);
+    appendValue(tr("  Cycle count"), "/sys/class/power_supply/bq27000-battery/cycle_count", &text);
+    appendValue(tr("  Energy now"), "/sys/class/power_supply/bq27000-battery/energy_now", &text);
+    appendValue(tr("  Temperature"), "/sys/class/power_supply/bq27000-battery/temp", &text);
+    text[text.length() - 1] = ' ';
+    appendValue(tr("  Type"), "/sys/class/power_supply/bq27000-battery/technology", &text);
+    //appendValue(tr("  Technology"), "/sys/class/power_supply/bq27000-battery/type", &text);
+    appendValue(tr("  Charge full design"), "/sys/class/power_supply/bq27000-battery/charge_full_design", &text);
     label->setText(text);
 
     QTimer::singleShot(1000, this, SLOT(updateSysfs()));
