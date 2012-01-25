@@ -31,7 +31,7 @@ LANGUAGES := $(shell ls i18n/ | xargs echo | sed 's/ /,/g')
 
 # Device defaults to neo, but can be set from the calling environment as well:
 # QTMOKO_DEVICE=<device> dpkg-buildpackage
-QTMOKO_DEVICE ?= neo
+QTMOKO_DEVICE ?= gta04
 ifeq (neo,$(QTMOKO_DEVICE))
   QTMOKO_DEVICE_SHORTDESC := Neo FreeRunner
 else ifeq (gta04,$(QTMOKO_DEVICE))
