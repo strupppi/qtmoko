@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,ppp,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libxtst6 squeeze /media/card/ http://cdn.debian.net/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill squeeze /media/card/ http://cdn.debian.net/debian/
 
 Step 2
 ======
@@ -95,8 +95,6 @@ echo g_ether > /media/card/etc/modules
 echo ppp_generic >> /media/card/etc/modules
 echo joydev >> /media/card/etc/modules
 echo hso >> /media/card/etc/modules
-
-* Edit /media/card/etc/ppp/options and replace "auth" with "noauth"
 
 * Configure bluez4 for handsfreee calls, otherwise there is no sounds:
 
@@ -267,10 +265,10 @@ git submodule update --init
 * Install it
 
 chroot /media/card/
-wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko_37-1_armel.deb
-dpkg -i qtmoko_37-1_armel.deb
-update-rc.d qtmoko defaults
-rm qtmoko_37-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_38-1_armel.deb
+dpkg -i qtmoko-gta04_38-1_armel.deb
+update-rc.d qtmoko-gta04 defaults
+rm qtmoko-gta04_38-1_armel.deb
 exit
 
 
@@ -321,6 +319,18 @@ update-rc.d -f bluetooth remove
 exit
 
 
+Step 9.3 - Install libts from lindi
+===================================
+
+* It is needed for more recent kernels
+
+chroot /media/card
+wget http://lindi.iki.fi/lindi/tslib/libts-0.0-0_1.0-8lindi1_armel.deb
+dpkg -i libts-0.0-0_1.0-8lindi1_armel.deb
+rm libts-0.0-0_1.0-8lindi1_armel.deb
+exit
+
+
 Step 9.5 - remove bash history
 ==============================
 
@@ -345,8 +355,8 @@ Step 10 - release tarball
 cd /media/card
 tar -czvf ../qtmoko-debian.tar.gz .
 
-Step 11 - make ubifs images
-===========================
+Step 11 - make ubifs images - not using yet
+===========================================
 
 * Delete contents of boot, because for NAND it's not needed:
 
@@ -397,19 +407,67 @@ mkfs.ubifs -r /media/card -o qtmoko-debian.ubifs -x zlib -m 2048 -e 126976 -c 20
 ubinize -o qtmoko-debian.ubi -m 2048 -p 128KiB -s 2048 -O 2048 ubinize.cfg
 rm qtmoko-debian.ubifs
 
-Step 12 - jffs2 image (not using anymore)
-=========================================
+Step 12 - jffs2
+===============
 
 * Same first 2 steps as with ubi (copy&delete /boot)
 
-* Uncomment the /var/cache/apt mount in /media/card/etc/fstab
+* Create tarbal for NAND:
 
-* Make jffs2 image:
+tar -czvf ../qtmoko-debian-nand.tar.gz .
 
-mkfs.jffs2 --pad=0x700000 -o qtmoko-debian.jffs2 -e 0x20000 -n -d/media/card
+* You will need bootloader script with bootmenu, you can find it under
+  devices/gta04/boot. The script is generated with:
+
+mkimage -A arm -O linux -a 0 -e 0 -T script -C none -n "GTA04 Boot Script" -d 
+boot.scr.in boot.scr
+
+* You will need uImage with cmdline compiled with root on NAND, so replace the
+  part with root on /dev/mmcblk02 with root=/dev/mtdblock4 rootfstype=jffs2 rw
+  in kernel config and make new kernel package. You also have to enable JFFS2
+  filesystem.
+
+* Boot GTA04 from SD card
+
+* Write kernel to NAND (based on instructions from
+  http://elinux.org/BeagleBoardNAND):
+
+flash_eraseall /dev/mtd3
+nandwrite -p /dev/mtd3 uImage   # uImage is the one with root=/dev/mtdblock4
+
+* Write rootfs to NAND:
+
+flash_eraseall -j /dev/mtd4
+mount -t jffs2 /dev/mtdblock4 /mnt
+cd /mnt
+tar xzvpf qtmoko-debian-nand.tar.gz
+
+* Uncomment the /var/cache/apt mount in /mnt/etc/fstab
+
+* Edit the mount for root in /mnt/etc/fstab so that it reads:
+
+/dev/mtdblock4  /       jffs2   rw,noatime      1  1 
+
+* Unmount NAND:
+
+cd /
+sync
+umount /mnt
+
+* Write boot.scr with bootmenu to root of FAT boot partition
+
+* Reboot and select NAND from the bootmenu
 
 
+Step 13 - generate Packages.gz for debian repository
+====================================================
 
+* We have debian repository at http://qtmoko.sourceforge.net/debian/ After you
+  upload packages there (using filezilla, host is frs.sourceforge.net user is
+  radekp,qtmoko and directory is /home/project-web/qtmoko/htdocs/debian) you
+  have to generate Packages.gz:
+
+dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
 
 
 Boot speedup
