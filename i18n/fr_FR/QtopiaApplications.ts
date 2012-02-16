@@ -264,7 +264,7 @@
     </message>
     <message>
         <source>World Time</source>
-        <translation>Temps dans le Monde</translation>
+        <translation>Heure dans le Monde</translation>
     </message>
 </context>
 </TS>
