@@ -47,7 +47,10 @@ oVoiceCallManager("org.ofono", modemDbusPath, QDBusConnection::systemBus(),
 , modemProperties()
 , netRegProperties()
 , voiceCallManagerProperties()
+, phoneVs("/Communications/Calls")
 {
+    connect(&phoneVs, SIGNAL(contentsChanged()), this, SLOT(phoneVsChanged()));
+
     connect(&oModem, SIGNAL(PropertyChanged(const QString, const QDBusVariant)),
             this,
             SLOT(modemPropertyChanged(const QString, const QDBusVariant)));
@@ -149,6 +152,13 @@ void OFonoTelephonyService::poweredFinished(QOFonoDBusPendingCall & call)
     if (!checkReply(reply)) {
         return;
     }
+    // Disable UMTS to avoid modem usb disconnects. Check this for details:
+    // http://lists.goldelico.com/pipermail/gta04-owner/2012-February/001563.html
+    QOFonoDBusPendingReply <> reply2 =
+        oRadio.SetProperty("TechnologyPreference", QDBusVariant("gsm"));
+    if (!checkReply(reply2)) {
+        qWarning() << "Failed to set TechnologyPreference to gsm";
+    }
 }
 
 // Returns false if interface is not yet available (e.g. netReg interface is
@@ -159,6 +169,12 @@ bool OFonoTelephonyService::interfaceAvailable(QOFonoDbusAbstractInterface *
 {
     QStringList interfaces = modemProperties["Interfaces"].toStringList();
     return interfaces.contains(interface->interface());
+}
+
+void OFonoTelephonyService::phoneVsChanged()
+{
+    int num = phoneVs.value("MissedCalls").toInt();
+    llIndicatorMissedCallsChanged(num);
 }
 
 void OFonoTelephonyService::modemPropertyChanged(const QString & name,
@@ -193,18 +209,19 @@ void OFonoTelephonyService::voiceCallAdded(const QDBusObjectPath & path,
                                            const QVariantMap & properties)
 {
     qDebug() << "voiceCallAdded" << path.path();
-    llIndicatorsVoiceCallAdded();
 
-    if (properties.value("State") == "dialing") {   // Dialed calls are already registered
+    QString state = properties.value("State").toString();
+    if (state == "dialing") {   // Dialed calls are already registered
         return;
     }
+    llIndicatorsIncomingVoiceCallAdded();
+
     OFonoPhoneCall *call = new OFonoPhoneCall(this, NULL, "Voice", path.path());
     call->setNumber(properties.value("LineIdentification").toString());
-    call->setOFonoState(properties.value("State").toString());
+    call->setOFonoState(state);
 }
 
 void OFonoTelephonyService::voiceCallRemoved(const QDBusObjectPath & path)
 {
     qDebug() << "voiceCallRemoved" << path.path();
-    llIndicatorsVoiceCallRemoved();
 }
