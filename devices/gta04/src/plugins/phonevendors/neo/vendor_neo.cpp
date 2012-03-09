@@ -21,6 +21,7 @@
 #include <qmodemindicators.h>
 #include <qatutils.h>
 #include <qatresultparser.h>
+#include <qmodemllindicators.h>
 #include <QProcess>
 #include <QTimer>
 #include <stdio.h>
@@ -62,6 +63,7 @@ bool NeoCallProvider::hasRepeatingRings() const
 
 void NeoCallProvider::ringing(const QString &, const QString &, uint)
 {
+    llIndicatorsRinging();      // turn on green led
     doClcc();                   // start CLCC polling
 }
 
@@ -145,6 +147,7 @@ NeoModemService::NeoModemService
 
     chat("AT_OSQI=1");          // unsolicited reporting of antenna signal strength, e.g. "_OSIGQ: 3,0"
     chat("AT_OPCMENABLE=1");    // enable the PCM interface for voice calls
+    chat("AT_OPSYS=0,2");       // disable UMTS, use only GSM
 }
 
 NeoModemService::~NeoModemService()
