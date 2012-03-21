@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill squeeze /media/card/ http://cdn.debian.net/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill,ntpdate squeeze /media/card/ http://cdn.debian.net/debian/
 
 Step 2
 ======
@@ -274,10 +274,10 @@ git submodule update --init
 * Install it
 
 chroot /media/card/
-wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_40-1_armel.deb
-dpkg -i qtmoko-gta04_40-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_41-1_armel.deb
+dpkg -i qtmoko-gta04_41-1_armel.deb
 update-rc.d qtmoko-gta04 defaults
-rm qtmoko-gta04_40-1_armel.deb
+rm qtmoko-gta04_41-1_armel.deb
 exit
 killall qpe.sh  # recent versions start qtmoko after install, so kill it
 
@@ -291,7 +291,7 @@ http://github.com/radekp/linux-2.6/
 
 * Checkout branch for your qtmoko version:
 
-git checkout v3.2-gta04-qtmoko-v39
+git checkout v3.2-gta04-qtmoko-v41
 
 * Create package in buildhost:
 
@@ -304,9 +304,9 @@ dpkg-buildpackage
 * Install kernel image:
 
 chroot /media/card
-wget http://qtmoko.sourceforge.net/debian/gta04/linux-image-3.2-qtmoko-gta04_39-1_armel.deb
-dpkg -i linux-image-3.2-qtmoko-gta04_39-1_armel.deb
-rm linux-image-3.2-qtmoko-gta04_39-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/linux-image-3.2-qtmoko-gta04_41-1_armel.deb
+dpkg -i linux-image-3.2-qtmoko-gta04_41-1_armel.deb
+rm linux-image-3.2-qtmoko-gta04_41-1_armel.deb
 exit
 
 
@@ -363,10 +363,10 @@ Step 10 - release tarball
 =========================
 
 cd /media/card
-tar -czvf ../qtmoko-debian-gta04-v40.tar.gz .
+tar -czvf ../qtmoko-debian-gta04-v41.tar.gz .
 
-Step 11 - make ubifs images - not using yet
-===========================================
+Step 11 - make ubifs image
+==========================
 
 * Delete contents of boot, because for NAND it's not needed:
 
@@ -405,22 +405,40 @@ cd /root
 cat > ubinize.cfg <<__END__
 [ubifs]
 mode=ubi
-image=qtmoko-debian.ubifs
+image=ubifs.img
 vol_id=0
-vol_size=230MiB
+vol_size=200MiB
 vol_type=dynamic
-vol_name=om-gta02-rootfs
+vol_name=rootfs
 vol_flags=autoresize
 __END__
 
-mkfs.ubifs -r /media/card -o qtmoko-debian.ubifs -x zlib -m 2048 -e 126976 -c 2047
-ubinize -o qtmoko-debian.ubi -m 2048 -p 128KiB -s 2048 -O 2048 ubinize.cfg
-rm qtmoko-debian.ubifs
 
-Step 12 - jffs2
-===============
+mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 2047 -o ubifs.img
+ubinize -o qtmoko-debian-gta04-v41.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
+rm ubifs.img
+
+* To install it on the device you need to boot from SD and:
+
+flash_eraseall /dev/mtd4
+ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v41.ubi
+
+* To check that it's mountable:
+
+ubiattach /dev/ubi_ctrl -m 4
+mount -t ubifs ubi0:rootfs /mnt/ubifs/
+
+
+Step 12 - jffs2 - not using anymore
+===================================
 
 * Same first 2 steps as with ubi (copy&delete /boot)
+
+* Create jffs2 image: 
+
+cd /media
+mkfs.jffs2 -o qtmoko-debian-gta04-nosum-v41.jffs2 -e 0x20000 -n -d/media/card
+sumtool -n -e 0x20000 -p -i qtmoko-debian-gta04-nosum-v41.jffs2 -o qtmoko-debian-gta04-v41.jffs2
 
 * Create tarbal for NAND:
 
