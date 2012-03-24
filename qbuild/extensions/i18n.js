@@ -235,7 +235,7 @@ function i18n_handle_translatables()
     if ( !string_language.isEmpty() ) {
         // Now do a -pluralonly run for the string language
         rule.commands.append("#(ve)grep -v '^TRANSLATIONS' translatables.pro >translatables2.pro");
-        var ts = srcdir+"/"+trtarget+"-"+string_language.strValue()+".ts";
+        var ts = trndir+"/"+trtarget+"-"+string_language.strValue()+".ts";
         rule.commands.append("#(ve)echo \"TRANSLATIONS+="+ts+"\" >>translatables2.pro");
         command = "$$HOST_QT_BINS/lupdate "+lupdate_silent+"-pluralonly $$path(translatables2.pro,generated)";
         rule.commands.append("#(eh)echo $$shellQuote("+command+")");
