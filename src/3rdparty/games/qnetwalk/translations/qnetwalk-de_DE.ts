@@ -1,4 +1,6 @@
-<!DOCTYPE TS><TS language="es">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>MainWindow</name>
     <message>
@@ -7,23 +9,23 @@
     </message>
     <message>
         <source>&amp;Sound</source>
-        <translation>&amp;Sonido</translation>
+        <translation>&amp;Sound</translation>
     </message>
     <message>
         <source>&amp;New</source>
-        <translation>&amp;Nuevo</translation>
+        <translation>&amp;Neues Spiel</translation>
     </message>
     <message>
         <source>&amp;Highscores</source>
-        <translation>&amp;Mejores puntuaciones</translation>
+        <translation>&amp;Bestenliste</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation>&amp;Salir</translation>
+        <translation>B&amp;eenden</translation>
     </message>
     <message>
         <source>&amp;Novice</source>
-        <translation>&amp;Principiante</translation>
+        <translation>Anfä&amp;nger</translation>
     </message>
     <message>
         <source>&amp;Amateur</source>
@@ -31,101 +33,101 @@
     </message>
     <message>
         <source>&amp;Expert</source>
-        <translation>&amp;Experto</translation>
+        <translation>&amp;Experte</translation>
     </message>
     <message>
         <source>&amp;Master</source>
-        <translation>&amp;Maestro</translation>
+        <translation>&amp;Meister</translation>
     </message>
     <message>
         <source>&amp;Rules of Play</source>
-        <translation>&amp;Reglas del juego</translation>
+        <translation>&amp;Spielregeln</translation>
     </message>
     <message>
         <source>&amp;Homepage</source>
-        <translation>&amp;Página web</translation>
+        <translation>&amp;Homepage</translation>
     </message>
     <message>
         <source>&amp;About QNetWalk</source>
-        <translation>&amp;Acerca de QNetWalk</translation>
+        <translation>&amp;Über QNetWalk</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
-        <translation>Acerca de &amp;Qt</translation>
+        <translation>Über &amp;Qt</translation>
     </message>
     <message>
         <source>&amp;Game</source>
-        <translation>&amp;Juego</translation>
+        <translation>&amp;Spiel</translation>
     </message>
     <message>
         <source>&amp;Skill</source>
-        <translation>&amp;Nivel</translation>
+        <translation>Schwierigkeits&amp;grad</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;Ayuda</translation>
+        <translation>&amp;Hilfe</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation>Nuevo juego</translation>
+        <translation>Neues Spiel</translation>
     </message>
     <message>
         <source>Show Highscores</source>
-        <translation>Mostrar las mejores puntuaciones</translation>
+        <translation>Zeige Bestenliste</translation>
     </message>
     <message>
         <source>Highscores</source>
-        <translation>Mejores puntuaciones</translation>
+        <translation>Bestenliste</translation>
     </message>
     <message>
         <source>&lt;h3&gt;Highscores</source>
-        <translation>&lt;h3&gt;Mejores puntuaciones</translation>
+        <translation>&lt;h3&gt;Bestenliste</translation>
     </message>
     <message>
         <source>Novices</source>
-        <translation>Principiantes</translation>
+        <translation>Anfänger</translation>
     </message>
     <message>
         <source>Amateurs</source>
-        <translation>Amateurs</translation>
+        <translation>Amateure</translation>
     </message>
     <message>
         <source>Experts</source>
-        <translation>Expertos</translation>
+        <translation>Experten</translation>
     </message>
     <message>
         <source>Masters</source>
-        <translation>Maestros</translation>
+        <translation>Meister</translation>
     </message>
     <message>
         <source>&lt;b&gt;Scores</source>
-        <translation>&lt;b&gt;Puntuaciones</translation>
+        <translation>&lt;b&gt;Punktzahl</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>Fehler</translation>
     </message>
     <message>
         <source>Could not launch your web browser.
 Please, check the BROWSER environment&apos;s variable.</source>
-        <translation>No se ha podido ejecutar el navegador web.
-Por favor, revisa la variable de entorno BROWSE.</translation>
+        <translation>Der Web-Browser konnte nicht gestartet werden.
+Bitte überprüfen Sie die Umgebungsvariable BROWSER.</translation>
     </message>
     <message>
         <source>Rules of Play</source>
-        <translation>Reglas del juego</translation>
+        <translation>Spielregeln</translation>
     </message>
     <message>
         <source>About QNetWalk</source>
-        <translation>Acerca de QNetWalk</translation>
+        <translation>Über QNetWalk</translation>
     </message>
     <message>
         <source>&lt;h3&gt;About QNetWalk 1.2&lt;/h3&gt;&lt;p&gt;QNetWalk is a free Qt-version of the NetWalk game.&lt;p&gt;Copyright (C) 2004, Andi Peredri&lt;p&gt;Homepage: http://qt.osdn.org.ua/qnetwalk.html&lt;p&gt;This program is distributed under the terms of the GNU General Public License.</source>
-        <translation>&lt;h3&gt;Acerca de QNetWalk 1.2&lt;/h3&gt;&lt;p&gt;QNetWalk es una versión libre del juego NetWalk para la plataforma Qt.&lt;p&gt;Copyright (C) 2004, Andi Peredri&lt;p&gt;Página web: http://qt.osdn.org.ua/qnetwalk.html&lt;p&gt;Este programa se distribuye según los términos de la licencia GNU General Public License.</translation>
+        <translation>&lt;h3&gt;Über QNetWalk 1.2&lt;/h3&gt;&lt;p&gt;QNetWalk is eine freie QT-Version des Spiels Netwalk.&lt;p&gt;Copyright (C) 2004, Andi Peredri&lt;p&gt;Homepage: http://qt.osdn.org.ua/qnetwalk.html&lt;p&gt;Dieses Programm wird unter den Bedingungen der GNU General Public License veröffentlicht.</translation>
     </message>
     <message>
         <source>&lt;h3&gt;Rules of Play&lt;/h3&gt;&lt;p&gt;You are the system administrator and your goal is to connect each computer to the central server.&lt;p&gt;Click the right mouse&apos;s button for turning the cable in a clockwise direction, and left mouse&apos;s button for turning the cable in a counter-clockwise direction.&lt;p&gt;Start the LAN with as few turns as possible!</source>
-        <translation>&lt;h3&gt;Reglas del juego&lt;/h3&gt;&lt;p&gt;Eres el administrador del sistema y tu misión consiste en conectar todos los ordenadores al servidor principal.&lt;p&gt;Usa el botón derecho del ratón para girar los cables en el sentido de las agujas del reloj, y el izquierdo para girarlos en sentido inverso.&lt;p&gt;¡Construye la red local en el menor número de pasos posible!</translation>
+        <translation>&lt;h3&gt;Spielregeln&lt;/h3&gt;&lt;p&gt;Sie sind ein System-Administrator und Ihre Aufgabe ist es, jeden Computer mit dem zentralen Server zu verbinden.&lt;p&gt;Klicken Sie mit der rechten Maustaste, um ein Kabel im Uhrzeigersinn zu drehen, und mit der linken Maustaste, um ein Kabel gegen den Uhrzeigersinn zu drehen.&lt;p&gt;Richten Sie das LAN in möglichst wenigen Zügen ein!</translation>
     </message>
     <message>
         <source>Options</source>
