@@ -4,33 +4,33 @@
 <context>
     <name>ParaShoot</name>
     <message>
-        <location filename="interface.cpp" line="73"/>
+        <location filename="../interface.cpp" line="73"/>
         <source>ParaShoot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="interface.cpp" line="76"/>
+        <location filename="../interface.cpp" line="76"/>
         <source>New Game</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="interface.cpp" line="77"/>
+        <location filename="../interface.cpp" line="77"/>
         <source>Start a new game</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="interface.cpp" line="95"/>
+        <location filename="../interface.cpp" line="95"/>
         <source>Press select
 for new game</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="interface.cpp" line="155"/>
+        <location filename="../interface.cpp" line="155"/>
         <source>     Level: %1       Score: %2   </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="interface.cpp" line="210"/>
+        <location filename="../interface.cpp" line="210"/>
         <source>GAME OVER!
 Your Score: %1
 Parachuters Killed: %2
@@ -39,7 +39,7 @@ Accuracy: %4%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="interface.cpp" line="232"/>
+        <location filename="../interface.cpp" line="232"/>
         <source>GAME OVER!
 Your Score: %1
 Parachuters Killed: %2
