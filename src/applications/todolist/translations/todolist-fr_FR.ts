@@ -265,6 +265,7 @@ a partir de la fin</translation>
             <numerusform>%n jours
         
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -273,6 +274,7 @@ a partir de la fin</translation>
         <translation type="unfinished">
             <numerusform>%n heures
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -281,6 +283,7 @@ a partir de la fin</translation>
         <translation type="unfinished">
             <numerusform>%n minutes        
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
