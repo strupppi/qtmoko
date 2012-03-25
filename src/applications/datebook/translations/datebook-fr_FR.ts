@@ -208,6 +208,7 @@
         <translation type="unfinished">
             <numerusform>tous les%1 jours
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -220,6 +221,7 @@
         <translation type="unfinished">
             <numerusform>toutes les %2 semaines, le %1
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -238,6 +240,7 @@
         <translation type="unfinished">
             <numerusform>tous les %1 mois
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -250,6 +253,7 @@
         <translation type="unfinished">
             <numerusform>tous les %1 ans
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -910,6 +914,7 @@ a partir de la fin</translation>
         <translation type="unfinished">
             <numerusform>%n jours
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -918,6 +923,7 @@ a partir de la fin</translation>
         <translation type="unfinished">
             <numerusform>%n heures
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -926,6 +932,7 @@ a partir de la fin</translation>
         <translation type="unfinished">
             <numerusform>%n minutes
         </numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
