@@ -255,7 +255,7 @@ function i18n_handle_translatables()
 
     // The rule to install .qm files
     rule = project.rule();
-    var licmd = linstall+" $$TRTARGET $$shellQuote($$TRANSLATIONS) $$QTOPIA_IMAGE/i18n $$TS_DIR";
+    var licmd = linstall+" $$TRTARGET $$shellQuote($$TRANSLATIONS) $$QTOPIA_IMAGE/i18n "+trndir;
     rule.commands.append("#(eh)echo $$shellQuote("+licmd+")");
     rule.commands.append("#(e)"+licmd);
     i18n_depend_on_qt(rule.name);
