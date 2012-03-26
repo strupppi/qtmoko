@@ -100,7 +100,23 @@
     <message>
         <source>File Manager</source>
         <comment>application header</comment>
-        <translation>Gestionnaire de Fichiers</translation>
+        <translation type="obsolete">Gestionnaire de Fichiers</translation>
+    </message>
+    <message>
+        <source>File Manager</source>
+        <translation type="unfinished">Gestionnaire de Fichiers</translation>
+    </message>
+    <message>
+        <source>Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
