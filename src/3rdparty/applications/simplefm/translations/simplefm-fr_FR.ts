@@ -104,19 +104,19 @@
     </message>
     <message>
         <source>File Manager</source>
-        <translation type="unfinished">Gestionnaire de Fichiers</translation>
+        <translation>Gestionnaire de Fichiers</translation>
     </message>
     <message>
         <source>Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin</translation>
     </message>
     <message>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <source>Root</source>
-        <translation type="unfinished"></translation>
+        <translation>Racine</translation>
     </message>
 </context>
 </TS>
