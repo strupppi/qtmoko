@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill,ntpdate squeeze /media/card/ http://cdn.debian.net/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill,ntpdate,libspeex1,libspeexdsp1 squeeze /media/card/ http://cdn.debian.net/debian/
 
 Step 2
 ======
@@ -93,7 +93,7 @@ Step 4
   between mass storage, ppp_generic is not needed for people not using GPRS,
   joydev is used in qtmaze for accelerometers, hso is for UMTS.
 
-echo g_ether > /media/card/etc/modules
+echo "g_ether dev_addr=09:0l:de:11:c0:04" > /media/card/etc/modules
 echo joydev >> /media/card/etc/modules
 echo hso >> /media/card/etc/modules
 echo ledtrig-timer >> /media/card/etc/modules
@@ -202,13 +202,6 @@ ln -s libts-0.0.so.0 libts-1.0.so.0
 
 cd /media/card/dev
 rm -rf .udev
-
-* Remove udev from startup scripts, we have devtmpfs in kernel and it's faster:
-
-chroot /media/card
-update-rc.d -f udev-mtab remove
-update-rc.d -f udev remove
-exit
 
 * Remove /etc/network/run and do make dir /etc/network/run
   Otherwise fstab mounting will fail for this directory
@@ -321,12 +314,13 @@ make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm modules
 make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm modules_install INSTALL_MOD_PATH=GTA04
 find  GTA04/lib/modules -name *.ko -exec /opt/toolchains/arm920t-eabi/bin/arm-linux-strip -R .not -R .comment --strip-unneeded {} \;
 
-Step 9.2 - Remove bluetooth from init scripts until it works good
-=================================================================
+Step 9.2 - Setup bluetooth uarts
+================================
 
-chroot /media/card
-update-rc.d -f bluetooth remove
-exit
+* Bluetooth is on /dev/ttyO0 serial port and we need to run hciattach to have
+  bluetooth working. For more info see http://projects.goldelico.com/p/gta04-kernel/page/Wireless/
+
+echo "-s 115200 /dev/ttyO0 any 115200 flow" > /media/card/etc/bluetooth/uart
 
 
 Step 9.3 - Install libts from lindi
@@ -407,20 +401,19 @@ cat > ubinize.cfg <<__END__
 mode=ubi
 image=ubifs.img
 vol_id=0
-vol_size=200MiB
+vol_size=492MiB
 vol_type=dynamic
 vol_name=rootfs
 vol_flags=autoresize
 __END__
 
 
-mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 2047 -o ubifs.img
-ubinize -o qtmoko-debian-gta04-v41.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
+mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 4007 -o ubifs.img
+ubinize -o qtmoko-debian-gta04-v42.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
 rm ubifs.img
 
 * To install it on the device you need to boot from SD and:
 
-flash_eraseall /dev/mtd4
 ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v41.ubi
 
 * To check that it's mountable:

@@ -1352,7 +1352,7 @@ void QMplayer::play(QStringList & args)
 
     if(useBluetooth < 0)
     {
-        QFile f("/etc/asound.conf");
+        QFile f("/home/root/.asoundrc");
         if(f.exists() && f.open(QIODevice::ReadOnly | QIODevice::Text))
         {
             QByteArray text = f.readAll();
