@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,timeout,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill,ntpdate squeeze /media/card/ http://cdn.debian.net/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg62,libmng1,libtiff4,libxtst6,sqlite3,rfkill,ntpdate squeeze /media/card/ http://cdn.debian.net/debian/
 
 Step 2
 ======
@@ -407,20 +407,19 @@ cat > ubinize.cfg <<__END__
 mode=ubi
 image=ubifs.img
 vol_id=0
-vol_size=200MiB
+vol_size=492MiB
 vol_type=dynamic
 vol_name=rootfs
 vol_flags=autoresize
 __END__
 
 
-mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 2047 -o ubifs.img
-ubinize -o qtmoko-debian-gta04-v41.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
+mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 4007 -o ubifs.img
+ubinize -o qtmoko-debian-gta04-v42.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
 rm ubifs.img
 
 * To install it on the device you need to boot from SD and:
 
-flash_eraseall /dev/mtd4
 ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v41.ubi
 
 * To check that it's mountable:
