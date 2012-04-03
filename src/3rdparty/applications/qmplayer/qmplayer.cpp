@@ -596,7 +596,7 @@ void QMplayer::backClicked()
     }
     else if(screen == QMplayer::ScreenPlay)
     {
-        //showScreen(QMplayer::ScreenFullscreen);
+        showScreen(QMplayer::ScreenFullscreen);
     }
     else if(screen == QMplayer::ScreenStopped)
     {
@@ -908,9 +908,17 @@ bool QMplayer::startMencoder(QString srcFile, QString dstFile)
     args.append("-lavcopts");
     args.append("vcodec=mpeg4:vhq:vbitrate=300:acodec=ac3");
     args.append("-vf");
+#ifdef QT_QWS_NEO
+    args.append("scale=320:240,eq2=1.2:0.5:-0.25,rotate=2");
+#else
     args.append("scale=640:480,eq2=1.2:0.5:-0.25,rotate=2");
+#endif
     args.append("-oac");
     args.append("lavc");
+#ifdef QT_QWS_NEO
+    args.append("-ofps");
+    args.append("15");
+#endif
     args.append("-o");
     args.append(dstFile);
 
@@ -1443,7 +1451,7 @@ void QMplayer::playerStopped()
 
 void QMplayer::setRes(int xy)
 {
-#ifdef QTOPIA
+#ifdef QT_QWS_NEO
     if(xy == 320240 || xy == 640480)
     {
         QFile f("/sys/class/lcd/jbt6k74-lcd/device/resolution");
@@ -1471,9 +1479,37 @@ void QMplayer::setRes(int xy)
 
 bool QMplayer::installMplayer()
 {
-#ifdef QTOPIA
-    QProcess::execute("raptor", QStringList() << "-u" << "-i" << "mplayer");
+#ifdef QT_QWS_NEO
+    if(QMessageBox::question(this, tr("qmplayer"),
+            tr("Install glamo mplayer (YES) or distribution mplayer (NO)?"),
+            QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes)
+    {
+        QDir("/home/root").mkdir(".mplayer");
+        QFile f("/home/root/.mplayer/config");
+        f.open(QFile::WriteOnly);
+        f.write("vo=glamo\n\n[default]\nafm=ffmpeg\nvfm=ffmpeg\n");
+        f.close();
 
+        return download("http://72.249.85.183/radekp/qmplayer/download/mplayer",
+                        "/usr/bin/mplayer", "mplayer", false) &&
+        QFile::setPermissions("/usr/bin/mplayer", QFile::ReadOwner |
+                            QFile::WriteOwner | QFile::ExeOwner |
+                            QFile::ReadUser | QFile::ExeUser |
+                            QFile::ReadGroup | QFile::ExeGroup |
+                            QFile::ReadOther | QFile::ExeOther);
+    }
+    else
+    {
+        QProcess::execute("raptor", QStringList() << "-u" << "-i" << "mplayer");
+
+        QDir("/home/root").mkdir(".mplayer");
+        QFile f("/home/root/.mplayer/config");
+        f.open(QFile::WriteOnly);
+        f.write("vo=fbdev\n\n[default]\nafm=ffmpeg\nvfm=ffmpeg\n");
+        f.close();
+    }
+#elif QT_QWS_GTA04
+    QProcess::execute("raptor", QStringList() << "-u" << "-i" << "mplayer");
     QDir("/home/root").mkdir(".mplayer");
     QFile f("/home/root/.mplayer/config");
     f.open(QFile::WriteOnly);
