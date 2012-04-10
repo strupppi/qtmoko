@@ -3,6 +3,7 @@
 ** This file is part of the Qt Extended Opensource Package.
 **
 ** Copyright (C) 2009 Trolltech ASA.
+** Copyright (C) 2012 Radek Polak.
 **
 ** Contact: Qt Extended Information (info@qtextended.org)
 **
@@ -17,16 +18,18 @@
 **
 ****************************************************************************/
 
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <QFile>
+#include <QTimer>
+#include <QProcess>
+#include <QDateTime>
+#include <QPowerSource>
+#include <QDesktopWidget>
 #include <QtopiaIpcAdaptor>
 #include <QtopiaIpcEnvelope>
 #include <QtopiaServiceRequest>
-#include <QPowerSource>
-#include <QProcess>
-#include <stdio.h>
-#include <stdlib.h>
-#include <QDesktopWidget>
-#include <QTimer>
-
 
 #include "systemsuspend.h"
 
@@ -39,20 +42,20 @@
 class NeoSuspend : public SystemSuspendHandler
 {
 public:
-
-  NeoSuspend();
+    NeoSuspend();
     virtual bool canSuspend() const;
     virtual bool suspend();
     virtual bool wake();
 private:
-    QProcess resumeScript;
+     QProcess resumeScript;
+     QDateTime suspendTime;
 };
 
 QTOPIA_DEMAND_TASK(NeoSuspend, NeoSuspend);
 QTOPIA_TASK_PROVIDES(NeoSuspend, SystemSuspendHandler);
 
 NeoSuspend::NeoSuspend()
-    : resumeScript(this)
+:  resumeScript(this)
 {
 }
 
@@ -63,23 +66,28 @@ bool NeoSuspend::canSuspend() const
 */
     /* Make sure resume script is finished */
     bool ok = (resumeScript.state() == QProcess::NotRunning);
-    
-    if(!ok) {
-        qLog(PowerManagement) << "Cant suspend, resume script is running, state=" << resumeScript.state();
+
+    if (!ok) {
+        qLog(PowerManagement) <<
+            "Cant suspend, resume script is running, state=" << resumeScript.
+            state();
     }
-    
+
     return ok;
 }
 
 bool NeoSuspend::suspend()
 {
-    qLog(PowerManagement)<< __PRETTY_FUNCTION__;
-    
+    qLog(PowerManagement) << __PRETTY_FUNCTION__;
+
     QProcess::execute("before-suspend.sh");
+
+    suspendTime = QDateTime::currentDateTime();
     
     QFile powerStateFile("/sys/power/state");
-    if( !powerStateFile.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Truncate)) {
-        qWarning()<<"File not opened";
+    if (!powerStateFile.
+        open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Truncate)) {
+        qWarning() << "File not opened";
     } else {
         QTextStream out(&powerStateFile);
         out << "mem";
@@ -88,33 +96,54 @@ bool NeoSuspend::suspend()
     return true;
 }
 
+static void writeFile(const char * path, const char * content)
+{
+    QFile f(path);
+    if(!f.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
+        return;
+    }
+    f.write(content);
+    f.close();
+}
+
 bool NeoSuspend::wake()
 {
+    // Check if resume was too fast. If yes, it might be GPS which wakes the
+    // device up and prevents suspend. As a workaround we try to turn the gps
+    // off. For more info see:
+    // http://lists.goldelico.com/pipermail/gta04-owner/2012-April/002184.html
+    QDateTime now = QDateTime::currentDateTime();
+    int secs = suspendTime.secsTo(now);
+    if(secs < 10) {
+        qLog(PowerManagement) << "Resume was too fast, trying to turn off gps";
+        writeFile("/sys/devices/virtual/gpio/gpio145/value", "0");
+        writeFile("/sys/devices/virtual/gpio/gpio145/value", "1");
+    }
+    
 #ifdef Q_WS_QWS
     QWSServer::instance()->refresh();
 #endif
-    QtopiaIpcEnvelope("QPE/Card", "mtabChanged()" ); // might have changed while asleep
+    QtopiaIpcEnvelope("QPE/Card", "mtabChanged()"); // might have changed while asleep
 
-   //screenSaverActivate uses QTimer which depends on hwclock update
+    //screenSaverActivate uses QTimer which depends on hwclock update
     //when the device wakes up. The clock update is another event in the
     //Qt event loop (see qeventdispatcher_unix.cpp. We have to call
     //processEvents to give Qt a chance to sync its internal timer with
     //the hw clock
 #ifdef Q_WS_QWS
     QCoreApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
-    QWSServer::screenSaverActivate( false );
+    QWSServer::screenSaverActivate(false);
     {
-        QtopiaIpcEnvelope("QPE/Card", "mtabChanged()" ); // might have changed while asleep
+        QtopiaIpcEnvelope("QPE/Card", "mtabChanged()"); // might have changed while asleep
         QtopiaServiceRequest e("QtopiaPowerManager", "setBacklight(int)");
-        e << -3; // Force on
+        e << -3;                // Force on
         e.send();
-        QtopiaIpcEnvelope("QPE/NetworkState", "updateNetwork()"); //might have changed
+        QtopiaIpcEnvelope("QPE/NetworkState", "updateNetwork()");   //might have changed
     }
 #endif
 
     /* No waitForFinished after start, because we want the command to complete
        in the background */
     resumeScript.start("after-resume.sh");
-
     return true;
 }

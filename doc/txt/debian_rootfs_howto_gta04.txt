@@ -42,6 +42,7 @@ mkdir /media/card/mnt/p1
 mkdir /media/card/mnt/p2
 mkdir /media/card/mnt/p3
 mkdir /media/card/media/card
+mkdir /media/card/media/p1
 echo "neo" > /media/card/etc/hostname
 echo "127.0.0.1 neo" >> /media/card/etc/hosts
 cat > /media/card/etc/network/interfaces <<__END__
@@ -58,7 +59,7 @@ iface usb0 inet static
 __END__
 cat > /media/card/etc/fstab << __END__
 rootfs  /                auto    defaults,errors=remount-ro,noatime 0 1
-/dev/mmcblk0p1 /boot     auto  defaults                           0 0
+/dev/mmcblk0p1 /media/p1   auto  defaults                           0 0
 /dev/mmcblk0p3 /media/card auto  defaults                           0 0
 /dev/mmcblk0p4 swap      swap    defaults                           0 0
 proc    /proc            proc    defaults                           0 0
@@ -93,10 +94,15 @@ Step 4
   between mass storage, ppp_generic is not needed for people not using GPRS,
   joydev is used in qtmaze for accelerometers, hso is for UMTS.
 
-echo "g_ether dev_addr=09:0l:de:11:c0:04" > /media/card/etc/modules
+echo g_ether > /media/card/etc/modules
 echo joydev >> /media/card/etc/modules
 echo hso >> /media/card/etc/modules
 echo ledtrig-timer >> /media/card/etc/modules
+
+* Make the MAC address of g_ether fixed instead of random, so that network
+  manager can be configured:
+  
+echo "options g_ether host_addr=46:0d:9e:67:69:eb dev_addr=b6:c8:ab:ac:44:7f" >> /media/card/etc/modprobe.d/options
 
 * Configure bluez4 for handsfreee calls, otherwise there is no sounds:
 
@@ -267,10 +273,10 @@ git submodule update --init
 * Install it
 
 chroot /media/card/
-wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_41-1_armel.deb
-dpkg -i qtmoko-gta04_41-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_44-1_armel.deb
+dpkg -i qtmoko-gta04_44-1_armel.deb
 update-rc.d qtmoko-gta04 defaults
-rm qtmoko-gta04_41-1_armel.deb
+rm qtmoko-gta04_44-1_armel.deb
 exit
 killall qpe.sh  # recent versions start qtmoko after install, so kill it
 
@@ -284,7 +290,7 @@ http://github.com/radekp/linux-2.6/
 
 * Checkout branch for your qtmoko version:
 
-git checkout v3.2-gta04-qtmoko-v41
+git checkout v3.2-gta04-qtmoko-v44
 
 * Create package in buildhost:
 
@@ -297,9 +303,9 @@ dpkg-buildpackage
 * Install kernel image:
 
 chroot /media/card
-wget http://qtmoko.sourceforge.net/debian/gta04/linux-image-3.2-qtmoko-gta04_41-1_armel.deb
-dpkg -i linux-image-3.2-qtmoko-gta04_41-1_armel.deb
-rm linux-image-3.2-qtmoko-gta04_41-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/linux-image-3.3-qtmoko-gta04_44-1_armel.deb
+dpkg -i linux-image-3.3-qtmoko-gta04_44-1_armel.deb
+rm linux-image-3.3-qtmoko-gta04_44-1_armel.deb
 exit
 
 
@@ -320,7 +326,7 @@ Step 9.2 - Setup bluetooth uarts
 * Bluetooth is on /dev/ttyO0 serial port and we need to run hciattach to have
   bluetooth working. For more info see http://projects.goldelico.com/p/gta04-kernel/page/Wireless/
 
-echo "-s 3000000 /dev/ttyO0 any 3000000 flow" > /media/card/etc/bluetooth/uart
+echo "-s 115200 /dev/ttyO0 any 3000000 flow" > /media/card/etc/bluetooth/uart
 
 
 Step 9.3 - Install libts from lindi
@@ -352,19 +358,28 @@ cat > /media/card/etc/resolv.conf <<__END__
 nameserver 8.8.8.8
 __END__
 
+Step 9.7 - boot logo
+====================
+
+* gta04-init displays this logo on boot:
+
+cd /media/card/boot
+wget -O logo.bmp https://github.com/radekp/qtmoko/raw/master/pics/gta04-init/sd.bmp
 
 Step 10 - release tarball
 =========================
 
 cd /media/card
-tar -czvf ../qtmoko-debian-gta04-v41.tar.gz .
+tar -czvf ../qtmoko-debian-gta04-v44.tar.gz .
 
 Step 11 - make ubifs image
 ==========================
 
-* Delete contents of boot, because for NAND it's not needed:
+* Download logo for NAND boot:
 
-rm -rf /media/card/boot/*
+cd /media/card/boot/
+rm -f logo.bmp
+wget -O logo.bmp https://github.com/radekp/qtmoko/raw/master/pics/gta04-init/nand.bmp
 
 * Remove doc and stuff that is not needed and makes NAND image slower:
 
@@ -409,12 +424,12 @@ __END__
 
 
 mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 4007 -o ubifs.img
-ubinize -o qtmoko-debian-gta04-v42.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
+ubinize -o qtmoko-debian-gta04-v44.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
 rm ubifs.img
 
 * To install it on the device you need to boot from SD and:
 
-ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v41.ubi
+ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v44.ubi
 
 * To check that it's mountable:
 
@@ -430,8 +445,8 @@ Step 12 - jffs2 - not using anymore
 * Create jffs2 image: 
 
 cd /media
-mkfs.jffs2 -o qtmoko-debian-gta04-nosum-v41.jffs2 -e 0x20000 -n -d/media/card
-sumtool -n -e 0x20000 -p -i qtmoko-debian-gta04-nosum-v41.jffs2 -o qtmoko-debian-gta04-v41.jffs2
+mkfs.jffs2 -o qtmoko-debian-gta04-nosum-v44.jffs2 -e 0x20000 -n -d/media/card
+sumtool -n -e 0x20000 -p -i qtmoko-debian-gta04-nosum-v44.jffs2 -o qtmoko-debian-gta04-v44.jffs2
 
 * Create tarbal for NAND:
 
