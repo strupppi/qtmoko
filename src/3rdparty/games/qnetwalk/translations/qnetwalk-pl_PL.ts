@@ -131,15 +131,15 @@ Proszę, sprawdź ustawienia zmiennej środowiskowej BROWSER.</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Game Over</source>
-        <translation type="unfinished"></translation>
+        <translation>Koniec gry</translation>
     </message>
     <message>
         <source>Congratulations! Score %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Gratulacje! Wynik %1</translation>
     </message>
 </context>
 </TS>

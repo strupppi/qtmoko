@@ -3,6 +3,7 @@
 ** This file is part of the Qt Extended Opensource Package.
 **
 ** Copyright (C) 2009 Trolltech ASA.
+** Copyright (C) 2012 Radek Polak.
 **
 ** Contact: Qt Extended Information (info@qtextended.org)
 **
@@ -20,11 +21,11 @@
 #ifndef NEOHARDWARE_H
 #define NEOHARDWARE_H
 
-#ifdef QT_QWS_GTA04
-
 #include <QObject>
 #include <QProcess>
 #include <QTcpSocket>
+#include <QtopiaIpcAdaptor>
+#include <QPowerSourceProvider>
 
 #include <qvaluespace.h>
 #include <linux/input.h>
@@ -39,31 +40,20 @@ class QSpeakerPhoneAccessoryProvider;
 class NeoHardware : public QObject
 {
     Q_OBJECT
-
 public:
     NeoHardware();
     ~NeoHardware();
 
 private:
-     QValueSpaceObject vsoPortableHandsfree;
-     QValueSpaceObject vsoUsbCable;
-     QValueSpaceObject vsoNeoHardware;
-     QtopiaIpcAdaptor *adaptor;
-     QTcpSocket *ueventSocket;
+    QPowerSourceProvider ac;
+    QPowerSourceProvider battery;
+    QTcpSocket ueventSocket;
+    bool hasSmartBattery;
 
-     void findHardwareVersion();
-     QtopiaIpcAdaptor *audioMgr;
-     char *findAttribute(char *buf, int len, const char *token);
- 
 private slots:
-     void headphonesInserted(bool);
-     void cableConnected(bool);
-     void shutdownRequested();
-     bool getCableStatus();
-     void uevent();
-
+    void shutdownRequested();
+    void uevent();
+    void updateStatus();
 };
-
-#endif
 
 #endif
