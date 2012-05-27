@@ -1,41 +1,40 @@
 TEMPLATE=plugin
-TARGET=transparentkeyboard
+TARGET=svgkeyboard
 
 PLUGIN_FOR=qtopia
 PLUGIN_TYPE=inputmethods
 
 CONFIG+=qtopia singleexec
 
+QT += svg
+
 STRING_LANGUAGE=en_US
 AVAILABLE_LANGUAGES=$$QTOPIA_AVAILABLE_LANGUAGES
 LANGUAGES=$$QTOPIA_LANGUAGES
 
 pkg [
-    name=transparentkeyboard-inputmethod
+    name=svgkeyboard-inputmethod
     desc="Keyboard inputmethod plugin for Qt Extended."
     version=$$QTOPIA_VERSION
     license=$$QTOPIA_LICENSE
     maintainer=$$QTOPIA_MAINTAINER
-    multi=plugins/inputmethods/transparentkeyboard
+    multi=plugins/inputmethods/svgkeyboard
 ]
 
 HEADERS=\
     keyboard.h\
-    pickboardcfg.h\
-    pickboardpicks.h\
     keyboardimpl.h\
     keyboardframe.h
 
 SOURCES=\
     keyboard.cpp\
-    pickboardcfg.cpp\
-    pickboardpicks.cpp\
     keyboardimpl.cpp\
     keyboardframe.cpp
 
-pics [
-    hint=pics
-    files=pics/*
-    path=/pics/keyboard
+config [
+    hint=image
+    files=layouts/*
+    path=/etc/im/svgkbd
 ]
+
 
