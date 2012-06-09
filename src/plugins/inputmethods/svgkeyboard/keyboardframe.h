@@ -66,7 +66,7 @@ public:
     explicit KeyboardFrame(QWidget * parent = 0, Qt::WFlags f = 0);
     virtual ~ KeyboardFrame();
 
-    void setLayout(int index = 0);
+    void setLayout(int index = 0, bool skipShifted = false);
     void cleanHigh();
     void resetState();
     void mousePressEvent(QMouseEvent *);
@@ -78,7 +78,7 @@ public:
     void hideEvent(QHideEvent *);
     QRect geometryHint() const;
     QSize sizeHint() const;
-    bool obscures(const QPoint & point);
+    void microFocusUpdate(const QRect & rect);
     void focusInEvent(QFocusEvent *)
     {
         qWarning() << "Warning: keyboard got focus";
@@ -93,12 +93,8 @@ public:
     };
 
 signals:
-    void needsPositionConfirmation();
     void hiding();
     void showing();
-
-public slots:
-    void swapPosition();
 
 private slots:
     void repeat();
@@ -112,7 +108,8 @@ private:
     Qt::KeyboardModifiers modifiers;
 
     int highTid;                // id for time that hides highlighted key after 200ms
-    bool positionTop;
+    QRect microFocus;           // where is currently cursor on screen
+    bool repaintAll;
     struct timespec pressTime;  // last time key was pressed
     int caps;                   // direction for shift. -1=caps lock active, 1=caps lock not active
     bool ignorePress;           // used to ignore too fast presses    

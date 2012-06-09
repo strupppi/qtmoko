@@ -226,15 +226,16 @@ QFrame(parent, f)
     , highKey(NULL)
     , modifiers(Qt::NoModifier)
     , highTid(0)
-    , positionTop(true)
+    , microFocus()
+    , repaintAll(false)
     , caps(1)
     , numLayouts(0)
     , curLayout(0)
 {
     setAttribute(Qt::WA_InputMethodTransparent, true);
 
-    setWindowFlags(Qt::Dialog | Qt::
-                   WindowStaysOnTopHint | Qt::FramelessWindowHint);
+    setWindowFlags(Qt::Dialog | Qt::WindowStaysOnTopHint | Qt::
+                   FramelessWindowHint);
     setFrameStyle(QFrame::Plain | QFrame::Box);
 
     QPalette pal(palette());
@@ -248,7 +249,7 @@ QFrame(parent, f)
 
     connect(&repeatTimer, SIGNAL(timeout()), this, SLOT(repeat()));
 
-    emit needsPositionConfirmation();
+    qwsServer->sendIMQuery(Qt::ImMicroFocus);
 }
 
 KeyboardFrame::~KeyboardFrame()
@@ -266,10 +267,10 @@ KeyboardFrame::~KeyboardFrame()
 }
 
 // Set current layout. The layout is loaded from svg file if was not used yet
-void KeyboardFrame::setLayout(int index)
+void KeyboardFrame::setLayout(int index, bool skipShifted)
 {
     if (numLayouts == 0) {
-        QDir d(Qtopia::qtopiaDir() + "/etc/im/svgkbd");
+        QDir d(Qtopia::qtopiaDir() + "etc/im/svgkbd");
         QStringList list = d.entryList(QStringList() << "*.svg", QDir::Files);
         list.sort();
         qLog(Input) << "svg kbd layouts in " << d.path() << ": " +
@@ -280,12 +281,20 @@ void KeyboardFrame::setLayout(int index)
             fillLayout(d.filePath(list.at(i)), &layouts[i]);
     }
 
-    if (index >= numLayouts)
-        index = 0;
-    else if (index < 0)
-        index = numLayouts - 1;
+    KeyLayout *lay = NULL;
+    for (;;) {
+        if (index >= numLayouts)
+            index = 0;
+        else if (index < 0)
+            index = numLayouts - 1;
 
-    KeyLayout *lay = &layouts[index];
+        lay = &layouts[index];
+        if (lay->shifted && skipShifted)
+            index++;
+        else
+            break;
+    }
+
     if (width() != lay->scrWidth || height() != lay->scrHeight) {
         lay->scrWidth = width();
         lay->scrHeight = height();
@@ -322,18 +331,29 @@ void KeyboardFrame::resizeEvent(QResizeEvent *)
     setLayout();
 }
 
-static void renderKey(QPainter * p, QRect clip, QSvgRenderer * svg,
+static void renderKey(QPainter * p, QRect clip, QRect focus, QSvgRenderer * svg,
                       KeyInfo * ki)
 {
-    if (!ki->rectScr.intersects(clip))
+    QRect r = ki->rectScr;
+
+    if (!r.intersects(clip))
         return;
 
-    svg->render(p, elemId(ki), ki->rectScr);
+    if (r.intersects(focus) && focus.height() < r.height()) {
+        int fromTop = abs(r.top() - focus.top());
+        int fromBottom = abs(r.bottom() - focus.bottom());
+        if (fromTop < fromBottom)
+            r.setTop(focus.bottom());
+        else
+            r.setBottom(focus.top());
+    }
+
+    svg->render(p, elemId(ki), r);
 
 //    if(ki->unicode)
-//        p->drawText(ki->rectScr, Qt::AlignCenter, QString(ki->unicode));
+//        p->drawText(r, Qt::AlignCenter, QString(ki->unicode));
 //    else
-//        svg->render(p, elemId(ki), ki->rectScr);
+//        svg->render(p, elemId(ki), r);
 }
 
 void KeyboardFrame::paintEvent(QPaintEvent * e)
@@ -349,7 +369,7 @@ void KeyboardFrame::paintEvent(QPaintEvent * e)
     // Draw keys - only those that are in clip region
     KeyInfo *ki = lay->keys;
     for (int i = 0; i < lay->numKeys; i++) {
-        renderKey(&p, e->rect(), lay->svg, ki);
+        renderKey(&p, e->rect(), microFocus, lay->svg, ki);
         ki++;
     }
 
@@ -362,7 +382,7 @@ void KeyboardFrame::paintEvent(QPaintEvent * e)
         lay->svg->render(&p, elemId(highKey), rect);
     }
     //p.setPen(Qt::yellow);
-    //p.drawRect(e->rect());
+    //p.drawRect(microFocus);
 }
 
 void KeyboardFrame::mousePressEvent(QMouseEvent * e)
@@ -433,18 +453,23 @@ void KeyboardFrame::mousePressEvent(QMouseEvent * e)
     highKey = ki;
     repaint(pressedRect(ki->rectScr));
 
-    emit needsPositionConfirmation();
+    qwsServer->sendIMQuery(Qt::ImMicroFocus);
 }
 
-void KeyboardFrame::mouseReleaseEvent(QMouseEvent *)
+void KeyboardFrame::mouseReleaseEvent(QMouseEvent * e)
 {
     if (ignorePress)
         return;
 
     if (pressedKey) {
         if (pressedKey->keycode == Qt::Key_Mode_switch) {
+
+            // Switch layout if released on the same rect
+            if (pressedKey->rectScr.contains(e->pos())) {
+                caps = 1;
+                setLayout(curLayout + 1, true);
+            }
             pressedKey = NULL;
-            setLayout(curLayout + 1);
             repaint();
             return;
         }
@@ -481,7 +506,11 @@ void KeyboardFrame::cleanHigh()
     if (highKey) {
         QRect rect = pressedRect(highKey->rectScr);
         highKey = NULL;
-        repaint(rect);
+        if (repaintAll) {
+            repaintAll = false;
+            repaint();
+        } else
+            repaint(rect);
     }
 }
 
@@ -504,10 +533,7 @@ void KeyboardFrame::repeat()
 
 QRect KeyboardFrame::geometryHint() const
 {
-    QRect r = QApplication::desktop()->availableGeometry();
-    if (r.width() <= 480)
-        r.setHeight(480);       // hack to make it larger
-    return r;
+    return QApplication::desktop()->availableGeometry();
 }
 
 QSize KeyboardFrame::sizeHint() const
@@ -522,21 +548,17 @@ void KeyboardFrame::resetState()
     repeatTimer.stop();
 }
 
-bool KeyboardFrame::obscures(const QPoint & point)
+void KeyboardFrame::microFocusUpdate(const QRect & rect)
 {
-    QRect mwr = QApplication::desktop()->availableGeometry();
-    bool isTop = point.y() < (mwr.y() + (mwr.height() >> 1));
-    return (isTop == positionTop);
-}
+    QRect old = microFocus;
+    microFocus = rect;
+    microFocus.setLeft(0);
+    microFocus.setWidth(width());
 
-void KeyboardFrame::swapPosition()
-{
-    QRect mwr = QApplication::desktop()->availableGeometry();
-    if (positionTop) {
-        move(mwr.bottomLeft() - QPoint(0, height()));
-        positionTop = false;
-    } else {
-        move(mwr.topLeft());
-        positionTop = true;
+    if (old.top() != microFocus.top() || old.height() != microFocus.height()) {
+        if (highKey)
+            repaintAll = true;  // repaint after key up
+        else
+            repaint();
     }
 }
