@@ -3,6 +3,7 @@
  *  Accelerometer stuff
  *
  *  (c) 2009-2010 Anton Olkhovik <ant007h@gmail.com>
+ *  (c) 2012 Neil Jerram <neil@ossau.homelinux.net>
  *
  *  This file is part of QtMaze (port of Mokomaze) - labyrinth game.
  *
@@ -23,12 +24,19 @@
 #ifndef ACCELEROMETERS_H
 #define ACCELEROMETERS_H
 
-void accelerometer_start();
-void accelerometer_stop();
+#include <qtopiaglobal.h>
 
-double getacx();
-double getacy();
-double getacz();
+QTOPIA_EXPORT void accelerometer_start();
+QTOPIA_EXPORT void accelerometer_stop();
+
+/* On the GTA04, the values returned by the following are in units of
+   about 1g.  That seems to be about right for the QtMaze game, so I
+   guess that units of 1g is in line with what the accelerometer
+   interface generates on other devices; but I haven't verified that
+   and I don't think it's explicitly documented anywhere. */
+QTOPIA_EXPORT double getacx();
+QTOPIA_EXPORT double getacy();
+QTOPIA_EXPORT double getacz();
 
 #endif /* ACCELEROMETERS_H */
 
