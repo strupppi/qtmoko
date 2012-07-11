@@ -98,6 +98,7 @@ echo g_ether > /media/card/etc/modules
 echo joydev >> /media/card/etc/modules
 echo hso >> /media/card/etc/modules
 echo ledtrig-timer >> /media/card/etc/modules
+echo bmp085 >> /media/card/etc/modules
 
 * Make the MAC address of g_ether fixed instead of random, so that network
   manager can be configured:
@@ -128,10 +129,20 @@ Step 4.1 - stable device nodes for UMTS
     http://lists.goldelico.com/pipermail/gta04-owner/2012-February/001563.html
   We will use udev to create stable symlinks for us:
 
-cat > /media/card/etc/udev/rules.d/hso.rules <<__END__
-SUBSYSTEM=="tty", ACTION=="add", KERNEL=="ttyHS*", ATTR{hsotype}=="?*", SYMLINK+="ttyHS_\$attr{hsotype}", OPTIONS+="string_escape=replace"
-__END__
+cd /media/card/etc/udev/rules.d
+wget https://raw.github.com/radekp/linux-2.6/v3.3-gta04-qtmoko-v45/GTA04/udev-rules/hso.rules
+wget https://raw.github.com/radekp/linux-2.6/v3.3-gta04-qtmoko-v45/GTA04/udev-rules/input.rules
 
+Step 4.2 - charging udev rules
+==============================
+
+* For more info see:
+    http://lists.goldelico.com/pipermail/gta04-owner/2012-April/002272.html
+
+cat > /media/card/etc/udev/rules.d/gta04-charging.rules <<__END__
+SUBSYSTEM=="power_supply", ACTION=="change", DEVPATH=="*power_supply/twl4030_usb" ATTRS{1-0048/twl4030_usb/id}=="floating", ATTR{../../max_current}="500000"
+SUBSYSTEM=="power_supply", ACTION=="change", DEVPATH=="*power_supply/twl4030_usb" ATTRS{1-0048/twl4030_usb/id}=="102k", ATTR{../../max_current}="851000"
+__END__
 
 Step 4.5 - make it generate SSH keys on start
 =============================================
@@ -253,7 +264,7 @@ Step 8 - install QtMoko
 
 * I use qemu armel host for building qtmoko package. It should be as simple as
 
-git checkout v44_gta04
+git checkout v45_gta04
 dpkg-buildpackage
 
 * Note that you may need to install some dependencies before building:
@@ -273,10 +284,10 @@ git submodule update --init
 * Install it
 
 chroot /media/card/
-wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_44-1_armel.deb
-dpkg -i qtmoko-gta04_44-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/qtmoko-gta04_45-1_armel.deb
+dpkg -i qtmoko-gta04_45-1_armel.deb
 update-rc.d qtmoko-gta04 defaults
-rm qtmoko-gta04_44-1_armel.deb
+rm qtmoko-gta04_45-1_armel.deb
 exit
 killall qpe.sh  # recent versions start qtmoko after install, so kill it
 
@@ -290,7 +301,7 @@ http://github.com/radekp/linux-2.6/
 
 * Checkout branch for your qtmoko version:
 
-git checkout v3.2-gta04-qtmoko-v44
+git checkout v3.4-gta04-qtmoko-v45
 
 * Create package in buildhost:
 
@@ -303,9 +314,9 @@ dpkg-buildpackage
 * Install kernel image:
 
 chroot /media/card
-wget http://qtmoko.sourceforge.net/debian/gta04/linux-image-3.2-qtmoko-gta04_44-1_armel.deb
-dpkg -i linux-image-3.2-qtmoko-gta04_44-1_armel.deb
-rm linux-image-3.2-qtmoko-gta04_44-1_armel.deb
+wget http://qtmoko.sourceforge.net/debian/gta04/linux-image-3.4-qtmoko-gta04_45-1_armel.deb
+dpkg -i linux-image-3.4-qtmoko-gta04_45-1_armel.deb
+rm linux-image-3.4-qtmoko-gta04_45-1_armel.deb
 exit
 
 
@@ -314,7 +325,7 @@ Step 9.1 - Linux kernel cross compiling - not using anymore for releases
 
 * If you want to cross compile kernel and make uboot image on PC:
 
-make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm gta04a3_nodebug_defconfig
+make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm gta04_qtmoko_defconfig
 make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm uImage
 make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm modules
 make CROSS_COMPILE=/opt/toolchains/arm920t-eabi/bin/arm-linux- ARCH=arm modules_install INSTALL_MOD_PATH=GTA04
@@ -326,7 +337,7 @@ Step 9.2 - Setup bluetooth uarts
 * Bluetooth is on /dev/ttyO0 serial port and we need to run hciattach to have
   bluetooth working. For more info see http://projects.goldelico.com/p/gta04-kernel/page/Wireless/
 
-echo "-s 115200 /dev/ttyO0 any 3000000 flow" > /media/card/etc/bluetooth/uart
+echo "-s 3000000 /dev/ttyO0 any 3000000 flow" > /media/card/etc/bluetooth/uart
 
 
 Step 9.3 - Install libts from lindi
@@ -389,7 +400,7 @@ Step 10 - release tarball
 =========================
 
 cd /media/card
-tar -czvf ../qtmoko-debian-gta04-v44.tar.gz .
+tar -czvf ../qtmoko-debian-gta04-v45.tar.gz .
 
 Step 11 - make ubifs image
 ==========================
@@ -443,12 +454,12 @@ __END__
 
 
 mkfs.ubifs -r /media/card -m 2048 -e 129024 -c 4007 -o ubifs.img
-ubinize -o qtmoko-debian-gta04-v44.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
+ubinize -o qtmoko-debian-gta04-v45.ubi -m 2048 -p 128KiB -s 512 ubinize.cfg
 rm ubifs.img
 
 * To install it on the device you need to boot from SD and:
 
-ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v44.ubi
+ubiformat /dev/mtd4 -f /qtmoko-debian-gta04-v45.ubi
 
 * To check that it's mountable:
 
@@ -464,8 +475,8 @@ Step 12 - jffs2 - not using anymore
 * Create jffs2 image: 
 
 cd /media
-mkfs.jffs2 -o qtmoko-debian-gta04-nosum-v44.jffs2 -e 0x20000 -n -d/media/card
-sumtool -n -e 0x20000 -p -i qtmoko-debian-gta04-nosum-v44.jffs2 -o qtmoko-debian-gta04-v44.jffs2
+mkfs.jffs2 -o qtmoko-debian-gta04-nosum-v45.jffs2 -e 0x20000 -n -d/media/card
+sumtool -n -e 0x20000 -p -i qtmoko-debian-gta04-nosum-v45.jffs2 -o qtmoko-debian-gta04-v45.jffs2
 
 * Create tarbal for NAND:
 

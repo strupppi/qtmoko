@@ -54,6 +54,7 @@ public slots:
 protected:
     QTimer clccTimer;
     NeoModemService *modemService;
+    void abortDial(uint id, QPhoneCall::Scope scope);
     bool hasRepeatingRings() const;
 
 private slots:
@@ -79,6 +80,22 @@ private slots:
     void reset();
     void suspend();
     void wake();
+};
+
+class NeoVibrateAccessory : public QVibrateAccessoryProvider
+{
+    Q_OBJECT
+public:
+    NeoVibrateAccessory(QModemService * service);
+    ~NeoVibrateAccessory();
+
+public slots:
+    void setVibrateNow(const bool value, int timeoutMs = 0, int strength = 0xffff);
+    void setVibrateOnRing(const bool value);
+
+private:
+    int rumbleFd;
+    qint16 effectId;
 };
 
 #endif

@@ -248,13 +248,18 @@ void QMplayer::handleFsDeactivate()
         return;
     }
     if (processRunning(process)) {
-#ifdef QT_QWS_GTA04
-        if (!fsPlay.clicked) {  // user did not press pause, so e.g. incomming call triggered this
-            fsPlay.hide();
-            stopMplayer();      // quit mplayer so that it does not block sound card e.g. when someone
-            return;             // this might be not needed when we have HW sound routing or mixing on GTA04
+
+        // On GTA04A3 (old model) we have to stop mplayer so that gsm voice
+        // routing program can open sound card.
+        bool gta04a3 = !QFile::exists("/sys/class/gpio/gpio186/value");
+        if(gta04a3) {
+            if (!fsPlay.clicked) {  // user did not press pause, so e.g. incomming call triggered this
+                fsPlay.hide();
+                stopMplayer();      // quit mplayer so that it does not block sound card e.g. when someone
+                return;             // this might be not needed when we have HW sound routing or mixing on GTA04
+            }
         }
-#endif
+
         process->write(" ");
         process->waitForBytesWritten(1000);
     }
@@ -1695,40 +1700,65 @@ void QMplayerFullscreen::enterFullScreen()
 }
 
 QMplayerFullscreenPlay::QMplayerFullscreenPlay():QMplayerFullscreen()
+  , locked(0)
+  , lastX(-1)
 {
 }
 
 void QMplayerFullscreenPlay::paintEvent(QPaintEvent *)
 {
+    if(lastX >= 0)
+        return;
+
     QPainter p(this);
-    p.drawText(this->rect(), Qt::AlignCenter,
-               tr("click to pause\n\nslide to adjust volume"));
+    if(locked > 0)
+        p.drawText(this->rect(), Qt::AlignCenter, tr("L O C K E D\n\nslide up to unlock"));
+    else
+        p.drawText(this->rect(), Qt::AlignCenter,
+               tr("click to pause\n\nslide left/right to adjust volume\n\nslide up to lock"));
 }
 
 void QMplayerFullscreenPlay::mousePressEvent(QMouseEvent * e)
 {
     downX = lastX = e->x();
+    lastY = e->y();
+    locked = (locked > 0);
+    update();
 }
 
 void QMplayerFullscreenPlay::mouseReleaseEvent(QMouseEvent * e)
 {
-    if (abs(e->x() - downX) < 64) {
+    if (abs(e->x() - downX) < 64 && !locked) {
         clicked = true;
         hide();
     }
+    lastX = -1;
+    update();
 }
 
 void QMplayerFullscreenPlay::mouseMoveEvent(QMouseEvent * e)
 {
-    int delta = e->x() - lastX;
-    if (delta > 32) {
+    int deltaY = abs(e->y() - lastY);
+    if(deltaY > 240 && (locked == 0 || locked == 1)) {
+        lastY = e->y();
+        if(locked)
+            locked = -2;
+        else
+            locked = 2;
+        update();
+        return;
+    }
+
+    int deltaX = e->x() - lastX;
+    if (deltaX > 32) {
         emit volumeUp();
-    } else if (delta < -32) {
+    } else if (deltaX < -32) {
         emit volumeDown();
     } else {
         return;
     }
     lastX = e->x();
+    lastY = e->y();
 }
 
 QMplayerMainWindow::QMplayerMainWindow(QWidget * parent, Qt::WFlags f)

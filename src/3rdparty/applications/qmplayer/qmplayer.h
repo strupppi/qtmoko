@@ -77,8 +77,10 @@ protected:
     void mouseMoveEvent(QMouseEvent *);
 
 private:
+    int locked;         // 0=unlocked, 1=locked, 2,-2=locked/unlocked and mouse is still down
     int downX;
     int lastX;
+    int lastY;
 };
 
 class QMplayer : public QWidget
