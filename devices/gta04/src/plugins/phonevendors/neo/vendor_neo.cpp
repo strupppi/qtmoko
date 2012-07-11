@@ -62,6 +62,15 @@ bool NeoCallProvider::hasRepeatingRings() const
     return true;
 }
 
+ // Use the AT+CHUP command to abort outgoing calls, instead of AT+CHLD=1. Also
+ // use send() without waiting like chat() does.
+ void NeoCallProvider::abortDial(uint id, QPhoneCall::Scope scope)
+{
+    Q_UNUSED(id);
+    Q_UNUSED(scope);
+    atchat()->send("AT+CHUP");
+}
+
 void NeoCallProvider::ringing(const QString &, const QString &, uint)
 {
     llIndicatorsRinging();      // turn on green led
@@ -191,9 +200,9 @@ void NeoModemService::suspend()
     qLog(Modem) << " Gta04ModemService::suspend()";
     //chat("AT_OSQI=0");          // unsolicited reporting of antenna signal strength, e.g. "_OSIGQ: 3,0"
 
-    primaryAtChat()->suspend();
-    QSerialIODevice *port = multiplexer()->channel("primary");
-    port->close();
+    //primaryAtChat()->suspend();
+    //QSerialIODevice *port = multiplexer()->channel("primary");
+    //port->close();
 
     suspendDone();
 }
@@ -202,9 +211,9 @@ void NeoModemService::wake()
 {
     qLog(Modem) << " Gta04ModemService::wake()";
 
-    QSerialIODevice *port = multiplexer()->channel("primary");
-    port->open(QIODevice::ReadWrite);
-    primaryAtChat()->resume();
+    //QSerialIODevice *port = multiplexer()->channel("primary");
+    //port->open(QIODevice::ReadWrite);
+    //primaryAtChat()->resume();
 
     post( "modemresumed" );
 
