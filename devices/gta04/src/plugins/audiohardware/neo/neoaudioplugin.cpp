@@ -75,11 +75,21 @@ static bool alsactl(QStringList & args)
 {
     qLog(AudioState) << "alsactl " << args;
 
-    int ret = QProcess::execute("alsactl", args);
-    if (ret != 0) {
-        qWarning() << "alsactl returned " << ret;
+    for(int i = 0; i < 8; i++) {
+        
+        QProcess p;
+        p.start("alsactl", args);
+        p.waitForFinished(-1);
+        QString output = p.readAllStandardOutput();
+        output += p.readAllStandardError();
+
+        if(output.length() == 0)
+            return true;
+
+        qWarning() << "alsactl returned " << output << ", running kill-snd-card-users.sh";
+        QProcess::execute("kill-snd-card-users.sh");
     }
-    return ret == 0;
+    return false;
 }
 
 static bool restoreState(QString stateFile, bool gsm = false)
