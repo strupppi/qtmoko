@@ -31,7 +31,7 @@ LANGUAGES := $(shell ls i18n/ | xargs echo | sed 's/ /,/g')
 
 # Device defaults to neo, but can be set from the calling environment as well:
 # QTMOKO_DEVICE=<device> dpkg-buildpackage
-QTMOKO_DEVICE ?= neo
+QTMOKO_DEVICE ?= gta04
 ifeq (neo,$(QTMOKO_DEVICE))
   QTMOKO_DEVICE_SHORTDESC := Neo FreeRunner
 else ifeq (gta04,$(QTMOKO_DEVICE))
@@ -47,6 +47,15 @@ QMAKE_CONF := devices/$(QTMOKO_DEVICE)/mkspecs/qws/$(TOOLCHAIN)/qmake.conf
 	dh $@
 
 override_dh_auto_configure:
+
+	# Add built qt to LD path to avoid libQtSql.so.4 missing error
+	export LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):$(PWD)/../build/qtopiacore/host/lib/
+
+	# Fix wrong filename for libjscore.a
+	# http://qt-project.org/forums/viewthread/12732
+	mkdir -p $(PWD)/../build/qtopiacore/target/src/3rdparty/webkit/JavaScriptCore/release/
+	ln -s $(PWD)/../build/qtopiacore/target/src/3rdparty/webkit/JavaScriptCore/release/jscore. $(PWD)/../build/qtopiacore/target/src/3rdparty/webkit/JavaScriptCore/release/libjscore.a
+	
 	# debhelper files
 	cp debian/qtmoko.install.in debian/qtmoko-$(QTMOKO_DEVICE).install
 	[ ! -f debian/qtmoko-$(QTMOKO_DEVICE).install.in ] || \
@@ -69,10 +78,10 @@ override_dh_auto_configure:
 
 	# Qt Extended configuration step
 	mkdir -p ../build
-	cd ../build && "$(CONFIGURE)" -device $(QTMOKO_DEVICE) -force-build-qt -xplatform $(TOOLCHAIN) -remove-module pkgmanagement -languages $(LANGUAGES) -l dbus-1 -I /usr/include/dbus-1.0/ -I /usr/lib/dbus-1.0/include
+	cd ../build && "$(CONFIGURE)" -device $(QTMOKO_DEVICE) -system-qt -xplatform $(TOOLCHAIN) -remove-module pkgmanagement -languages $(LANGUAGES) -l dbus-1 -I /usr/include/dbus-1.0/ -I /usr/lib/dbus-1.0/include
 
 override_dh_auto_build:
-	cd ../build && make
+	$(MAKE) -C ../build
 
 override_dh_auto_clean:
 	[ ! -f $(QMAKE_CONF).orig ] || mv $(QMAKE_CONF).orig $(QMAKE_CONF)
@@ -86,9 +95,9 @@ override_dh_auto_clean:
 	rm -f debian/qtmoko-*.init
 
 override_dh_auto_install:
-	cd ../build && make install
+	$(MAKE) -C ../build install
 	mkdir -p debian/tmp/opt/qtmoko
-	cp -r ../build/image/* debian/tmp/opt/qtmoko
+	cp -al ../build/image/* debian/tmp/opt/qtmoko/
 
 	# remove patented stuff - can be installed via package later
 	rm -f debian/tmp/opt/qtmoko/plugins/codecs/libmadplugin.so
@@ -98,7 +107,10 @@ override_dh_auto_install:
 	rm -rf debian/tmp/opt/qtmoko/lib/fonts
 
 	# Install missing dependency for qt_plugins/script/libqtscriptdbus.so
-	install -m"a+r,u+w" ../build/qtopiacore/target/lib/libQtScript.so.4.5.3 debian/tmp/opt/qtmoko/lib
+	install -m"a+r,u+w" ../build/qtopiacore/target/lib/libQtScript.so.4.7.4 debian/tmp/opt/qtmoko/lib/
+	
+	# Install libQtDeclarative so that dh_shlibdeps does not complain
+	install -m"a+r,u+w" ../build/qtopiacore/target/lib/libQtDeclarative* debian/tmp/opt/qtmoko/lib/
 
 override_dh_makeshlibs:
 	dh_makeshlibs -n

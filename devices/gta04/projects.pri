@@ -22,9 +22,9 @@ PROJECTS*=\
     3rdparty/applications/screenshot \
     3rdparty/applications/qmplayer \
     3rdparty/applications/qx \
-    3rdparty/applications/simplefm \
     3rdparty/applications/nerongps \
     3rdparty/applications/arora/src \
+    3rdparty/applications/yberbrowser \
     3rdparty/tools/atd \
     3rdparty/applications/neocontrol \
     3rdparty/applications/raptor \

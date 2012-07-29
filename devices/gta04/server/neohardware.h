@@ -21,6 +21,7 @@
 #ifndef NEOHARDWARE_H
 #define NEOHARDWARE_H
 
+#include <QTimer>
 #include <QObject>
 #include <QProcess>
 #include <QTcpSocket>
@@ -47,7 +48,9 @@ public:
 private:
     QPowerSourceProvider ac;
     QPowerSourceProvider battery;
+    QValueSpaceObject batteryVso;
     QTcpSocket ueventSocket;
+    QTimer timer;
     bool hasSmartBattery;
 
 private slots:

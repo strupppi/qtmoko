@@ -48,17 +48,15 @@ public:
     ~NeoCallProvider();
 
 public slots:
-     virtual void ringing(const QString & number, const QString & callType,
+    void doClcc();
+    void clcc(bool, const QAtResult &);
+    virtual void ringing(const QString & number, const QString & callType,
                           uint modemIdentifier = 0);
-
 protected:
     QTimer clccTimer;
     NeoModemService *modemService;
+    void abortDial(uint id, QPhoneCall::Scope scope);
     bool hasRepeatingRings() const;
-
-private slots:
-    void doClcc();
-    void clcc(bool, const QAtResult &);
 };
 
 class NeoModemService : public QModemService
@@ -74,11 +72,30 @@ public:
     bool supportsAtCced();
     QString decodeOperatorName(QString name);
 
+private:
+    NeoCallProvider *neoCallProvider;
+    
 private slots:
     void sigq(const QString & msg);
     void reset();
     void suspend();
     void wake();
+};
+
+class NeoVibrateAccessory : public QVibrateAccessoryProvider
+{
+    Q_OBJECT
+public:
+    NeoVibrateAccessory(QModemService * service);
+    ~NeoVibrateAccessory();
+
+public slots:
+    void setVibrateNow(const bool value, int timeoutMs = 0, int strength = 0xffff);
+    void setVibrateOnRing(const bool value);
+
+private:
+    int rumbleFd;
+    qint16 effectId;
 };
 
 #endif
