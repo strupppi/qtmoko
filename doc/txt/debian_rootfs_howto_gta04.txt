@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg8,libxtst6,sqlite3,rfkill,ntpdate,libspeex1,libspeexdsp1,lsof squeeze /media/card/ http://cdn.debian.net/debian/
+cdebootstrap --flavour=minimal--include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg8,libxtst6,sqlite3,rfkill,ntpdate,libspeex1,libspeexdsp1,lsof,sysfsutils squeeze /media/card/ http://cdn.debian.net/debian/
 
 Step 2
 ======
@@ -77,6 +77,7 @@ chroot /media/card /bin/sh -e <<__END_CHROOT__
 echo root: root | chpasswd
 sed -i 's/root:.*/root:C0XOiCyzQDtsA:14973:0:99999:7:::/' /etc/shadow
 apt-get --yes --purge remove cdebootstrap-helper-rc.d
+
 __END_CHROOT__
 
 
@@ -353,6 +354,99 @@ wget http://lindi.iki.fi/lindi/tslib/libts-0.0-0_1.0-8lindi1_armel.deb
 dpkg -i libts-0.0-0_1.0-8lindi1_armel.deb
 rm libts-0.0-0_1.0-8lindi1_armel.deb
 exit
+
+
+Step 9.4 - Prepare for running as non-root user
+===============================================
+
+cat > /media/card/etc/sysfs.conf << __END__
+#
+# /etc/sysfs.conf - Configuration file for setting sysfs attributes.
+#
+# The sysfs mount directory is automatically prepended to the attribute
+# paths.
+#
+# Syntax:
+# attribute = value
+# mode attribute = 0600 # (any valid argument for chmod)
+# owner attribute = root:wheel # (any valid argument for chown)
+#
+# Examples:
+#
+# Always use the powersave CPU frequency governor
+# devices/system/cpu/cpu0/cpufreq/scaling_governor = powersave
+#
+# Use userspace CPU frequency governor and set initial speed
+# devices/system/cpu/cpu0/cpufreq/scaling_governor = userspace
+# devices/system/cpu/cpu0/cpufreq/scaling_setspeed = 600000
+#
+# Set permissions of suspend control file
+# mode power/state = 0660
+# owner power/state = root:power
+
+owner devices/platform/pwm-backlight/backlight/pwm-backlight/brightness
+root:video
+mode devices/platform/pwm-backlight/backlight/pwm-backlight/brightness 0660
+
+owner bus/i2c/devices/i2c-2/new_device root.phonehw
+mode bus/i2c/devices/i2c-2/new_device 0220
+
+# Modem enable GPIO
+owner class/gpio/gpio186/value root.dialout
+mode class/gpio/gpio186/value 0660
+
+# GPS
+owner devices/virtual/gpio/gpio145/value root.phonehw
+mode devices/virtual/gpio/gpio145/value 0660
+
+owner devices/virtual/graphics/fbcon/cursor_blink root.video
+mode devices/virtual/graphics/fbcon/cursor_blink 0660
+
+owner class/leds/gta04:green:power/trigger root.phonehw
+mode class/leds/gta04:green:power/trigger 0660
+owner class/leds/gta04:red:power/trigger root.phonehw
+mode class/leds/gta04:red:power/trigger 0660
+owner class/leds/gta04:green:power/brightness root.phonehw
+mode class/leds/gta04:green:power/brightness 0660
+owner class/leds/gta04:red:power/brightness root.phonehw
+mode class/leds/gta04:red:power/brightness 0660
+
+owner class/leds/gta04:green:aux/trigger root.phonehw
+mode class/leds/gta04:green:aux/trigger 0660
+owner class/leds/gta04:red:aux/trigger root.phonehw
+mode class/leds/gta04:red:aux/trigger 0660
+owner class/leds/gta04:green:aux/brightness root.phonehw
+mode class/leds/gta04:green:aux/brightness 0660
+owner class/leds/gta04:red:aux/brightness root.phonehw
+mode class/leds/gta04:red:aux/brightness 0660
+
+__END__
+
+cat > /media/card/etc/udev/rules.d/99-fix-permissions.rules << __END__
+SUBSYSTEM=="input", GROUP="input", MODE=660
+KERNEL=="tty1", GROUP="phonehw", MODE=660
+__END__
+
+
+* Create users and groups
+
+chroot /media/card
+adduser qtmoko
+addgroup --system phonehw
+addgroup --system input
+adduser qtmoko phonehw
+adduser qtmoko input
+adduser qtmoko audio
+adduser qtmoko video
+adduser qtmoko users
+adduser qtmoko dialout
+
+* add user to sudoers file
+
+visudo
+# add line:
+# qtmoko  ALL = NOPASSWD: ALL
+# save & exit
 
 
 Step 9.5 - remove bash history
