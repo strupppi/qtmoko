@@ -427,6 +427,7 @@ __END__
 cat > /media/card/etc/udev/rules.d/99-fix-permissions.rules << __END__
 SUBSYSTEM=="input", GROUP="input", MODE=660
 KERNEL=="tty1", GROUP="phonehw", MODE=660
+KERNEL=="tty0", GROUP="phonehw", MODE=660
 __END__
 
 
