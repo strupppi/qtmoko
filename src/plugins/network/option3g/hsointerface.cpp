@@ -271,7 +271,7 @@ void HsoInterface::atFinished(bool ok, QAtResult result)
         break;
     case DisablingWan:
         closePort();
-        QProcess::execute("ifconfig", QStringList() << "hso0" << "down");
+        QProcess::execute("sudo", QStringList() << "ifconfig" << "hso0" << "down");
         writeResolvConf("8.8.8.8", "208.67.222.222");
         setState(HsoInterface::Down);
         break;
@@ -316,7 +316,7 @@ void HsoInterface::wanDataNotification(QString result)
     writeResolvConf(dns1, dns2);
 
     int ret =
-        QProcess::execute("ifconfig", QStringList() << "hso0" << ip << "up");
+        QProcess::execute("sudo", QStringList() << "ifconfig" << "hso0" << ip << "up");
     if (ret) {
         qWarning() << "hso: ifconfig failed with " << ret;
         setState(HsoInterface::Down);
@@ -324,8 +324,8 @@ void HsoInterface::wanDataNotification(QString result)
     }
 
     ret =
-        QProcess::execute("route",
-                          QStringList() << "add" << "default" << "dev" <<
+        QProcess::execute("sudo",
+                          QStringList() << "route" << "add" << "default" << "dev" <<
                           "hso0");
     if (ret) {
         qWarning() << "hso: route failed with " << ret;
