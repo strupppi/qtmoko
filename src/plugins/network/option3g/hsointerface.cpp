@@ -205,16 +205,19 @@ void HsoInterface::closePort()
 
 static bool writeResolvConf(QString dns1, QString dns2)
 {
-    QFile resolvConf("/etc/resolv.conf");
-    if (!resolvConf.open(QIODevice::ReadWrite | QIODevice::Truncate)) {
-        qWarning() << "hso: failed to open /etc/resolv.conf";
-        return false;
-    }
+    
+    QProcess::execute("sudo", QStringList() << "/opt/qtmoko/bin/updateResolvConf" << dns1 << dns2);
 
-    resolvConf.write(QString("nameserver %1\nnameserver %2\n").
-                     arg(dns1).arg(dns2).toLatin1());
-    resolvConf.close();
-    return true;
+    //QFile resolvConf("/etc/resolv.conf");
+    //if (!resolvConf.open(QIODevice::ReadWrite | QIODevice::Truncate)) {
+    //    qWarning() << "hso: failed to open /etc/resolv.conf";
+    //    return false;
+    //}
+
+    //resolvConf.write(QString("nameserver %1\nnameserver %2\n").
+    //                 arg(dns1).arg(dns2).toLatin1());
+    //resolvConf.close();
+    //return true;
 }
 
 bool HsoInterface::start(const QVariant /*options */ )
