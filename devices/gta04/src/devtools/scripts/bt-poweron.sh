@@ -1,2 +1,2 @@
 #!/bin/sh
-rfkill unblock bluetooth
+sudo rfkill unblock bluetooth

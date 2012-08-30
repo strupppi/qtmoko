@@ -1192,7 +1192,7 @@ bool QBluetoothLocalDevice::setName(const QString &name)
 bool QBluetoothLocalDevice::setDiscoverable(uint timeout)
 {
  #ifdef QT_QWS_GTA04
-    QProcess::execute("rfkill", QStringList() << "unblock" << "bluetooth");
+    QProcess::execute("sudo", QStringList() << "rfkill" << "unblock" << "bluetooth");
 #endif
     m_data->m_discovTo = timeout;
     return m_data->setPropertyAsync("Discoverable", true, SLOT(asyncDiscoverableChange(QDBusMessage)));
@@ -1236,7 +1236,7 @@ QBluetoothReply<bool> QBluetoothLocalDevice::discoverable() const
 bool QBluetoothLocalDevice::setConnectable()
 {
 #ifdef QT_QWS_GTA04
-    return QProcess::execute("rfkill", QStringList() << "unblock" << "bluetooth") == 0;
+    return QProcess::execute("sudo", QStringList() << "rfkill" << "unblock" << "bluetooth") == 0;
 #else
     return m_data->setPropertyAsync("Powered", true, SLOT(asyncReply(QDBusMessage)));
 #endif
@@ -1266,7 +1266,7 @@ QBluetoothReply<bool> QBluetoothLocalDevice::connectable() const
 bool QBluetoothLocalDevice::turnOff()
 {
  #ifdef QT_QWS_GTA04
-    return QProcess::execute("rfkill", QStringList() << "block" << "bluetooth") == 0;
+    return QProcess::execute("sudo", QStringList() << "rfkill" << "block" << "bluetooth") == 0;
 #else
     return m_data->setPropertyAsync("Powered", false, SLOT(asyncReply(QDBusMessage)));
 #endif

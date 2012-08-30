@@ -1,2 +1,2 @@
 #!/bin/sh
-rfkill block wifi
+sudo rfkill block wifi

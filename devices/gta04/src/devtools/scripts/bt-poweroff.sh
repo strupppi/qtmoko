@@ -1,2 +1,2 @@
 #!/bin/sh
-rfkill block bluetooth
+sudo rfkill block bluetooth
