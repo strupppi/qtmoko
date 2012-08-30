@@ -1,4 +1,4 @@
 #!/bin/sh
 # Turn on GPS antenna
-rfkill unblock gps
+sudo rfkill unblock gps
 sleep 1

@@ -1,2 +1,2 @@
 #!/bin/sh
-rfkill block gps
+sudo rfkill block gps
