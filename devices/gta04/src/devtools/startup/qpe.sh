@@ -14,7 +14,7 @@ if [ ! "$(pidof udevd)" ]; then
 fi
 
 # Saves power in suspend
-rfkill block bluetooth &
+rfkill block gps &
 
 # Power on modem on GTA04A4 and higher
 modem-poweron.sh
