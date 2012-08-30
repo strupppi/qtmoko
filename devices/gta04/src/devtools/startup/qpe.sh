@@ -36,3 +36,5 @@ while [ -e /tmp/restart-qtopia ]; do
 done
 
 killall -q atd
+
+modem-poweroff.sh
