@@ -443,6 +443,7 @@ adduser qtmoko audio
 adduser qtmoko video
 adduser qtmoko users
 adduser qtmoko dialout
+adduser qtmoko bluetooth
 
 * add user to sudoers file
 
