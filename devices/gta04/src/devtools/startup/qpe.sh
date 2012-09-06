@@ -30,15 +30,9 @@ mkdir -p /var/cache/apt/archives/partial
 
 touch /tmp/restart-qtopia
 while [ -e /tmp/restart-qtopia ]; do
-<<<<<<< HEAD
+
     su $USER -l -c ". /opt/qtmoko/qpe.env; qpe"
 done
 
-killall -q atd
-
 modem-poweroff.sh
 
-=======
-    qpe
-done
->>>>>>> master
