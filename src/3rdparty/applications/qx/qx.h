@@ -46,7 +46,7 @@
 class QX : public QWidget
 {
     Q_OBJECT
-
+ 
 public:
     QX(QWidget *parent = 0, Qt::WFlags f = 0);
     ~QX();
@@ -109,6 +109,7 @@ private:
 
 public slots:
     void pauseApp();
+    void fixTs();
 
 private slots:
     void okClicked();
