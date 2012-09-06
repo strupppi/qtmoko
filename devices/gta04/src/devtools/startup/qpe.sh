@@ -28,10 +28,9 @@ echo 0 > /sys/class/leds/gta04\:green\:power/brightness
 stty -F /dev/tty1 -echo
 mkdir -p /var/cache/apt/archives/partial
 
-atd /var/spool/at
-
 touch /tmp/restart-qtopia
 while [ -e /tmp/restart-qtopia ]; do
+<<<<<<< HEAD
     su $USER -l -c ". /opt/qtmoko/qpe.env; qpe"
 done
 
@@ -39,3 +38,7 @@ killall -q atd
 
 modem-poweroff.sh
 
+=======
+    qpe
+done
+>>>>>>> master

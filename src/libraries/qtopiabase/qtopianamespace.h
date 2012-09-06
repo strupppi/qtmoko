@@ -115,6 +115,8 @@ namespace Qtopia
     QTOPIABASE_EXPORT void addAlarm ( QDateTime when, const QString& channel, const QString& msg, int data=0);
     QTOPIABASE_EXPORT void deleteAlarm (QDateTime when, const QString& channel, const QString& msg, int data=0);
     QTOPIABASE_EXPORT void writeHWClock();
+    QTOPIABASE_EXPORT QDateTime rtcNow();
+
 
     /*
 
