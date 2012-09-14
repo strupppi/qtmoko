@@ -392,8 +392,10 @@ cat > /media/card/etc/sysfs.conf << __END__
 # mode power/state = 0660
 # owner power/state = root:power
   
+
 owner devices/platform/pwm-backlight/backlight/pwm-backlight/brightness root:video
 mode devices/platform/pwm-backlight/backlight/pwm-backlight/brightness 0660
+
 
 owner bus/i2c/devices/i2c-2/new_device root.phonehw
 mode bus/i2c/devices/i2c-2/new_device 0220
@@ -403,8 +405,8 @@ owner class/gpio/gpio186/value root.dialout
 mode class/gpio/gpio186/value 0660
 
 # GPS
-owner devices/virtual/gpio/gpio145/value root.phonehw
-mode devices/virtual/gpio/gpio145/value 0660
+#owner devices/virtual/gpio/gpio145/value root.phonehw
+#mode devices/virtual/gpio/gpio145/value 0660
 
 owner devices/virtual/graphics/fbcon/cursor_blink root.video
 mode devices/virtual/graphics/fbcon/cursor_blink 0660
@@ -429,7 +431,9 @@ mode class/leds/gta04:red:aux/brightness 0660
 
 # let user put phone into suspend mode
 owner power/state root.phonehw 
-mode power/state 0660
+mode power/state 0664
+owner power/wakeup_count root.phonehw 
+mode power/wakeup_count 0664
 
 __END__
 
