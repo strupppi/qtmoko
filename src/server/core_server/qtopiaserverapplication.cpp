@@ -799,13 +799,13 @@ void QtopiaServerApplication::shutdown( QtopiaServerApplication::ShutdownType ty
         case QtopiaServerApplication::ShutdownSystem:
             qLog(Support) << "QtopiaServerApplication::ShutdownSystem";
             _shutdown(type);
-            execlp("shutdown", "shutdown", "-h", "now", (void*)0); // No tr
+            execlp("sudo", "shutdown", "shutdown", "-h", "now", (void*)0); // No tr
             break;
 
         case QtopiaServerApplication::RebootSystem:
             qLog(Support) << "QtopiaServerApplication::RebootSystem";
             _shutdown(type);
-            execlp("shutdown", "shutdown", "-r", "now", (void*)0); // No tr
+            execlp("sudo", "shutdown", "shutdown", "-r", "now", (void*)0); // No tr
             break;
 
         case QtopiaServerApplication::RestartDesktop:
