@@ -17,7 +17,7 @@ ln -s ../../../usr/share/fonts/truetype/ttf-dejavu/ fonts
 cd ../../..
 
 # make package
-tar -czvf --numeric-owner $QTOPIA_IMAGE opt
+tar --numeric-owner -czvf $QTOPIA_IMAGE opt
 
 PHONEIP=192.168.0.202
 ssh root@$PHONEIP '/etc/init.d/qtmoko stop'
