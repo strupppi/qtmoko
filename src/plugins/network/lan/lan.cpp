@@ -167,7 +167,7 @@ void LanImpl::cleanup()
 
     QStringList params;
     params << "cleanup"; //no tr
-    thread.addScriptToRun( lanScript, params );
+    thread.addScriptToRun( "sudo", QStringList() << lanScript << params );
 
     //Wait for lanScript to finish before removing network device
     while ( thread.remainingTasks() > 0 ) {
@@ -211,7 +211,7 @@ bool LanImpl::setDefaultGateway()
         args << "-gw";
         args << gateway;
     }
-    thread.addScriptToRun( lanScript, args );
+    thread.addScriptToRun( "sudo", QStringList() << lanScript << args );
 
     //new gateway may require new dns
     installDNS( dhcp );
@@ -241,7 +241,7 @@ void LanImpl::installDNS(bool dhcp)
     }
 
     //write dns info
-    thread.addScriptToRun( lanScript, list );
+    thread.addScriptToRun( "sudo", QStringList() << lanScript << list );
 }
 
 bool LanImpl::start( const QVariant options )
@@ -371,7 +371,7 @@ bool LanImpl::start( const QVariant options )
             }
         }
 
-        thread.addScriptToRun( lanScript, params );
+        thread.addScriptToRun( "sudo", QStringList() << lanScript << params );
 
 #ifndef NO_WIRELESS_LAN
         if ( t & QtopiaNetwork::WirelessLAN ) {
@@ -480,7 +480,7 @@ bool LanImpl::start( const QVariant options )
                 return false;
             }
 
-            thread.addScriptToRun( lanScript, params );
+            thread.addScriptToRun( "sudo", QStringList() << lanScript << params );
         }
 #endif
 
@@ -494,7 +494,7 @@ bool LanImpl::start( const QVariant options )
     // ### start <iface>
     args << "start";
     args << deviceName;
-    thread.addScriptToRun( lanScript, args );
+    thread.addScriptToRun( "sudo", QStringList() << lanScript << args );
     //we have to wait a bit until this interface is actually online
     //->then it can become the default gateway ->installs dns details as well
     ifaceStatus = QtopiaNetworkInterface::Pending;
@@ -534,7 +534,7 @@ bool LanImpl::stop()
     QStringList args;
     args << "stop";
     args << deviceName;
-    thread.addScriptToRun( lanScript, args );
+    thread.addScriptToRun( "sudo", QStringList() << lanScript << args );
     updateTrigger();
     return true;
 }
