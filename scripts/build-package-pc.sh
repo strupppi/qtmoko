@@ -1,3 +1,3 @@
 #!/bin/sh
-export QTMOKO_DEVICES=gta04
+export QTMOKO_DEVICES=pc
 scripts/build-package.sh
