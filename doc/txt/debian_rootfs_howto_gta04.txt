@@ -30,7 +30,7 @@ Step 1
 
 * We will be installing new image to /media/card:
 
-cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg8,libxtst6,sqlite3,rfkill,ntpdate,libspeex1,libspeexdsp1,lsof,gstreamer0.10-ffmpeg,gstreamer0.10-plugins-good,gstreamer0.10-pulseaudio,pulseaudio,libasound2-plugins,sysfsutils,sudo squeeze /media/card/ http://cdn.debian.net/debian/
+cdebootstrap --flavour=minimal --include=ifupdown,procps,netbase,nano,module-init-tools,wget,openssh-server,screen,mc,libts-0.0-0,libasound2,alsa-utils,udhcpc,wpasupplicant,wireless-tools,iputils-ping,iproute,bluez,bluez-alsa,dosfstools,fbset,klogd,psmisc,iptables,dash,ttf-dejavu,libpng12-0,libjpeg8,libxtst6,sqlite3,rfkill,ntpdate,libspeex1,libspeexdsp1,lsof,gstreamer0.10-ffmpeg,gstreamer0.10-plugins-good,gstreamer0.10-pulseaudio,pulseaudio,pulseaudio-utils,libasound2-plugins,sysfsutils,sudo squeeze /media/card/ http://cdn.debian.net/debian/
 
 Step 2
 ======
@@ -373,6 +373,15 @@ dpkg -i libts-0.0-0_1.0-8lindi1_armel.deb
 rm libts-0.0-0_1.0-8lindi1_armel.deb
 exit
 
+Step 9.4 - Set pulseaudio as default source/sink for gstreamer
+==============================================================
+
+chroot /media/card
+. /opt/qtmoko/qpe.env 
+gconftool-2 -t string --set /system/gstreamer/0.10/default/audiosink pulsesink
+gconftool-2 -t string --set /system/gstreamer/0.10/default/audiosrc pulsesrc
+exit
+
 
 Step 9.5 - remove bash history
 ==============================
@@ -416,6 +425,19 @@ create subdirectory here and unpack distribution tarball here. E.g:
 
 Now press POWER, select the distribution from combo box and press "Restart Device"
 __END__
+
+
+Step 9.9 - enable ssh access just on usb
+========================================
+
+* SSH root access can be dangerous on wifi or on GPRS, so enable it only on usb0
+
+echo "# Enable ssh access just on usb" >> /media/card/etc/rc.local
+echo "ip6tables -A INPUT ! -i usb0 -p tcp --dport 22 -j REJECT --reject-with tcp-reset; iptables -A INPUT ! -i usb0 -p tcp --dport 22 -j REJECT --reject-with tcp-reset" >> /media/card/etc/rc.local
+
+* Manually edit /media/card/etc/rc.local and move "exit" 0 to the end of file:
+
+nano /media/card/etc/rc.local
 
 
 Step 10 - release tarball
