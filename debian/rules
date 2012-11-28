@@ -183,7 +183,7 @@ install_%: DEVICE=$(patsubst install_%,%,$@)
 install_%:
 	$(MAKE) -C ../build-$(DEVICE) install
 	mkdir -p debian/tmp-$(DEVICE)/opt/qtmoko
-	cp -r ../build-$(DEVICE)/image/* debian/tmp-$(DEVICE)/opt/qtmoko
+	cp -rd ../build-$(DEVICE)/image/* debian/tmp-$(DEVICE)/opt/qtmoko
 
 	# remove patented stuff - can be installed via package later
 	rm -f debian/tmp-$(DEVICE)/opt/qtmoko/plugins/codecs/libmadplugin.so
@@ -191,12 +191,6 @@ install_%:
 
 	# symlink to ttfont installed together with X
 	rm -rf debian/tmp-$(DEVICE)/opt/qtmoko/lib/fonts
-
-	# Install missing dependency for qt_plugins/script/libqtscriptdbus.so
-	install -m"a+r,u+w" ../build-$(DEVICE)/qtopiacore/target/lib/libQtScript.so.$(QT_VERSION) debian/tmp-$(DEVICE)/opt/qtmoko/lib
-	
-	# Install libQtDeclarative so that dh_shlibdeps does not complain
-	install -m"a+r,u+w" ../build-$(DEVICE)/qtopiacore/target/lib/libQtDeclarative* debian/tmp-$(DEVICE)/opt/qtmoko/lib/
 
 
 override_dh_makeshlibs:
