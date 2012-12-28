@@ -470,6 +470,146 @@ echo "ip6tables -A INPUT ! -i usb0 -p tcp --dport 22 -j REJECT --reject-with tcp
 nano /media/card/etc/rc.local
 
 
+Step 9.10 - allow non-privileged user to operate the phone
+==========================================================
+
+cat > /media/card/etc/sysfs.conf << __END__
+#
+# /etc/sysfs.conf - Configuration file for setting sysfs attributes.
+#
+# The sysfs mount directory is automatically prepended to the attribute paths.
+#
+# Syntax:
+# attribute = value
+# mode attribute = 0600 # (any valid argument for chmod)
+# owner attribute = root:wheel # (any valid argument for chown)
+#
+# Examples:
+#
+# Always use the powersave CPU frequency governor
+# devices/system/cpu/cpu0/cpufreq/scaling_governor = powersave
+# 
+# Use userspace CPU frequency governor and set initial speed
+# devices/system/cpu/cpu0/cpufreq/scaling_governor = userspace
+# devices/system/cpu/cpu0/cpufreq/scaling_setspeed = 600000 
+#
+# Set permissions of suspend control file 
+# mode power/state = 0660
+# owner power/state = root:power
+  
+
+owner devices/platform/pwm-backlight/backlight/pwm-backlight/brightness root:video
+mode devices/platform/pwm-backlight/backlight/pwm-backlight/brightness 0660
+
+
+owner bus/i2c/devices/i2c-2/new_device root.phonehw
+mode bus/i2c/devices/i2c-2/new_device 0220
+
+# Modem enable GPIO
+owner class/gpio/gpio186/value root.dialout
+mode class/gpio/gpio186/value 0660
+
+# GPS
+#owner devices/virtual/gpio/gpio145/value root.phonehw
+#mode devices/virtual/gpio/gpio145/value 0660
+
+owner devices/virtual/graphics/fbcon/cursor_blink root.video
+mode devices/virtual/graphics/fbcon/cursor_blink 0660
+
+owner class/leds/gta04:green:power/trigger root.phonehw
+mode class/leds/gta04:green:power/trigger 0660 
+owner class/leds/gta04:red:power/trigger root.phonehw
+mode class/leds/gta04:red:power/trigger 0660 
+owner class/leds/gta04:green:power/brightness root.phonehw
+mode class/leds/gta04:green:power/brightness 0660 
+owner class/leds/gta04:red:power/brightness root.phonehw
+mode class/leds/gta04:red:power/brightness 0660
+
+owner class/leds/gta04:green:aux/trigger root.phonehw
+mode class/leds/gta04:green:aux/trigger 0660 
+owner class/leds/gta04:red:aux/trigger root.phonehw
+mode class/leds/gta04:red:aux/trigger 0660
+owner class/leds/gta04:green:aux/brightness root.phonehw
+mode class/leds/gta04:green:aux/brightness 0660
+owner class/leds/gta04:red:aux/brightness root.phonehw
+mode class/leds/gta04:red:aux/brightness 0660
+
+
+# let user put phone into suspend mode
+owner power/state root.phonehw 
+mode power/state 0664
+owner power/wakeup_count root.phonehw 
+mode power/wakeup_count 0664
+
+__END__
+
+cat > /media/card/etc/udev/rules.d/99-fix-permissions.rules << __END__
+SUBSYSTEM=="input", GROUP="input", MODE=660
+KERNEL=="tty1", GROUP="phonehw", MODE=660
+KERNEL=="tty0", GROUP="phonehw", MODE=660
+__END__
+
+
+* Create users and groups
+
+chroot /media/card
+adduser qtmoko
+addgroup --system phonehw
+addgroup --system input
+adduser qtmoko phonehw
+adduser qtmoko input
+adduser qtmoko audio
+adduser qtmoko video
+adduser qtmoko users
+adduser qtmoko dialout
+adduser qtmoko bluetooth
+adduser qtmoko sudo
+
+* add user to sudoers file
+
+visudo
+# add line:
+# qtmoko  ALL = NOPASSWD: ALL
+# save & exit
+
+*
+
+create /etc/dbus-1/system.d/bluetooth.conf with following contents:
+
+<!-- This configuration file specifies the required security policies
+     for Bluetooth core daemon to work. -->
+
+<!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+<busconfig>
+
+  <!-- ../system.conf have denied everything, so we just punch some holes -->
+
+  <policy user="root">
+    <allow own="org.bluez"/>
+    <allow send_destination="org.bluez"/>
+
+    <!-- allow root to send to agents -->
+    <allow send_interface="org.bluez.Agent"/>
+  </policy>
+
+  <!-- allow users at the console, see consolekit or libpam-foreground -->
+  <policy at_console="true">
+    <allow send_destination="org.bluez"/>
+  </policy>
+
+  <!-- allow users of bluetooth group to communicate with hcid -->
+  <policy group="bluetooth">
+    <allow send_destination="org.bluez"/>
+  </policy>
+
+  <policy context="default">
+    <deny send_destination="org.bluez"/>
+  </policy>
+
+</busconfig>
+
+
 Step 10 - release tarball
 =========================
 
