@@ -9,7 +9,7 @@ if [ ! -d /dev/pts ]; then
 fi
 
 # Start pulse audio
-pulse.sh &
+su $USER -l -c ". /opt/qtmoko/qpe.env; pulse.sh &"
 
 if [ ! "$(pidof udevd)" ]; then
   # running on devtmpfs
